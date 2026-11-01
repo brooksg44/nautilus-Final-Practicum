@@ -1,0 +1,5865 @@
+{
+  "tolerance": 0.001,
+  "tests": [
+    {
+      "name": "ST: startup and reset require healthy contacts and clear sensors",
+      "steps": [
+        {
+          "scans": 1,
+          "expect": {
+            "MainStep": 1,
+            "Mode": 0,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true,
+            "ClassifyDefuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop2": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 1,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: three second warning precedes a half second emitter pulse",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "Start": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 20,
+            "Emitter": false
+          }
+        },
+        {
+          "given": {
+            "Start": false
+          },
+          "advance": "2.8s",
+          "expect": {
+            "AutoStep": 20,
+            "Emitter": false
+          }
+        },
+        {
+          "advance": "240ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true
+          }
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "Emitter": false
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: sort raw",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 24,
+            "RawCounter": 1,
+            "RawSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "RawCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "RawCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: sort raw green",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 4
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 24,
+            "RawCounter": 1,
+            "RawSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "RawCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "RawCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: sort base",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 3
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 27,
+            "BaseCounter": 1,
+            "BaseSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "BaseCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "BaseSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "BaseCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: sort base green",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 6
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 27,
+            "BaseCounter": 1,
+            "BaseSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "BaseCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "BaseSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "BaseCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: sort lid",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 2
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 28,
+            "LidCounter": 1,
+            "LidSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "LidCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "LidSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "LidCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: sort lid green",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 5
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 28,
+            "LidCounter": 1,
+            "LidSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "LidCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "LidSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "LidCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: reject metal 7",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 7
+          },
+          "scans": 1
+        },
+        {
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25
+          }
+        },
+        {
+          "given": {
+            "RejectDiffuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 85,
+            "RejectPusher": true,
+            "BeltSpeedRef": 0
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 86,
+            "RejectPusher": false
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": false,
+            "RejPushBackLimit": false
+          },
+          "scans": 20,
+          "expect": {
+            "AutoStep": 86
+          }
+        },
+        {
+          "given": {
+            "RejPushBackLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 19,
+            "BeltSpeedRef": 100
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: reject metal 8",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 8
+          },
+          "scans": 1
+        },
+        {
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25
+          }
+        },
+        {
+          "given": {
+            "RejectDiffuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 85,
+            "RejectPusher": true,
+            "BeltSpeedRef": 0
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 86,
+            "RejectPusher": false
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": false,
+            "RejPushBackLimit": false
+          },
+          "scans": 20,
+          "expect": {
+            "AutoStep": 86
+          }
+        },
+        {
+          "given": {
+            "RejPushBackLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 19,
+            "BeltSpeedRef": 100
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: reject metal 9",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 9
+          },
+          "scans": 1
+        },
+        {
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25
+          }
+        },
+        {
+          "given": {
+            "RejectDiffuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 85,
+            "RejectPusher": true,
+            "BeltSpeedRef": 0
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 86,
+            "RejectPusher": false
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": false,
+            "RejPushBackLimit": false
+          },
+          "scans": 20,
+          "expect": {
+            "AutoStep": 86
+          }
+        },
+        {
+          "given": {
+            "RejPushBackLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 19,
+            "BeltSpeedRef": 100
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: operator reject overrides sort and unknown vision waits",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 0
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 5,
+          "expect": {
+            "AutoStep": 22
+          }
+        },
+        {
+          "given": {
+            "VisionSensor1": 1,
+            "SendRejectPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25,
+            "RawCounter": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: manual edge toggles exclude reverse direction and reset on mode exit",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawSorterBeltCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "scans": 10,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "RawSorterBeltCCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCCW": false,
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "RawSorterBeltCWManPB": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawSorterBeltCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "RawSorterBeltCCWManPB": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawSorterBeltCCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCCW": true
+          }
+        },
+        {
+          "given": {
+            "ManualSS": false,
+            "AutoSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCCW": false,
+            "Mode": 5
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: speed increments edges clamp and scale to volts",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "BeltConveyor4mManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltSpeedRef": 60,
+            "BeltConveyor4mSpeed": 2.0
+          }
+        },
+        {
+          "given": {
+            "IncSpdX100": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltSpeedRef": 160
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "BeltSpeedRef": 160
+          }
+        },
+        {
+          "given": {
+            "IncSpdX100": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltSpeedRef": 300,
+            "BeltConveyor4mSpeed": 10.0
+          }
+        },
+        {
+          "given": {
+            "Stop": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: manual counter reset requires five continuous seconds",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawCounter": 3,
+            "BaseCounter": 4,
+            "LidCounter": 5,
+            "Reset": true
+          },
+          "advance": "4s",
+          "expect": {
+            "RawCounter": 3
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "advance": "4s",
+          "expect": {
+            "BaseCounter": 4
+          }
+        },
+        {
+          "advance": "1.1s",
+          "expect": {
+            "RawCounter": 0,
+            "BaseCounter": 0,
+            "LidCounter": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: Stop removes active motion and requires reset",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "Stop": false
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "Emitter": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "Stop": true,
+            "Reset": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: EmergencyStop removes active motion and requires reset",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop": false
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "Emitter": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop": true,
+            "Reset": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: EmergencyStop2 removes active motion and requires reset",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop2": false
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "Emitter": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop2": true,
+            "Reset": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "ST: conflicting selectors disable motion",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RejectPusherManPB": true,
+            "BeltConveyor4mManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RejectPusher": true
+          }
+        },
+        {
+          "given": {
+            "AutoSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RejectPusher": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 1
+      }
+    },
+    {
+      "name": "LD: startup and reset require healthy contacts and clear sensors",
+      "steps": [
+        {
+          "scans": 1,
+          "expect": {
+            "MainStep": 1,
+            "Mode": 0,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true,
+            "ClassifyDefuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop2": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 1,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: three second warning precedes a half second emitter pulse",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "Start": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 20,
+            "Emitter": false
+          }
+        },
+        {
+          "given": {
+            "Start": false
+          },
+          "advance": "2.8s",
+          "expect": {
+            "AutoStep": 20,
+            "Emitter": false
+          }
+        },
+        {
+          "advance": "240ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true
+          }
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "Emitter": false
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: sort raw",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 24,
+            "RawCounter": 1,
+            "RawSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "RawCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "RawCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: sort raw green",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 4
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 24,
+            "RawCounter": 1,
+            "RawSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "RawCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "RawCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: sort base",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 3
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 27,
+            "BaseCounter": 1,
+            "BaseSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "BaseCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "BaseSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "BaseCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: sort base green",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 6
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 27,
+            "BaseCounter": 1,
+            "BaseSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "BaseCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "BaseSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "BaseCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: sort lid",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 2
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 28,
+            "LidCounter": 1,
+            "LidSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "LidCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "LidSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "LidCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: sort lid green",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 5
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 28,
+            "LidCounter": 1,
+            "LidSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "LidCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "LidSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "LidCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: reject metal 7",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 7
+          },
+          "scans": 1
+        },
+        {
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25
+          }
+        },
+        {
+          "given": {
+            "RejectDiffuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 85,
+            "RejectPusher": true,
+            "BeltSpeedRef": 0
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 86,
+            "RejectPusher": false
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": false,
+            "RejPushBackLimit": false
+          },
+          "scans": 20,
+          "expect": {
+            "AutoStep": 86
+          }
+        },
+        {
+          "given": {
+            "RejPushBackLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 19,
+            "BeltSpeedRef": 100
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: reject metal 8",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 8
+          },
+          "scans": 1
+        },
+        {
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25
+          }
+        },
+        {
+          "given": {
+            "RejectDiffuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 85,
+            "RejectPusher": true,
+            "BeltSpeedRef": 0
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 86,
+            "RejectPusher": false
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": false,
+            "RejPushBackLimit": false
+          },
+          "scans": 20,
+          "expect": {
+            "AutoStep": 86
+          }
+        },
+        {
+          "given": {
+            "RejPushBackLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 19,
+            "BeltSpeedRef": 100
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: reject metal 9",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 9
+          },
+          "scans": 1
+        },
+        {
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25
+          }
+        },
+        {
+          "given": {
+            "RejectDiffuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 85,
+            "RejectPusher": true,
+            "BeltSpeedRef": 0
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 86,
+            "RejectPusher": false
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": false,
+            "RejPushBackLimit": false
+          },
+          "scans": 20,
+          "expect": {
+            "AutoStep": 86
+          }
+        },
+        {
+          "given": {
+            "RejPushBackLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 19,
+            "BeltSpeedRef": 100
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: operator reject overrides sort and unknown vision waits",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 0
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 5,
+          "expect": {
+            "AutoStep": 22
+          }
+        },
+        {
+          "given": {
+            "VisionSensor1": 1,
+            "SendRejectPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25,
+            "RawCounter": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: manual edge toggles exclude reverse direction and reset on mode exit",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawSorterBeltCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "scans": 10,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "RawSorterBeltCCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCCW": false,
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "RawSorterBeltCWManPB": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawSorterBeltCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "RawSorterBeltCCWManPB": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawSorterBeltCCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCCW": true
+          }
+        },
+        {
+          "given": {
+            "ManualSS": false,
+            "AutoSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCCW": false,
+            "Mode": 5
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: speed increments edges clamp and scale to volts",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "BeltConveyor4mManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltSpeedRef": 60,
+            "BeltConveyor4mSpeed": 2.0
+          }
+        },
+        {
+          "given": {
+            "IncSpdX100": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltSpeedRef": 160
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "BeltSpeedRef": 160
+          }
+        },
+        {
+          "given": {
+            "IncSpdX100": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltSpeedRef": 300,
+            "BeltConveyor4mSpeed": 10.0
+          }
+        },
+        {
+          "given": {
+            "Stop": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: manual counter reset requires five continuous seconds",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawCounter": 3,
+            "BaseCounter": 4,
+            "LidCounter": 5,
+            "Reset": true
+          },
+          "advance": "4s",
+          "expect": {
+            "RawCounter": 3
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "advance": "4s",
+          "expect": {
+            "BaseCounter": 4
+          }
+        },
+        {
+          "advance": "1.1s",
+          "expect": {
+            "RawCounter": 0,
+            "BaseCounter": 0,
+            "LidCounter": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: Stop removes active motion and requires reset",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "Stop": false
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "Emitter": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "Stop": true,
+            "Reset": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: EmergencyStop removes active motion and requires reset",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop": false
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "Emitter": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop": true,
+            "Reset": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: EmergencyStop2 removes active motion and requires reset",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop2": false
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "Emitter": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop2": true,
+            "Reset": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "LD: conflicting selectors disable motion",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RejectPusherManPB": true,
+            "BeltConveyor4mManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RejectPusher": true
+          }
+        },
+        {
+          "given": {
+            "AutoSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RejectPusher": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 2
+      }
+    },
+    {
+      "name": "FBD: startup and reset require healthy contacts and clear sensors",
+      "steps": [
+        {
+          "scans": 1,
+          "expect": {
+            "MainStep": 1,
+            "Mode": 0,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true,
+            "ClassifyDefuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop2": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 1,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: three second warning precedes a half second emitter pulse",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "Start": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 20,
+            "Emitter": false
+          }
+        },
+        {
+          "given": {
+            "Start": false
+          },
+          "advance": "2.8s",
+          "expect": {
+            "AutoStep": 20,
+            "Emitter": false
+          }
+        },
+        {
+          "advance": "240ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true
+          }
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "Emitter": false
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: sort raw",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 24,
+            "RawCounter": 1,
+            "RawSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "RawCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "RawCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: sort raw green",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 4
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 24,
+            "RawCounter": 1,
+            "RawSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "RawCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "RawCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: sort base",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 3
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 27,
+            "BaseCounter": 1,
+            "BaseSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "BaseCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "BaseSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "BaseCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: sort base green",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 6
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 27,
+            "BaseCounter": 1,
+            "BaseSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "BaseCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "BaseSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "BaseCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: sort lid",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 2
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 28,
+            "LidCounter": 1,
+            "LidSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "LidCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "LidSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "LidCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: sort lid green",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 5
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 22,
+            "BeltSpeedRef": 60
+          }
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 28,
+            "LidCounter": 1,
+            "LidSorterBeltCW": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "LidCounter": 1
+          }
+        },
+        {
+          "given": {
+            "AtExit": false
+          },
+          "scans": 1,
+          "expect": {
+            "LidSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "AtExit": true,
+            "ClassifyDefuseSensor": false,
+            "SendSortPB": false
+          },
+          "scans": 1
+        },
+        {
+          "advance": "600ms",
+          "expect": {
+            "AutoStep": 19,
+            "Emitter": true,
+            "LidCounter": 1
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: reject metal 7",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 7
+          },
+          "scans": 1
+        },
+        {
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25
+          }
+        },
+        {
+          "given": {
+            "RejectDiffuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 85,
+            "RejectPusher": true,
+            "BeltSpeedRef": 0
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 86,
+            "RejectPusher": false
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": false,
+            "RejPushBackLimit": false
+          },
+          "scans": 20,
+          "expect": {
+            "AutoStep": 86
+          }
+        },
+        {
+          "given": {
+            "RejPushBackLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 19,
+            "BeltSpeedRef": 100
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: reject metal 8",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 8
+          },
+          "scans": 1
+        },
+        {
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25
+          }
+        },
+        {
+          "given": {
+            "RejectDiffuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 85,
+            "RejectPusher": true,
+            "BeltSpeedRef": 0
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 86,
+            "RejectPusher": false
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": false,
+            "RejPushBackLimit": false
+          },
+          "scans": 20,
+          "expect": {
+            "AutoStep": 86
+          }
+        },
+        {
+          "given": {
+            "RejPushBackLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 19,
+            "BeltSpeedRef": 100
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: reject metal 9",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 9
+          },
+          "scans": 1
+        },
+        {
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25
+          }
+        },
+        {
+          "given": {
+            "RejectDiffuseSensor": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 85,
+            "RejectPusher": true,
+            "BeltSpeedRef": 0
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 86,
+            "RejectPusher": false
+          }
+        },
+        {
+          "given": {
+            "RejPushFrontLimit": false,
+            "RejPushBackLimit": false
+          },
+          "scans": 20,
+          "expect": {
+            "AutoStep": 86
+          }
+        },
+        {
+          "given": {
+            "RejPushBackLimit": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 19,
+            "BeltSpeedRef": 100
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: operator reject overrides sort and unknown vision waits",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 0
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 5,
+          "expect": {
+            "AutoStep": 22
+          }
+        },
+        {
+          "given": {
+            "VisionSensor1": 1,
+            "SendRejectPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "AutoStep": 25,
+            "RawCounter": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: manual edge toggles exclude reverse direction and reset on mode exit",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawSorterBeltCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "scans": 10,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "RawSorterBeltCCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCCW": false,
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "RawSorterBeltCWManPB": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawSorterBeltCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": false
+          }
+        },
+        {
+          "given": {
+            "RawSorterBeltCCWManPB": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawSorterBeltCCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCCW": true
+          }
+        },
+        {
+          "given": {
+            "ManualSS": false,
+            "AutoSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCCW": false,
+            "Mode": 5
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: speed increments edges clamp and scale to volts",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "BeltConveyor4mManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltSpeedRef": 60,
+            "BeltConveyor4mSpeed": 2.0
+          }
+        },
+        {
+          "given": {
+            "IncSpdX100": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltSpeedRef": 160
+          }
+        },
+        {
+          "scans": 5,
+          "expect": {
+            "BeltSpeedRef": 160
+          }
+        },
+        {
+          "given": {
+            "IncSpdX100": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltSpeedRef": 300,
+            "BeltConveyor4mSpeed": 10.0
+          }
+        },
+        {
+          "given": {
+            "Stop": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: manual counter reset requires five continuous seconds",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawCounter": 3,
+            "BaseCounter": 4,
+            "LidCounter": 5,
+            "Reset": true
+          },
+          "advance": "4s",
+          "expect": {
+            "RawCounter": 3
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "advance": "4s",
+          "expect": {
+            "BaseCounter": 4
+          }
+        },
+        {
+          "advance": "1.1s",
+          "expect": {
+            "RawCounter": 0,
+            "BaseCounter": 0,
+            "LidCounter": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: Stop removes active motion and requires reset",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "Stop": false
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "Emitter": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "Stop": true,
+            "Reset": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: EmergencyStop removes active motion and requires reset",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop": false
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "Emitter": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop": true,
+            "Reset": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: EmergencyStop2 removes active motion and requires reset",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": true,
+            "ManualSS": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 5
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": true,
+            "Start": true
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "IncSpdX100": false,
+            "Start": false
+          },
+          "advance": "3.1s",
+          "expect": {
+            "AutoStep": 19,
+            "RunningPL": true,
+            "BeltSpeedRef": 100
+          }
+        },
+        {
+          "given": {
+            "ClassifyDefuseSensor": true,
+            "VisionSensor1": 1
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "SendSortPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop2": false
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "Emitter": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "EmergencyStop2": true,
+            "Reset": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "FBD: conflicting selectors disable motion",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RejectPusherManPB": true,
+            "BeltConveyor4mManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "RejectPusher": true
+          }
+        },
+        {
+          "given": {
+            "AutoSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 0,
+            "RejectPusher": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        }
+      ],
+      "given": {
+        "LanguageSelect": 3
+      }
+    },
+    {
+      "name": "switch 1 to 2 clears motion, preserves totals and requires reset",
+      "steps": [
+        {
+          "given": {
+            "LanguageSelect": 1,
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawCounter": 12,
+            "BaseCounter": 13,
+            "LidCounter": 14,
+            "BeltConveyor4mManPB": true,
+            "RawSorterBeltCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltConveyor4mSpeed": 2.0,
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "LanguageSelect": 2
+          },
+          "scans": 1,
+          "expect": {
+            "ActiveLanguage": 2,
+            "MainStep": 1,
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "BeltConveyor4mSpeed": 0.0,
+            "RawCounter": 12,
+            "BaseCounter": 13,
+            "LidCounter": 14
+          }
+        },
+        {
+          "given": {
+            "BeltConveyor4mManPB": false,
+            "RawSorterBeltCWManPB": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 4,
+            "BeltConveyor4mSpeed": 0.0,
+            "RawSorterBeltCW": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "switch 2 to 3 clears motion, preserves totals and requires reset",
+      "steps": [
+        {
+          "given": {
+            "LanguageSelect": 2,
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawCounter": 12,
+            "BaseCounter": 13,
+            "LidCounter": 14,
+            "BeltConveyor4mManPB": true,
+            "RawSorterBeltCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltConveyor4mSpeed": 2.0,
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "LanguageSelect": 3
+          },
+          "scans": 1,
+          "expect": {
+            "ActiveLanguage": 3,
+            "MainStep": 1,
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "BeltConveyor4mSpeed": 0.0,
+            "RawCounter": 12,
+            "BaseCounter": 13,
+            "LidCounter": 14
+          }
+        },
+        {
+          "given": {
+            "BeltConveyor4mManPB": false,
+            "RawSorterBeltCWManPB": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 4,
+            "BeltConveyor4mSpeed": 0.0,
+            "RawSorterBeltCW": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "switch 3 to 1 clears motion, preserves totals and requires reset",
+      "steps": [
+        {
+          "given": {
+            "LanguageSelect": 3,
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "RawCounter": 12,
+            "BaseCounter": 13,
+            "LidCounter": 14,
+            "BeltConveyor4mManPB": true,
+            "RawSorterBeltCWManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltConveyor4mSpeed": 2.0,
+            "RawSorterBeltCW": true
+          }
+        },
+        {
+          "given": {
+            "LanguageSelect": 1
+          },
+          "scans": 1,
+          "expect": {
+            "ActiveLanguage": 1,
+            "MainStep": 1,
+            "Mode": 0,
+            "RawSorterBeltCW": false,
+            "BeltConveyor4mSpeed": 0.0,
+            "RawCounter": 12,
+            "BaseCounter": 13,
+            "LidCounter": 14
+          }
+        },
+        {
+          "given": {
+            "BeltConveyor4mManPB": false,
+            "RawSorterBeltCWManPB": false
+          },
+          "scans": 5,
+          "expect": {
+            "MainStep": 2,
+            "Mode": 0
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 4,
+            "BeltConveyor4mSpeed": 0.0,
+            "RawSorterBeltCW": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "invalid language disables all implementations and can recover",
+      "steps": [
+        {
+          "given": {
+            "EmergencyStop": true,
+            "EmergencyStop2": true,
+            "Stop": true,
+            "AtExit": true,
+            "AutoSS": false,
+            "ManualSS": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 3,
+            "Mode": 4
+          }
+        },
+        {
+          "given": {
+            "Reset": false
+          },
+          "scans": 1
+        },
+        {
+          "given": {
+            "BeltConveyor4mManPB": true,
+            "RejectPusherManPB": true
+          },
+          "scans": 1,
+          "expect": {
+            "BeltConveyor4mSpeed": 2.0,
+            "RejectPusher": true
+          }
+        },
+        {
+          "given": {
+            "LanguageSelect": 99
+          },
+          "scans": 5,
+          "expect": {
+            "LanguageValid": false,
+            "ActiveLanguage": 0,
+            "MainStep": 1,
+            "RejectPusher": false,
+            "BeltConveyor4mSpeed": 0.0
+          }
+        },
+        {
+          "given": {
+            "LanguageSelect": 3
+          },
+          "scans": 1,
+          "expect": {
+            "LanguageValid": true,
+            "ActiveLanguage": 3,
+            "MainStep": 1,
+            "RejectPusher": false
+          }
+        },
+        {
+          "given": {
+            "RejectPusherManPB": false,
+            "BeltConveyor4mManPB": false
+          },
+          "scans": 1,
+          "expect": {
+            "MainStep": 2
+          }
+        },
+        {
+          "given": {
+            "Reset": true
+          },
+          "scans": 1,
+          "expect": {
+            "Mode": 4,
+            "RejectPusher": false
+          }
+        }
+      ]
+    }
+  ]
+}

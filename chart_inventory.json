@@ -1,0 +1,3057 @@
+[
+  {
+    "title": "Main",
+    "items": [
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepInitial",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "1",
+        "Id": "a89b544f-8056-454c-af98-c2c2ce1c9883",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "Stop*EmergencyStop * EmergencyStop2",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "07a567a2-c1f3-40ea-878c-5ae08d1a533e",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "3",
+        "Id": "c404bf42-e5bf-451d-b90e-cb8ec49d0b62",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepEnclosing",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "5",
+        "Id": "39202680-e166-4bc6-95b1-8b64cc8baed6",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "2",
+        "Id": "11a0110a-21e2-41c4-966b-6043efc32201",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Jump",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "4",
+        "Id": "e025340a-4133-4cff-9bba-adbc86d58d7f",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "ManualSS*!AutoSS",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "6a1c3d00-e066-491e-bba2-999b906e2396",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "AutoSS*!ManualSS",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "32214714-e641-4706-bda9-d0e90fcdaf4a",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!ControlOnPL",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "069e9c39-e1d5-4287-bad0-fbcb91cf2680",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!ControlOnPL",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "daf73f53-addd-4a83-aac1-2fbdfd37b19c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "AutoSS*!ManualSS",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "b1704388-41bd-4e0d-9679-da9097b4aa85",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Jump",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "5",
+        "Id": "31ddb249-3c18-49a1-b4d7-76db5df95ae4",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "StopPL",
+        "Caption": null,
+        "Id": "93d8ee6e-f392-408b-9457-b338adaefe42",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!ControlOnPL",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "f0cc6d98-290d-47fc-8a2b-1f509deecc6b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "ManualPL",
+        "Caption": null,
+        "Id": "eaa0a639-028f-4d4e-8a19-b3875e2bb13e",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "AutoPL",
+        "Caption": null,
+        "Id": "54691427-35b1-4b6a-8d7d-e3f32b0378f0",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepEnclosing",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "4",
+        "Id": "fcf7169c-5e63-4cbd-a91e-cd74af2786c7",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=0",
+        "Caption": null,
+        "Id": "6040f6d1-ec99-44e8-9d41-d94189a1644d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LastBeltRefSpeed:=BeltSpeedRef",
+        "Caption": null,
+        "Id": "7863ddc8-62ec-4590-b30a-fb4309dece75",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=0",
+        "Caption": null,
+        "Id": "4b835daa-7a71-4e51-baae-e69e3df36970",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LastBeltRefSpeed:=BeltSpeedRef",
+        "Caption": null,
+        "Id": "adb52baf-4ee9-4eba-abd1-52cc3225f7d5",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mSpeed2:=0",
+        "Caption": null,
+        "Id": "75ffdd50-9c74-49ec-9e11-bd0d6ccf95c7",
+        "TargetLinkId": "d1ed1e9f-31ca-44df-b2b6-e6f6fd2e950d"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mSpeed:=TargetBeltSpeed",
+        "Caption": null,
+        "Id": "33da2185-1c33-45fd-abe0-6dca0569313f",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mSpeed2:=TargetBeltSpeed",
+        "Caption": null,
+        "Id": "f8d1f631-2a0b-4461-aeac-255f5ac08b0f",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!EmergencyStop +!EmergencyStop2",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "53971b5a-26da-4aef-854a-a172e8db652f",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!Stop",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "03c863b5-e459-44d7-895b-5ef814cb1fc3",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Jump",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "2",
+        "Id": "96064124-9f2d-4032-8cc9-ecdafe31ab39",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Jump",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "1",
+        "Id": "95494ed9-5126-4de1-82d1-96a3e78c7f90",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "(Reset+Reset2PB)*!ClassifyDefuseSensor*!RejectDiffuseSensor*AtExit",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "963a9878-1a9a-4771-996b-a7036dacd6cf",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Jump",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "1",
+        "Id": "03e6a21c-6600-4f61-92b1-9ffdc785e1ac",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!EmergencyStop +!EmergencyStop2",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "565cfcd4-d9ff-4231-a59c-17895c51a0b6",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mSpeed:=0",
+        "Caption": null,
+        "Id": "4da53448-85ea-44fa-9ec2-f33984c292fd",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X3",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "2a83a955-0732-4ccf-b335-dda3868cb557",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "7",
+        "Id": "e184fb73-875b-4da2-b3cc-01c97d4b57df",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "ControlOnPL2",
+        "Caption": null,
+        "Id": "6ab0b06f-4ea0-4353-b21e-d843b8d86922",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "ControlOnPL",
+        "Caption": null,
+        "Id": "18612b96-fd50-4db8-b57f-53611b298260",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionConditional",
+        "ConditionStr": "_SI_1HZ",
+        "TransitionStr": null,
+        "ActionStr": "ControlOnPL",
+        "Caption": null,
+        "Id": "4b52a8a3-932b-4804-ae0d-8be1100af4d7",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionConditional",
+        "ConditionStr": "_SI_1HZ",
+        "TransitionStr": null,
+        "ActionStr": "ControlOnPL2",
+        "Caption": null,
+        "Id": "a370e1bc-b6a2-442f-9862-4c985c05ac30",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionConditional",
+        "ConditionStr": "_SI_1HZ",
+        "TransitionStr": null,
+        "ActionStr": "EStoppedPL",
+        "Caption": null,
+        "Id": "a08221ae-89da-428b-9960-0d86deb88d1e",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "ManualSS*!AutoSS",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "cf8d0d6e-a37b-4431-97fa-4468394f030e",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RunningPL:=0",
+        "Caption": null,
+        "Id": "94c78fc0-e169-40e2-aac5-812cf832f366",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RunningPL:=0",
+        "Caption": null,
+        "Id": "8454b799-f648-4e4b-a99e-51f369f42e9c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RunningPL:=0",
+        "Caption": null,
+        "Id": "f116af0c-1532-4f9c-954e-92220ec052ff",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionConditional",
+        "ConditionStr": "_SI_1HZ",
+        "TransitionStr": null,
+        "ActionStr": "ControlOnPL",
+        "Caption": null,
+        "Id": "06dbe64c-18cd-4fae-a679-858c1ce04450",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionConditional",
+        "ConditionStr": "_SI_1HZ",
+        "TransitionStr": null,
+        "ActionStr": "ControlOnPL2",
+        "Caption": null,
+        "Id": "8a42bf48-600f-4bdd-9b2c-7f147a2a2626",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "StartPL:=0",
+        "Caption": null,
+        "Id": "82c7405b-b3e7-4116-bd8d-2f82362a0cb9",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "StartPL:=0",
+        "Caption": null,
+        "Id": "4a6415ff-78d1-4655-9b33-3ada837e34e0",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "StartPL:=0",
+        "Caption": null,
+        "Id": "f91f1900-8ab9-4a39-a2a2-47ea4b504394",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "StopPL",
+        "Caption": null,
+        "Id": "96cd195c-60eb-4f6e-bb67-d48b7625401a",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "title": "Automatic",
+    "items": [
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "EmitFlag",
+        "Caption": null,
+        "Id": "1ef7cbf2-4353-45d4-80fb-96238512df5d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "19",
+        "Id": "97322a2f-38cc-4c71-9885-a3b2ddb5ba9c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "3s/X20",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "cd8addcf-4393-4378-8c2b-05f30d7ab94d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "20",
+        "Id": "e7975be2-cb1d-4f90-a5a1-571bd8bb1c21",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "Start*ControlOnPL",
+        "ActionStr": "?",
+        "Caption": "0",
+        "Id": "9da7ba99-6863-4593-819e-3a54a3fbdfbd",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "21",
+        "Id": "d4dcf949-2656-4a9a-b90b-2405fc3d09cb",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "22",
+        "Id": "96456b5b-9dc3-493a-b150-037d975e1875",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "([VisionSensor1 = 2]+[VisionSensor1 =5 ]) * SendSortPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "76cffc9c-d934-4f53-8747-5e0c12308baa",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepEnclosing",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "28",
+        "Id": "a0073353-dde7-414b-960d-2b254bf3b7db",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "RejPushBackLimit*!RejectFlag",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "560e2438-60f6-40c0-b7b2-ebc6ecb74506",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Jump",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "19",
+        "Id": "de8d3956-fe1c-46df-b730-8d1e44cfad41",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawFlag:=0",
+        "Caption": null,
+        "Id": "f0e7ecfd-f2b4-44e2-9a4f-3d250b4f02ac",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseFlag:=0",
+        "Caption": null,
+        "Id": "8df7ad1d-0451-40ab-be2f-8ddf654787ec",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidFlag:=0",
+        "Caption": null,
+        "Id": "4e2c7c76-d54b-497a-bcfc-07518590090d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "([VisionSensor1 = 1]+[VisionSensor1 = 4]) * SendSortPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "6fed09b2-cfed-4605-a332-e9c84100749a",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepEnclosing",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "24",
+        "Id": "d064c8d8-4119-4167-a5b8-f3f5278275e1",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "([VisionSensor1=3]+[VisionSensor1=6])*SendSortPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "b1df41f7-5e17-41ee-bd68-1d36480848a1",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepEnclosing",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "27",
+        "Id": "c975a95d-2365-41b2-b7d7-5d224e2123cc",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Jump",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "19",
+        "Id": "9bb3aa37-c47c-4d5f-ae10-141a80218de5",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!LidFlag",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "17f26974-69d2-4349-9904-81dfc5b228b2",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Jump",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "19",
+        "Id": "58ffa26b-db19-4437-9ad1-3c7cd681604f",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Jump",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "19",
+        "Id": "da1dd953-d9df-4da2-bef7-3bf0462c4779",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!BaseFlag",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "b4cddcb1-fc28-4c98-8207-06901aaf7057",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RejectFlag:=0",
+        "Caption": null,
+        "Id": "853d8551-cc73-4511-8ae0-13f931b1350a",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!RawFlag",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "6a46d6c7-bc2b-4ffd-b99d-2fe60bde4bf9",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191ClassifyDefuseSensor",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "67ca100c-5280-4d08-8099-0e1cc5cacbe8",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LastBeltRefSpeed:=BeltSpeedRef",
+        "Caption": null,
+        "Id": "656d107d-8dac-44e8-bb8a-1ae315bf79ab",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "([VisionSensor1 = 7]+[VisionSensor1 = 8]+[VisionSensor1 =9]) + SendRejectPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "4f2bd412-ab0d-478e-b46e-85b45c228f9e",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepEnclosing",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "25",
+        "Id": "b75575c3-79d5-4620-8fc1-e6a22cf49fcd",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=60",
+        "Caption": null,
+        "Id": "84efb2ea-28c1-4844-9ffb-626e1450668c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=LastBeltRefSpeed",
+        "Caption": null,
+        "Id": "be1aed7e-801c-40d1-9a62-b4d963ef9361",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mSpeed2:=TargetBeltSpeed",
+        "Caption": null,
+        "Id": "71a1528f-24f6-463a-ae20-afd3366b7358",
+        "TargetLinkId": "d1ed1e9f-31ca-44df-b2b6-e6f6fd2e950d"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mSpeed:=TargetBeltSpeed",
+        "Caption": null,
+        "Id": "15635336-5af1-4e01-9fd7-ebd74d24836c",
+        "TargetLinkId": "a9495b1e-1e8e-4a79-8a8a-6e8891fb5a88"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawFlag:=1",
+        "Caption": null,
+        "Id": "56c43f9e-c703-4b4f-85e1-b41ce44cd242",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseFlag:=1",
+        "Caption": null,
+        "Id": "669e86f0-a5b3-4fef-9ffc-c92f78f1b951",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidFlag:=1",
+        "Caption": null,
+        "Id": "5da469b2-6f99-4acb-a3ed-a4aff4a0572c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RejectFlag:=1",
+        "Caption": null,
+        "Id": "31b65f66-adb2-4d2e-9b02-ff88de10b8d9",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RunningPL:=1",
+        "Caption": null,
+        "Id": "d0b1bea3-9774-44dc-b8d4-caeb5a6b066b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionConditional",
+        "ConditionStr": "!_SI_1HZ",
+        "TransitionStr": null,
+        "ActionStr": "WarningLight1",
+        "Caption": "0",
+        "Id": "0ff4f02e-72ab-4ea6-b9ea-5b262155ac5d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "16",
+        "Id": "629d395a-f251-4819-8cbe-a0720c4620c9",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X16",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "3e1685ed-8aa8-407e-bace-d5a299a2da9e",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "23",
+        "Id": "6e056edb-7dd2-4062-b7b1-1b7616c01a8d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "RejectFlag",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "22ee7d5f-4df8-4023-9273-41f9cc629cb1",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "26",
+        "Id": "0c61eca9-fdf6-4984-85d5-ec0cc95cfd48",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "LidFlag",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "448dd315-9077-404b-a18d-3115a4a3a8cd",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "29",
+        "Id": "22577891-eb54-48b6-9f62-69c79aa741d6",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "BaseFlag",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "209755a2-6659-4ee9-8105-fb0d370d5c7d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "37",
+        "Id": "d32092ae-4ae7-463c-b740-b33466dde73b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "RawFlag",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "c1ec6405-1e2e-4e02-8268-16aa1eafdcf4",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "!_SI_1HZ",
+        "TransitionStr": null,
+        "ActionStr": "StartPL:=0",
+        "Caption": null,
+        "Id": "73eb94c9-f88c-466d-88a7-159973ed51cc",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "_SI_1HZ",
+        "TransitionStr": null,
+        "ActionStr": "StartPL:=1",
+        "Caption": null,
+        "Id": "586bddd6-67b6-412f-a578-3d1225993aca",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "StartPL:=1",
+        "Caption": null,
+        "Id": "d2a02400-0703-4c7d-bd3b-aefa08e5ca8d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "title": "Automatic-Resets",
+    "items": [
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "9",
+        "Id": "27dac13b-4dab-4367-a339-980e61cf1ca6",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "1",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "da611b80-786a-4055-86ea-0c2d8bfdcc28",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "10",
+        "Id": "71a59e4c-2c52-4fb6-ae2e-6cfd4c26b4cc",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!ControlOnPL",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "401a75af-efbe-4062-a1e0-2f58fde2facf",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=0",
+        "Caption": null,
+        "Id": "df4a8050-9f0b-40f6-8798-ff54437832b7",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "12",
+        "Id": "19fb7b17-76fd-4913-819f-1ae332e66e73",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191EmitFlag",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "fa5511d4-cd81-4bb4-8c29-11053e525240",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "13",
+        "Id": "beb18e9d-1e93-4fde-bd92-0b945097d752",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "Emitter",
+        "Caption": null,
+        "Id": "0ccb60c8-16af-4e28-b792-af4c019a0f86",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "500ms/X13",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "f52daab1-5e67-42d1-bf4b-1c97ff1b2ee6",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "8",
+        "Id": "cc4a4985-d085-41ff-9617-e2709ce91bf3",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "11",
+        "Id": "8d2482a3-ac8a-49de-8552-2c96c0b54203",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X8",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "65f5680f-2269-434f-b1e1-21464e5c64d4",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X11",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "1d243247-363e-49f8-be83-6612a15278fd",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "title": "Manual-Speeds",
+    "items": [
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LastBeltRefSpeed:=0",
+        "Caption": null,
+        "Id": "7549409a-e86f-453d-8ea8-b282a124c4c0",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mSpeed2:=TargetBeltSpeed",
+        "Caption": null,
+        "Id": "14f34170-ca2e-4d8a-ac47-c0e2e99508a9",
+        "TargetLinkId": "d1ed1e9f-31ca-44df-b2b6-e6f6fd2e950d"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mSpeed:=TargetBeltSpeed",
+        "Caption": null,
+        "Id": "0ff9d225-3fc9-4de0-9496-4ed14876ef23",
+        "TargetLinkId": "a9495b1e-1e8e-4a79-8a8a-6e8891fb5a88"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "51",
+        "Id": "b9a4aa24-db06-4eb2-afe9-1751fd7e3c71",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "1",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "14fb5a79-2e9b-449b-a153-17ca5301a77f",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "52",
+        "Id": "1d986ccc-971b-4886-879b-c209a9da7117",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!ControlOnPL",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "247d63f8-1c20-477c-93dc-5ba205008ba5",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=0",
+        "Caption": null,
+        "Id": "3f5b2921-7423-4746-bac7-8ae07df52380",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "50",
+        "Id": "e4f87a33-98eb-4e13-aa5f-882173dc8970",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X50",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "7fec17f6-1d42-45ad-b073-3ba2b3d89207",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "title": "Manual-PushPullls",
+    "items": [
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "100",
+        "Id": "6e1ee267-ad97-4b34-8150-8905d6d6b21c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191RawSorterBeltCCWManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "a6a03772-fab3-4439-bb7e-64faebcf1bba",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "102",
+        "Id": "e4c0c6d3-21a8-48f6-a765-7fcf4dff7f8d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191RawSorterBeltCCWManPB*!RawSorterBeltCW",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "8494e3e9-de14-44ed-924b-1f38094973bf",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawSorterBeltCCWPL",
+        "Caption": null,
+        "Id": "d8889f10-6b84-45ab-a9b6-4b1ae0a83fa1",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawSorterBeltCCW",
+        "Caption": null,
+        "Id": "6431d821-b21f-4e7b-87a3-6313922b4fb3",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "103",
+        "Id": "63dcc629-9cae-40d9-9b1a-c9af026c91c1",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191RawSorterBeltCWManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "44c599e4-291c-4b29-a65f-81f0e3e60cf7",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "105",
+        "Id": "ddb25020-85d3-466a-a3fb-fd795066fe22",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191RawSorterBeltCWManPB*!RawSorterBeltCCW",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "982831cd-38ee-416f-93f8-f8890bfc91ca",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawSorterBeltCWPL",
+        "Caption": null,
+        "Id": "f390e329-0838-468a-81e2-55e547f5f392",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawSorterBeltCW",
+        "Caption": null,
+        "Id": "076309f8-4d0f-44cf-adfd-058adbd6896d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "106",
+        "Id": "0d7765e8-f6c6-4a73-b532-1680ac8107c8",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191RawSorterBeltTurnManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "b62e9aff-0f6a-437d-87b2-1130b9505480",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "108",
+        "Id": "b0127d75-cd56-4358-b3ce-615854a1bbcb",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191RawSorterBeltTurnManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "129ad333-3ff3-4fe9-b0a9-fd3f3e95f807",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawSorterBeltTurnPL",
+        "Caption": null,
+        "Id": "2aeec706-5557-47d3-b817-0814b0d9c125",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawSorterBeltTurn",
+        "Caption": null,
+        "Id": "3870c90e-5fa3-426b-8862-99c607e7ba41",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "109",
+        "Id": "9348b735-02cf-44a1-809b-0547346d8e8d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191LidSorterBeltCCWManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "3b3f554d-5a28-49a3-9089-5a6d0e71f44a",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "111",
+        "Id": "d98d3c88-6b7b-43cf-8df4-3d14ee1832e0",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191LidSorterBeltCCWManPB*!LidSorterBeltCW",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "a29d94be-0f63-4a22-a48b-977122ab3862",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidSorterBeltCCWPL",
+        "Caption": null,
+        "Id": "ad49f130-14b2-4bea-a889-42fdf6d4b5c4",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidSorterBeltCCW",
+        "Caption": null,
+        "Id": "cc0ee338-5584-43c2-9019-48d268d958f3",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "112",
+        "Id": "adbe9eab-7b26-4404-bcef-4c0e59478f69",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191LidSorterBeltCWManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "44c05f3d-4e5a-4ea5-b108-6099658a60d9",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "114",
+        "Id": "3c84ea1e-0a3a-4455-84b2-4a722e8f774b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191LidSorterBeltCWManPB*!LidSorterBeltCCW",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "6596d67e-46ba-4a8f-881e-0852131d3187",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidSorterBeltCWPL",
+        "Caption": null,
+        "Id": "ced6738f-acba-4d98-abb5-6e8239e9d995",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidSorterBeltCW",
+        "Caption": null,
+        "Id": "5e26bb0c-b3c1-4985-8801-a7734537011a",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "115",
+        "Id": "168da286-85b4-4bb8-87f3-990d72e7c380",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191LidSorterBeltTurnManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "81e04556-37f3-4b8c-bfc0-d3ee394f8683",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "117",
+        "Id": "62886c81-d2c4-4d87-b0fa-66ce8e3085b2",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191LidSorterBeltTurnManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "8b171fc6-8fb0-42b3-83fc-236a9c9746f6",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidSorterBeltTurnPL",
+        "Caption": null,
+        "Id": "3b5b709d-ada4-44c4-b39d-6dc273b5ecfe",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidSorterBeltTurn",
+        "Caption": null,
+        "Id": "454d465c-8347-44c2-babd-654d9aea659f",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "63",
+        "Id": "53f69ff2-d9e5-4f21-9d57-80e4ad5dd9f4",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191BaseSorterBeltCCWManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "2adf2d23-b911-4027-9a62-1a203587ee5c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "65",
+        "Id": "97beecd5-3411-432a-a8a9-86d185f26003",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191BaseSorterBeltCCWManPB*!BaseSorterBeltCW",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "cd4a9814-faf5-4d35-b71c-548db065039d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseSorterBeltCCWPL",
+        "Caption": null,
+        "Id": "c869d4b3-6c0a-49b9-ba20-41a803b808f4",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseSorterBeltCCW",
+        "Caption": null,
+        "Id": "2384dfc4-9708-4c9b-8477-adcde760b431",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "66",
+        "Id": "11e41aed-af29-41f4-8a0a-7f1960759015",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191BaseSorterBeltCWManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "05bc4fa9-da2e-4dcd-ba41-129728999105",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "68",
+        "Id": "98afd2f6-f14f-4ace-86d8-b9a566fc1700",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191BaseSorterBeltCWManPB*!BaseSorterBeltCCW",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "ce211c60-1040-40c3-944e-836682e60be3",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseSorterBeltCWPL",
+        "Caption": null,
+        "Id": "48909dd6-3605-4a35-8c0d-ea998101a069",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseSorterBeltCW",
+        "Caption": null,
+        "Id": "fde89003-e056-4cbf-9d9c-01c9c9358818",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "69",
+        "Id": "9c86429b-f88c-46a9-8ec3-d4a63bdf8fa1",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191BaseSorterBeltTurnManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "c3a303f8-6557-487d-bd78-5c0499e8442a",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "71",
+        "Id": "abe6d0bd-3d82-4283-9c19-76a84655bb84",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191BaseSorterBeltTurnManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "773552ae-dfb1-49e4-b67d-15fa56629b37",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseSorterBeltTurnPL",
+        "Caption": null,
+        "Id": "d2230de3-d90f-427d-9dc4-756167ecc394",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseSorterBeltTurn",
+        "Caption": null,
+        "Id": "a8e25443-f6dc-4205-a31b-28e02cbe4002",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "90",
+        "Id": "d04d007e-ccee-44d3-ae49-c4e9df57dd8e",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191RejectPusherManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "8b3cfa63-0cc0-4781-85f3-0849581403c1",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "92",
+        "Id": "4cefcf60-65c6-47fa-b8ce-7ad09f2ed922",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191RejectPusherManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "466ca00c-a70f-4dbe-bed6-38b3c0b8126a",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RejectPusherPL",
+        "Caption": null,
+        "Id": "f8b962bf-2ee5-4408-a3bd-404df4a229f6",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RejectPusher",
+        "Caption": null,
+        "Id": "023988be-0f95-40f0-a73f-5673aa27abcc",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "60",
+        "Id": "d30c89fe-02a3-4df1-aabc-debb38be1625",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191BeltConveyor4mManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "8bee8fdc-c408-4889-a216-4107d96478ac",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "62",
+        "Id": "de7a7358-6bba-4e44-b898-0b030a726992",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191BeltConveyor4mManPB",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "1d862713-21d5-4952-80be-6320777bbd5e",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mPL:=0",
+        "Caption": null,
+        "Id": "4f94a653-3d32-45f6-a8d3-d8afa56ecb41",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=0",
+        "Caption": null,
+        "Id": "1f3d477f-c757-46ab-9f71-63e1b36325be",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191x100",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "b1b08a5b-a475-45f5-aed9-4948f567a649",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "101",
+        "Id": "0a4785a4-9b7e-463d-9b9e-d8c898b4929c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X103",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "a7ebd267-cb95-40c2-872c-1b77921f6bcd",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "104",
+        "Id": "7a92a4e3-17d2-4069-8de9-6f4c97f96b70",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X106",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "423fe083-7377-4d15-ad7d-684b51d600e7",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "107",
+        "Id": "45e0f742-1f8a-4b38-a525-50fc040f2171",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X109",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "1636410c-2618-4f9e-b573-170a6f1eddca",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "110",
+        "Id": "26bade06-756c-4d3a-8cf4-babf228864b3",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X112",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "7540880c-f6e3-47ec-be4d-7bbdcd1c24fa",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "113",
+        "Id": "3ceac754-6531-472b-8163-d663993c354c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X115",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "b5e4e57c-af48-43bc-9a63-e6275329327d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "116",
+        "Id": "965c8e2a-f5a8-4fbf-afee-3fb8983a33cc",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X63",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "a528a61e-c1d1-4840-90ee-824f24b5f87d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "64",
+        "Id": "af88f9e2-17fb-4115-9f61-38df6c88c47c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X66",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "54056323-a84b-4a7d-b9e8-91c556d3c0e7",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "67",
+        "Id": "5d5dcdb8-e8a8-493a-b9ad-d8b1b35d3cd0",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X69",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "e23edf2e-2dd9-433e-bbcb-f90636e4a49c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "70",
+        "Id": "925533a6-d98f-4cea-87c6-ce68639de8c7",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X90",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "619870e5-ed8c-4598-8a01-9324a5a5562b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "91",
+        "Id": "3c82d70f-504c-4126-8f3d-485d88606694",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191X60",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "bbefc063-d31b-48aa-b8c9-57f9ca1bbcfc",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "61",
+        "Id": "19a818b0-b3ef-47ee-9bda-8ca0bb8000e2",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=60",
+        "Caption": null,
+        "Id": "c76d4014-2b63-4141-b45c-fa70803d02c3",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mPL:=1",
+        "Caption": null,
+        "Id": "b853f72c-1621-4674-b2c3-a5c9917af50b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "title": "Manual-Counters",
+    "items": [
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "57",
+        "Id": "68534692-8c0e-44eb-8373-5cbae93b0a58",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2191Reset",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "9f7be8e5-f01d-4706-8650-b0bca9225ee7",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "58",
+        "Id": "cff428e2-5af1-47e6-8b96-b13b585fa1d0",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "5s/X58*Reset",
+        "TransitionStr": null,
+        "ActionStr": "LidCounter:=0",
+        "Caption": null,
+        "Id": "410da417-0eb1-4a5a-b69a-edfd02a4a3e0",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "\u2193Reset",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "6738b529-d6e8-4b94-a4c5-4ac8b0401aa4",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "5s/X58*Reset",
+        "TransitionStr": null,
+        "ActionStr": "RawCounter:=0",
+        "Caption": null,
+        "Id": "5f820db4-a2e8-46a9-afb6-727f77170a9b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "5s/X58*Reset",
+        "TransitionStr": null,
+        "ActionStr": "BaseCounter:=0",
+        "Caption": null,
+        "Id": "4dfd184a-98d7-4234-9c4b-15b4cdca1a8c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "title": "Sort Raw",
+    "items": [
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!Atexit",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "9fea8541-8c00-45f0-8c7b-bafcc5262950",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "73",
+        "Id": "b4ba2d17-c715-4609-8b85-6b9dcfbc6340",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "AtExit",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "3040333c-e71a-4c0d-9343-75e0a3d79399",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawSorterBeltCWPL",
+        "Caption": null,
+        "Id": "65c644c1-b0b3-4992-afdf-36a91625e527",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawSorterBeltTurnPL",
+        "Caption": null,
+        "Id": "a98429fb-b07b-4958-a7bf-87e9aeaf4cb1",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "500ms/X74",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "3d8a33ac-2660-4f8d-a7ab-3c3c95646886",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "74",
+        "Id": "a46ef0d4-4e3d-4f58-9fe9-618fe74518db",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawLightInd",
+        "Caption": null,
+        "Id": "72e8589c-8d39-4c23-a7be-daa48c4dd585",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawCounter := RawCounter + 1",
+        "Caption": null,
+        "Id": "75de0ff2-193b-40ec-b296-9bf53ec91dfb",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": " BeltSpeedRef:=LastBeltRefSpeed",
+        "Caption": null,
+        "Id": "9fc66d4b-147f-43bd-beeb-1587067252d1",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawSorterBeltCW",
+        "Caption": null,
+        "Id": "192ac887-0020-45e8-a64c-386e38cbe554",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawSorterBeltTurn",
+        "Caption": null,
+        "Id": "27d0d3fa-e5da-4d39-a050-6d3295d4d287",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RawFlag:=0",
+        "Caption": null,
+        "Id": "422430bd-1ca6-4b4d-841d-f7828179c533",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "72",
+        "Id": "665a1328-ab68-407e-9d46-3cbafae9829b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "75",
+        "Id": "fff60add-34a8-4291-9738-d798bf5e812f",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "1",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "dc59d89c-8d56-49c8-b05a-b78d3f2ce23f",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "title": "Sort Base",
+    "items": [
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!Atexit",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "3ec33290-ea30-4d1b-90e8-6c9b7eabcfd8",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "77",
+        "Id": "276b2c47-e05c-4f83-972b-29dbd70b7230",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "AtExit",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "241a3855-a6fb-44f8-8f20-0d8474303c9c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseSorterBeltCW",
+        "Caption": null,
+        "Id": "009dfcb2-9e02-4123-bfeb-916a46f30a88",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseSorterBeltTurn",
+        "Caption": null,
+        "Id": "d4ec55b6-778c-4cf4-ba8a-e3e04ef3f9aa",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "500ms/X78",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "a6a58f92-f3e7-4884-9e7a-048929d4a7c3",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "78",
+        "Id": "36505c8b-1def-4e91-bcd7-d1aa481b6350",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseLightInd",
+        "Caption": null,
+        "Id": "962635e0-ed93-4ae7-880e-ed9e5490ae14",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseCounter := BaseCounter + 1",
+        "Caption": null,
+        "Id": "4262a185-3a6c-4159-a2af-6d88bba6e4b9",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": " BeltSpeedRef:=LastBeltRefSpeed",
+        "Caption": null,
+        "Id": "141181c8-83a5-4a22-a34d-9f7abe3e9546",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseSorterBeltCWPL",
+        "Caption": null,
+        "Id": "598e2d54-1ad7-44dd-92e5-f1cbfbc4487c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseSorterBeltTurnPL",
+        "Caption": null,
+        "Id": "35357fa1-6a61-4b3f-8106-8dde69d55f92",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BaseFlag:=0",
+        "Caption": null,
+        "Id": "66931154-d709-4ab8-b41c-0c8c543a2376",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "76",
+        "Id": "c6e04f8d-e1ba-41d8-bb43-c136879ef7c7",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "79",
+        "Id": "7699b374-feb2-4070-ac84-739e48dedbc7",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "1",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "80eb8e5c-12bc-422a-92b2-ee7088742f5b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "title": "Sort Lid",
+    "items": [
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "!Atexit",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "23800162-f104-43d5-a091-82ac067a4308",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "81",
+        "Id": "9542a773-0027-4db5-b30f-d759373ddf52",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "AtExit",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "d8df5b37-a54e-47d3-b0d5-711500fa3b63",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "82",
+        "Id": "3107ea73-7a3c-46ef-a256-ede95e7a6567",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidSorterBeltCWPL",
+        "Caption": null,
+        "Id": "a70bad32-56e9-4aac-9b86-b4db9c0e77f2",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidSorterBeltTurnPL",
+        "Caption": null,
+        "Id": "5bf6b8f7-2e9d-4bad-8d23-2d5da563175a",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "500ms/X82",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "8763128f-9824-462f-af1a-4c5c46aab3ea",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidLightInd",
+        "Caption": null,
+        "Id": "dcb396d4-87ad-4c93-b9c2-3fabd53f0656",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidCounter := LidCounter + 1",
+        "Caption": null,
+        "Id": "5767845f-8cda-4ae8-97b4-b1db17523740",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": " BeltSpeedRef:=LastBeltRefSpeed",
+        "Caption": null,
+        "Id": "2046ef7a-57b0-45fa-b050-68ac8b7c69ee",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidSorterBeltCW",
+        "Caption": null,
+        "Id": "9877ed0b-d1a8-4575-85e1-ccdc111a5ba8",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidSorterBeltTurn",
+        "Caption": null,
+        "Id": "fe892ca7-4815-4507-852f-2530d390cef1",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "LidFlag:=0",
+        "Caption": null,
+        "Id": "d4527972-deb5-4046-a3a9-777ba5402652",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "80",
+        "Id": "740821a5-7d74-497b-bc3f-1609df36db56",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "83",
+        "Id": "78fd44b6-b29d-4e82-aa67-6879f56ee58b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "1",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "bbf5754d-0a6f-4349-b074-769013d25cfd",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "title": "Continuous",
+    "items": [
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "[BeltSpeedRef > 300]",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=300",
+        "Caption": null,
+        "Id": "0f705bb8-815d-48ef-9b2d-d133b28a9f09",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepInitial",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "46",
+        "Id": "2f6af5c6-61ca-48c4-be75-ff2d6e7c396d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "\u2191IncSpdX100 * ControlOnPL",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=BeltSpeedRef+100",
+        "Caption": null,
+        "Id": "63f8d345-ccc8-4b6d-a1f1-22a5449ebf49",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "[BeltSpeedRef = 0]",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mPL:=0",
+        "Caption": null,
+        "Id": "1637bcb7-2082-4c94-a8e1-202aa8c09404",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepInitial",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "48",
+        "Id": "090a057b-f1b5-4167-8942-ef86098d0333",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "\u2191IncSpdX10 * ControlOnPL",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=BeltSpeedRef+10",
+        "Caption": null,
+        "Id": "251d5d35-001c-4224-9690-535c090ce6a4",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "[BeltSpeedRef < 0]",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=0",
+        "Caption": null,
+        "Id": "10f4a0c3-2269-4d27-a1a3-e0fa9a70d8c2",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepInitial",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "44",
+        "Id": "44c73cd6-5506-4b07-b5e1-3a819664cb69",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "\u2191DecSpdX100 * ControlOnPL",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=BeltSpeedRef-100",
+        "Caption": null,
+        "Id": "12d55f6d-fb50-468e-9dba-03f37dce2ee8",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "[BeltSpeedRef < 0]",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=0",
+        "Caption": null,
+        "Id": "96aabd62-8eed-4492-bf06-dd67b83587d5",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepInitial",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "14",
+        "Id": "f49a99a8-91d1-4a1d-8b35-869361a2985a",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "\u2191DecSpdX10 * ControlOnPL",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=BeltSpeedRef-10",
+        "Caption": null,
+        "Id": "637162f4-81a7-456d-88db-5f8ba82e779c",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "\u2191DecSpdX10 + \u2191DecSpdX100 + \u2191IncSpdX10 + \u2191IncSpdX100",
+        "TransitionStr": null,
+        "ActionStr": "LastBeltRefSpeed:=BeltSpeedRef",
+        "Caption": null,
+        "Id": "6a3bca59-39be-49f7-80ac-1c9ca02b0457",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepInitial",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "38",
+        "Id": "57bdfe11-0e07-46c1-a4b1-114de6b98347",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "[BeltSpeedRef > 300]",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=300",
+        "Caption": null,
+        "Id": "8593178a-6bc7-49bb-b3d1-112473268b29",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "[BeltSpeedRef > 0]",
+        "TransitionStr": null,
+        "ActionStr": "BeltConveyor4mPL:=1",
+        "Caption": null,
+        "Id": "2350af2c-9346-4a5e-9e7e-12f5ca3df366",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepInitial",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "36",
+        "Id": "1b9e443b-85ed-40ad-8e85-596dec2de61d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "TargetBeltSpeed :=BeltSpeedRef * (1000/300)",
+        "Caption": null,
+        "Id": "90f03faf-d1b7-45a0-9daf-ddda1fe05813",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepInitial",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "39",
+        "Id": "189e84e2-ccdb-4e70-a966-f2dd2b99ef90",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "TargetBeltSpeed :=BeltSpeedRef * (27648/300)",
+        "Caption": null,
+        "Id": "ceb42978-fa88-4f15-bf95-0414f3adb3de",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionEvent",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "TargetBeltSpeed :=BeltSpeedRef * (10/300)",
+        "Caption": null,
+        "Id": "d6b370c0-8088-4a96-9c38-fb445b95ea9b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  },
+  {
+    "title": "Reject",
+    "items": [
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RejectPusherPL",
+        "Caption": null,
+        "Id": "04f90fa5-6145-4fca-9e2a-5346b15ecc37",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "RejPushFrontLimit",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "a3795609-3bf3-499e-9da3-9467ca4f5901",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "BeltSpeedRef:=0",
+        "Caption": null,
+        "Id": "0ec6cc3d-8ba1-425e-a064-282d6dd1198d",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RejectPusher",
+        "Caption": null,
+        "Id": "e5ffd1f5-98d1-4e6c-bcc0-230d188c350b",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "85",
+        "Id": "c59d6d6e-ddd0-4291-995f-a6cc9c41ee83",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "Transition",
+        "ConditionStr": "1",
+        "TransitionStr": "RejectDiffuseSensor",
+        "ActionStr": "?",
+        "Caption": null,
+        "Id": "9a237166-c2fc-4da3-bece-70e446c46010",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "ActionActivation",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "RejectFlag:=0",
+        "Caption": null,
+        "Id": "c5a493e1-e711-4bab-aa10-657ff08e0eb9",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "true",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "84",
+        "Id": "b49cfad1-9518-4721-a8bb-38f7a1fc667e",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "IsStartStep": "false",
+        "TypeEnum": "StepNormal",
+        "ConditionStr": "1",
+        "TransitionStr": null,
+        "ActionStr": "?",
+        "Caption": "86",
+        "Id": "778fc048-8288-46be-9f97-9c7f8a2c9528",
+        "TargetLinkId": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
+  }
+]
