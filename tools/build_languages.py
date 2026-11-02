@@ -4,7 +4,11 @@ Rejects unsupported statements. Branch decisions are captured before writes,
 so LD/FBD preserve ST's sequential, one-branch-per-IF/CASE semantics.
 """
 from pathlib import Path
+import argparse
 import re
+cli=argparse.ArgumentParser(description=__doc__)
+cli.add_argument('--language',choices=['ST','LD','FBD'],action='append',help='Regenerate only this implementation (repeatable; default: all)')
+selected_languages=cli.parse_args().language or ['ST','LD','FBD']
 ROOT=Path(__file__).resolve().parents[1]
 source=(ROOT/'control.st').read_text()
 clean=re.sub(r'\(\*.*?\*\)', '', source, flags=re.S)
@@ -77,6 +81,39 @@ def lower(nodes,parent='TRUE'):
     emit(guard,f'({parent}) AND ({cond})',note='Select CASE branch')
     lower(children,guard)
 lower(tree)
+
+def inline_decisions(operations, variables):
+ """Inline contacts only when their operands stay unchanged until every use.
+
+ Exclude the last consuming operation's target: its RHS/guard is evaluated
+ before its target is written. Process definitions in order so substitutions
+ expose the remaining guards' real dependencies.
+ """
+ operations=list(operations);variables=dict(variables)
+ for name in list(variables):
+  if variables[name]!='BOOL':continue
+  pattern=re.compile(r'\b'+re.escape(name)+r'\b')
+  index=next(i for i,op in enumerate(operations) if op[0]==name)
+  value=operations[index][1]
+  uses=[i for i,(_,v,g,_) in enumerate(operations) if i>index and (pattern.search(v) or pattern.search(g))]
+  dependencies=set(re.findall(r'[A-Za-z_]\w*',value))
+  if uses and any(t in dependencies for t,_,_,_ in operations[index+1:max(uses)]):continue
+  operations=[(t,pattern.sub(lambda _:f'({value})',v),pattern.sub(lambda _:f'({value})',g),note)
+              for i,(t,v,g,note) in enumerate(operations) if i!=index]
+  del variables[name]
+ return operations,variables
+
+ld_ops,ld_temps=inline_decisions(ops,temps)
+# These are the only decisions whose source operands change before their
+# last use in this controller. Give the retained scan snapshots useful names.
+snapshot_names={'Branch003':'MainWasEmergency', 'Branch005':'MainWasWaitingForReset',
+                'CaseValue019':'AutoStepAtScanStart'}
+for old in list(ld_temps):
+ new=snapshot_names.get(old)
+ if new is None:raise ValueError(f'Name the required ladder snapshot: {old}')
+ pattern=re.compile(r'\b'+old+r'\b')
+ ld_ops=[(new if t==old else t,pattern.sub(new,v),pattern.sub(new,g),note) for t,v,g,note in ld_ops]
+ ld_temps[new]=ld_temps.pop(old)
 # Convert top-level Boolean operators to native LD contact function calls.
 def strip(expr):
  expr=expr.strip()
@@ -98,7 +135,13 @@ def contact(expr):
    elif c==')':depth-=1
    if depth==0 and expr.startswith(operator,i):
     left,right=expr[:i],expr[i+len(operator):]
-    if function in ('AND','OR'):return f'{function}({contact(left)}, {contact(right)})'
+    if function in ('AND','OR'):
+     left,right=contact(left),contact(right)
+     identity,absorbing=('TRUE','FALSE') if function=='AND' else ('FALSE','TRUE')
+     if absorbing in (left,right):return absorbing
+     if left==identity:return right
+     if right==identity or left==right:return left
+     return f'{function}({left}, {right})'
     return f'{function}({contact(left)}, {contact(right)})'
    i+=1
  for operators in [[(' + ','ADD'),(' - ','SUB')],[(' * ','MUL'),(' / ','DIV')]]:
@@ -114,12 +157,84 @@ def contact(expr):
    return f'{function}({contact(expr[:i])}, {contact(expr[i+len(operator):])})'
  if expr.startswith('NOT '):return f'NOT({contact(expr[4:])})'
  return expr
+def ladder_logic(expr):
+ """Simplify Boolean contacts without changing comparison/arithmetic evaluation."""
+ def parse(text):
+  match=re.fullmatch(r'(AND|OR|NOT)\((.*)\)',text)
+  if not match:return text
+  op,body=match.groups();args=[];start=depth=0
+  for i,c in enumerate(body):
+   depth+=(c=='(')-(c==')')
+   if c==',' and depth==0:args.append(parse(body[start:i].strip()));start=i+1
+  args.append(parse(body[start:].strip()))
+  return (op,tuple(args))
+ def neg(node):
+  if node=='TRUE':return 'FALSE'
+  if node=='FALSE':return 'TRUE'
+  if isinstance(node,tuple) and node[0]=='NOT':return node[1][0]
+  return ('NOT',(node,))
+ def simplify(node,known=frozenset()):
+  if node in known:return 'TRUE'
+  if neg(node) in known:return 'FALSE'
+  if isinstance(node,str):return node
+  op,args=node
+  if op=='NOT':
+   child=simplify(args[0],known)
+   if isinstance(child,tuple) and child[0] in ('AND','OR'):
+    return simplify(('OR' if child[0]=='AND' else 'AND',tuple(neg(a) for a in child[1])),known)
+   return neg(child)
+  identity,zero=('TRUE','FALSE') if op=='AND' else ('FALSE','TRUE')
+  flat=[]
+  for arg in args:
+   arg=simplify(arg,known)
+   for item in arg[1] if isinstance(arg,tuple) and arg[0]==op else (arg,):
+    if item==zero:return zero
+    if item!=identity and item not in flat:flat.append(item)
+  if any(neg(a) in flat for a in flat):return zero
+  # Other series contacts are known true; other parallel legs are known false.
+  for i,arg in enumerate(flat):
+   facts=frozenset(a if op=='AND' else neg(a) for j,a in enumerate(flat) if i!=j)
+   reduced=simplify(arg,known|facts)
+   if reduced!=arg:
+    return simplify((op,tuple(flat[:i]+[reduced]+flat[i+1:])),known)
+  return identity if not flat else flat[0] if len(flat)==1 else (op,tuple(flat))
+ def emit(node):
+  if isinstance(node,str):return node
+  op,args=node
+  if op=='NOT':return '/'+emit(args[0])
+  if op=='AND':return ' '.join(emit(arg) for arg in args)
+  return '[ '+' | '.join(emit(arg) for arg in args)+' ]'
+ return emit(simplify(parse(expr)))
+
+def combine_ladder_coils(lines):
+ """Fan out adjacent independent coils with identical rung power.
+
+ The compiler evaluates shared power once, so never combine when an earlier
+ coil writes an operand read by that condition.
+ """
+ result=[];previous=None
+ coil=re.compile(r'    (.*?) (\( (?:[SR] )?(\w+) \))$')
+ for line in lines:
+  if line.startswith('  RUNG '):
+   pending=line
+   continue
+  match=coil.fullmatch(line)
+  if match and previous and len(previous[1])<3 and match[1]==previous[0] and not any(
+    re.search(r'\b'+re.escape(target)+r'\b',match[1]) for target in previous[1]):
+   result[-1]+=' '+match[2]
+   previous[1].append(match[3])
+  else:
+   if line.startswith('    '):result.append(pending)
+   result.append(line)
+   previous=(match[1],[match[3]]) if match else None
+ return result
+
 # Reset each implementation's private locals; shared counters are never reset here.
 locals_text=header.split('END_VAR',1)[1]
 locals_types={m.group(1):m.group(2) for m in re.finditer(r'(\w+)\s*:\s*(BOOL|REAL|INT)\s*;',locals_text)}
 alltypes={m.group(1):m.group(2) for m in re.finditer(r'(\w+)\s*:\s*(BOOL|REAL|INT)\s*;',header)}
 reset_ops=[(name,'FALSE' if typ=='BOOL' else '0.0' if typ=='REAL' else '0','ResetState','Reset private state') for name,typ in locals_types.items()]
-for language in ['ST','LD','FBD']:
+for language in selected_languages:
  name='Practicum'+language
  h=header.replace('PROGRAM FinalPracticum','FUNCTION_BLOCK '+name,1)
  h+='VAR_INPUT\n    ResetState : BOOL;\nEND_VAR\n'
@@ -127,21 +242,31 @@ for language in ['ST','LD','FBD']:
   resets='\n'.join(f'    {target} := {value};' for target,value,_,_ in reset_ops)
   result=h+'IF ResetState THEN\n'+resets+'\nELSE\n'+body+'END_IF;\nEND_FUNCTION_BLOCK\n'
  else:
-  h+='VAR\n'+''.join(f'    {n} : {t};\n' for n,t in temps.items())+'END_VAR\n'
+  diagram_ops,diagram_temps=(ld_ops,ld_temps) if language=='LD' else (ops,temps)
+  h+='VAR\n'+''.join(f'    {n} : {t};\n' for n,t in diagram_temps.items())+'END_VAR\n'
   lines=[h,language]
-  for n,(target,value,guard,note) in enumerate(reset_ops+[(t,v,f'NOT ResetState AND ({g})',note) for t,v,g,note in ops],1):
+  for n,(target,value,guard,note) in enumerate(reset_ops+[(t,v,f'NOT ResetState AND ({g})',note) for t,v,g,note in diagram_ops],1):
    value=strip(value)
    if language=='LD':
     lines.append(f'  RUNG r{n:03d}_{target}'+(f' (* {note} *)' if note else ''))
-    if alltypes.get(target,temps.get(target))=='BOOL':
-     # SEL preserves the previous coil value when the branch has no power.
-     lines.append(f'    SEL({contact(guard)}, {target}, {contact(value)}) ( {target} )')
+    if alltypes.get(target,diagram_temps.get(target))=='BOOL':
+     if value in ('TRUE','FALSE'):
+      mode='S' if value=='TRUE' else 'R'
+      lines.append(f'    {ladder_logic(contact(guard))} ( {mode} {target} )')
+     elif target in diagram_temps:
+      lines.append(f'    {ladder_logic(contact(guard+" AND ("+value+")"))} ( {target} )')
+     else:
+      # A parallel holding path retains the coil when its assignment is disabled.
+      power=contact(guard);new_value=contact(value)
+      logic=f'OR(AND({power}, {new_value}), AND(NOT({power}), {target}))'
+      lines.append(f'    {ladder_logic(logic)} ( {target} )')
     else:
-     lines.append(f'    '+('ResetState' if guard=='ResetState' else contact(guard))+f' {{ {target} := {value} }}')
+     lines.append(f'    '+ladder_logic(contact(guard))+f' {{ {target} := {value} }}')
    else:
     if note:lines.append(f"  NETWORK '{n:03d} {note}: {target}'")
     lines.append(f'  {target} := SEL({contact(guard)}, {target}, ({contact(value)}))')
+  if language=='LD':lines=combine_ladder_coils(lines)
   lines += ['END_'+language,'END_FUNCTION_BLOCK','']
   result='\n'.join(lines)
  (ROOT/'lib'/f'practicum_{language.lower()}.{language.lower()}').write_text('(* Generated by tools/build_languages.py from control.st. *)\n'+result)
-print(f'Generated ST/LD/FBD function blocks: {len(ops)} operations, {len(temps)} branch temporaries.')
+print(f'Generated {", ".join(selected_languages)}: LD has {len(ld_ops)} operations and {len(ld_temps)} named snapshots; FBD has {len(ops)} operations and {len(temps)} temporaries.')

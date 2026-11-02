@@ -145,77 +145,16 @@ VAR_INPUT
     ResetState : BOOL;
 END_VAR
 VAR
-    Branch001 : BOOL;
-    Branch002 : BOOL;
-    Branch003 : BOOL;
-    Branch004 : BOOL;
-    Branch005 : BOOL;
-    Branch006 : BOOL;
-    Branch007 : BOOL;
-    Branch008 : BOOL;
-    Branch009 : BOOL;
-    Branch010 : BOOL;
-    Branch011 : BOOL;
-    Branch012 : BOOL;
-    Branch013 : BOOL;
-    Branch014 : BOOL;
-    Branch015 : BOOL;
-    Branch016 : BOOL;
-    Branch017 : BOOL;
-    Branch018 : BOOL;
-    CaseValue019 : INT;
-    CaseBranch020 : BOOL;
-    CaseBranch021 : BOOL;
-    Branch022 : BOOL;
-    CaseBranch023 : BOOL;
-    Branch024 : BOOL;
-    CaseBranch025 : BOOL;
-    Branch026 : BOOL;
-    CaseBranch027 : BOOL;
-    Branch028 : BOOL;
-    Branch029 : BOOL;
-    Branch030 : BOOL;
-    Branch031 : BOOL;
-    Branch032 : BOOL;
-    CaseBranch033 : BOOL;
-    Branch034 : BOOL;
-    CaseBranch035 : BOOL;
-    Branch036 : BOOL;
-    CaseBranch037 : BOOL;
-    Branch038 : BOOL;
-    CaseBranch039 : BOOL;
-    Branch040 : BOOL;
-    CaseBranch041 : BOOL;
-    Branch042 : BOOL;
-    CaseBranch043 : BOOL;
-    Branch044 : BOOL;
-    Branch045 : BOOL;
-    Branch046 : BOOL;
-    Branch047 : BOOL;
-    Branch048 : BOOL;
-    Branch049 : BOOL;
-    Branch050 : BOOL;
-    Branch051 : BOOL;
-    Branch052 : BOOL;
-    Branch053 : BOOL;
-    Branch054 : BOOL;
-    Branch055 : BOOL;
-    Branch056 : BOOL;
-    Branch057 : BOOL;
-    Branch058 : BOOL;
-    Branch059 : BOOL;
-    Branch060 : BOOL;
-    Branch061 : BOOL;
-    Branch062 : BOOL;
-    Branch063 : BOOL;
-    Branch064 : BOOL;
+    MainWasEmergency : BOOL;
+    MainWasWaitingForReset : BOOL;
+    AutoStepAtScanStart : INT;
 END_VAR
 
 LD
   RUNG r001_ClockS (* Reset private state *)
     ResetState { ClockS := 0.0 }
   RUNG r002_Blink (* Reset private state *)
-    SEL(ResetState, Blink, FALSE) ( Blink )
+    ResetState ( R Blink )
   RUNG r003_AutoElapsed (* Reset private state *)
     ResetState { AutoElapsed := 0.0 }
   RUNG r004_EmitRemaining (* Reset private state *)
@@ -227,574 +166,366 @@ LD
   RUNG r007_PrevMode (* Reset private state *)
     ResetState { PrevMode := 0 }
   RUNG r008_PrevClassify (* Reset private state *)
-    SEL(ResetState, PrevClassify, FALSE) ( PrevClassify )
-  RUNG r009_PrevStart (* Reset private state *)
-    SEL(ResetState, PrevStart, FALSE) ( PrevStart )
-  RUNG r010_PrevReset (* Reset private state *)
-    SEL(ResetState, PrevReset, FALSE) ( PrevReset )
+    ResetState ( R PrevClassify ) ( R PrevStart ) ( R PrevReset )
   RUNG r011_PrevInc10 (* Reset private state *)
-    SEL(ResetState, PrevInc10, FALSE) ( PrevInc10 )
-  RUNG r012_PrevInc100 (* Reset private state *)
-    SEL(ResetState, PrevInc100, FALSE) ( PrevInc100 )
-  RUNG r013_PrevDec10 (* Reset private state *)
-    SEL(ResetState, PrevDec10, FALSE) ( PrevDec10 )
+    ResetState ( R PrevInc10 ) ( R PrevInc100 ) ( R PrevDec10 )
   RUNG r014_PrevDec100 (* Reset private state *)
-    SEL(ResetState, PrevDec100, FALSE) ( PrevDec100 )
-  RUNG r015_PrevBelt (* Reset private state *)
-    SEL(ResetState, PrevBelt, FALSE) ( PrevBelt )
-  RUNG r016_PrevReject (* Reset private state *)
-    SEL(ResetState, PrevReject, FALSE) ( PrevReject )
+    ResetState ( R PrevDec100 ) ( R PrevBelt ) ( R PrevReject )
   RUNG r017_PrevRawCCW (* Reset private state *)
-    SEL(ResetState, PrevRawCCW, FALSE) ( PrevRawCCW )
-  RUNG r018_PrevRawCW (* Reset private state *)
-    SEL(ResetState, PrevRawCW, FALSE) ( PrevRawCW )
-  RUNG r019_PrevRawTurn (* Reset private state *)
-    SEL(ResetState, PrevRawTurn, FALSE) ( PrevRawTurn )
+    ResetState ( R PrevRawCCW ) ( R PrevRawCW ) ( R PrevRawTurn )
   RUNG r020_PrevBaseCCW (* Reset private state *)
-    SEL(ResetState, PrevBaseCCW, FALSE) ( PrevBaseCCW )
-  RUNG r021_PrevBaseCW (* Reset private state *)
-    SEL(ResetState, PrevBaseCW, FALSE) ( PrevBaseCW )
-  RUNG r022_PrevBaseTurn (* Reset private state *)
-    SEL(ResetState, PrevBaseTurn, FALSE) ( PrevBaseTurn )
+    ResetState ( R PrevBaseCCW ) ( R PrevBaseCW ) ( R PrevBaseTurn )
   RUNG r023_PrevLidCCW (* Reset private state *)
-    SEL(ResetState, PrevLidCCW, FALSE) ( PrevLidCCW )
-  RUNG r024_PrevLidCW (* Reset private state *)
-    SEL(ResetState, PrevLidCW, FALSE) ( PrevLidCW )
-  RUNG r025_PrevLidTurn (* Reset private state *)
-    SEL(ResetState, PrevLidTurn, FALSE) ( PrevLidTurn )
+    ResetState ( R PrevLidCCW ) ( R PrevLidCW ) ( R PrevLidTurn )
   RUNG r026_ManBelt (* Reset private state *)
-    SEL(ResetState, ManBelt, FALSE) ( ManBelt )
-  RUNG r027_ManReject (* Reset private state *)
-    SEL(ResetState, ManReject, FALSE) ( ManReject )
-  RUNG r028_ManRawCCW (* Reset private state *)
-    SEL(ResetState, ManRawCCW, FALSE) ( ManRawCCW )
+    ResetState ( R ManBelt ) ( R ManReject ) ( R ManRawCCW )
   RUNG r029_ManRawCW (* Reset private state *)
-    SEL(ResetState, ManRawCW, FALSE) ( ManRawCW )
-  RUNG r030_ManRawTurn (* Reset private state *)
-    SEL(ResetState, ManRawTurn, FALSE) ( ManRawTurn )
-  RUNG r031_ManBaseCCW (* Reset private state *)
-    SEL(ResetState, ManBaseCCW, FALSE) ( ManBaseCCW )
+    ResetState ( R ManRawCW ) ( R ManRawTurn ) ( R ManBaseCCW )
   RUNG r032_ManBaseCW (* Reset private state *)
-    SEL(ResetState, ManBaseCW, FALSE) ( ManBaseCW )
-  RUNG r033_ManBaseTurn (* Reset private state *)
-    SEL(ResetState, ManBaseTurn, FALSE) ( ManBaseTurn )
-  RUNG r034_ManLidCCW (* Reset private state *)
-    SEL(ResetState, ManLidCCW, FALSE) ( ManLidCCW )
+    ResetState ( R ManBaseCW ) ( R ManBaseTurn ) ( R ManLidCCW )
   RUNG r035_ManLidCW (* Reset private state *)
-    SEL(ResetState, ManLidCW, FALSE) ( ManLidCW )
-  RUNG r036_ManLidTurn (* Reset private state *)
-    SEL(ResetState, ManLidTurn, FALSE) ( ManLidTurn )
+    ResetState ( R ManLidCW ) ( R ManLidTurn )
   RUNG r037_ClockS
-    AND(NOT(ResetState), TRUE) { ClockS := ClockS + ScanDtS }
-  RUNG r038_Branch001 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch001, AND(TRUE, AND(TRUE, GE(ClockS, 1.0)))) ( Branch001 )
-  RUNG r039_ClockS
-    AND(NOT(ResetState), Branch001) { ClockS := ClockS - 1.0 }
-  RUNG r040_Blink
-    SEL(AND(NOT(ResetState), TRUE), Blink, LT(ClockS, 0.5)) ( Blink )
-  RUNG r041_Branch002 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch002, AND(TRUE, AND(TRUE, OR(NOT(EmergencyStop), OR(NOT(EmergencyStop2), FIOReset))))) ( Branch002 )
-  RUNG r042_Branch003 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch003, AND(TRUE, AND(NOT(Branch002), EQ(MainStep, 1)))) ( Branch003 )
-  RUNG r043_Branch004 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch004, AND(TRUE, AND(AND(NOT(Branch002), NOT(Branch003)), NOT(Stop)))) ( Branch004 )
-  RUNG r044_Branch005 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch005, AND(TRUE, AND(AND(NOT(Branch002), AND(NOT(Branch003), NOT(Branch004))), EQ(MainStep, 2)))) ( Branch005 )
+    /ResetState { ClockS := ClockS + ScanDtS }
+  RUNG r038_ClockS
+    /ResetState GE(ClockS, 1.0) { ClockS := ClockS - 1.0 }
+  RUNG r039_Blink
+    [ /ResetState LT(ClockS, 0.5) | ResetState Blink ] ( Blink )
+  RUNG r040_MainWasEmergency (* Capture IF decision before branch writes *)
+    /ResetState EmergencyStop EmergencyStop2 /FIOReset EQ(MainStep, 1) ( MainWasEmergency )
+  RUNG r041_MainWasWaitingForReset (* Capture IF decision before branch writes *)
+    /ResetState EmergencyStop EmergencyStop2 /FIOReset /MainWasEmergency Stop EQ(MainStep, 2) ( MainWasWaitingForReset )
+  RUNG r042_MainStep
+    /ResetState [ /EmergencyStop | /EmergencyStop2 | FIOReset ] { MainStep := 1 }
+  RUNG r043_MainStep
+    /ResetState MainWasEmergency Stop { MainStep := 2 }
+  RUNG r044_MainStep
+    /ResetState EmergencyStop EmergencyStop2 /FIOReset /MainWasEmergency /Stop { MainStep := 2 }
   RUNG r045_MainStep
-    AND(NOT(ResetState), Branch002) { MainStep := 1 }
-  RUNG r046_Branch006 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch006, AND(Branch003, AND(TRUE, Stop))) ( Branch006 )
-  RUNG r047_MainStep
-    AND(NOT(ResetState), Branch006) { MainStep := 2 }
-  RUNG r048_MainStep
-    AND(NOT(ResetState), Branch004) { MainStep := 2 }
-  RUNG r049_Branch007 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch007, AND(Branch005, AND(TRUE, AND(OR(Reset, Reset2PB), AND(NOT(ClassifyDefuseSensor), AND(NOT(RejectDiffuseSensor), AtExit)))))) ( Branch007 )
-  RUNG r050_MainStep
-    AND(NOT(ResetState), Branch007) { MainStep := 3 }
-  RUNG r051_ControlOnPL
-    SEL(AND(NOT(ResetState), TRUE), ControlOnPL, OR(EQ(MainStep, 3), Blink)) ( ControlOnPL )
-  RUNG r052_ControlOnPL2
-    SEL(AND(NOT(ResetState), TRUE), ControlOnPL2, ControlOnPL) ( ControlOnPL2 )
-  RUNG r053_StopPL
-    SEL(AND(NOT(ResetState), TRUE), StopPL, NE(MainStep, 3)) ( StopPL )
-  RUNG r054_EStoppedPL
-    SEL(AND(NOT(ResetState), TRUE), EStoppedPL, AND(EQ(MainStep, 1), Blink)) ( EStoppedPL )
-  RUNG r055_Mode
-    AND(NOT(ResetState), TRUE) { Mode := 0 }
-  RUNG r056_Branch008 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch008, AND(TRUE, AND(TRUE, EQ(MainStep, 3)))) ( Branch008 )
-  RUNG r057_Branch009 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch009, AND(Branch008, AND(TRUE, AND(ManualSS, NOT(AutoSS))))) ( Branch009 )
-  RUNG r058_Mode
-    AND(NOT(ResetState), Branch009) { Mode := 4 }
-  RUNG r059_Branch010 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch010, AND(Branch008, AND(TRUE, AND(AutoSS, NOT(ManualSS))))) ( Branch010 )
-  RUNG r060_Mode
-    AND(NOT(ResetState), Branch010) { Mode := 5 }
-  RUNG r061_ManualPL
-    SEL(AND(NOT(ResetState), TRUE), ManualPL, EQ(Mode, 4)) ( ManualPL )
-  RUNG r062_AutoPL
-    SEL(AND(NOT(ResetState), TRUE), AutoPL, EQ(Mode, 5)) ( AutoPL )
-  RUNG r063_Branch011 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch011, AND(TRUE, AND(TRUE, NE(Mode, PrevMode)))) ( Branch011 )
-  RUNG r064_BeltSpeedRef
-    AND(NOT(ResetState), Branch011) { BeltSpeedRef := 0 }
-  RUNG r065_LastBeltRefSpeed
-    AND(NOT(ResetState), Branch011) { LastBeltRefSpeed := 0 }
-  RUNG r066_AutoStep
-    AND(NOT(ResetState), Branch011) { AutoStep := 16 }
-  RUNG r067_AutoElapsed
-    AND(NOT(ResetState), Branch011) { AutoElapsed := 0.0 }
-  RUNG r068_EmitRemaining
-    AND(NOT(ResetState), Branch011) { EmitRemaining := 0.0 }
-  RUNG r069_SortElapsed
-    AND(NOT(ResetState), Branch011) { SortElapsed := 0.0 }
-  RUNG r070_RunningPL
-    SEL(AND(NOT(ResetState), Branch011), RunningPL, FALSE) ( RunningPL )
-  RUNG r071_ManBelt
-    SEL(AND(NOT(ResetState), Branch011), ManBelt, FALSE) ( ManBelt )
-  RUNG r072_ManReject
-    SEL(AND(NOT(ResetState), Branch011), ManReject, FALSE) ( ManReject )
-  RUNG r073_ManRawCCW
-    SEL(AND(NOT(ResetState), Branch011), ManRawCCW, FALSE) ( ManRawCCW )
-  RUNG r074_ManRawCW
-    SEL(AND(NOT(ResetState), Branch011), ManRawCW, FALSE) ( ManRawCW )
-  RUNG r075_ManRawTurn
-    SEL(AND(NOT(ResetState), Branch011), ManRawTurn, FALSE) ( ManRawTurn )
-  RUNG r076_ManBaseCCW
-    SEL(AND(NOT(ResetState), Branch011), ManBaseCCW, FALSE) ( ManBaseCCW )
-  RUNG r077_ManBaseCW
-    SEL(AND(NOT(ResetState), Branch011), ManBaseCW, FALSE) ( ManBaseCW )
-  RUNG r078_ManBaseTurn
-    SEL(AND(NOT(ResetState), Branch011), ManBaseTurn, FALSE) ( ManBaseTurn )
-  RUNG r079_ManLidCCW
-    SEL(AND(NOT(ResetState), Branch011), ManLidCCW, FALSE) ( ManLidCCW )
-  RUNG r080_ManLidCW
-    SEL(AND(NOT(ResetState), Branch011), ManLidCW, FALSE) ( ManLidCW )
-  RUNG r081_ManLidTurn
-    SEL(AND(NOT(ResetState), Branch011), ManLidTurn, FALSE) ( ManLidTurn )
-  RUNG r082_Emitter
-    SEL(AND(NOT(ResetState), TRUE), Emitter, FALSE) ( Emitter )
-  RUNG r083_EmitFlag
-    SEL(AND(NOT(ResetState), TRUE), EmitFlag, FALSE) ( EmitFlag )
-  RUNG r084_WarningLight1
-    SEL(AND(NOT(ResetState), TRUE), WarningLight1, FALSE) ( WarningLight1 )
-  RUNG r085_RawSorterBeltCCW
-    SEL(AND(NOT(ResetState), TRUE), RawSorterBeltCCW, FALSE) ( RawSorterBeltCCW )
-  RUNG r086_RawSorterBeltCW
-    SEL(AND(NOT(ResetState), TRUE), RawSorterBeltCW, FALSE) ( RawSorterBeltCW )
-  RUNG r087_RawSorterBeltTurn
-    SEL(AND(NOT(ResetState), TRUE), RawSorterBeltTurn, FALSE) ( RawSorterBeltTurn )
-  RUNG r088_BaseSorterBeltCCW
-    SEL(AND(NOT(ResetState), TRUE), BaseSorterBeltCCW, FALSE) ( BaseSorterBeltCCW )
-  RUNG r089_BaseSorterBeltCW
-    SEL(AND(NOT(ResetState), TRUE), BaseSorterBeltCW, FALSE) ( BaseSorterBeltCW )
-  RUNG r090_BaseSorterBeltTurn
-    SEL(AND(NOT(ResetState), TRUE), BaseSorterBeltTurn, FALSE) ( BaseSorterBeltTurn )
-  RUNG r091_LidSorterBeltCCW
-    SEL(AND(NOT(ResetState), TRUE), LidSorterBeltCCW, FALSE) ( LidSorterBeltCCW )
-  RUNG r092_LidSorterBeltCW
-    SEL(AND(NOT(ResetState), TRUE), LidSorterBeltCW, FALSE) ( LidSorterBeltCW )
-  RUNG r093_LidSorterBeltTurn
-    SEL(AND(NOT(ResetState), TRUE), LidSorterBeltTurn, FALSE) ( LidSorterBeltTurn )
-  RUNG r094_RejectPusher
-    SEL(AND(NOT(ResetState), TRUE), RejectPusher, FALSE) ( RejectPusher )
-  RUNG r095_RawLightInd
-    SEL(AND(NOT(ResetState), TRUE), RawLightInd, FALSE) ( RawLightInd )
-  RUNG r096_BaseLightInd
-    SEL(AND(NOT(ResetState), TRUE), BaseLightInd, FALSE) ( BaseLightInd )
-  RUNG r097_LidLightInd
-    SEL(AND(NOT(ResetState), TRUE), LidLightInd, FALSE) ( LidLightInd )
-  RUNG r098_RawFlag
-    SEL(AND(NOT(ResetState), TRUE), RawFlag, FALSE) ( RawFlag )
-  RUNG r099_BaseFlag
-    SEL(AND(NOT(ResetState), TRUE), BaseFlag, FALSE) ( BaseFlag )
-  RUNG r100_LidFlag
-    SEL(AND(NOT(ResetState), TRUE), LidFlag, FALSE) ( LidFlag )
-  RUNG r101_RejectFlag
-    SEL(AND(NOT(ResetState), TRUE), RejectFlag, FALSE) ( RejectFlag )
-  RUNG r102_Branch012 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch012, AND(TRUE, AND(TRUE, EQ(MainStep, 3)))) ( Branch012 )
-  RUNG r103_Branch013 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch013, AND(Branch012, AND(TRUE, AND(IncSpdX10, NOT(PrevInc10))))) ( Branch013 )
-  RUNG r104_BeltSpeedRef
-    AND(NOT(ResetState), Branch013) { BeltSpeedRef := BeltSpeedRef + 10 }
-  RUNG r105_Branch014 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch014, AND(Branch012, AND(TRUE, AND(IncSpdX100, NOT(PrevInc100))))) ( Branch014 )
-  RUNG r106_BeltSpeedRef
-    AND(NOT(ResetState), Branch014) { BeltSpeedRef := BeltSpeedRef + 100 }
-  RUNG r107_Branch015 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch015, AND(Branch012, AND(TRUE, AND(DecSpdX10, NOT(PrevDec10))))) ( Branch015 )
-  RUNG r108_BeltSpeedRef
-    AND(NOT(ResetState), Branch015) { BeltSpeedRef := BeltSpeedRef - 10 }
-  RUNG r109_Branch016 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch016, AND(Branch012, AND(TRUE, AND(DecSpdX100, NOT(PrevDec100))))) ( Branch016 )
-  RUNG r110_BeltSpeedRef
-    AND(NOT(ResetState), Branch016) { BeltSpeedRef := BeltSpeedRef - 100 }
+    /ResetState MainWasWaitingForReset [ Reset | Reset2PB ] /ClassifyDefuseSensor /RejectDiffuseSensor AtExit { MainStep := 3 }
+  RUNG r046_ControlOnPL
+    [ /ResetState [ EQ(MainStep, 3) | Blink ] | ResetState ControlOnPL ] ( ControlOnPL )
+  RUNG r047_ControlOnPL2
+    [ /ResetState ControlOnPL | ResetState ControlOnPL2 ] ( ControlOnPL2 )
+  RUNG r048_StopPL
+    [ /ResetState NE(MainStep, 3) | ResetState StopPL ] ( StopPL )
+  RUNG r049_EStoppedPL
+    [ /ResetState EQ(MainStep, 1) Blink | ResetState EStoppedPL ] ( EStoppedPL )
+  RUNG r050_Mode
+    /ResetState { Mode := 0 }
+  RUNG r051_Mode
+    /ResetState EQ(MainStep, 3) ManualSS /AutoSS { Mode := 4 }
+  RUNG r052_Mode
+    /ResetState EQ(MainStep, 3) AutoSS /ManualSS { Mode := 5 }
+  RUNG r053_ManualPL
+    [ /ResetState EQ(Mode, 4) | ResetState ManualPL ] ( ManualPL )
+  RUNG r054_AutoPL
+    [ /ResetState EQ(Mode, 5) | ResetState AutoPL ] ( AutoPL )
+  RUNG r055_BeltSpeedRef
+    /ResetState NE(Mode, PrevMode) { BeltSpeedRef := 0 }
+  RUNG r056_LastBeltRefSpeed
+    /ResetState NE(Mode, PrevMode) { LastBeltRefSpeed := 0 }
+  RUNG r057_AutoStep
+    /ResetState NE(Mode, PrevMode) { AutoStep := 16 }
+  RUNG r058_AutoElapsed
+    /ResetState NE(Mode, PrevMode) { AutoElapsed := 0.0 }
+  RUNG r059_EmitRemaining
+    /ResetState NE(Mode, PrevMode) { EmitRemaining := 0.0 }
+  RUNG r060_SortElapsed
+    /ResetState NE(Mode, PrevMode) { SortElapsed := 0.0 }
+  RUNG r061_RunningPL
+    /ResetState NE(Mode, PrevMode) ( R RunningPL ) ( R ManBelt ) ( R ManReject )
+  RUNG r064_ManRawCCW
+    /ResetState NE(Mode, PrevMode) ( R ManRawCCW ) ( R ManRawCW ) ( R ManRawTurn )
+  RUNG r067_ManBaseCCW
+    /ResetState NE(Mode, PrevMode) ( R ManBaseCCW ) ( R ManBaseCW ) ( R ManBaseTurn )
+  RUNG r070_ManLidCCW
+    /ResetState NE(Mode, PrevMode) ( R ManLidCCW ) ( R ManLidCW ) ( R ManLidTurn )
+  RUNG r073_Emitter
+    /ResetState ( R Emitter ) ( R EmitFlag ) ( R WarningLight1 )
+  RUNG r076_RawSorterBeltCCW
+    /ResetState ( R RawSorterBeltCCW ) ( R RawSorterBeltCW ) ( R RawSorterBeltTurn )
+  RUNG r079_BaseSorterBeltCCW
+    /ResetState ( R BaseSorterBeltCCW ) ( R BaseSorterBeltCW ) ( R BaseSorterBeltTurn )
+  RUNG r082_LidSorterBeltCCW
+    /ResetState ( R LidSorterBeltCCW ) ( R LidSorterBeltCW ) ( R LidSorterBeltTurn )
+  RUNG r085_RejectPusher
+    /ResetState ( R RejectPusher ) ( R RawLightInd ) ( R BaseLightInd )
+  RUNG r088_LidLightInd
+    /ResetState ( R LidLightInd ) ( R RawFlag ) ( R BaseFlag )
+  RUNG r091_LidFlag
+    /ResetState ( R LidFlag ) ( R RejectFlag )
+  RUNG r093_BeltSpeedRef
+    /ResetState EQ(MainStep, 3) IncSpdX10 /PrevInc10 { BeltSpeedRef := BeltSpeedRef + 10 }
+  RUNG r094_BeltSpeedRef
+    /ResetState EQ(MainStep, 3) IncSpdX100 /PrevInc100 { BeltSpeedRef := BeltSpeedRef + 100 }
+  RUNG r095_BeltSpeedRef
+    /ResetState EQ(MainStep, 3) DecSpdX10 /PrevDec10 { BeltSpeedRef := BeltSpeedRef - 10 }
+  RUNG r096_BeltSpeedRef
+    /ResetState EQ(MainStep, 3) DecSpdX100 /PrevDec100 { BeltSpeedRef := BeltSpeedRef - 100 }
+  RUNG r097_BeltSpeedRef
+    /ResetState EQ(MainStep, 3) { BeltSpeedRef := LIMIT( 0 , BeltSpeedRef , 300 ) }
+  RUNG r098_LastBeltRefSpeed
+    /ResetState EQ(MainStep, 3) [ IncSpdX10 /PrevInc10 | IncSpdX100 /PrevInc100 | DecSpdX10 /PrevDec10 | DecSpdX100 /PrevDec100 ] { LastBeltRefSpeed := BeltSpeedRef }
+  RUNG r099_AutoStepAtScanStart (* Snapshot CASE selector *)
+    /ResetState EQ(Mode, 5) { AutoStepAtScanStart := AutoStep }
+  RUNG r100_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 16) { AutoStep := 21 }
+  RUNG r101_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 21) Start { AutoStep := 20 }
+  RUNG r102_AutoElapsed
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 21) Start { AutoElapsed := 0.0 }
+  RUNG r103_WarningLight1
+    [ /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) /Blink | [ ResetState | /EQ(Mode, 5) | /EQ(AutoStepAtScanStart, 20) ] WarningLight1 ] ( WarningLight1 )
+  RUNG r104_AutoElapsed
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) { AutoElapsed := AutoElapsed + ScanDtS }
+  RUNG r105_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) GE(AutoElapsed, 3.0) { AutoStep := 19 }
+  RUNG r106_EmitRemaining
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) GE(AutoElapsed, 3.0) { EmitRemaining := 0.5 }
+  RUNG r107_BeltSpeedRef
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) GE(AutoElapsed, 3.0) { BeltSpeedRef := LastBeltRefSpeed }
+  RUNG r108_RunningPL
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) GE(AutoElapsed, 3.0) ( S RunningPL )
+  RUNG r109_EmitFlag
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 19) ( S EmitFlag )
+  RUNG r110_LastBeltRefSpeed
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 19) ClassifyDefuseSensor /PrevClassify { LastBeltRefSpeed := BeltSpeedRef }
   RUNG r111_BeltSpeedRef
-    AND(NOT(ResetState), Branch012) { BeltSpeedRef := LIMIT( 0 , BeltSpeedRef , 300 ) }
-  RUNG r112_Branch017 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch017, AND(Branch012, AND(TRUE, OR(AND(IncSpdX10, NOT(PrevInc10)), OR(AND(IncSpdX100, NOT(PrevInc100)), OR(AND(DecSpdX10, NOT(PrevDec10)), AND(DecSpdX100, NOT(PrevDec100)))))))) ( Branch017 )
-  RUNG r113_LastBeltRefSpeed
-    AND(NOT(ResetState), Branch017) { LastBeltRefSpeed := BeltSpeedRef }
-  RUNG r114_Branch018 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch018, AND(TRUE, AND(TRUE, EQ(Mode, 5)))) ( Branch018 )
-  RUNG r115_CaseValue019 (* Snapshot CASE selector *)
-    AND(NOT(ResetState), Branch018) { CaseValue019 := AutoStep }
-  RUNG r116_CaseBranch020 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch020, AND(Branch018, EQ(CaseValue019, 16))) ( CaseBranch020 )
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 19) ClassifyDefuseSensor /PrevClassify { BeltSpeedRef := 60 }
+  RUNG r112_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 19) ClassifyDefuseSensor /PrevClassify { AutoStep := 22 }
+  RUNG r113_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) [ SendRejectPB | GE(VisionSensor1, 7) LE(VisionSensor1, 9) ] { AutoStep := 25 }
+  RUNG r114_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) ] { AutoStep := 24 }
+  RUNG r115_RawCounter
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) ] { RawCounter := RawCounter + 1 }
+  RUNG r116_BeltSpeedRef
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) ] { BeltSpeedRef := LastBeltRefSpeed }
   RUNG r117_AutoStep
-    AND(NOT(ResetState), CaseBranch020) { AutoStep := 21 }
-  RUNG r118_CaseBranch021 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch021, AND(Branch018, EQ(CaseValue019, 21))) ( CaseBranch021 )
-  RUNG r119_Branch022 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch022, AND(CaseBranch021, AND(TRUE, Start))) ( Branch022 )
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ EQ(VisionSensor1, 3) | EQ(VisionSensor1, 6) ] { AutoStep := 27 }
+  RUNG r118_BaseCounter
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ EQ(VisionSensor1, 3) | EQ(VisionSensor1, 6) ] { BaseCounter := BaseCounter + 1 }
+  RUNG r119_BeltSpeedRef
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ EQ(VisionSensor1, 3) | EQ(VisionSensor1, 6) ] { BeltSpeedRef := LastBeltRefSpeed }
   RUNG r120_AutoStep
-    AND(NOT(ResetState), Branch022) { AutoStep := 20 }
-  RUNG r121_AutoElapsed
-    AND(NOT(ResetState), Branch022) { AutoElapsed := 0.0 }
-  RUNG r122_CaseBranch023 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch023, AND(Branch018, EQ(CaseValue019, 20))) ( CaseBranch023 )
-  RUNG r123_WarningLight1
-    SEL(AND(NOT(ResetState), CaseBranch023), WarningLight1, NOT(Blink)) ( WarningLight1 )
-  RUNG r124_AutoElapsed
-    AND(NOT(ResetState), CaseBranch023) { AutoElapsed := AutoElapsed + ScanDtS }
-  RUNG r125_Branch024 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch024, AND(CaseBranch023, AND(TRUE, GE(AutoElapsed, 3.0)))) ( Branch024 )
-  RUNG r126_AutoStep
-    AND(NOT(ResetState), Branch024) { AutoStep := 19 }
-  RUNG r127_EmitRemaining
-    AND(NOT(ResetState), Branch024) { EmitRemaining := 0.5 }
-  RUNG r128_BeltSpeedRef
-    AND(NOT(ResetState), Branch024) { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r129_RunningPL
-    SEL(AND(NOT(ResetState), Branch024), RunningPL, TRUE) ( RunningPL )
-  RUNG r130_CaseBranch025 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch025, AND(Branch018, EQ(CaseValue019, 19))) ( CaseBranch025 )
-  RUNG r131_EmitFlag
-    SEL(AND(NOT(ResetState), CaseBranch025), EmitFlag, TRUE) ( EmitFlag )
-  RUNG r132_Branch026 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch026, AND(CaseBranch025, AND(TRUE, AND(ClassifyDefuseSensor, NOT(PrevClassify))))) ( Branch026 )
-  RUNG r133_LastBeltRefSpeed
-    AND(NOT(ResetState), Branch026) { LastBeltRefSpeed := BeltSpeedRef }
-  RUNG r134_BeltSpeedRef
-    AND(NOT(ResetState), Branch026) { BeltSpeedRef := 60 }
-  RUNG r135_AutoStep
-    AND(NOT(ResetState), Branch026) { AutoStep := 22 }
-  RUNG r136_CaseBranch027 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch027, AND(Branch018, EQ(CaseValue019, 22))) ( CaseBranch027 )
-  RUNG r137_Branch028 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch028, AND(CaseBranch027, AND(TRUE, OR(SendRejectPB, AND(GE(VisionSensor1, 7), LE(VisionSensor1, 9)))))) ( Branch028 )
-  RUNG r138_Branch029 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch029, AND(CaseBranch027, AND(NOT(Branch028), SendSortPB))) ( Branch029 )
-  RUNG r139_AutoStep
-    AND(NOT(ResetState), Branch028) { AutoStep := 25 }
-  RUNG r140_Branch030 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch030, AND(Branch029, AND(TRUE, OR(EQ(VisionSensor1, 1), EQ(VisionSensor1, 4))))) ( Branch030 )
-  RUNG r141_Branch031 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch031, AND(Branch029, AND(NOT(Branch030), OR(EQ(VisionSensor1, 3), EQ(VisionSensor1, 6))))) ( Branch031 )
-  RUNG r142_Branch032 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch032, AND(Branch029, AND(AND(NOT(Branch030), NOT(Branch031)), OR(EQ(VisionSensor1, 2), EQ(VisionSensor1, 5))))) ( Branch032 )
-  RUNG r143_AutoStep
-    AND(NOT(ResetState), Branch030) { AutoStep := 24 }
-  RUNG r144_RawCounter
-    AND(NOT(ResetState), Branch030) { RawCounter := RawCounter + 1 }
-  RUNG r145_BeltSpeedRef
-    AND(NOT(ResetState), Branch030) { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r146_AutoStep
-    AND(NOT(ResetState), Branch031) { AutoStep := 27 }
-  RUNG r147_BaseCounter
-    AND(NOT(ResetState), Branch031) { BaseCounter := BaseCounter + 1 }
-  RUNG r148_BeltSpeedRef
-    AND(NOT(ResetState), Branch031) { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r149_AutoStep
-    AND(NOT(ResetState), Branch032) { AutoStep := 28 }
-  RUNG r150_LidCounter
-    AND(NOT(ResetState), Branch032) { LidCounter := LidCounter + 1 }
-  RUNG r151_BeltSpeedRef
-    AND(NOT(ResetState), Branch032) { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r152_CaseBranch033 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch033, AND(Branch018, OR(EQ(CaseValue019, 24), OR(EQ(CaseValue019, 27), EQ(CaseValue019, 28))))) ( CaseBranch033 )
-  RUNG r153_Branch034 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch034, AND(CaseBranch033, AND(TRUE, NOT(AtExit)))) ( Branch034 )
-  RUNG r154_AutoStep
-    AND(NOT(ResetState), Branch034) { AutoStep := AutoStep + 100 }
-  RUNG r155_CaseBranch035 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch035, AND(Branch018, OR(EQ(CaseValue019, 124), OR(EQ(CaseValue019, 127), EQ(CaseValue019, 128))))) ( CaseBranch035 )
-  RUNG r156_Branch036 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch036, AND(CaseBranch035, AND(TRUE, AtExit))) ( Branch036 )
-  RUNG r157_AutoStep
-    AND(NOT(ResetState), Branch036) { AutoStep := AutoStep + 100 }
-  RUNG r158_SortElapsed
-    AND(NOT(ResetState), Branch036) { SortElapsed := 0.0 }
-  RUNG r159_CaseBranch037 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch037, AND(Branch018, OR(EQ(CaseValue019, 224), OR(EQ(CaseValue019, 227), EQ(CaseValue019, 228))))) ( CaseBranch037 )
-  RUNG r160_SortElapsed
-    AND(NOT(ResetState), CaseBranch037) { SortElapsed := SortElapsed + ScanDtS }
-  RUNG r161_Branch038 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch038, AND(CaseBranch037, AND(TRUE, GE(SortElapsed, 0.5)))) ( Branch038 )
-  RUNG r162_AutoStep
-    AND(NOT(ResetState), Branch038) { AutoStep := 19 }
-  RUNG r163_EmitRemaining
-    AND(NOT(ResetState), Branch038) { EmitRemaining := 0.5 }
-  RUNG r164_BeltSpeedRef
-    AND(NOT(ResetState), Branch038) { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r165_CaseBranch039 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch039, AND(Branch018, EQ(CaseValue019, 25))) ( CaseBranch039 )
-  RUNG r166_Branch040 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch040, AND(CaseBranch039, AND(TRUE, RejectDiffuseSensor))) ( Branch040 )
-  RUNG r167_AutoStep
-    AND(NOT(ResetState), Branch040) { AutoStep := 85 }
-  RUNG r168_BeltSpeedRef
-    AND(NOT(ResetState), Branch040) { BeltSpeedRef := 0 }
-  RUNG r169_CaseBranch041 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch041, AND(Branch018, EQ(CaseValue019, 85))) ( CaseBranch041 )
-  RUNG r170_Branch042 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch042, AND(CaseBranch041, AND(TRUE, RejPushFrontLimit))) ( Branch042 )
-  RUNG r171_AutoStep
-    AND(NOT(ResetState), Branch042) { AutoStep := 86 }
-  RUNG r172_CaseBranch043 (* Select CASE branch *)
-    SEL(AND(NOT(ResetState), TRUE), CaseBranch043, AND(Branch018, EQ(CaseValue019, 86))) ( CaseBranch043 )
-  RUNG r173_Branch044 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch044, AND(CaseBranch043, AND(TRUE, RejPushBackLimit))) ( Branch044 )
-  RUNG r174_AutoStep
-    AND(NOT(ResetState), Branch044) { AutoStep := 19 }
-  RUNG r175_EmitRemaining
-    AND(NOT(ResetState), Branch044) { EmitRemaining := 0.5 }
-  RUNG r176_BeltSpeedRef
-    AND(NOT(ResetState), Branch044) { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r177_RawFlag
-    SEL(AND(NOT(ResetState), Branch018), RawFlag, OR(EQ(AutoStep, 24), OR(EQ(AutoStep, 124), EQ(AutoStep, 224)))) ( RawFlag )
-  RUNG r178_BaseFlag
-    SEL(AND(NOT(ResetState), Branch018), BaseFlag, OR(EQ(AutoStep, 27), OR(EQ(AutoStep, 127), EQ(AutoStep, 227)))) ( BaseFlag )
-  RUNG r179_LidFlag
-    SEL(AND(NOT(ResetState), Branch018), LidFlag, OR(EQ(AutoStep, 28), OR(EQ(AutoStep, 128), EQ(AutoStep, 228)))) ( LidFlag )
-  RUNG r180_RejectFlag
-    SEL(AND(NOT(ResetState), Branch018), RejectFlag, OR(EQ(AutoStep, 25), EQ(AutoStep, 85))) ( RejectFlag )
-  RUNG r181_RawSorterBeltCW
-    SEL(AND(NOT(ResetState), Branch018), RawSorterBeltCW, EQ(AutoStep, 24)) ( RawSorterBeltCW )
-  RUNG r182_RawSorterBeltTurn
-    SEL(AND(NOT(ResetState), Branch018), RawSorterBeltTurn, RawSorterBeltCW) ( RawSorterBeltTurn )
-  RUNG r183_BaseSorterBeltCW
-    SEL(AND(NOT(ResetState), Branch018), BaseSorterBeltCW, EQ(AutoStep, 27)) ( BaseSorterBeltCW )
-  RUNG r184_BaseSorterBeltTurn
-    SEL(AND(NOT(ResetState), Branch018), BaseSorterBeltTurn, BaseSorterBeltCW) ( BaseSorterBeltTurn )
-  RUNG r185_LidSorterBeltCW
-    SEL(AND(NOT(ResetState), Branch018), LidSorterBeltCW, EQ(AutoStep, 28)) ( LidSorterBeltCW )
-  RUNG r186_LidSorterBeltTurn
-    SEL(AND(NOT(ResetState), Branch018), LidSorterBeltTurn, LidSorterBeltCW) ( LidSorterBeltTurn )
-  RUNG r187_RawLightInd
-    SEL(AND(NOT(ResetState), Branch018), RawLightInd, RawSorterBeltCW) ( RawLightInd )
-  RUNG r188_BaseLightInd
-    SEL(AND(NOT(ResetState), Branch018), BaseLightInd, BaseSorterBeltCW) ( BaseLightInd )
-  RUNG r189_LidLightInd
-    SEL(AND(NOT(ResetState), Branch018), LidLightInd, LidSorterBeltCW) ( LidLightInd )
-  RUNG r190_RejectPusher
-    SEL(AND(NOT(ResetState), Branch018), RejectPusher, EQ(AutoStep, 85)) ( RejectPusher )
-  RUNG r191_Branch045 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch045, AND(Branch018, AND(TRUE, GT(EmitRemaining, 0.0)))) ( Branch045 )
-  RUNG r192_Emitter
-    SEL(AND(NOT(ResetState), Branch045), Emitter, TRUE) ( Emitter )
-  RUNG r193_EmitRemaining
-    AND(NOT(ResetState), Branch045) { EmitRemaining := EmitRemaining - ScanDtS }
-  RUNG r194_Branch046 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch046, AND(TRUE, AND(TRUE, EQ(Mode, 4)))) ( Branch046 )
-  RUNG r195_Branch047 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch047, AND(TRUE, NOT(Branch046))) ( Branch047 )
-  RUNG r196_Branch048 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch048, AND(Branch046, AND(TRUE, AND(BeltConveyor4mManPB, NOT(PrevBelt))))) ( Branch048 )
-  RUNG r197_ManBelt
-    SEL(AND(NOT(ResetState), Branch048), ManBelt, NOT(ManBelt)) ( ManBelt )
-  RUNG r198_Branch049 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch049, AND(Branch048, AND(TRUE, ManBelt))) ( Branch049 )
-  RUNG r199_Branch050 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch050, AND(Branch048, NOT(Branch049))) ( Branch050 )
-  RUNG r200_BeltSpeedRef
-    AND(NOT(ResetState), Branch049) { BeltSpeedRef := 60 }
-  RUNG r201_BeltSpeedRef
-    AND(NOT(ResetState), Branch050) { BeltSpeedRef := 0 }
-  RUNG r202_Branch051 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch051, AND(Branch046, AND(TRUE, AND(RejectPusherManPB, NOT(PrevReject))))) ( Branch051 )
-  RUNG r203_ManReject
-    SEL(AND(NOT(ResetState), Branch051), ManReject, NOT(ManReject)) ( ManReject )
-  RUNG r204_Branch052 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch052, AND(Branch046, AND(TRUE, AND(RawSorterBeltCCWManPB, AND(NOT(PrevRawCCW), NOT(ManRawCW)))))) ( Branch052 )
-  RUNG r205_ManRawCCW
-    SEL(AND(NOT(ResetState), Branch052), ManRawCCW, NOT(ManRawCCW)) ( ManRawCCW )
-  RUNG r206_RawSorterBeltCCW
-    SEL(AND(NOT(ResetState), Branch046), RawSorterBeltCCW, ManRawCCW) ( RawSorterBeltCCW )
-  RUNG r207_Branch053 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch053, AND(Branch046, AND(TRUE, AND(RawSorterBeltCWManPB, AND(NOT(PrevRawCW), NOT(ManRawCCW)))))) ( Branch053 )
-  RUNG r208_ManRawCW
-    SEL(AND(NOT(ResetState), Branch053), ManRawCW, NOT(ManRawCW)) ( ManRawCW )
-  RUNG r209_RawSorterBeltCW
-    SEL(AND(NOT(ResetState), Branch046), RawSorterBeltCW, ManRawCW) ( RawSorterBeltCW )
-  RUNG r210_Branch054 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch054, AND(Branch046, AND(TRUE, AND(RawSorterBeltTurnManPB, NOT(PrevRawTurn))))) ( Branch054 )
-  RUNG r211_ManRawTurn
-    SEL(AND(NOT(ResetState), Branch054), ManRawTurn, NOT(ManRawTurn)) ( ManRawTurn )
-  RUNG r212_RawSorterBeltTurn
-    SEL(AND(NOT(ResetState), Branch046), RawSorterBeltTurn, ManRawTurn) ( RawSorterBeltTurn )
-  RUNG r213_Branch055 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch055, AND(Branch046, AND(TRUE, AND(BaseSorterBeltCCWManPB, AND(NOT(PrevBaseCCW), NOT(ManBaseCW)))))) ( Branch055 )
-  RUNG r214_ManBaseCCW
-    SEL(AND(NOT(ResetState), Branch055), ManBaseCCW, NOT(ManBaseCCW)) ( ManBaseCCW )
-  RUNG r215_BaseSorterBeltCCW
-    SEL(AND(NOT(ResetState), Branch046), BaseSorterBeltCCW, ManBaseCCW) ( BaseSorterBeltCCW )
-  RUNG r216_Branch056 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch056, AND(Branch046, AND(TRUE, AND(BaseSorterBeltCWManPB, AND(NOT(PrevBaseCW), NOT(ManBaseCCW)))))) ( Branch056 )
-  RUNG r217_ManBaseCW
-    SEL(AND(NOT(ResetState), Branch056), ManBaseCW, NOT(ManBaseCW)) ( ManBaseCW )
-  RUNG r218_BaseSorterBeltCW
-    SEL(AND(NOT(ResetState), Branch046), BaseSorterBeltCW, ManBaseCW) ( BaseSorterBeltCW )
-  RUNG r219_Branch057 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch057, AND(Branch046, AND(TRUE, AND(BaseSorterBeltTurnManPB, NOT(PrevBaseTurn))))) ( Branch057 )
-  RUNG r220_ManBaseTurn
-    SEL(AND(NOT(ResetState), Branch057), ManBaseTurn, NOT(ManBaseTurn)) ( ManBaseTurn )
-  RUNG r221_BaseSorterBeltTurn
-    SEL(AND(NOT(ResetState), Branch046), BaseSorterBeltTurn, ManBaseTurn) ( BaseSorterBeltTurn )
-  RUNG r222_Branch058 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch058, AND(Branch046, AND(TRUE, AND(LidSorterBeltCCWManPB, AND(NOT(PrevLidCCW), NOT(ManLidCW)))))) ( Branch058 )
-  RUNG r223_ManLidCCW
-    SEL(AND(NOT(ResetState), Branch058), ManLidCCW, NOT(ManLidCCW)) ( ManLidCCW )
-  RUNG r224_LidSorterBeltCCW
-    SEL(AND(NOT(ResetState), Branch046), LidSorterBeltCCW, ManLidCCW) ( LidSorterBeltCCW )
-  RUNG r225_Branch059 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch059, AND(Branch046, AND(TRUE, AND(LidSorterBeltCWManPB, AND(NOT(PrevLidCW), NOT(ManLidCCW)))))) ( Branch059 )
-  RUNG r226_ManLidCW
-    SEL(AND(NOT(ResetState), Branch059), ManLidCW, NOT(ManLidCW)) ( ManLidCW )
-  RUNG r227_LidSorterBeltCW
-    SEL(AND(NOT(ResetState), Branch046), LidSorterBeltCW, ManLidCW) ( LidSorterBeltCW )
-  RUNG r228_Branch060 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch060, AND(Branch046, AND(TRUE, AND(LidSorterBeltTurnManPB, NOT(PrevLidTurn))))) ( Branch060 )
-  RUNG r229_ManLidTurn
-    SEL(AND(NOT(ResetState), Branch060), ManLidTurn, NOT(ManLidTurn)) ( ManLidTurn )
-  RUNG r230_LidSorterBeltTurn
-    SEL(AND(NOT(ResetState), Branch046), LidSorterBeltTurn, ManLidTurn) ( LidSorterBeltTurn )
-  RUNG r231_RejectPusher
-    SEL(AND(NOT(ResetState), Branch046), RejectPusher, ManReject) ( RejectPusher )
-  RUNG r232_Branch061 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch061, AND(Branch046, AND(TRUE, Reset))) ( Branch061 )
-  RUNG r233_Branch062 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch062, AND(Branch046, NOT(Branch061))) ( Branch062 )
-  RUNG r234_ResetHeld
-    AND(NOT(ResetState), Branch061) { ResetHeld := ResetHeld + ScanDtS }
-  RUNG r235_ResetHeld
-    AND(NOT(ResetState), Branch062) { ResetHeld := 0.0 }
-  RUNG r236_Branch063 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch063, AND(Branch046, AND(TRUE, GE(ResetHeld, 5.0)))) ( Branch063 )
-  RUNG r237_RawCounter
-    AND(NOT(ResetState), Branch063) { RawCounter := 0 }
-  RUNG r238_BaseCounter
-    AND(NOT(ResetState), Branch063) { BaseCounter := 0 }
-  RUNG r239_LidCounter
-    AND(NOT(ResetState), Branch063) { LidCounter := 0 }
-  RUNG r240_ResetHeld
-    AND(NOT(ResetState), Branch047) { ResetHeld := 0.0 }
-  RUNG r241_Branch064 (* Capture IF decision before branch writes *)
-    SEL(AND(NOT(ResetState), TRUE), Branch064, AND(TRUE, AND(TRUE, EQ(Mode, 0)))) ( Branch064 )
-  RUNG r242_BeltSpeedRef
-    AND(NOT(ResetState), Branch064) { BeltSpeedRef := 0 }
-  RUNG r243_RunningPL
-    SEL(AND(NOT(ResetState), Branch064), RunningPL, FALSE) ( RunningPL )
-  RUNG r244_BeltSpeedRef
-    AND(NOT(ResetState), TRUE) { BeltSpeedRef := LIMIT( 0 , BeltSpeedRef , 300 ) }
-  RUNG r245_TargetBeltSpeed
-    AND(NOT(ResetState), TRUE) { TargetBeltSpeed := BeltSpeedRef * 10.0 / 300.0 }
-  RUNG r246_BeltConveyor4mSpeed
-    AND(NOT(ResetState), TRUE) { BeltConveyor4mSpeed := TargetBeltSpeed }
-  RUNG r247_BeltConveyor4mSpeed2
-    AND(NOT(ResetState), TRUE) { BeltConveyor4mSpeed2 := TargetBeltSpeed }
-  RUNG r248_BeltConveyor4mPL
-    SEL(AND(NOT(ResetState), TRUE), BeltConveyor4mPL, GT(BeltSpeedRef, 0)) ( BeltConveyor4mPL )
-  RUNG r249_StartPL
-    SEL(AND(NOT(ResetState), TRUE), StartPL, AND(EQ(Mode, 5), OR(RunningPL, Blink))) ( StartPL )
-  RUNG r250_RawSorterBeltCCWPL
-    SEL(AND(NOT(ResetState), TRUE), RawSorterBeltCCWPL, RawSorterBeltCCW) ( RawSorterBeltCCWPL )
-  RUNG r251_RawSorterBeltCWPL
-    SEL(AND(NOT(ResetState), TRUE), RawSorterBeltCWPL, RawSorterBeltCW) ( RawSorterBeltCWPL )
-  RUNG r252_RawSorterBeltTurnPL
-    SEL(AND(NOT(ResetState), TRUE), RawSorterBeltTurnPL, RawSorterBeltTurn) ( RawSorterBeltTurnPL )
-  RUNG r253_BaseSorterBeltCCWPL
-    SEL(AND(NOT(ResetState), TRUE), BaseSorterBeltCCWPL, BaseSorterBeltCCW) ( BaseSorterBeltCCWPL )
-  RUNG r254_BaseSorterBeltCWPL
-    SEL(AND(NOT(ResetState), TRUE), BaseSorterBeltCWPL, BaseSorterBeltCW) ( BaseSorterBeltCWPL )
-  RUNG r255_BaseSorterBeltTurnPL
-    SEL(AND(NOT(ResetState), TRUE), BaseSorterBeltTurnPL, BaseSorterBeltTurn) ( BaseSorterBeltTurnPL )
-  RUNG r256_LidSorterBeltCCWPL
-    SEL(AND(NOT(ResetState), TRUE), LidSorterBeltCCWPL, LidSorterBeltCCW) ( LidSorterBeltCCWPL )
-  RUNG r257_LidSorterBeltCWPL
-    SEL(AND(NOT(ResetState), TRUE), LidSorterBeltCWPL, LidSorterBeltCW) ( LidSorterBeltCWPL )
-  RUNG r258_LidSorterBeltTurnPL
-    SEL(AND(NOT(ResetState), TRUE), LidSorterBeltTurnPL, LidSorterBeltTurn) ( LidSorterBeltTurnPL )
-  RUNG r259_RejectPusherPL
-    SEL(AND(NOT(ResetState), TRUE), RejectPusherPL, RejectPusher) ( RejectPusherPL )
-  RUNG r260_Remover1
-    SEL(AND(NOT(ResetState), TRUE), Remover1, TRUE) ( Remover1 )
-  RUNG r261_Remover2
-    SEL(AND(NOT(ResetState), TRUE), Remover2, TRUE) ( Remover2 )
-  RUNG r262_Remover3
-    SEL(AND(NOT(ResetState), TRUE), Remover3, TRUE) ( Remover3 )
-  RUNG r263_LabPLCRunning
-    SEL(AND(NOT(ResetState), TRUE), LabPLCRunning, Blink) ( LabPLCRunning )
-  RUNG r264_SkidPLCRunning
-    SEL(AND(NOT(ResetState), TRUE), SkidPLCRunning, Blink) ( SkidPLCRunning )
-  RUNG r265_LocalPanelActive
-    SEL(AND(NOT(ResetState), TRUE), LocalPanelActive, LocalControlPanel) ( LocalPanelActive )
-  RUNG r266_RemotePanelActive
-    SEL(AND(NOT(ResetState), TRUE), RemotePanelActive, RemoteControlPanel) ( RemotePanelActive )
-  RUNG r267_IncSpdX1Light
-    SEL(AND(NOT(ResetState), TRUE), IncSpdX1Light, IncSpdX100) ( IncSpdX1Light )
-  RUNG r268_IncSpdX10Light
-    SEL(AND(NOT(ResetState), TRUE), IncSpdX10Light, IncSpdX10) ( IncSpdX10Light )
-  RUNG r269_DecSpdX10Light
-    SEL(AND(NOT(ResetState), TRUE), DecSpdX10Light, DecSpdX10) ( DecSpdX10Light )
-  RUNG r270_DecSpdX100Light
-    SEL(AND(NOT(ResetState), TRUE), DecSpdX100Light, DecSpdX100) ( DecSpdX100Light )
-  RUNG r271_StopBlade
-    SEL(AND(NOT(ResetState), TRUE), StopBlade, FALSE) ( StopBlade )
-  RUNG r272_Spare
-    SEL(AND(NOT(ResetState), TRUE), Spare, FALSE) ( Spare )
-  RUNG r273_ProductionRate
-    AND(NOT(ResetState), TRUE) { ProductionRate := 0 }
-  RUNG r274_PrevMode
-    AND(NOT(ResetState), TRUE) { PrevMode := Mode }
-  RUNG r275_PrevClassify
-    SEL(AND(NOT(ResetState), TRUE), PrevClassify, ClassifyDefuseSensor) ( PrevClassify )
-  RUNG r276_PrevStart
-    SEL(AND(NOT(ResetState), TRUE), PrevStart, Start) ( PrevStart )
-  RUNG r277_PrevReset
-    SEL(AND(NOT(ResetState), TRUE), PrevReset, Reset) ( PrevReset )
-  RUNG r278_PrevInc10
-    SEL(AND(NOT(ResetState), TRUE), PrevInc10, IncSpdX10) ( PrevInc10 )
-  RUNG r279_PrevInc100
-    SEL(AND(NOT(ResetState), TRUE), PrevInc100, IncSpdX100) ( PrevInc100 )
-  RUNG r280_PrevDec10
-    SEL(AND(NOT(ResetState), TRUE), PrevDec10, DecSpdX10) ( PrevDec10 )
-  RUNG r281_PrevDec100
-    SEL(AND(NOT(ResetState), TRUE), PrevDec100, DecSpdX100) ( PrevDec100 )
-  RUNG r282_PrevBelt
-    SEL(AND(NOT(ResetState), TRUE), PrevBelt, BeltConveyor4mManPB) ( PrevBelt )
-  RUNG r283_PrevReject
-    SEL(AND(NOT(ResetState), TRUE), PrevReject, RejectPusherManPB) ( PrevReject )
-  RUNG r284_PrevRawCCW
-    SEL(AND(NOT(ResetState), TRUE), PrevRawCCW, RawSorterBeltCCWManPB) ( PrevRawCCW )
-  RUNG r285_PrevRawCW
-    SEL(AND(NOT(ResetState), TRUE), PrevRawCW, RawSorterBeltCWManPB) ( PrevRawCW )
-  RUNG r286_PrevRawTurn
-    SEL(AND(NOT(ResetState), TRUE), PrevRawTurn, RawSorterBeltTurnManPB) ( PrevRawTurn )
-  RUNG r287_PrevBaseCCW
-    SEL(AND(NOT(ResetState), TRUE), PrevBaseCCW, BaseSorterBeltCCWManPB) ( PrevBaseCCW )
-  RUNG r288_PrevBaseCW
-    SEL(AND(NOT(ResetState), TRUE), PrevBaseCW, BaseSorterBeltCWManPB) ( PrevBaseCW )
-  RUNG r289_PrevBaseTurn
-    SEL(AND(NOT(ResetState), TRUE), PrevBaseTurn, BaseSorterBeltTurnManPB) ( PrevBaseTurn )
-  RUNG r290_PrevLidCCW
-    SEL(AND(NOT(ResetState), TRUE), PrevLidCCW, LidSorterBeltCCWManPB) ( PrevLidCCW )
-  RUNG r291_PrevLidCW
-    SEL(AND(NOT(ResetState), TRUE), PrevLidCW, LidSorterBeltCWManPB) ( PrevLidCW )
-  RUNG r292_PrevLidTurn
-    SEL(AND(NOT(ResetState), TRUE), PrevLidTurn, LidSorterBeltTurnManPB) ( PrevLidTurn )
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) | /EQ(VisionSensor1, 3) /EQ(VisionSensor1, 6) ] [ EQ(VisionSensor1, 2) | EQ(VisionSensor1, 5) ] { AutoStep := 28 }
+  RUNG r121_LidCounter
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) | /EQ(VisionSensor1, 3) /EQ(VisionSensor1, 6) ] [ EQ(VisionSensor1, 2) | EQ(VisionSensor1, 5) ] { LidCounter := LidCounter + 1 }
+  RUNG r122_BeltSpeedRef
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) | /EQ(VisionSensor1, 3) /EQ(VisionSensor1, 6) ] [ EQ(VisionSensor1, 2) | EQ(VisionSensor1, 5) ] { BeltSpeedRef := LastBeltRefSpeed }
+  RUNG r123_AutoStep
+    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 24) | EQ(AutoStepAtScanStart, 27) | EQ(AutoStepAtScanStart, 28) ] /AtExit { AutoStep := AutoStep + 100 }
+  RUNG r124_AutoStep
+    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 124) | EQ(AutoStepAtScanStart, 127) | EQ(AutoStepAtScanStart, 128) ] AtExit { AutoStep := AutoStep + 100 }
+  RUNG r125_SortElapsed
+    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 124) | EQ(AutoStepAtScanStart, 127) | EQ(AutoStepAtScanStart, 128) ] AtExit { SortElapsed := 0.0 }
+  RUNG r126_SortElapsed
+    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 224) | EQ(AutoStepAtScanStart, 227) | EQ(AutoStepAtScanStart, 228) ] { SortElapsed := SortElapsed + ScanDtS }
+  RUNG r127_AutoStep
+    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 224) | EQ(AutoStepAtScanStart, 227) | EQ(AutoStepAtScanStart, 228) ] GE(SortElapsed, 0.5) { AutoStep := 19 }
+  RUNG r128_EmitRemaining
+    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 224) | EQ(AutoStepAtScanStart, 227) | EQ(AutoStepAtScanStart, 228) ] GE(SortElapsed, 0.5) { EmitRemaining := 0.5 }
+  RUNG r129_BeltSpeedRef
+    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 224) | EQ(AutoStepAtScanStart, 227) | EQ(AutoStepAtScanStart, 228) ] GE(SortElapsed, 0.5) { BeltSpeedRef := LastBeltRefSpeed }
+  RUNG r130_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 25) RejectDiffuseSensor { AutoStep := 85 }
+  RUNG r131_BeltSpeedRef
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 25) RejectDiffuseSensor { BeltSpeedRef := 0 }
+  RUNG r132_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 85) RejPushFrontLimit { AutoStep := 86 }
+  RUNG r133_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 86) RejPushBackLimit { AutoStep := 19 }
+  RUNG r134_EmitRemaining
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 86) RejPushBackLimit { EmitRemaining := 0.5 }
+  RUNG r135_BeltSpeedRef
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 86) RejPushBackLimit { BeltSpeedRef := LastBeltRefSpeed }
+  RUNG r136_RawFlag
+    [ /ResetState EQ(Mode, 5) [ EQ(AutoStep, 24) | EQ(AutoStep, 124) | EQ(AutoStep, 224) ] | [ ResetState | /EQ(Mode, 5) ] RawFlag ] ( RawFlag )
+  RUNG r137_BaseFlag
+    [ /ResetState EQ(Mode, 5) [ EQ(AutoStep, 27) | EQ(AutoStep, 127) | EQ(AutoStep, 227) ] | [ ResetState | /EQ(Mode, 5) ] BaseFlag ] ( BaseFlag )
+  RUNG r138_LidFlag
+    [ /ResetState EQ(Mode, 5) [ EQ(AutoStep, 28) | EQ(AutoStep, 128) | EQ(AutoStep, 228) ] | [ ResetState | /EQ(Mode, 5) ] LidFlag ] ( LidFlag )
+  RUNG r139_RejectFlag
+    [ /ResetState EQ(Mode, 5) [ EQ(AutoStep, 25) | EQ(AutoStep, 85) ] | [ ResetState | /EQ(Mode, 5) ] RejectFlag ] ( RejectFlag )
+  RUNG r140_RawSorterBeltCW
+    [ /ResetState EQ(Mode, 5) EQ(AutoStep, 24) | [ ResetState | /EQ(Mode, 5) ] RawSorterBeltCW ] ( RawSorterBeltCW )
+  RUNG r141_RawSorterBeltTurn
+    [ /ResetState EQ(Mode, 5) RawSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] RawSorterBeltTurn ] ( RawSorterBeltTurn )
+  RUNG r142_BaseSorterBeltCW
+    [ /ResetState EQ(Mode, 5) EQ(AutoStep, 27) | [ ResetState | /EQ(Mode, 5) ] BaseSorterBeltCW ] ( BaseSorterBeltCW )
+  RUNG r143_BaseSorterBeltTurn
+    [ /ResetState EQ(Mode, 5) BaseSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] BaseSorterBeltTurn ] ( BaseSorterBeltTurn )
+  RUNG r144_LidSorterBeltCW
+    [ /ResetState EQ(Mode, 5) EQ(AutoStep, 28) | [ ResetState | /EQ(Mode, 5) ] LidSorterBeltCW ] ( LidSorterBeltCW )
+  RUNG r145_LidSorterBeltTurn
+    [ /ResetState EQ(Mode, 5) LidSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] LidSorterBeltTurn ] ( LidSorterBeltTurn )
+  RUNG r146_RawLightInd
+    [ /ResetState EQ(Mode, 5) RawSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] RawLightInd ] ( RawLightInd )
+  RUNG r147_BaseLightInd
+    [ /ResetState EQ(Mode, 5) BaseSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] BaseLightInd ] ( BaseLightInd )
+  RUNG r148_LidLightInd
+    [ /ResetState EQ(Mode, 5) LidSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] LidLightInd ] ( LidLightInd )
+  RUNG r149_RejectPusher
+    [ /ResetState EQ(Mode, 5) EQ(AutoStep, 85) | [ ResetState | /EQ(Mode, 5) ] RejectPusher ] ( RejectPusher )
+  RUNG r150_Emitter
+    /ResetState EQ(Mode, 5) GT(EmitRemaining, 0.0) ( S Emitter )
+  RUNG r151_EmitRemaining
+    /ResetState EQ(Mode, 5) GT(EmitRemaining, 0.0) { EmitRemaining := EmitRemaining - ScanDtS }
+  RUNG r152_ManBelt
+    [ /ResetState EQ(Mode, 4) BeltConveyor4mManPB /PrevBelt /ManBelt | [ ResetState | /EQ(Mode, 4) | /BeltConveyor4mManPB | PrevBelt ] ManBelt ] ( ManBelt )
+  RUNG r153_BeltSpeedRef
+    /ResetState EQ(Mode, 4) BeltConveyor4mManPB /PrevBelt ManBelt { BeltSpeedRef := 60 }
+  RUNG r154_BeltSpeedRef
+    /ResetState EQ(Mode, 4) BeltConveyor4mManPB /PrevBelt /ManBelt { BeltSpeedRef := 0 }
+  RUNG r155_ManReject
+    [ /ResetState EQ(Mode, 4) RejectPusherManPB /PrevReject /ManReject | [ ResetState | /EQ(Mode, 4) | /RejectPusherManPB | PrevReject ] ManReject ] ( ManReject )
+  RUNG r156_ManRawCCW
+    [ /ResetState EQ(Mode, 4) RawSorterBeltCCWManPB /PrevRawCCW /ManRawCW /ManRawCCW | [ ResetState | /EQ(Mode, 4) | /RawSorterBeltCCWManPB | PrevRawCCW | ManRawCW ] ManRawCCW ] ( ManRawCCW )
+  RUNG r157_RawSorterBeltCCW
+    [ /ResetState EQ(Mode, 4) ManRawCCW | [ ResetState | /EQ(Mode, 4) ] RawSorterBeltCCW ] ( RawSorterBeltCCW )
+  RUNG r158_ManRawCW
+    [ /ResetState EQ(Mode, 4) RawSorterBeltCWManPB /PrevRawCW /ManRawCCW /ManRawCW | [ ResetState | /EQ(Mode, 4) | /RawSorterBeltCWManPB | PrevRawCW | ManRawCCW ] ManRawCW ] ( ManRawCW )
+  RUNG r159_RawSorterBeltCW
+    [ /ResetState EQ(Mode, 4) ManRawCW | [ ResetState | /EQ(Mode, 4) ] RawSorterBeltCW ] ( RawSorterBeltCW )
+  RUNG r160_ManRawTurn
+    [ /ResetState EQ(Mode, 4) RawSorterBeltTurnManPB /PrevRawTurn /ManRawTurn | [ ResetState | /EQ(Mode, 4) | /RawSorterBeltTurnManPB | PrevRawTurn ] ManRawTurn ] ( ManRawTurn )
+  RUNG r161_RawSorterBeltTurn
+    [ /ResetState EQ(Mode, 4) ManRawTurn | [ ResetState | /EQ(Mode, 4) ] RawSorterBeltTurn ] ( RawSorterBeltTurn )
+  RUNG r162_ManBaseCCW
+    [ /ResetState EQ(Mode, 4) BaseSorterBeltCCWManPB /PrevBaseCCW /ManBaseCW /ManBaseCCW | [ ResetState | /EQ(Mode, 4) | /BaseSorterBeltCCWManPB | PrevBaseCCW | ManBaseCW ] ManBaseCCW ] ( ManBaseCCW )
+  RUNG r163_BaseSorterBeltCCW
+    [ /ResetState EQ(Mode, 4) ManBaseCCW | [ ResetState | /EQ(Mode, 4) ] BaseSorterBeltCCW ] ( BaseSorterBeltCCW )
+  RUNG r164_ManBaseCW
+    [ /ResetState EQ(Mode, 4) BaseSorterBeltCWManPB /PrevBaseCW /ManBaseCCW /ManBaseCW | [ ResetState | /EQ(Mode, 4) | /BaseSorterBeltCWManPB | PrevBaseCW | ManBaseCCW ] ManBaseCW ] ( ManBaseCW )
+  RUNG r165_BaseSorterBeltCW
+    [ /ResetState EQ(Mode, 4) ManBaseCW | [ ResetState | /EQ(Mode, 4) ] BaseSorterBeltCW ] ( BaseSorterBeltCW )
+  RUNG r166_ManBaseTurn
+    [ /ResetState EQ(Mode, 4) BaseSorterBeltTurnManPB /PrevBaseTurn /ManBaseTurn | [ ResetState | /EQ(Mode, 4) | /BaseSorterBeltTurnManPB | PrevBaseTurn ] ManBaseTurn ] ( ManBaseTurn )
+  RUNG r167_BaseSorterBeltTurn
+    [ /ResetState EQ(Mode, 4) ManBaseTurn | [ ResetState | /EQ(Mode, 4) ] BaseSorterBeltTurn ] ( BaseSorterBeltTurn )
+  RUNG r168_ManLidCCW
+    [ /ResetState EQ(Mode, 4) LidSorterBeltCCWManPB /PrevLidCCW /ManLidCW /ManLidCCW | [ ResetState | /EQ(Mode, 4) | /LidSorterBeltCCWManPB | PrevLidCCW | ManLidCW ] ManLidCCW ] ( ManLidCCW )
+  RUNG r169_LidSorterBeltCCW
+    [ /ResetState EQ(Mode, 4) ManLidCCW | [ ResetState | /EQ(Mode, 4) ] LidSorterBeltCCW ] ( LidSorterBeltCCW )
+  RUNG r170_ManLidCW
+    [ /ResetState EQ(Mode, 4) LidSorterBeltCWManPB /PrevLidCW /ManLidCCW /ManLidCW | [ ResetState | /EQ(Mode, 4) | /LidSorterBeltCWManPB | PrevLidCW | ManLidCCW ] ManLidCW ] ( ManLidCW )
+  RUNG r171_LidSorterBeltCW
+    [ /ResetState EQ(Mode, 4) ManLidCW | [ ResetState | /EQ(Mode, 4) ] LidSorterBeltCW ] ( LidSorterBeltCW )
+  RUNG r172_ManLidTurn
+    [ /ResetState EQ(Mode, 4) LidSorterBeltTurnManPB /PrevLidTurn /ManLidTurn | [ ResetState | /EQ(Mode, 4) | /LidSorterBeltTurnManPB | PrevLidTurn ] ManLidTurn ] ( ManLidTurn )
+  RUNG r173_LidSorterBeltTurn
+    [ /ResetState EQ(Mode, 4) ManLidTurn | [ ResetState | /EQ(Mode, 4) ] LidSorterBeltTurn ] ( LidSorterBeltTurn )
+  RUNG r174_RejectPusher
+    [ /ResetState EQ(Mode, 4) ManReject | [ ResetState | /EQ(Mode, 4) ] RejectPusher ] ( RejectPusher )
+  RUNG r175_ResetHeld
+    /ResetState EQ(Mode, 4) Reset { ResetHeld := ResetHeld + ScanDtS }
+  RUNG r176_ResetHeld
+    /ResetState EQ(Mode, 4) /Reset { ResetHeld := 0.0 }
+  RUNG r177_RawCounter
+    /ResetState EQ(Mode, 4) GE(ResetHeld, 5.0) { RawCounter := 0 }
+  RUNG r178_BaseCounter
+    /ResetState EQ(Mode, 4) GE(ResetHeld, 5.0) { BaseCounter := 0 }
+  RUNG r179_LidCounter
+    /ResetState EQ(Mode, 4) GE(ResetHeld, 5.0) { LidCounter := 0 }
+  RUNG r180_ResetHeld
+    /ResetState /EQ(Mode, 4) { ResetHeld := 0.0 }
+  RUNG r181_BeltSpeedRef
+    /ResetState EQ(Mode, 0) { BeltSpeedRef := 0 }
+  RUNG r182_RunningPL
+    /ResetState EQ(Mode, 0) ( R RunningPL )
+  RUNG r183_BeltSpeedRef
+    /ResetState { BeltSpeedRef := LIMIT( 0 , BeltSpeedRef , 300 ) }
+  RUNG r184_TargetBeltSpeed
+    /ResetState { TargetBeltSpeed := BeltSpeedRef * 10.0 / 300.0 }
+  RUNG r185_BeltConveyor4mSpeed
+    /ResetState { BeltConveyor4mSpeed := TargetBeltSpeed }
+  RUNG r186_BeltConveyor4mSpeed2
+    /ResetState { BeltConveyor4mSpeed2 := TargetBeltSpeed }
+  RUNG r187_BeltConveyor4mPL
+    [ /ResetState GT(BeltSpeedRef, 0) | ResetState BeltConveyor4mPL ] ( BeltConveyor4mPL )
+  RUNG r188_StartPL
+    [ /ResetState EQ(Mode, 5) [ RunningPL | Blink ] | ResetState StartPL ] ( StartPL )
+  RUNG r189_RawSorterBeltCCWPL
+    [ /ResetState RawSorterBeltCCW | ResetState RawSorterBeltCCWPL ] ( RawSorterBeltCCWPL )
+  RUNG r190_RawSorterBeltCWPL
+    [ /ResetState RawSorterBeltCW | ResetState RawSorterBeltCWPL ] ( RawSorterBeltCWPL )
+  RUNG r191_RawSorterBeltTurnPL
+    [ /ResetState RawSorterBeltTurn | ResetState RawSorterBeltTurnPL ] ( RawSorterBeltTurnPL )
+  RUNG r192_BaseSorterBeltCCWPL
+    [ /ResetState BaseSorterBeltCCW | ResetState BaseSorterBeltCCWPL ] ( BaseSorterBeltCCWPL )
+  RUNG r193_BaseSorterBeltCWPL
+    [ /ResetState BaseSorterBeltCW | ResetState BaseSorterBeltCWPL ] ( BaseSorterBeltCWPL )
+  RUNG r194_BaseSorterBeltTurnPL
+    [ /ResetState BaseSorterBeltTurn | ResetState BaseSorterBeltTurnPL ] ( BaseSorterBeltTurnPL )
+  RUNG r195_LidSorterBeltCCWPL
+    [ /ResetState LidSorterBeltCCW | ResetState LidSorterBeltCCWPL ] ( LidSorterBeltCCWPL )
+  RUNG r196_LidSorterBeltCWPL
+    [ /ResetState LidSorterBeltCW | ResetState LidSorterBeltCWPL ] ( LidSorterBeltCWPL )
+  RUNG r197_LidSorterBeltTurnPL
+    [ /ResetState LidSorterBeltTurn | ResetState LidSorterBeltTurnPL ] ( LidSorterBeltTurnPL )
+  RUNG r198_RejectPusherPL
+    [ /ResetState RejectPusher | ResetState RejectPusherPL ] ( RejectPusherPL )
+  RUNG r199_Remover1
+    /ResetState ( S Remover1 ) ( S Remover2 ) ( S Remover3 )
+  RUNG r202_LabPLCRunning
+    [ /ResetState Blink | ResetState LabPLCRunning ] ( LabPLCRunning )
+  RUNG r203_SkidPLCRunning
+    [ /ResetState Blink | ResetState SkidPLCRunning ] ( SkidPLCRunning )
+  RUNG r204_LocalPanelActive
+    [ /ResetState LocalControlPanel | ResetState LocalPanelActive ] ( LocalPanelActive )
+  RUNG r205_RemotePanelActive
+    [ /ResetState RemoteControlPanel | ResetState RemotePanelActive ] ( RemotePanelActive )
+  RUNG r206_IncSpdX1Light
+    [ /ResetState IncSpdX100 | ResetState IncSpdX1Light ] ( IncSpdX1Light )
+  RUNG r207_IncSpdX10Light
+    [ /ResetState IncSpdX10 | ResetState IncSpdX10Light ] ( IncSpdX10Light )
+  RUNG r208_DecSpdX10Light
+    [ /ResetState DecSpdX10 | ResetState DecSpdX10Light ] ( DecSpdX10Light )
+  RUNG r209_DecSpdX100Light
+    [ /ResetState DecSpdX100 | ResetState DecSpdX100Light ] ( DecSpdX100Light )
+  RUNG r210_StopBlade
+    /ResetState ( R StopBlade ) ( R Spare )
+  RUNG r212_ProductionRate
+    /ResetState { ProductionRate := 0 }
+  RUNG r213_PrevMode
+    /ResetState { PrevMode := Mode }
+  RUNG r214_PrevClassify
+    [ /ResetState ClassifyDefuseSensor | ResetState PrevClassify ] ( PrevClassify )
+  RUNG r215_PrevStart
+    [ /ResetState Start | ResetState PrevStart ] ( PrevStart )
+  RUNG r216_PrevReset
+    [ /ResetState Reset | ResetState PrevReset ] ( PrevReset )
+  RUNG r217_PrevInc10
+    [ /ResetState IncSpdX10 | ResetState PrevInc10 ] ( PrevInc10 )
+  RUNG r218_PrevInc100
+    [ /ResetState IncSpdX100 | ResetState PrevInc100 ] ( PrevInc100 )
+  RUNG r219_PrevDec10
+    [ /ResetState DecSpdX10 | ResetState PrevDec10 ] ( PrevDec10 )
+  RUNG r220_PrevDec100
+    [ /ResetState DecSpdX100 | ResetState PrevDec100 ] ( PrevDec100 )
+  RUNG r221_PrevBelt
+    [ /ResetState BeltConveyor4mManPB | ResetState PrevBelt ] ( PrevBelt )
+  RUNG r222_PrevReject
+    [ /ResetState RejectPusherManPB | ResetState PrevReject ] ( PrevReject )
+  RUNG r223_PrevRawCCW
+    [ /ResetState RawSorterBeltCCWManPB | ResetState PrevRawCCW ] ( PrevRawCCW )
+  RUNG r224_PrevRawCW
+    [ /ResetState RawSorterBeltCWManPB | ResetState PrevRawCW ] ( PrevRawCW )
+  RUNG r225_PrevRawTurn
+    [ /ResetState RawSorterBeltTurnManPB | ResetState PrevRawTurn ] ( PrevRawTurn )
+  RUNG r226_PrevBaseCCW
+    [ /ResetState BaseSorterBeltCCWManPB | ResetState PrevBaseCCW ] ( PrevBaseCCW )
+  RUNG r227_PrevBaseCW
+    [ /ResetState BaseSorterBeltCWManPB | ResetState PrevBaseCW ] ( PrevBaseCW )
+  RUNG r228_PrevBaseTurn
+    [ /ResetState BaseSorterBeltTurnManPB | ResetState PrevBaseTurn ] ( PrevBaseTurn )
+  RUNG r229_PrevLidCCW
+    [ /ResetState LidSorterBeltCCWManPB | ResetState PrevLidCCW ] ( PrevLidCCW )
+  RUNG r230_PrevLidCW
+    [ /ResetState LidSorterBeltCWManPB | ResetState PrevLidCW ] ( PrevLidCW )
+  RUNG r231_PrevLidTurn
+    [ /ResetState LidSorterBeltTurnManPB | ResetState PrevLidTurn ] ( PrevLidTurn )
 END_LD
 END_FUNCTION_BLOCK

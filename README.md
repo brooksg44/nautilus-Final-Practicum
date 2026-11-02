@@ -1,5 +1,9 @@
 # Final Practicum — Nautilus / Factory I/O over Modbus TCP
 
+For a reusable method to develop other controllers from GRAFCET specifications,
+see [GRAFCET project workflow](GRAFCET_PROJECT_WORKFLOW.md).
+
+
 This project translates `Spring2026_Final_Practicum_V21.grafcet` into a
 Nautilus Structured Text controller for the supplied V20 Factory I/O scene.
 The original input files are preserved. Use the generated
@@ -43,8 +47,8 @@ before running again; the three production counters are preserved. An
 invalid selection disables all three implementations. Stop the scene before
 restarting Nautilus to load this update.
 
-The LD implementation contains native rungs, Boolean contacts/coils, SEL
-blocks and enabled assignment boxes. The FBD implementation contains native
+The LD implementation contains native rungs, Boolean contacts/coils, parallel
+holding branches and enabled assignment boxes. The FBD implementation contains native
 SEL, comparison, Boolean and arithmetic blocks. Both implement the complete
 sequence directly. Each has independent private state; no ST controller is
 called from LD or FBD. Use the Nautilus VS Code extension's **Open With →
@@ -52,11 +56,19 @@ Ladder Diagram / Function Block Diagram** editors to view these library files.
 
 `control.st` remains the readable reference implementation. The scoped
 `tools/build_languages.py` translator generates all three function blocks
-from its assignments, IF branches and CASE branches. It captures branch
-conditions before writes so the diagrams preserve ST scan ordering; it
-rejects unsupported statements. Generated `BranchNNN` coils and `CaseValueNNN`
-variables hold those decisions. Edit the reference and regenerate rather
-than modifying generated library files.
+from its assignments, IF branches and CASE branches. LD puts conditions
+directly on rungs and uses set/reset coils for conditional Boolean constants.
+Boolean assignments use contact branches rather than SEL boxes. Redundant
+conditions are simplified, including negated branches and repeated contacts.
+Rungs use native series contacts, `/Tag` normally closed contacts, and
+`[ a | b ]` parallel paths, following the Nautilus lift-station and batch-skid
+examples. Up to three adjacent independent coils share identical rung power.
+Only three named snapshots remain: `MainWasEmergency`,
+`MainWasWaitingForReset`, and `AutoStepAtScanStart`. These preserve decisions
+when later rungs change the state in the same scan. FBD retains generated
+branch temporaries. The translator rejects unsupported statements. Edit the
+reference and regenerate rather than modifying generated library files;
+`python3 tools/build_languages.py --language LD` rebuilds only ladder.
 
 ## Run
 
