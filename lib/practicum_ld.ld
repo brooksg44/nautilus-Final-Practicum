@@ -431,12 +431,12 @@ LD
   // Scene support outputs absent from the chart's actions.
   RUNG r132_Remover1
     /ResetState ( S Remover1 ) ( S Remover2 ) ( S Remover3 )
-  RUNG r133_LabPLCRunning
-    [ /ResetState Blink | ResetState LabPLCRunning ] ( LabPLCRunning )
+  //RUNG r133_LabPLCRunning
+  //  [ /ResetState Blink | ResetState LabPLCRunning ] ( LabPLCRunning )
   //RUNG r134_SkidPLCRunning
-    // [ /ResetState Blink | ResetState SkidPLCRunning ] ( SkidPLCRunning )
-  //RUNG r135_LocalPanelActive
-    //[ /ResetState LocalControlPanel | ResetState LocalPanelActive ] ( LocalPanelActive )
+  //  [ /ResetState Blink | ResetState SkidPLCRunning ] ( SkidPLCRunning )
+  RUNG r135_LocalPanelActive
+    [ /ResetState LocalControlPanel | ResetState LocalPanelActive ] ( LocalPanelActive )
   RUNG r136_RemotePanelActive
     [ /ResetState RemoteControlPanel | ResetState RemotePanelActive ] ( RemotePanelActive )
   RUNG r137_IncSpdX1Light
