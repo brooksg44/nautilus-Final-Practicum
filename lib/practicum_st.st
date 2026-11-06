@@ -381,7 +381,7 @@ LidSorterBeltTurnPL := LidSorterBeltTurn;
 RejectPusherPL := RejectPusher;
 (* Scene support outputs absent from the chart's actions. *)
 Remover1 := TRUE; Remover2 := TRUE; Remover3 := TRUE;
-(* LabPLCRunning := Blink; SkidPLCRunning := Blink; *)
+LabPLCRunning := Blink; SkidPLCRunning := Blink;
 LocalPanelActive := LocalControlPanel; RemotePanelActive := RemoteControlPanel;
 IncSpdX1Light := IncSpdX100; IncSpdX10Light := IncSpdX10;
 DecSpdX10Light := DecSpdX10; DecSpdX100Light := DecSpdX100;

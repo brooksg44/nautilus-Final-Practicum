@@ -151,381 +151,341 @@ VAR
 END_VAR
 
 LD
-  RUNG r001_ClockS (* Reset private state *)
+  // Reset private state while ResetState is TRUE; shared totals are kept.
+  RUNG r001_ClockS
     ResetState { ClockS := 0.0 }
-  RUNG r002_Blink (* Reset private state *)
+  RUNG r002_Blink
     ResetState ( R Blink )
-  RUNG r003_AutoElapsed (* Reset private state *)
-    ResetState { AutoElapsed := 0.0 }
-  RUNG r004_EmitRemaining (* Reset private state *)
-    ResetState { EmitRemaining := 0.0 }
-  RUNG r005_SortElapsed (* Reset private state *)
-    ResetState { SortElapsed := 0.0 }
-  RUNG r006_ResetHeld (* Reset private state *)
-    ResetState { ResetHeld := 0.0 }
-  RUNG r007_PrevMode (* Reset private state *)
-    ResetState { PrevMode := 0 }
-  RUNG r008_PrevClassify (* Reset private state *)
+  RUNG r003_AutoElapsed
+    ResetState { AutoElapsed := 0.0 } { EmitRemaining := 0.0 } { SortElapsed := 0.0 }
+  RUNG r004_ResetHeld
+    ResetState { ResetHeld := 0.0 } { PrevMode := 0 }
+  RUNG r005_PrevClassify
     ResetState ( R PrevClassify ) ( R PrevStart ) ( R PrevReset )
-  RUNG r011_PrevInc10 (* Reset private state *)
+  RUNG r006_PrevInc10
     ResetState ( R PrevInc10 ) ( R PrevInc100 ) ( R PrevDec10 )
-  RUNG r014_PrevDec100 (* Reset private state *)
+  RUNG r007_PrevDec100
     ResetState ( R PrevDec100 ) ( R PrevBelt ) ( R PrevReject )
-  RUNG r017_PrevRawCCW (* Reset private state *)
+  RUNG r008_PrevRawCCW
     ResetState ( R PrevRawCCW ) ( R PrevRawCW ) ( R PrevRawTurn )
-  RUNG r020_PrevBaseCCW (* Reset private state *)
+  RUNG r009_PrevBaseCCW
     ResetState ( R PrevBaseCCW ) ( R PrevBaseCW ) ( R PrevBaseTurn )
-  RUNG r023_PrevLidCCW (* Reset private state *)
+  RUNG r010_PrevLidCCW
     ResetState ( R PrevLidCCW ) ( R PrevLidCW ) ( R PrevLidTurn )
-  RUNG r026_ManBelt (* Reset private state *)
+  RUNG r011_ManBelt
     ResetState ( R ManBelt ) ( R ManReject ) ( R ManRawCCW )
-  RUNG r029_ManRawCW (* Reset private state *)
+  RUNG r012_ManRawCW
     ResetState ( R ManRawCW ) ( R ManRawTurn ) ( R ManBaseCCW )
-  RUNG r032_ManBaseCW (* Reset private state *)
+  RUNG r013_ManBaseCW
     ResetState ( R ManBaseCW ) ( R ManBaseTurn ) ( R ManLidCCW )
-  RUNG r035_ManLidCW (* Reset private state *)
+  RUNG r014_ManLidCW
     ResetState ( R ManLidCW ) ( R ManLidTurn )
-  RUNG r037_ClockS
+  // Main, X1/X2/X3. Stop and both emergency stops are NC: TRUE = healthy.
+  // FIOReset resets sequencing; totals are cleared only by manual Reset
+  // hold.
+  RUNG r015_ClockS
     /ResetState { ClockS := ClockS + ScanDtS }
-  RUNG r038_ClockS
+  RUNG r016_ClockS
     /ResetState GE(ClockS, 1.0) { ClockS := ClockS - 1.0 }
-  RUNG r039_Blink
+  RUNG r017_Blink
     [ /ResetState LT(ClockS, 0.5) | ResetState Blink ] ( Blink )
-  RUNG r040_MainWasEmergency (* Capture IF decision before branch writes *)
+  RUNG r018_MainWasEmergency (* Capture IF decision before branch writes *)
     /ResetState EmergencyStop EmergencyStop2 /FIOReset EQ(MainStep, 1) ( MainWasEmergency )
-  RUNG r041_MainWasWaitingForReset (* Capture IF decision before branch writes *)
+  RUNG r019_MainWasWaitingForReset (* Capture IF decision before branch writes *)
     /ResetState EmergencyStop EmergencyStop2 /FIOReset /MainWasEmergency Stop EQ(MainStep, 2) ( MainWasWaitingForReset )
-  RUNG r042_MainStep
+  RUNG r020_MainStep
     /ResetState [ /EmergencyStop | /EmergencyStop2 | FIOReset ] { MainStep := 1 }
-  RUNG r043_MainStep
+  RUNG r021_MainStep
     /ResetState MainWasEmergency Stop { MainStep := 2 }
-  RUNG r044_MainStep
+  RUNG r022_MainStep
     /ResetState EmergencyStop EmergencyStop2 /FIOReset /MainWasEmergency /Stop { MainStep := 2 }
-  RUNG r045_MainStep
+  RUNG r023_MainStep
     /ResetState MainWasWaitingForReset [ Reset | Reset2PB ] /ClassifyDefuseSensor /RejectDiffuseSensor AtExit { MainStep := 3 }
-  RUNG r046_ControlOnPL
+  RUNG r024_ControlOnPL
     [ /ResetState [ EQ(MainStep, 3) | Blink ] | ResetState ControlOnPL ] ( ControlOnPL )
-  RUNG r047_ControlOnPL2
+  RUNG r025_ControlOnPL2
     [ /ResetState ControlOnPL | ResetState ControlOnPL2 ] ( ControlOnPL2 )
-  RUNG r048_StopPL
+  RUNG r026_StopPL
     [ /ResetState NE(MainStep, 3) | ResetState StopPL ] ( StopPL )
-  RUNG r049_EStoppedPL
+  RUNG r027_EStoppedPL
     [ /ResetState EQ(MainStep, 1) Blink | ResetState EStoppedPL ] ( EStoppedPL )
-  RUNG r050_Mode
+  RUNG r028_Mode
     /ResetState { Mode := 0 }
-  RUNG r051_Mode
+  RUNG r029_Mode
     /ResetState EQ(MainStep, 3) ManualSS /AutoSS { Mode := 4 }
-  RUNG r052_Mode
+  RUNG r030_Mode
     /ResetState EQ(MainStep, 3) AutoSS /ManualSS { Mode := 5 }
-  RUNG r053_ManualPL
+  RUNG r031_ManualPL
     [ /ResetState EQ(Mode, 4) | ResetState ManualPL ] ( ManualPL )
-  RUNG r054_AutoPL
+  RUNG r032_AutoPL
     [ /ResetState EQ(Mode, 5) | ResetState AutoPL ] ( AutoPL )
-  RUNG r055_BeltSpeedRef
-    /ResetState NE(Mode, PrevMode) { BeltSpeedRef := 0 }
-  RUNG r056_LastBeltRefSpeed
-    /ResetState NE(Mode, PrevMode) { LastBeltRefSpeed := 0 }
-  RUNG r057_AutoStep
-    /ResetState NE(Mode, PrevMode) { AutoStep := 16 }
-  RUNG r058_AutoElapsed
-    /ResetState NE(Mode, PrevMode) { AutoElapsed := 0.0 }
-  RUNG r059_EmitRemaining
-    /ResetState NE(Mode, PrevMode) { EmitRemaining := 0.0 }
-  RUNG r060_SortElapsed
-    /ResetState NE(Mode, PrevMode) { SortElapsed := 0.0 }
-  RUNG r061_RunningPL
+  // Enclosing X4/X5: deactivate child charts when leaving their mode.
+  RUNG r033_BeltSpeedRef
+    /ResetState NE(Mode, PrevMode) { BeltSpeedRef := 0 } { LastBeltRefSpeed := 0 } { AutoStep := 16 }
+  RUNG r034_AutoElapsed
+    /ResetState NE(Mode, PrevMode) { AutoElapsed := 0.0 } { EmitRemaining := 0.0 } { SortElapsed := 0.0 }
+  RUNG r035_RunningPL
     /ResetState NE(Mode, PrevMode) ( R RunningPL ) ( R ManBelt ) ( R ManReject )
-  RUNG r064_ManRawCCW
+  RUNG r036_ManRawCCW
     /ResetState NE(Mode, PrevMode) ( R ManRawCCW ) ( R ManRawCW ) ( R ManRawTurn )
-  RUNG r067_ManBaseCCW
+  RUNG r037_ManBaseCCW
     /ResetState NE(Mode, PrevMode) ( R ManBaseCCW ) ( R ManBaseCW ) ( R ManBaseTurn )
-  RUNG r070_ManLidCCW
+  RUNG r038_ManLidCCW
     /ResetState NE(Mode, PrevMode) ( R ManLidCCW ) ( R ManLidCW ) ( R ManLidTurn )
-  RUNG r073_Emitter
+  RUNG r039_Emitter
     /ResetState ( R Emitter ) ( R EmitFlag ) ( R WarningLight1 )
-  RUNG r076_RawSorterBeltCCW
+  RUNG r040_RawSorterBeltCCW
     /ResetState ( R RawSorterBeltCCW ) ( R RawSorterBeltCW ) ( R RawSorterBeltTurn )
-  RUNG r079_BaseSorterBeltCCW
+  RUNG r041_BaseSorterBeltCCW
     /ResetState ( R BaseSorterBeltCCW ) ( R BaseSorterBeltCW ) ( R BaseSorterBeltTurn )
-  RUNG r082_LidSorterBeltCCW
+  RUNG r042_LidSorterBeltCCW
     /ResetState ( R LidSorterBeltCCW ) ( R LidSorterBeltCW ) ( R LidSorterBeltTurn )
-  RUNG r085_RejectPusher
+  RUNG r043_RejectPusher
     /ResetState ( R RejectPusher ) ( R RawLightInd ) ( R BaseLightInd )
-  RUNG r088_LidLightInd
+  RUNG r044_LidLightInd
     /ResetState ( R LidLightInd ) ( R RawFlag ) ( R BaseFlag )
-  RUNG r091_LidFlag
+  RUNG r045_LidFlag
     /ResetState ( R LidFlag ) ( R RejectFlag )
-  RUNG r093_BeltSpeedRef
+  // Continuous: +/-10 and +/-100 cm/s on rising edges, clamp 0..300. Use
+  // real division for Modbus voltage scaling; the source has three mutually
+  // incompatible platform scaling examples.
+  RUNG r046_BeltSpeedRef
     /ResetState EQ(MainStep, 3) IncSpdX10 /PrevInc10 { BeltSpeedRef := BeltSpeedRef + 10 }
-  RUNG r094_BeltSpeedRef
+  RUNG r047_BeltSpeedRef
     /ResetState EQ(MainStep, 3) IncSpdX100 /PrevInc100 { BeltSpeedRef := BeltSpeedRef + 100 }
-  RUNG r095_BeltSpeedRef
+  RUNG r048_BeltSpeedRef
     /ResetState EQ(MainStep, 3) DecSpdX10 /PrevDec10 { BeltSpeedRef := BeltSpeedRef - 10 }
-  RUNG r096_BeltSpeedRef
+  RUNG r049_BeltSpeedRef
     /ResetState EQ(MainStep, 3) DecSpdX100 /PrevDec100 { BeltSpeedRef := BeltSpeedRef - 100 }
-  RUNG r097_BeltSpeedRef
+  RUNG r050_BeltSpeedRef
     /ResetState EQ(MainStep, 3) { BeltSpeedRef := LIMIT( 0 , BeltSpeedRef , 300 ) }
-  RUNG r098_LastBeltRefSpeed
+  RUNG r051_LastBeltRefSpeed
     /ResetState EQ(MainStep, 3) [ IncSpdX10 /PrevInc10 | IncSpdX100 /PrevInc100 | DecSpdX10 /PrevDec10 | DecSpdX100 /PrevDec100 ] { LastBeltRefSpeed := BeltSpeedRef }
-  RUNG r099_AutoStepAtScanStart (* Snapshot CASE selector *)
+  // Automatic: X16/X21 wait, X20 three second warning, X19 emit, X22
+  // classify, X24/X27/X28 sorting, X25 rejection.
+  RUNG r052_AutoStepAtScanStart (* Snapshot CASE selector *)
     /ResetState EQ(Mode, 5) { AutoStepAtScanStart := AutoStep }
-  RUNG r100_AutoStep
+  RUNG r053_AutoStep
     /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 16) { AutoStep := 21 }
-  RUNG r101_AutoStep
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 21) Start { AutoStep := 20 }
-  RUNG r102_AutoElapsed
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 21) Start { AutoElapsed := 0.0 }
-  RUNG r103_WarningLight1
+  RUNG r054_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 21) Start { AutoStep := 20 } { AutoElapsed := 0.0 }
+  RUNG r055_WarningLight1
     [ /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) /Blink | [ ResetState | /EQ(Mode, 5) | /EQ(AutoStepAtScanStart, 20) ] WarningLight1 ] ( WarningLight1 )
-  RUNG r104_AutoElapsed
+  RUNG r056_AutoElapsed
     /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) { AutoElapsed := AutoElapsed + ScanDtS }
-  RUNG r105_AutoStep
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) GE(AutoElapsed, 3.0) { AutoStep := 19 }
-  RUNG r106_EmitRemaining
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) GE(AutoElapsed, 3.0) { EmitRemaining := 0.5 }
-  RUNG r107_BeltSpeedRef
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) GE(AutoElapsed, 3.0) { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r108_RunningPL
+  RUNG r057_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) GE(AutoElapsed, 3.0) { AutoStep := 19 } { EmitRemaining := 0.5 } { BeltSpeedRef := LastBeltRefSpeed }
+  RUNG r058_RunningPL
     /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 20) GE(AutoElapsed, 3.0) ( S RunningPL )
-  RUNG r109_EmitFlag
+  RUNG r059_EmitFlag
     /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 19) ( S EmitFlag )
-  RUNG r110_LastBeltRefSpeed
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 19) ClassifyDefuseSensor /PrevClassify { LastBeltRefSpeed := BeltSpeedRef }
-  RUNG r111_BeltSpeedRef
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 19) ClassifyDefuseSensor /PrevClassify { BeltSpeedRef := 60 }
-  RUNG r112_AutoStep
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 19) ClassifyDefuseSensor /PrevClassify { AutoStep := 22 }
-  RUNG r113_AutoStep
+  RUNG r060_LastBeltRefSpeed
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 19) ClassifyDefuseSensor /PrevClassify { LastBeltRefSpeed := BeltSpeedRef } { BeltSpeedRef := 60 } { AutoStep := 22 }
+  // Reject has priority if the operator presses both commands.
+  RUNG r061_AutoStep
     /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) [ SendRejectPB | GE(VisionSensor1, 7) LE(VisionSensor1, 9) ] { AutoStep := 25 }
-  RUNG r114_AutoStep
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) ] { AutoStep := 24 }
-  RUNG r115_RawCounter
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) ] { RawCounter := RawCounter + 1 }
-  RUNG r116_BeltSpeedRef
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) ] { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r117_AutoStep
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ EQ(VisionSensor1, 3) | EQ(VisionSensor1, 6) ] { AutoStep := 27 }
-  RUNG r118_BaseCounter
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ EQ(VisionSensor1, 3) | EQ(VisionSensor1, 6) ] { BaseCounter := BaseCounter + 1 }
-  RUNG r119_BeltSpeedRef
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ EQ(VisionSensor1, 3) | EQ(VisionSensor1, 6) ] { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r120_AutoStep
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) | /EQ(VisionSensor1, 3) /EQ(VisionSensor1, 6) ] [ EQ(VisionSensor1, 2) | EQ(VisionSensor1, 5) ] { AutoStep := 28 }
-  RUNG r121_LidCounter
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) | /EQ(VisionSensor1, 3) /EQ(VisionSensor1, 6) ] [ EQ(VisionSensor1, 2) | EQ(VisionSensor1, 5) ] { LidCounter := LidCounter + 1 }
-  RUNG r122_BeltSpeedRef
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) ] [ GE(VisionSensor1, 7) LE(VisionSensor1, 9) | EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) | /EQ(VisionSensor1, 3) /EQ(VisionSensor1, 6) ] [ EQ(VisionSensor1, 2) | EQ(VisionSensor1, 5) ] { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r123_AutoStep
+  RUNG r062_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB [ EQ(VisionSensor1, 1) | EQ(VisionSensor1, 4) ] { AutoStep := 24 } { RawCounter := RawCounter + 1 } { BeltSpeedRef := LastBeltRefSpeed }
+  RUNG r063_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) [ EQ(VisionSensor1, 3) | EQ(VisionSensor1, 6) ] { AutoStep := 27 } { BaseCounter := BaseCounter + 1 } { BeltSpeedRef := LastBeltRefSpeed }
+  RUNG r064_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 22) /SendRejectPB [ /GE(VisionSensor1, 7) | /LE(VisionSensor1, 9) ] SendSortPB /EQ(VisionSensor1, 1) /EQ(VisionSensor1, 4) /EQ(VisionSensor1, 3) /EQ(VisionSensor1, 6) [ EQ(VisionSensor1, 2) | EQ(VisionSensor1, 5) ] { AutoStep := 28 } { LidCounter := LidCounter + 1 } { BeltSpeedRef := LastBeltRefSpeed }
+  RUNG r065_AutoStep
     /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 24) | EQ(AutoStepAtScanStart, 27) | EQ(AutoStepAtScanStart, 28) ] /AtExit { AutoStep := AutoStep + 100 }
-  RUNG r124_AutoStep
-    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 124) | EQ(AutoStepAtScanStart, 127) | EQ(AutoStepAtScanStart, 128) ] AtExit { AutoStep := AutoStep + 100 }
-  RUNG r125_SortElapsed
-    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 124) | EQ(AutoStepAtScanStart, 127) | EQ(AutoStepAtScanStart, 128) ] AtExit { SortElapsed := 0.0 }
-  RUNG r126_SortElapsed
+  RUNG r066_AutoStep
+    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 124) | EQ(AutoStepAtScanStart, 127) | EQ(AutoStepAtScanStart, 128) ] AtExit { AutoStep := AutoStep + 100 } { SortElapsed := 0.0 }
+  RUNG r067_SortElapsed
     /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 224) | EQ(AutoStepAtScanStart, 227) | EQ(AutoStepAtScanStart, 228) ] { SortElapsed := SortElapsed + ScanDtS }
-  RUNG r127_AutoStep
-    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 224) | EQ(AutoStepAtScanStart, 227) | EQ(AutoStepAtScanStart, 228) ] GE(SortElapsed, 0.5) { AutoStep := 19 }
-  RUNG r128_EmitRemaining
-    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 224) | EQ(AutoStepAtScanStart, 227) | EQ(AutoStepAtScanStart, 228) ] GE(SortElapsed, 0.5) { EmitRemaining := 0.5 }
-  RUNG r129_BeltSpeedRef
-    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 224) | EQ(AutoStepAtScanStart, 227) | EQ(AutoStepAtScanStart, 228) ] GE(SortElapsed, 0.5) { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r130_AutoStep
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 25) RejectDiffuseSensor { AutoStep := 85 }
-  RUNG r131_BeltSpeedRef
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 25) RejectDiffuseSensor { BeltSpeedRef := 0 }
-  RUNG r132_AutoStep
+  RUNG r068_AutoStep
+    /ResetState EQ(Mode, 5) [ EQ(AutoStepAtScanStart, 224) | EQ(AutoStepAtScanStart, 227) | EQ(AutoStepAtScanStart, 228) ] GE(SortElapsed, 0.5) { AutoStep := 19 } { EmitRemaining := 0.5 } { BeltSpeedRef := LastBeltRefSpeed }
+  RUNG r069_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 25) RejectDiffuseSensor { AutoStep := 85 } { BeltSpeedRef := 0 }
+  RUNG r070_AutoStep
     /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 85) RejPushFrontLimit { AutoStep := 86 }
-  RUNG r133_AutoStep
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 86) RejPushBackLimit { AutoStep := 19 }
-  RUNG r134_EmitRemaining
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 86) RejPushBackLimit { EmitRemaining := 0.5 }
-  RUNG r135_BeltSpeedRef
-    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 86) RejPushBackLimit { BeltSpeedRef := LastBeltRefSpeed }
-  RUNG r136_RawFlag
+  RUNG r071_AutoStep
+    /ResetState EQ(Mode, 5) EQ(AutoStepAtScanStart, 86) RejPushBackLimit { AutoStep := 19 } { EmitRemaining := 0.5 } { BeltSpeedRef := LastBeltRefSpeed }
+  RUNG r072_RawFlag
     [ /ResetState EQ(Mode, 5) [ EQ(AutoStep, 24) | EQ(AutoStep, 124) | EQ(AutoStep, 224) ] | [ ResetState | /EQ(Mode, 5) ] RawFlag ] ( RawFlag )
-  RUNG r137_BaseFlag
+  RUNG r073_BaseFlag
     [ /ResetState EQ(Mode, 5) [ EQ(AutoStep, 27) | EQ(AutoStep, 127) | EQ(AutoStep, 227) ] | [ ResetState | /EQ(Mode, 5) ] BaseFlag ] ( BaseFlag )
-  RUNG r138_LidFlag
+  RUNG r074_LidFlag
     [ /ResetState EQ(Mode, 5) [ EQ(AutoStep, 28) | EQ(AutoStep, 128) | EQ(AutoStep, 228) ] | [ ResetState | /EQ(Mode, 5) ] LidFlag ] ( LidFlag )
-  RUNG r139_RejectFlag
+  RUNG r075_RejectFlag
     [ /ResetState EQ(Mode, 5) [ EQ(AutoStep, 25) | EQ(AutoStep, 85) ] | [ ResetState | /EQ(Mode, 5) ] RejectFlag ] ( RejectFlag )
-  RUNG r140_RawSorterBeltCW
+  RUNG r076_RawSorterBeltCW
     [ /ResetState EQ(Mode, 5) EQ(AutoStep, 24) | [ ResetState | /EQ(Mode, 5) ] RawSorterBeltCW ] ( RawSorterBeltCW )
-  RUNG r141_RawSorterBeltTurn
+  RUNG r077_RawSorterBeltTurn
     [ /ResetState EQ(Mode, 5) RawSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] RawSorterBeltTurn ] ( RawSorterBeltTurn )
-  RUNG r142_BaseSorterBeltCW
+  RUNG r078_BaseSorterBeltCW
     [ /ResetState EQ(Mode, 5) EQ(AutoStep, 27) | [ ResetState | /EQ(Mode, 5) ] BaseSorterBeltCW ] ( BaseSorterBeltCW )
-  RUNG r143_BaseSorterBeltTurn
+  RUNG r079_BaseSorterBeltTurn
     [ /ResetState EQ(Mode, 5) BaseSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] BaseSorterBeltTurn ] ( BaseSorterBeltTurn )
-  RUNG r144_LidSorterBeltCW
+  RUNG r080_LidSorterBeltCW
     [ /ResetState EQ(Mode, 5) EQ(AutoStep, 28) | [ ResetState | /EQ(Mode, 5) ] LidSorterBeltCW ] ( LidSorterBeltCW )
-  RUNG r145_LidSorterBeltTurn
+  RUNG r081_LidSorterBeltTurn
     [ /ResetState EQ(Mode, 5) LidSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] LidSorterBeltTurn ] ( LidSorterBeltTurn )
-  RUNG r146_RawLightInd
+  RUNG r082_RawLightInd
     [ /ResetState EQ(Mode, 5) RawSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] RawLightInd ] ( RawLightInd )
-  RUNG r147_BaseLightInd
+  RUNG r083_BaseLightInd
     [ /ResetState EQ(Mode, 5) BaseSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] BaseLightInd ] ( BaseLightInd )
-  RUNG r148_LidLightInd
+  RUNG r084_LidLightInd
     [ /ResetState EQ(Mode, 5) LidSorterBeltCW | [ ResetState | /EQ(Mode, 5) ] LidLightInd ] ( LidLightInd )
-  RUNG r149_RejectPusher
+  RUNG r085_RejectPusher
     [ /ResetState EQ(Mode, 5) EQ(AutoStep, 85) | [ ResetState | /EQ(Mode, 5) ] RejectPusher ] ( RejectPusher )
-  RUNG r150_Emitter
+  RUNG r086_Emitter
     /ResetState EQ(Mode, 5) GT(EmitRemaining, 0.0) ( S Emitter )
-  RUNG r151_EmitRemaining
+  RUNG r087_EmitRemaining
     /ResetState EQ(Mode, 5) GT(EmitRemaining, 0.0) { EmitRemaining := EmitRemaining - ScanDtS }
-  RUNG r152_ManBelt
+  // Manual-PushPullls and Manual-Counters: edge toggles with CW/CCW
+  // exclusion, five second local Reset hold clears all three totals.
+  RUNG r088_ManBelt
     [ /ResetState EQ(Mode, 4) BeltConveyor4mManPB /PrevBelt /ManBelt | [ ResetState | /EQ(Mode, 4) | /BeltConveyor4mManPB | PrevBelt ] ManBelt ] ( ManBelt )
-  RUNG r153_BeltSpeedRef
+  RUNG r089_BeltSpeedRef
     /ResetState EQ(Mode, 4) BeltConveyor4mManPB /PrevBelt ManBelt { BeltSpeedRef := 60 }
-  RUNG r154_BeltSpeedRef
+  RUNG r090_BeltSpeedRef
     /ResetState EQ(Mode, 4) BeltConveyor4mManPB /PrevBelt /ManBelt { BeltSpeedRef := 0 }
-  RUNG r155_ManReject
+  RUNG r091_ManReject
     [ /ResetState EQ(Mode, 4) RejectPusherManPB /PrevReject /ManReject | [ ResetState | /EQ(Mode, 4) | /RejectPusherManPB | PrevReject ] ManReject ] ( ManReject )
-  RUNG r156_ManRawCCW
+  RUNG r092_ManRawCCW
     [ /ResetState EQ(Mode, 4) RawSorterBeltCCWManPB /PrevRawCCW /ManRawCW /ManRawCCW | [ ResetState | /EQ(Mode, 4) | /RawSorterBeltCCWManPB | PrevRawCCW | ManRawCW ] ManRawCCW ] ( ManRawCCW )
-  RUNG r157_RawSorterBeltCCW
+  RUNG r093_RawSorterBeltCCW
     [ /ResetState EQ(Mode, 4) ManRawCCW | [ ResetState | /EQ(Mode, 4) ] RawSorterBeltCCW ] ( RawSorterBeltCCW )
-  RUNG r158_ManRawCW
+  RUNG r094_ManRawCW
     [ /ResetState EQ(Mode, 4) RawSorterBeltCWManPB /PrevRawCW /ManRawCCW /ManRawCW | [ ResetState | /EQ(Mode, 4) | /RawSorterBeltCWManPB | PrevRawCW | ManRawCCW ] ManRawCW ] ( ManRawCW )
-  RUNG r159_RawSorterBeltCW
+  RUNG r095_RawSorterBeltCW
     [ /ResetState EQ(Mode, 4) ManRawCW | [ ResetState | /EQ(Mode, 4) ] RawSorterBeltCW ] ( RawSorterBeltCW )
-  RUNG r160_ManRawTurn
+  RUNG r096_ManRawTurn
     [ /ResetState EQ(Mode, 4) RawSorterBeltTurnManPB /PrevRawTurn /ManRawTurn | [ ResetState | /EQ(Mode, 4) | /RawSorterBeltTurnManPB | PrevRawTurn ] ManRawTurn ] ( ManRawTurn )
-  RUNG r161_RawSorterBeltTurn
+  RUNG r097_RawSorterBeltTurn
     [ /ResetState EQ(Mode, 4) ManRawTurn | [ ResetState | /EQ(Mode, 4) ] RawSorterBeltTurn ] ( RawSorterBeltTurn )
-  RUNG r162_ManBaseCCW
+  RUNG r098_ManBaseCCW
     [ /ResetState EQ(Mode, 4) BaseSorterBeltCCWManPB /PrevBaseCCW /ManBaseCW /ManBaseCCW | [ ResetState | /EQ(Mode, 4) | /BaseSorterBeltCCWManPB | PrevBaseCCW | ManBaseCW ] ManBaseCCW ] ( ManBaseCCW )
-  RUNG r163_BaseSorterBeltCCW
+  RUNG r099_BaseSorterBeltCCW
     [ /ResetState EQ(Mode, 4) ManBaseCCW | [ ResetState | /EQ(Mode, 4) ] BaseSorterBeltCCW ] ( BaseSorterBeltCCW )
-  RUNG r164_ManBaseCW
+  RUNG r100_ManBaseCW
     [ /ResetState EQ(Mode, 4) BaseSorterBeltCWManPB /PrevBaseCW /ManBaseCCW /ManBaseCW | [ ResetState | /EQ(Mode, 4) | /BaseSorterBeltCWManPB | PrevBaseCW | ManBaseCCW ] ManBaseCW ] ( ManBaseCW )
-  RUNG r165_BaseSorterBeltCW
+  RUNG r101_BaseSorterBeltCW
     [ /ResetState EQ(Mode, 4) ManBaseCW | [ ResetState | /EQ(Mode, 4) ] BaseSorterBeltCW ] ( BaseSorterBeltCW )
-  RUNG r166_ManBaseTurn
+  RUNG r102_ManBaseTurn
     [ /ResetState EQ(Mode, 4) BaseSorterBeltTurnManPB /PrevBaseTurn /ManBaseTurn | [ ResetState | /EQ(Mode, 4) | /BaseSorterBeltTurnManPB | PrevBaseTurn ] ManBaseTurn ] ( ManBaseTurn )
-  RUNG r167_BaseSorterBeltTurn
+  RUNG r103_BaseSorterBeltTurn
     [ /ResetState EQ(Mode, 4) ManBaseTurn | [ ResetState | /EQ(Mode, 4) ] BaseSorterBeltTurn ] ( BaseSorterBeltTurn )
-  RUNG r168_ManLidCCW
+  RUNG r104_ManLidCCW
     [ /ResetState EQ(Mode, 4) LidSorterBeltCCWManPB /PrevLidCCW /ManLidCW /ManLidCCW | [ ResetState | /EQ(Mode, 4) | /LidSorterBeltCCWManPB | PrevLidCCW | ManLidCW ] ManLidCCW ] ( ManLidCCW )
-  RUNG r169_LidSorterBeltCCW
+  RUNG r105_LidSorterBeltCCW
     [ /ResetState EQ(Mode, 4) ManLidCCW | [ ResetState | /EQ(Mode, 4) ] LidSorterBeltCCW ] ( LidSorterBeltCCW )
-  RUNG r170_ManLidCW
+  RUNG r106_ManLidCW
     [ /ResetState EQ(Mode, 4) LidSorterBeltCWManPB /PrevLidCW /ManLidCCW /ManLidCW | [ ResetState | /EQ(Mode, 4) | /LidSorterBeltCWManPB | PrevLidCW | ManLidCCW ] ManLidCW ] ( ManLidCW )
-  RUNG r171_LidSorterBeltCW
+  RUNG r107_LidSorterBeltCW
     [ /ResetState EQ(Mode, 4) ManLidCW | [ ResetState | /EQ(Mode, 4) ] LidSorterBeltCW ] ( LidSorterBeltCW )
-  RUNG r172_ManLidTurn
+  RUNG r108_ManLidTurn
     [ /ResetState EQ(Mode, 4) LidSorterBeltTurnManPB /PrevLidTurn /ManLidTurn | [ ResetState | /EQ(Mode, 4) | /LidSorterBeltTurnManPB | PrevLidTurn ] ManLidTurn ] ( ManLidTurn )
-  RUNG r173_LidSorterBeltTurn
+  RUNG r109_LidSorterBeltTurn
     [ /ResetState EQ(Mode, 4) ManLidTurn | [ ResetState | /EQ(Mode, 4) ] LidSorterBeltTurn ] ( LidSorterBeltTurn )
-  RUNG r174_RejectPusher
+  RUNG r110_RejectPusher
     [ /ResetState EQ(Mode, 4) ManReject | [ ResetState | /EQ(Mode, 4) ] RejectPusher ] ( RejectPusher )
-  RUNG r175_ResetHeld
+  RUNG r111_ResetHeld
     /ResetState EQ(Mode, 4) Reset { ResetHeld := ResetHeld + ScanDtS }
-  RUNG r176_ResetHeld
+  RUNG r112_ResetHeld
     /ResetState EQ(Mode, 4) /Reset { ResetHeld := 0.0 }
-  RUNG r177_RawCounter
-    /ResetState EQ(Mode, 4) GE(ResetHeld, 5.0) { RawCounter := 0 }
-  RUNG r178_BaseCounter
-    /ResetState EQ(Mode, 4) GE(ResetHeld, 5.0) { BaseCounter := 0 }
-  RUNG r179_LidCounter
-    /ResetState EQ(Mode, 4) GE(ResetHeld, 5.0) { LidCounter := 0 }
-  RUNG r180_ResetHeld
+  RUNG r113_RawCounter
+    /ResetState EQ(Mode, 4) GE(ResetHeld, 5.0) { RawCounter := 0 } { BaseCounter := 0 } { LidCounter := 0 }
+  RUNG r114_ResetHeld
     /ResetState /EQ(Mode, 4) { ResetHeld := 0.0 }
-  RUNG r181_BeltSpeedRef
+  // Output arbitration. The blinking ControlOnPL is never used as the motion
+  // permissive: only the actual X3 state can permit motion.
+  RUNG r115_BeltSpeedRef
     /ResetState EQ(Mode, 0) { BeltSpeedRef := 0 }
-  RUNG r182_RunningPL
+  RUNG r116_RunningPL
     /ResetState EQ(Mode, 0) ( R RunningPL )
-  RUNG r183_BeltSpeedRef
+  RUNG r117_BeltSpeedRef
     /ResetState { BeltSpeedRef := LIMIT( 0 , BeltSpeedRef , 300 ) }
-  RUNG r184_TargetBeltSpeed
+  RUNG r118_TargetBeltSpeed
     /ResetState { TargetBeltSpeed := BeltSpeedRef * 10.0 / 300.0 }
-  RUNG r185_BeltConveyor4mSpeed
-    /ResetState { BeltConveyor4mSpeed := TargetBeltSpeed }
-  RUNG r186_BeltConveyor4mSpeed2
-    /ResetState { BeltConveyor4mSpeed2 := TargetBeltSpeed }
-  RUNG r187_BeltConveyor4mPL
+  RUNG r119_BeltConveyor4mSpeed
+    /ResetState { BeltConveyor4mSpeed := TargetBeltSpeed } { BeltConveyor4mSpeed2 := TargetBeltSpeed }
+  RUNG r120_BeltConveyor4mPL
     [ /ResetState GT(BeltSpeedRef, 0) | ResetState BeltConveyor4mPL ] ( BeltConveyor4mPL )
-  RUNG r188_StartPL
+  RUNG r121_StartPL
     [ /ResetState EQ(Mode, 5) [ RunningPL | Blink ] | ResetState StartPL ] ( StartPL )
-  RUNG r189_RawSorterBeltCCWPL
+  RUNG r122_RawSorterBeltCCWPL
     [ /ResetState RawSorterBeltCCW | ResetState RawSorterBeltCCWPL ] ( RawSorterBeltCCWPL )
-  RUNG r190_RawSorterBeltCWPL
+  RUNG r123_RawSorterBeltCWPL
     [ /ResetState RawSorterBeltCW | ResetState RawSorterBeltCWPL ] ( RawSorterBeltCWPL )
-  RUNG r191_RawSorterBeltTurnPL
+  RUNG r124_RawSorterBeltTurnPL
     [ /ResetState RawSorterBeltTurn | ResetState RawSorterBeltTurnPL ] ( RawSorterBeltTurnPL )
-  RUNG r192_BaseSorterBeltCCWPL
+  RUNG r125_BaseSorterBeltCCWPL
     [ /ResetState BaseSorterBeltCCW | ResetState BaseSorterBeltCCWPL ] ( BaseSorterBeltCCWPL )
-  RUNG r193_BaseSorterBeltCWPL
+  RUNG r126_BaseSorterBeltCWPL
     [ /ResetState BaseSorterBeltCW | ResetState BaseSorterBeltCWPL ] ( BaseSorterBeltCWPL )
-  RUNG r194_BaseSorterBeltTurnPL
+  RUNG r127_BaseSorterBeltTurnPL
     [ /ResetState BaseSorterBeltTurn | ResetState BaseSorterBeltTurnPL ] ( BaseSorterBeltTurnPL )
-  RUNG r195_LidSorterBeltCCWPL
+  RUNG r128_LidSorterBeltCCWPL
     [ /ResetState LidSorterBeltCCW | ResetState LidSorterBeltCCWPL ] ( LidSorterBeltCCWPL )
-  RUNG r196_LidSorterBeltCWPL
+  RUNG r129_LidSorterBeltCWPL
     [ /ResetState LidSorterBeltCW | ResetState LidSorterBeltCWPL ] ( LidSorterBeltCWPL )
-  RUNG r197_LidSorterBeltTurnPL
+  RUNG r130_LidSorterBeltTurnPL
     [ /ResetState LidSorterBeltTurn | ResetState LidSorterBeltTurnPL ] ( LidSorterBeltTurnPL )
-  RUNG r198_RejectPusherPL
+  RUNG r131_RejectPusherPL
     [ /ResetState RejectPusher | ResetState RejectPusherPL ] ( RejectPusherPL )
-  RUNG r199_Remover1
+  // Scene support outputs absent from the chart's actions.
+  RUNG r132_Remover1
     /ResetState ( S Remover1 ) ( S Remover2 ) ( S Remover3 )
-  RUNG r202_LabPLCRunning
+  RUNG r133_LabPLCRunning
     [ /ResetState Blink | ResetState LabPLCRunning ] ( LabPLCRunning )
-  RUNG r203_SkidPLCRunning
-    [ /ResetState Blink | ResetState SkidPLCRunning ] ( SkidPLCRunning )
-  RUNG r204_LocalPanelActive
-    [ /ResetState LocalControlPanel | ResetState LocalPanelActive ] ( LocalPanelActive )
-  RUNG r205_RemotePanelActive
+  //RUNG r134_SkidPLCRunning
+    // [ /ResetState Blink | ResetState SkidPLCRunning ] ( SkidPLCRunning )
+  //RUNG r135_LocalPanelActive
+    //[ /ResetState LocalControlPanel | ResetState LocalPanelActive ] ( LocalPanelActive )
+  RUNG r136_RemotePanelActive
     [ /ResetState RemoteControlPanel | ResetState RemotePanelActive ] ( RemotePanelActive )
-  RUNG r206_IncSpdX1Light
+  RUNG r137_IncSpdX1Light
     [ /ResetState IncSpdX100 | ResetState IncSpdX1Light ] ( IncSpdX1Light )
-  RUNG r207_IncSpdX10Light
+  RUNG r138_IncSpdX10Light
     [ /ResetState IncSpdX10 | ResetState IncSpdX10Light ] ( IncSpdX10Light )
-  RUNG r208_DecSpdX10Light
+  RUNG r139_DecSpdX10Light
     [ /ResetState DecSpdX10 | ResetState DecSpdX10Light ] ( DecSpdX10Light )
-  RUNG r209_DecSpdX100Light
+  RUNG r140_DecSpdX100Light
     [ /ResetState DecSpdX100 | ResetState DecSpdX100Light ] ( DecSpdX100Light )
-  RUNG r210_StopBlade
+  RUNG r141_StopBlade
     /ResetState ( R StopBlade ) ( R Spare )
-  RUNG r212_ProductionRate
-    /ResetState { ProductionRate := 0 }
-  RUNG r213_PrevMode
-    /ResetState { PrevMode := Mode }
-  RUNG r214_PrevClassify
+  RUNG r142_ProductionRate
+    /ResetState { ProductionRate := 0 } { PrevMode := Mode }
+  RUNG r143_PrevClassify
     [ /ResetState ClassifyDefuseSensor | ResetState PrevClassify ] ( PrevClassify )
-  RUNG r215_PrevStart
+  RUNG r144_PrevStart
     [ /ResetState Start | ResetState PrevStart ] ( PrevStart )
-  RUNG r216_PrevReset
+  RUNG r145_PrevReset
     [ /ResetState Reset | ResetState PrevReset ] ( PrevReset )
-  RUNG r217_PrevInc10
+  RUNG r146_PrevInc10
     [ /ResetState IncSpdX10 | ResetState PrevInc10 ] ( PrevInc10 )
-  RUNG r218_PrevInc100
+  RUNG r147_PrevInc100
     [ /ResetState IncSpdX100 | ResetState PrevInc100 ] ( PrevInc100 )
-  RUNG r219_PrevDec10
+  RUNG r148_PrevDec10
     [ /ResetState DecSpdX10 | ResetState PrevDec10 ] ( PrevDec10 )
-  RUNG r220_PrevDec100
+  RUNG r149_PrevDec100
     [ /ResetState DecSpdX100 | ResetState PrevDec100 ] ( PrevDec100 )
-  RUNG r221_PrevBelt
+  RUNG r150_PrevBelt
     [ /ResetState BeltConveyor4mManPB | ResetState PrevBelt ] ( PrevBelt )
-  RUNG r222_PrevReject
+  RUNG r151_PrevReject
     [ /ResetState RejectPusherManPB | ResetState PrevReject ] ( PrevReject )
-  RUNG r223_PrevRawCCW
+  RUNG r152_PrevRawCCW
     [ /ResetState RawSorterBeltCCWManPB | ResetState PrevRawCCW ] ( PrevRawCCW )
-  RUNG r224_PrevRawCW
+  RUNG r153_PrevRawCW
     [ /ResetState RawSorterBeltCWManPB | ResetState PrevRawCW ] ( PrevRawCW )
-  RUNG r225_PrevRawTurn
+  RUNG r154_PrevRawTurn
     [ /ResetState RawSorterBeltTurnManPB | ResetState PrevRawTurn ] ( PrevRawTurn )
-  RUNG r226_PrevBaseCCW
+  RUNG r155_PrevBaseCCW
     [ /ResetState BaseSorterBeltCCWManPB | ResetState PrevBaseCCW ] ( PrevBaseCCW )
-  RUNG r227_PrevBaseCW
+  RUNG r156_PrevBaseCW
     [ /ResetState BaseSorterBeltCWManPB | ResetState PrevBaseCW ] ( PrevBaseCW )
-  RUNG r228_PrevBaseTurn
+  RUNG r157_PrevBaseTurn
     [ /ResetState BaseSorterBeltTurnManPB | ResetState PrevBaseTurn ] ( PrevBaseTurn )
-  RUNG r229_PrevLidCCW
+  RUNG r158_PrevLidCCW
     [ /ResetState LidSorterBeltCCWManPB | ResetState PrevLidCCW ] ( PrevLidCCW )
-  RUNG r230_PrevLidCW
+  RUNG r159_PrevLidCW
     [ /ResetState LidSorterBeltCWManPB | ResetState PrevLidCW ] ( PrevLidCW )
-  RUNG r231_PrevLidTurn
+  RUNG r160_PrevLidTurn
     [ /ResetState LidSorterBeltTurnManPB | ResetState PrevLidTurn ] ( PrevLidTurn )
 END_LD
 END_FUNCTION_BLOCK

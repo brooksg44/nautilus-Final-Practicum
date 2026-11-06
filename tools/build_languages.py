@@ -15,9 +15,14 @@ clean=re.sub(r'\(\*.*?\*\)', '', source, flags=re.S)
 header,body=clean.rsplit('END_VAR',1)
 header+='END_VAR\n'
 body=body.rsplit('END_PROGRAM',1)[0]
-tokens=re.findall(r':=|<>|>=|<=|[A-Za-z_]\w*|\d+\.\d+|\d+|[;,():+*/=<>-]',body)
+# The ST implementation copies the body verbatim, comments included.
+commented_body=source.rsplit('END_VAR',1)[1].rsplit('END_PROGRAM',1)[0]
+# Comments are tokens so LD/FBD can carry them as diagram notes.
+tokens=re.findall(r'\(\*.*?\*\)|:=|<>|>=|<=|[A-Za-z_]\w*|\d+\.\d+|\d+|[;,():+*/=<>-]',commented_body,flags=re.S)
 # Do not silently drop unsupported syntax.
-if re.sub(r'\s+','',body) != ''.join(tokens):raise ValueError('unsupported token in ST body')
+if re.sub(r'\s+','',commented_body) != re.sub(r'\s+','',''.join(tokens)):raise ValueError('unsupported token in ST body')
+def is_comment(token):return token.startswith('(*')
+def comment_text(token):return ' '.join(token[2:-2].split())
 class Parser:
  def __init__(self): self.i=0
  def peek(self):return tokens[self.i] if self.i<len(tokens) else ''
@@ -29,6 +34,7 @@ class Parser:
   expr=[]
   while self.peek()!=end:
    if not self.peek():raise ValueError('Unterminated expression')
+   if is_comment(self.peek()):raise ValueError('Comments inside expressions are not supported')
    expr.append(self.take())
   self.take(end);return re.sub(r'\b(LIMIT)\s+\(', r'\1(', ' '.join(expr))
  def label(self):
@@ -37,7 +43,8 @@ class Parser:
   out=[]
   while self.peek() and self.peek() not in ends and not(case and self.label()):
    t=self.take()
-   if t=='IF':
+   if is_comment(t):out.append(('comment',comment_text(t)))
+   elif t=='IF':
     branches=[(self.until('THEN'),self.block(('ELSIF','ELSE','END_IF')))]
     while self.peek()=='ELSIF':
      self.take();branches.append((self.until('THEN'),self.block(('ELSIF','ELSE','END_IF'))))
@@ -61,9 +68,14 @@ def temporary(typ,prefix):
  global serial
  serial+=1;name=f'{prefix}{serial:03d}';temps[name]=typ;return name
 def emit(target,value,guard='TRUE',note=''):ops.append((target,value,guard,note))
+# Source comments travel through the passes as note operations: target NOTE,
+# value the text, note 'section' for a top-level comment.
+NOTE='//'
+def is_note(op):return op[0]==NOTE
 def lower(nodes,parent='TRUE'):
  for node in nodes:
-  if node[0]=='assign':emit(node[1],node[2],parent)
+  if node[0]=='comment':emit(NOTE,node[1],'','section' if parent=='TRUE' else '')
+  elif node[0]=='assign':emit(node[1],node[2],parent)
   elif node[0]=='if':
    guards=[]
    for condition,children in node[1]:
@@ -95,11 +107,11 @@ def inline_decisions(operations, variables):
   pattern=re.compile(r'\b'+re.escape(name)+r'\b')
   index=next(i for i,op in enumerate(operations) if op[0]==name)
   value=operations[index][1]
-  uses=[i for i,(_,v,g,_) in enumerate(operations) if i>index and (pattern.search(v) or pattern.search(g))]
+  uses=[i for i,(t,v,g,_) in enumerate(operations) if i>index and t!=NOTE and (pattern.search(v) or pattern.search(g))]
   dependencies=set(re.findall(r'[A-Za-z_]\w*',value))
   if uses and any(t in dependencies for t,_,_,_ in operations[index+1:max(uses)]):continue
-  operations=[(t,pattern.sub(lambda _:f'({value})',v),pattern.sub(lambda _:f'({value})',g),note)
-              for i,(t,v,g,note) in enumerate(operations) if i!=index]
+  operations=[op if is_note(op) else (t,pattern.sub(lambda _:f'({value})',v),pattern.sub(lambda _:f'({value})',g),note)
+              for i,op in enumerate(operations) if i!=index for t,v,g,note in [op]]
   del variables[name]
  return operations,variables
 
@@ -112,7 +124,7 @@ for old in list(ld_temps):
  new=snapshot_names.get(old)
  if new is None:raise ValueError(f'Name the required ladder snapshot: {old}')
  pattern=re.compile(r'\b'+old+r'\b')
- ld_ops=[(new if t==old else t,pattern.sub(new,v),pattern.sub(new,g),note) for t,v,g,note in ld_ops]
+ ld_ops=[op if is_note(op) else (new if t==old else t,pattern.sub(new,v),pattern.sub(new,g),note) for op in ld_ops for t,v,g,note in [op]]
  ld_temps[new]=ld_temps.pop(old)
 # Convert top-level Boolean operators to native LD contact function calls.
 def strip(expr):
@@ -172,6 +184,9 @@ def ladder_logic(expr):
   if node=='TRUE':return 'FALSE'
   if node=='FALSE':return 'TRUE'
   if isinstance(node,tuple) and node[0]=='NOT':return node[1][0]
+  # De Morgan, so a known-false series (or parallel) group is recognised
+  # in the negated form a sibling branch spells it.
+  if isinstance(node,tuple):return ('OR' if node[0]=='AND' else 'AND',tuple(neg(a) for a in node[1]))
   return ('NOT',(node,))
  def simplify(node,known=frozenset()):
   if node in known:return 'TRUE'
@@ -206,46 +221,72 @@ def ladder_logic(expr):
   return '[ '+' | '.join(emit(arg) for arg in args)+' ]'
  return emit(simplify(parse(expr)))
 
-def combine_ladder_coils(lines):
- """Fan out adjacent independent coils with identical rung power.
+def combine_ladder_outputs(lines):
+ """Fan out adjacent independent outputs with identical rung power.
 
- The compiler evaluates shared power once, so never combine when an earlier
- coil writes an operand read by that condition.
+ Coils combine with coils and assignments with assignments (coils must end
+ the rung). The compiler evaluates shared power once, so never combine when
+ an earlier output writes an operand read by that condition or by a later
+ assignment's expression.
  """
  result=[];previous=None
- coil=re.compile(r'    (.*?) (\( (?:[SR] )?(\w+) \))$')
+ shapes={'coil':re.compile(r'    (.*?) (\( (?:[SR] )?(\w+) \))'),
+         'assign':re.compile(r'    (.*?) (\{ (\w+) := (.*) \})')}
+ def reads(text,targets):return any(re.search(r'\b'+re.escape(t)+r'\b',text) for t in targets)
  for line in lines:
   if line.startswith('  RUNG '):
    pending=line
    continue
-  match=coil.fullmatch(line)
-  if match and previous and len(previous[1])<3 and match[1]==previous[0] and not any(
-    re.search(r'\b'+re.escape(target)+r'\b',match[1]) for target in previous[1]):
+  kind,match=next(((k,m) for k,p in shapes.items() if (m:=p.fullmatch(line))),(None,None))
+  if match and previous and previous[0]==kind and len(previous[2])<3 and match[1]==previous[1] \
+     and not reads(match[1],previous[2]) and not (kind=='assign' and reads(match[4],previous[2])):
    result[-1]+=' '+match[2]
-   previous[1].append(match[3])
+   previous[2].append(match[3])
   else:
    if line.startswith('    '):result.append(pending)
    result.append(line)
-   previous=(match[1],[match[3]]) if match else None
+   previous=(kind,match[1],[match[3]]) if match else None
  return result
 
 # Reset each implementation's private locals; shared counters are never reset here.
 locals_text=header.split('END_VAR',1)[1]
 locals_types={m.group(1):m.group(2) for m in re.finditer(r'(\w+)\s*:\s*(BOOL|REAL|INT)\s*;',locals_text)}
 alltypes={m.group(1):m.group(2) for m in re.finditer(r'(\w+)\s*:\s*(BOOL|REAL|INT)\s*;',header)}
-reset_ops=[(name,'FALSE' if typ=='BOOL' else '0.0' if typ=='REAL' else '0','ResetState','Reset private state') for name,typ in locals_types.items()]
+reset_ops=[(name,'FALSE' if typ=='BOOL' else '0.0' if typ=='REAL' else '0','ResetState','') for name,typ in locals_types.items()]
+reset_note=(NOTE,'Reset private state while ResetState is TRUE; shared totals are kept.','','section')
+def note_lines(text,indent):
+ """Wrap a source comment into full-line // diagram notes."""
+ words=text.split();rows=[];row=''
+ for word in words:
+  if row and len(row)+1+len(word)>72:rows.append(row);row=word
+  else:row=f'{row} {word}'.strip()
+ return [f'{indent}// {r}' for r in rows+[row] if r]
+def renumber_rungs(lines):
+ count=0
+ def number(match):
+  nonlocal count
+  count+=1;return f'  RUNG r{count:03d}_'
+ return [re.sub(r'^  RUNG r\d+_',number,line) for line in lines]
 for language in selected_languages:
  name='Practicum'+language
  h=header.replace('PROGRAM FinalPracticum','FUNCTION_BLOCK '+name,1)
  h+='VAR_INPUT\n    ResetState : BOOL;\nEND_VAR\n'
  if language=='ST':
   resets='\n'.join(f'    {target} := {value};' for target,value,_,_ in reset_ops)
-  result=h+'IF ResetState THEN\n'+resets+'\nELSE\n'+body+'END_IF;\nEND_FUNCTION_BLOCK\n'
+  result=h+'IF ResetState THEN\n'+resets+'\nELSE\n'+commented_body+'END_IF;\nEND_FUNCTION_BLOCK\n'
  else:
   diagram_ops,diagram_temps=(ld_ops,ld_temps) if language=='LD' else (ops,temps)
   h+='VAR\n'+''.join(f'    {n} : {t};\n' for n,t in diagram_temps.items())+'END_VAR\n'
   lines=[h,language]
-  for n,(target,value,guard,note) in enumerate(reset_ops+[(t,v,f'NOT ResetState AND ({g})',note) for t,v,g,note in diagram_ops],1):
+  body_ops=[op if is_note(op) else (op[0],op[1],f'NOT ResetState AND ({op[2]})',op[3]) for op in diagram_ops]
+  for n,(target,value,guard,note) in enumerate([reset_note]+reset_ops+body_ops,1):
+   if target==NOTE:
+    # Top-level comments title FBD networks; every comment is a diagram note.
+    if language=='FBD' and note=='section':
+     title=value.split('.')[0].split(':')[0].strip().replace("'",'')
+     lines.append(f"  NETWORK '{title}'")
+    lines+=note_lines(value,'  ')
+    continue
    value=strip(value)
    if language=='LD':
     lines.append(f'  RUNG r{n:03d}_{target}'+(f' (* {note} *)' if note else ''))
@@ -263,9 +304,10 @@ for language in selected_languages:
     else:
      lines.append(f'    '+ladder_logic(contact(guard))+f' {{ {target} := {value} }}')
    else:
-    if note:lines.append(f"  NETWORK '{n:03d} {note}: {target}'")
-    lines.append(f'  {target} := SEL({contact(guard)}, {target}, ({contact(value)}))')
-  if language=='LD':lines=combine_ladder_coils(lines)
+    # BranchNNN names already say what an IF capture is; keep CASE notes.
+    if note and not target.startswith('Branch'):lines.append(f'  // {note}')
+    lines.append(f'  {target} := SEL({contact(guard)}, {target}, {contact(value)})')
+  if language=='LD':lines=renumber_rungs(combine_ladder_outputs(lines))
   lines += ['END_'+language,'END_FUNCTION_BLOCK','']
   result='\n'.join(lines)
  (ROOT/'lib'/f'practicum_{language.lower()}.{language.lower()}').write_text('(* Generated by tools/build_languages.py from control.st. *)\n'+result)
