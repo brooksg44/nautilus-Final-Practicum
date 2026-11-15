@@ -7,8 +7,12 @@ from pathlib import Path
 import argparse
 import re
 cli=argparse.ArgumentParser(description=__doc__)
-cli.add_argument('--language',choices=['ST','LD','FBD'],action='append',help='Regenerate only this implementation (repeatable; default: all)')
-selected_languages=cli.parse_args().language or ['ST','LD','FBD']
+# lib/practicum_ld.ld and lib/practicum_fbd.fbd are hand-maintained now: the
+# mechanical translation compiles but draws badly (hundreds of naut check
+# structure warnings). Only ST is regenerated unless LD/FBD is asked for by
+# name, which overwrites the hand-written diagram with the raw translation.
+cli.add_argument('--language',choices=['ST','LD','FBD'],action='append',help='Implementation to regenerate (repeatable; default: ST only). LD and FBD overwrite the hand-maintained diagrams in lib/ with the raw mechanical translation')
+selected_languages=cli.parse_args().language or ['ST']
 ROOT=Path(__file__).resolve().parents[1]
 source=(ROOT/'control.st').read_text()
 clean=re.sub(r'\(\*.*?\*\)', '', source, flags=re.S)

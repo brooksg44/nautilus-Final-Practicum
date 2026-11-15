@@ -47,28 +47,31 @@ before running again; the three production counters are preserved. An
 invalid selection disables all three implementations. Stop the scene before
 restarting Nautilus to load this update.
 
-The LD implementation contains native rungs, Boolean contacts/coils, parallel
-holding branches and enabled assignment boxes. The FBD implementation contains native
-SEL, comparison, Boolean and arithmetic blocks. Both implement the complete
+The LD implementation contains native rungs, Boolean contacts/coils, edge
+contacts, seal-ins and enabled assignment boxes. The FBD implementation contains native
+SEL, comparison, Boolean, edge-trigger and arithmetic blocks. Both implement the complete
 sequence directly. Each has independent private state; no ST controller is
 called from LD or FBD. Use the Nautilus VS Code extension's **Open With →
 Ladder Diagram / Function Block Diagram** editors to view these library files.
 
-`control.st` remains the readable reference implementation. The scoped
-`tools/build_languages.py` translator generates all three function blocks
-from its assignments, IF branches and CASE branches. LD puts conditions
-directly on rungs and uses set/reset coils for conditional Boolean constants.
-Boolean assignments use contact branches rather than SEL boxes. Redundant
-conditions are simplified, including negated branches and repeated contacts.
-Rungs use native series contacts, `/Tag` normally closed contacts, and
-`[ a | b ]` parallel paths, following the Nautilus lift-station and batch-skid
-examples. Up to three adjacent independent coils share identical rung power.
-Only three named snapshots remain: `MainWasEmergency`,
-`MainWasWaitingForReset`, and `AutoStepAtScanStart`. These preserve decisions
-when later rungs change the state in the same scan. FBD retains generated
-branch temporaries. The translator rejects unsupported statements. Edit the
-reference and regenerate rather than modifying generated library files;
-`python3 tools/build_languages.py --language LD` rebuilds only ladder.
+`control.st` remains the readable reference implementation, and
+`tools/build_languages.py` generates `lib/practicum_st.st` from it.
+
+`lib/practicum_ld.ld` and `lib/practicum_fbd.fbd` are hand-maintained. They
+follow `control.st` section by section and pass `naut check` with no
+structure warnings: one coil per BOOL, named and commented rungs, titled FBD
+networks with one block per line, and named constants for every threshold.
+Both use `lib/toggle_latch.ld`, a push-on / push-off block, for the eleven
+manual pushbuttons. Three snapshots (`WasEStopped`, `WasAwaitingReset`,
+`AutoStepAtScanStart`) preserve decisions when later rungs or statements
+change the step in the same scan. While `ResetState` is TRUE both drop their
+BOOL outputs instead of holding them; `main.st` overwrites the outputs in the
+same scan either way.
+
+After editing `control.st`, make the matching change in both diagrams by
+hand and run `naut check` and `naut test`. `python3 tools/build_languages.py
+--language LD` (or `FBD`) still produces the raw mechanical translation, but
+it overwrites the hand-maintained file and brings the warnings back.
 
 ## Run
 
@@ -143,7 +146,7 @@ Switching modes clears manual latches and restarts the automatic sequence.
 | `chart_inventory.json` | Original steps, transitions and actions by chart |
 | `practicum_test.yaml` | 61 virtual-time acceptance scenarios |
 | `tools/convert.py` | Rebuild mapping, scene copy and chart inventory |
-| `tools/build_languages.py` | Generate ST/LD/FBD implementations from the reference ST |
+| `tools/build_languages.py` | Generate the ST implementation from the reference ST (LD/FBD only on request) |
 | `tools/modbus_smoke.py` | Real TCP integration test with a simulated peer |
 
 All Modbus addresses in the manifest and CSV are **zero-based PDU addresses**.

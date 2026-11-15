@@ -1,6 +1,6 @@
 name: final-practicum
 server:
-  addr: "127.0.0.1:8080"
+  addr: "127.0.0.1:8081"
   online-edits: true       # download/rollback from VS Code
 tasks:
   - program: main.st
