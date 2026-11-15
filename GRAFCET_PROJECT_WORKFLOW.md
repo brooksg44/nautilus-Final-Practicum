@@ -356,8 +356,9 @@ The existing scripts have narrower scopes:
   and the output crosswalk. It does not recover a complete connection graph
   or generate `control.st`. Adapt and validate it before using another source.
   Running it here also restores default endpoint settings.
-- `tools/build_languages.py` generates this project's ST/LD/FBD blocks from
-  an already reviewed `control.st`. It supports a restricted expression and
+- `tools/build_languages.py` generates this project's ST block from an
+  already reviewed `control.st`; it can also emit a raw LD/FBD translation,
+  but this project's LD and FBD are now hand-maintained. It supports a restricted expression and
   statement subset and project-specific declarations/reset handling. It is
   not a general ST compiler or GRAFCET converter.
 - `tools/make_tests.py` encodes this machine's expected scenarios. Reuse the

@@ -1,3 +1,4 @@
 {
-    "nautilus.liveValues.enabled": true
+    "nautilus.liveValues.enabled": true,
+    "nautilus.runtimeUrl": "http://127.0.0.1:8081"
 }

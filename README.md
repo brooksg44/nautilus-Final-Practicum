@@ -11,8 +11,7 @@ The original input files are preserved. Use the generated
 
 Architecture: Nautilus (Modbus TCP client) → Factory I/O (Modbus TCP server).
 The controller runs every 20 ms. The driver polls every 20 ms and reasserts
-outputs every 100 ms. This project was checked with Nautilus 0.19.0 and the
-local joyautomation/nautilus checkout.
+outputs every 100 ms. This project was last checked with Nautilus 0.21.0.
 
 ## Choose ST, LD, or FBD
 
@@ -26,12 +25,12 @@ implementation per scan using the writable `LanguageSelect` setpoint:
 | 3 | Function Block Diagram | `lib/practicum_fbd.fbd` |
 
 Start with `naut run .`, then edit `LanguageSelect` on the dashboard at
-<http://127.0.0.1:8080>. `ActiveLanguage` reports the selected implementation;
+<http://127.0.0.1:8081>. `ActiveLanguage` reports the selected implementation;
 `LanguageValid` reports whether the selection is 1–3. To select LD using
 the tag API:
 
 ```sh
-curl -X POST http://127.0.0.1:8080/api/tags \
+curl -X POST http://127.0.0.1:8081/api/tags \
   -H 'Content-Type: application/json' \
   -d '{"name":"LanguageSelect","value":2}'
 ```
@@ -108,7 +107,7 @@ it overwrites the hand-maintained file and brings the warnings back.
    naut run .
    ```
 
-   The dashboard and tag API are at <http://127.0.0.1:8080>. Driver status is
+   The dashboard and tag API are at <http://127.0.0.1:8081>. Driver status is
    available at `/api/drivers`. With the repository's Go toolchain, the
    equivalent command is `go run ../../cmd/naut run .`.
 
@@ -139,6 +138,7 @@ Switching modes clears manual latches and restarts the automatic sequence.
 | `lib/practicum_st.st` | ST controller function block |
 | `lib/practicum_ld.ld` | Complete native LD controller function block |
 | `lib/practicum_fbd.fbd` | Complete native FBD controller function block |
+| `lib/toggle_latch.ld` | Push-on / push-off latch block used by the LD and FBD manual buttons |
 | `nautilus.yaml` | Main scan task, selector, tag files, driver and dashboard |
 | `modbus_manifest.yaml` | TCP endpoint and 89 field bindings |
 | `tags/io.yaml` | Symbols, types, initial values and roles |
@@ -147,7 +147,12 @@ Switching modes clears manual latches and restarts the automatic sequence.
 | `practicum_test.yaml` | 61 virtual-time acceptance scenarios |
 | `tools/convert.py` | Rebuild mapping, scene copy and chart inventory |
 | `tools/build_languages.py` | Generate the ST implementation from the reference ST (LD/FBD only on request) |
+| `tools/make_tests.py` | Generate `practicum_test.yaml` |
 | `tools/modbus_smoke.py` | Real TCP integration test with a simulated peer |
+| `tools/grafcet2mermaid.py` | Draw the source charts as Mermaid flowcharts (`Spring2026_Final_Practicum_V21.grafcet.md`) |
+| `tools/factoryio_to_oip.py` | Convert the Modbus scene into an Open Industry Project folder |
+| `tools/print_ladder.py`, `print.sh` | Render the LD and FBD files to printable HTML in `print/` |
+| `AGENTS.md`, `CLAUDE.md` | Nautilus authoring rules for AI coding assistants (`naut agents`) |
 
 All Modbus addresses in the manifest and CSV are **zero-based PDU addresses**.
 The digital outputs keep the V21 spare Q0.7, so addresses after it differ
@@ -191,6 +196,7 @@ compiler. `chart_inventory.json` preserves the source conditions for review.
   Counters increment once when the sort chart starts, as in the source.
 - **Manual-Speeds / Manual-PushPullls / Manual-Counters**: explicit latches,
   global button edge history, reverse exclusion and five second reset hold.
+  LD and FBD use one `ToggleLatch` block per button for the same behavior.
 - **Continuous**: one consistent Modbus scale replaces the source's three
   competing platform examples (1000/300, 27648/300 and 10/300). Real division
   avoids integer truncation. +/− commands operate once per rising edge.
@@ -203,9 +209,12 @@ across a mode change must be released and pressed again for manual toggles.
 
 The source defines no ProductionRate calculation, StopBlade action, or
 panel-selection arbitration. ProductionRate is zero and StopBlade is FALSE;
-panel-active lamps mirror their selector inputs. Removers are enabled and
-PLC-running lamps blink as scene support outputs. These support choices
-are explicit in `control.st` and should be checked during commissioning.
+panel-active lamps mirror their selector inputs. Removers are enabled as
+scene support outputs. `control.st` and the FBD also blink the two
+PLC-running lamps (`LabPLCRunning`, `SkidPLCRunning`); that line is commented
+out by hand in `lib/practicum_st.st` and absent from the LD, so the lamps
+stay off in ST and LD. These support choices should be checked during
+commissioning.
 Local/remote selection does not filter commands because no such filtering
 is specified by the supplied charts. Counter registers are signed 16-bit;
 reset totals before exceeding 32767.
@@ -240,8 +249,10 @@ naut check .
 naut test .
 ```
 
-The converter rewrites the endpoint to its localhost defaults; reapply your
-PC address afterward. It does not regenerate `control.st`: sequence changes
+`build_languages.py` rewrites `lib/practicum_st.st` only, and that undoes
+hand edits there (the commented-out PLC-running line); the LD and FBD files
+are maintained by hand as described above. The converter rewrites the
+endpoint to its localhost defaults; reapply your PC address afterward. It does not regenerate `control.st`: sequence changes
 require reviewing the ST translation and updating the behavioral tests.
 
 The existing ST setup has been reported working in Factory I/O. The new
