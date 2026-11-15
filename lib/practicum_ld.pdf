@@ -1,0 +1,2956 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R 30 0 R 32 0 R 34 0 R] /Count 14 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-BoldOblique /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Length 14001 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 518.4 756 Tm (Page 1 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 640.843 re W n
+0.727 0 0 0.727 36 62 cm
+0 0 0 RG 3 w [] 0 d 0 10 m 0 42 l S
+BT /F2 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 10 24 Tm (FUNCTION_BLOCK) Tj ET
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 100 24 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 10 36 Tm (ResetState : BOOL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 46 m 10 46 l S
+0 0 0 RG 3 w [] 0 d 733 46 m 733 46 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 57 Tm (reset_timers \(* a language switch must not inherit another run's timers or mode history *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 46 m 10 185 l S
+0 0 0 RG 3 w [] 0 d 733 46 m 733 185 l S
+0 0 0 RG 1.6 w [] 0 d 102 107 m 112 107 l S
+0 0 0 RG 1.6 w [] 0 d 10 107 m 30 107 l S
+0 0 0 RG 1.6 w [] 0 d 259 107 m 713 107 l S
+0 0 0 RG 1.6 w [] 0 d 713 107 m 733 107 l S
+0 0 0 RG 1.6 w [] 0 d 30 107 m 61 107 l S
+0 0 0 RG 1.6 w [] 0 d 71 107 m 102 107 l S
+0 0 0 RG 1.8 w [] 0 d 61 97 m 61 117 l S
+0 0 0 RG 1.8 w [] 0 d 71 97 m 71 117 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 131 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 66 m 255 66 l 257.209 66 259 67.791 259 70 c 259 144 l 259 146.209 257.209 148 255 148 c 116 148 l 113.791 148 112 146.209 112 144 c 112 70 l 112 67.791 113.791 66 116 66 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 143.5 80.5 Tm (ClockS := 0.0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 128.5 92.5 Tm (AutoElapsed := 0.0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 122.5 104.5 Tm (EmitRemaining := 0.0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 128.5 116.5 Tm (SortElapsed := 0.0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 134.5 128.5 Tm (ResetHeld := 0.0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 146.5 140.5 Tm (PrevMode := 0) Tj ET
+0.533 0.533 0.533 RG 0.8 w [3 2] 0 d 23 191 m 441 191 l 442.657 191 444 192.343 444 194 c 444 224 l 444 225.657 442.657 227 441 227 c 23 227 l 21.343 227 20 225.657 20 224 c 20 194 l 20 192.343 21.343 191 23 191 c h s
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 206 Tm (---- Main chart X1/X2/X3. Stop and both emergency stops are NC:) Tj ET
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 220 Tm (TRUE = healthy. FIOReset restarts the sequence but keeps the totals.) Tj ET
+0 0 0 RG 3 w [] 0 d 10 231 m 10 231 l S
+0 0 0 RG 3 w [] 0 d 733 231 m 733 231 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 242 Tm (blink_clock \(* free-running clock behind every flashing pilot light *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 231 m 10 312 l S
+0 0 0 RG 3 w [] 0 d 733 231 m 733 312 l S
+0 0 0 RG 1.6 w [] 0 d 102 263 m 112 263 l S
+0 0 0 RG 1.6 w [] 0 d 10 263 m 30 263 l S
+0 0 0 RG 1.6 w [] 0 d 290 263 m 713 263 l S
+0 0 0 RG 1.6 w [] 0 d 713 263 m 733 263 l S
+0 0 0 RG 1.6 w [] 0 d 30 263 m 61 263 l S
+0 0 0 RG 1.6 w [] 0 d 71 263 m 102 263 l S
+0 0 0 RG 1.8 w [] 0 d 61 253 m 61 273 l S
+0 0 0 RG 1.8 w [] 0 d 71 253 m 71 273 l S
+0 0 0 RG 1.8 w [] 0 d 57 274 m 75 252 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 287 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 252 m 286 252 l 288.209 252 290 253.791 290 256 c 290 270 l 290 272.209 288.209 274 286 274 c 116 274 l 113.791 274 112 272.209 112 270 c 112 256 l 112 253.791 113.791 252 116 252 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 123 266.5 Tm (ClockS := ClockS + ScanDtS) Tj ET
+0 0 0 RG 3 w [] 0 d 10 312 m 10 312 l S
+0 0 0 RG 3 w [] 0 d 733 312 m 733 312 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 323 Tm (blink_wrap \(* restart the clock each period *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 312 m 10 393 l S
+0 0 0 RG 3 w [] 0 d 733 312 m 733 393 l S
+0 0 0 RG 1.6 w [] 0 d 102 344 m 112 344 l S
+0 0 0 RG 1.6 w [] 0 d 281 344 m 291 344 l S
+0 0 0 RG 1.6 w [] 0 d 10 344 m 30 344 l S
+0 0 0 RG 1.6 w [] 0 d 500 344 m 713 344 l S
+0 0 0 RG 1.6 w [] 0 d 713 344 m 733 344 l S
+0 0 0 RG 1.6 w [] 0 d 30 344 m 61 344 l S
+0 0 0 RG 1.6 w [] 0 d 71 344 m 102 344 l S
+0 0 0 RG 1.8 w [] 0 d 61 334 m 61 354 l S
+0 0 0 RG 1.8 w [] 0 d 71 334 m 71 354 l S
+0 0 0 RG 1.8 w [] 0 d 57 355 m 75 333 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 368 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 333 m 277 333 l 279.209 333 281 334.791 281 337 c 281 351 l 281 353.209 279.209 355 277 355 c 116 355 l 113.791 355 112 353.209 112 351 c 112 337 l 112 334.791 113.791 333 116 333 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124.5 347.5 Tm (GE\(ClockS, BlinkPeriodS\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 295 333 m 496 333 l 498.209 333 500 334.791 500 337 c 500 351 l 500 353.209 498.209 355 496 355 c 295 355 l 292.791 355 291 353.209 291 351 c 291 337 l 291 334.791 292.791 333 295 333 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 302.5 347.5 Tm (ClockS := ClockS - BlinkPeriodS) Tj ET
+0 0 0 RG 3 w [] 0 d 10 393 m 10 393 l S
+0 0 0 RG 3 w [] 0 d 733 393 m 733 393 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 404 Tm (blink \(* on for the first half of each period *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 393 m 10 474 l S
+0 0 0 RG 3 w [] 0 d 733 393 m 733 474 l S
+0 0 0 RG 1.6 w [] 0 d 102 425 m 112 425 l S
+0 0 0 RG 1.6 w [] 0 d 10 425 m 30 425 l S
+0 0 0 RG 1.6 w [] 0 d 256 425 m 641 425 l S
+0 0 0 RG 1.6 w [] 0 d 713 425 m 733 425 l S
+0 0 0 RG 1.6 w [] 0 d 30 425 m 61 425 l S
+0 0 0 RG 1.6 w [] 0 d 71 425 m 102 425 l S
+0 0 0 RG 1.8 w [] 0 d 61 415 m 61 435 l S
+0 0 0 RG 1.8 w [] 0 d 71 415 m 71 435 l S
+0 0 0 RG 1.8 w [] 0 d 57 436 m 75 414 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 449 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 414 m 252 414 l 254.209 414 256 415.791 256 418 c 256 432 l 256 434.209 254.209 436 252 436 c 116 436 l 113.791 436 112 434.209 112 432 c 112 418 l 112 415.791 113.791 414 116 414 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 428.5 Tm (LT\(ClockS, BlinkOnS\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 425 m 665 425 l S
+0 0 0 RG 1.6 w [] 0 d 689 425 m 713 425 l S
+0 0 0 RG 1.8 w [] 0 d 669 415 m 663.667 421.667 663.667 428.333 669 435 c S
+0 0 0 RG 1.8 w [] 0 d 685 415 m 690.333 421.667 690.333 428.333 685 435 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 662 449 Tm (Blink) Tj ET
+0 0 0 RG 3 w [] 0 d 10 474 m 10 474 l S
+0 0 0 RG 3 w [] 0 d 733 474 m 733 474 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 485 Tm (safety_healthy \(* both e-stop chains made and the scene not being reset *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 474 m 10 555 l S
+0 0 0 RG 3 w [] 0 d 733 474 m 733 555 l S
+0 0 0 RG 1.6 w [] 0 d 102 506 m 112 506 l S
+0 0 0 RG 1.6 w [] 0 d 201 506 m 211 506 l S
+0 0 0 RG 1.6 w [] 0 d 306 506 m 316 506 l S
+0 0 0 RG 1.6 w [] 0 d 10 506 m 30 506 l S
+0 0 0 RG 1.6 w [] 0 d 388 506 m 624 506 l S
+0 0 0 RG 1.6 w [] 0 d 713 506 m 733 506 l S
+0 0 0 RG 1.6 w [] 0 d 30 506 m 61 506 l S
+0 0 0 RG 1.6 w [] 0 d 71 506 m 102 506 l S
+0 0 0 RG 1.8 w [] 0 d 61 496 m 61 516 l S
+0 0 0 RG 1.8 w [] 0 d 71 496 m 71 516 l S
+0 0 0 RG 1.8 w [] 0 d 57 517 m 75 495 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 530 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 506 m 151.5 506 l S
+0 0 0 RG 1.6 w [] 0 d 161.5 506 m 201 506 l S
+0 0 0 RG 1.8 w [] 0 d 151.5 496 m 151.5 516 l S
+0 0 0 RG 1.8 w [] 0 d 161.5 496 m 161.5 516 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 117.5 530 Tm (EmergencyStop) Tj ET
+0 0 0 RG 1.6 w [] 0 d 211 506 m 253.5 506 l S
+0 0 0 RG 1.6 w [] 0 d 263.5 506 m 306 506 l S
+0 0 0 RG 1.8 w [] 0 d 253.5 496 m 253.5 516 l S
+0 0 0 RG 1.8 w [] 0 d 263.5 496 m 263.5 516 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 216.5 530 Tm (EmergencyStop2) Tj ET
+0 0 0 RG 1.6 w [] 0 d 316 506 m 347 506 l S
+0 0 0 RG 1.6 w [] 0 d 357 506 m 388 506 l S
+0 0 0 RG 1.8 w [] 0 d 347 496 m 347 516 l S
+0 0 0 RG 1.8 w [] 0 d 357 496 m 357 516 l S
+0 0 0 RG 1.8 w [] 0 d 343 517 m 361 495 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 328 530 Tm (FIOReset) Tj ET
+0 0 0 RG 1.6 w [] 0 d 624 506 m 656.5 506 l S
+0 0 0 RG 1.6 w [] 0 d 680.5 506 m 713 506 l S
+0 0 0 RG 1.8 w [] 0 d 660.5 496 m 655.167 502.667 655.167 509.333 660.5 516 c S
+0 0 0 RG 1.8 w [] 0 d 676.5 496 m 681.833 502.667 681.833 509.333 676.5 516 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 629.5 530 Tm (SafetyHealthy) Tj ET
+0 0 0 RG 3 w [] 0 d 10 555 m 10 555 l S
+0 0 0 RG 3 w [] 0 d 733 555 m 733 555 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 566 Tm (was_estopped \(* remember X1 before the rungs below move the step *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 555 m 10 636 l S
+0 0 0 RG 3 w [] 0 d 733 555 m 733 636 l S
+0 0 0 RG 1.6 w [] 0 d 119 587 m 129 587 l S
+0 0 0 RG 1.6 w [] 0 d 10 587 m 30 587 l S
+0 0 0 RG 1.6 w [] 0 d 242 587 m 636 587 l S
+0 0 0 RG 1.6 w [] 0 d 713 587 m 733 587 l S
+0 0 0 RG 1.6 w [] 0 d 30 587 m 69.5 587 l S
+0 0 0 RG 1.6 w [] 0 d 79.5 587 m 119 587 l S
+0 0 0 RG 1.8 w [] 0 d 69.5 577 m 69.5 597 l S
+0 0 0 RG 1.8 w [] 0 d 79.5 577 m 79.5 597 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 611 Tm (SafetyHealthy) Tj ET
+0 0 0 RG 1.2 w [] 0 d 133 576 m 238 576 l 240.209 576 242 577.791 242 580 c 242 594 l 242 596.209 240.209 598 238 598 c 133 598 l 130.791 598 129 596.209 129 594 c 129 580 l 129 577.791 130.791 576 133 576 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 140.5 590.5 Tm (EQ\(MainStep, 1\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 636 587 m 662.5 587 l S
+0 0 0 RG 1.6 w [] 0 d 686.5 587 m 713 587 l S
+0 0 0 RG 1.8 w [] 0 d 666.5 577 m 661.167 583.667 661.167 590.333 666.5 597 c S
+0 0 0 RG 1.8 w [] 0 d 682.5 577 m 687.833 583.667 687.833 590.333 682.5 597 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 641.5 611 Tm (WasEStopped) Tj ET
+0 0 0 RG 3 w [] 0 d 10 636 m 10 636 l S
+0 0 0 RG 3 w [] 0 d 733 636 m 733 636 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 647 Tm (was_awaiting_reset \(* remember X2 with Stop healthy, before the step moves *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 636 m 10 717 l S
+0 0 0 RG 3 w [] 0 d 733 636 m 733 717 l S
+0 0 0 RG 1.6 w [] 0 d 119 668 m 129 668 l S
+0 0 0 RG 1.6 w [] 0 d 201 668 m 211 668 l S
+0 0 0 RG 1.6 w [] 0 d 10 668 m 30 668 l S
+0 0 0 RG 1.6 w [] 0 d 324 668 m 605 668 l S
+0 0 0 RG 1.6 w [] 0 d 713 668 m 733 668 l S
+0 0 0 RG 1.6 w [] 0 d 30 668 m 69.5 668 l S
+0 0 0 RG 1.6 w [] 0 d 79.5 668 m 119 668 l S
+0 0 0 RG 1.8 w [] 0 d 69.5 658 m 69.5 678 l S
+0 0 0 RG 1.8 w [] 0 d 79.5 658 m 79.5 678 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 692 Tm (SafetyHealthy) Tj ET
+0 0 0 RG 1.6 w [] 0 d 129 668 m 160 668 l S
+0 0 0 RG 1.6 w [] 0 d 170 668 m 201 668 l S
+0 0 0 RG 1.8 w [] 0 d 160 658 m 160 678 l S
+0 0 0 RG 1.8 w [] 0 d 170 658 m 170 678 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 153 692 Tm (Stop) Tj ET
+0 0 0 RG 1.2 w [] 0 d 215 657 m 320 657 l 322.209 657 324 658.791 324 661 c 324 675 l 324 677.209 322.209 679 320 679 c 215 679 l 212.791 679 211 677.209 211 675 c 211 661 l 211 658.791 212.791 657 215 657 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 222.5 671.5 Tm (EQ\(MainStep, 2\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 605 668 m 647 668 l S
+0 0 0 RG 1.6 w [] 0 d 671 668 m 713 668 l S
+0 0 0 RG 1.8 w [] 0 d 651 658 m 645.667 664.667 645.667 671.333 651 678 c S
+0 0 0 RG 1.8 w [] 0 d 667 658 m 672.333 664.667 672.333 671.333 667 678 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 611 692 Tm (WasAwaitingReset) Tj ET
+0 0 0 RG 3 w [] 0 d 10 717 m 10 717 l S
+0 0 0 RG 3 w [] 0 d 733 717 m 733 717 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 728 Tm (estop_trip \(* any e-stop or a scene reset drops to X1 from anywhere *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 717 m 10 798 l S
+0 0 0 RG 3 w [] 0 d 733 717 m 733 798 l S
+0 0 0 RG 1.6 w [] 0 d 102 749 m 112 749 l S
+0 0 0 RG 1.6 w [] 0 d 201 749 m 211 749 l S
+0 0 0 RG 1.6 w [] 0 d 10 749 m 30 749 l S
+0 0 0 RG 1.6 w [] 0 d 308 749 m 713 749 l S
+0 0 0 RG 1.6 w [] 0 d 713 749 m 733 749 l S
+0 0 0 RG 1.6 w [] 0 d 30 749 m 61 749 l S
+0 0 0 RG 1.6 w [] 0 d 71 749 m 102 749 l S
+0 0 0 RG 1.8 w [] 0 d 61 739 m 61 759 l S
+0 0 0 RG 1.8 w [] 0 d 71 739 m 71 759 l S
+0 0 0 RG 1.8 w [] 0 d 57 760 m 75 738 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 773 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 749 m 151.5 749 l S
+0 0 0 RG 1.6 w [] 0 d 161.5 749 m 201 749 l S
+0 0 0 RG 1.8 w [] 0 d 151.5 739 m 151.5 759 l S
+0 0 0 RG 1.8 w [] 0 d 161.5 739 m 161.5 759 l S
+0 0 0 RG 1.8 w [] 0 d 147.5 760 m 165.5 738 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 117.5 773 Tm (SafetyHealthy) Tj ET
+0 0 0 RG 1.2 w [] 0 d 215 738 m 304 738 l 306.209 738 308 739.791 308 742 c 308 756 l 308 758.209 306.209 760 304 760 c 215 760 l 212.791 760 211 758.209 211 756 c 211 742 l 211 739.791 212.791 738 215 738 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 220.5 752.5 Tm (MainStep := 1) Tj ET
+0 0 0 RG 3 w [] 0 d 10 798 m 10 798 l S
+0 0 0 RG 3 w [] 0 d 733 798 m 733 798 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 809 Tm (estop_cleared \(* X1 to X2 once the e-stops and Stop are healthy *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 798 m 10 879 l S
+0 0 0 RG 3 w [] 0 d 733 798 m 733 879 l S
+0 0 0 RG 1.6 w [] 0 d 107 830 m 117 830 l S
+0 0 0 RG 1.6 w [] 0 d 189 830 m 199 830 l S
+0 0 0 RG 1.6 w [] 0 d 10 830 m 30 830 l S
+0 0 0 RG 1.6 w [] 0 d 296 830 m 713 830 l S
+0 0 0 RG 1.6 w [] 0 d 713 830 m 733 830 l S
+0 0 0 RG 1.6 w [] 0 d 30 830 m 63.5 830 l S
+0 0 0 RG 1.6 w [] 0 d 73.5 830 m 107 830 l S
+0 0 0 RG 1.8 w [] 0 d 63.5 820 m 63.5 840 l S
+0 0 0 RG 1.8 w [] 0 d 73.5 820 m 73.5 840 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 854 Tm (WasEStopped) Tj ET
+0 0 0 RG 1.6 w [] 0 d 117 830 m 148 830 l S
+0 0 0 RG 1.6 w [] 0 d 158 830 m 189 830 l S
+0 0 0 RG 1.8 w [] 0 d 148 820 m 148 840 l S
+0 0 0 RG 1.8 w [] 0 d 158 820 m 158 840 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 141 854 Tm (Stop) Tj ET
+0 0 0 RG 1.2 w [] 0 d 203 819 m 292 819 l 294.209 819 296 820.791 296 823 c 296 837 l 296 839.209 294.209 841 292 841 c 203 841 l 200.791 841 199 839.209 199 837 c 199 823 l 199 820.791 200.791 819 203 819 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 208.5 833.5 Tm (MainStep := 2) Tj ET
+0 0 0 RG 3 w [] 0 d 10 879 m 10 879 l S
+0 0 0 RG 3 w [] 0 d 733 879 m 733 879 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 890 Tm (stop_pressed \(* Stop drops a running machine back to X2 *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 879 m 10 960 l S
+0 0 0 RG 3 w [] 0 d 733 879 m 733 960 l S
+Q
+Q
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 15866 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 518.4 756 Tm (Page 2 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 656.832 re W n
+0.727 0 0 0.727 36 -576.843 cm
+0 0 0 RG 3 w [] 0 d 10 798 m 10 879 l S
+0 0 0 RG 3 w [] 0 d 733 798 m 733 879 l S
+0 0 0 RG 3 w [] 0 d 10 879 m 10 879 l S
+0 0 0 RG 3 w [] 0 d 733 879 m 733 879 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 890 Tm (stop_pressed \(* Stop drops a running machine back to X2 *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 879 m 10 960 l S
+0 0 0 RG 3 w [] 0 d 733 879 m 733 960 l S
+0 0 0 RG 1.6 w [] 0 d 119 911 m 129 911 l S
+0 0 0 RG 1.6 w [] 0 d 206 911 m 216 911 l S
+0 0 0 RG 1.6 w [] 0 d 288 911 m 298 911 l S
+0 0 0 RG 1.6 w [] 0 d 10 911 m 30 911 l S
+0 0 0 RG 1.6 w [] 0 d 395 911 m 713 911 l S
+0 0 0 RG 1.6 w [] 0 d 713 911 m 733 911 l S
+0 0 0 RG 1.6 w [] 0 d 30 911 m 69.5 911 l S
+0 0 0 RG 1.6 w [] 0 d 79.5 911 m 119 911 l S
+0 0 0 RG 1.8 w [] 0 d 69.5 901 m 69.5 921 l S
+0 0 0 RG 1.8 w [] 0 d 79.5 901 m 79.5 921 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 935 Tm (SafetyHealthy) Tj ET
+0 0 0 RG 1.6 w [] 0 d 129 911 m 162.5 911 l S
+0 0 0 RG 1.6 w [] 0 d 172.5 911 m 206 911 l S
+0 0 0 RG 1.8 w [] 0 d 162.5 901 m 162.5 921 l S
+0 0 0 RG 1.8 w [] 0 d 172.5 901 m 172.5 921 l S
+0 0 0 RG 1.8 w [] 0 d 158.5 922 m 176.5 900 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 134.5 935 Tm (WasEStopped) Tj ET
+0 0 0 RG 1.6 w [] 0 d 216 911 m 247 911 l S
+0 0 0 RG 1.6 w [] 0 d 257 911 m 288 911 l S
+0 0 0 RG 1.8 w [] 0 d 247 901 m 247 921 l S
+0 0 0 RG 1.8 w [] 0 d 257 901 m 257 921 l S
+0 0 0 RG 1.8 w [] 0 d 243 922 m 261 900 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 240 935 Tm (Stop) Tj ET
+0 0 0 RG 1.2 w [] 0 d 302 900 m 391 900 l 393.209 900 395 901.791 395 904 c 395 918 l 395 920.209 393.209 922 391 922 c 302 922 l 299.791 922 298 920.209 298 918 c 298 904 l 298 901.791 299.791 900 302 900 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 307.5 914.5 Tm (MainStep := 2) Tj ET
+0 0 0 RG 3 w [] 0 d 10 960 m 10 960 l S
+0 0 0 RG 3 w [] 0 d 733 960 m 733 960 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 971 Tm (control_reset \(* X2 to X3: Reset is accepted only with the conveyor clear and the exit made *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 960 m 10 1127 l S
+0 0 0 RG 3 w [] 0 d 733 960 m 733 1127 l S
+0 0 0 RG 1.6 w [] 0 d 138 992 m 156 992 l S
+0 0 0 RG 1.6 w [] 0 d 228 992 m 246 992 l S
+0 0 0 RG 1.6 w [] 0 d 378 992 m 388 992 l S
+0 0 0 RG 1.6 w [] 0 d 514 992 m 524 992 l S
+0 0 0 RG 1.6 w [] 0 d 596 992 m 606 992 l S
+0 0 0 RG 1.6 w [] 0 d 10 992 m 30 992 l S
+0 0 0 RG 1.6 w [] 0 d 703 992 m 713 992 l S
+0 0 0 RG 1.6 w [] 0 d 713 992 m 733 992 l S
+0 0 0 RG 1.6 w [] 0 d 156 992 m 156 1064 l S
+0 0 0 RG 1.6 w [] 0 d 228 992 m 228 1064 l S
+0 0 0 RG 1.6 w [] 0 d 30 992 m 79 992 l S
+0 0 0 RG 1.6 w [] 0 d 89 992 m 138 992 l S
+0 0 0 RG 1.8 w [] 0 d 79 982 m 79 1002 l S
+0 0 0 RG 1.8 w [] 0 d 89 982 m 89 1002 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 1016 Tm (WasAwaitingReset) Tj ET
+0 0 0 RG 1.6 w [] 0 d 156 992 m 187 992 l S
+0 0 0 RG 1.6 w [] 0 d 197 992 m 228 992 l S
+0 0 0 RG 1.8 w [] 0 d 187 982 m 187 1002 l S
+0 0 0 RG 1.8 w [] 0 d 197 982 m 197 1002 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 177 1016 Tm (Reset) Tj ET
+0 0 0 RG 1.6 w [] 0 d 156 1064 m 187 1064 l S
+0 0 0 RG 1.6 w [] 0 d 197 1064 m 228 1064 l S
+0 0 0 RG 1.8 w [] 0 d 187 1054 m 187 1074 l S
+0 0 0 RG 1.8 w [] 0 d 197 1054 m 197 1074 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 168 1088 Tm (Reset2PB) Tj ET
+0 0 0 RG 1.6 w [] 0 d 246 992 m 307 992 l S
+0 0 0 RG 1.6 w [] 0 d 317 992 m 378 992 l S
+0 0 0 RG 1.8 w [] 0 d 307 982 m 307 1002 l S
+0 0 0 RG 1.8 w [] 0 d 317 982 m 317 1002 l S
+0 0 0 RG 1.8 w [] 0 d 303 1003 m 321 981 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 252 1016 Tm (ClassifyDefuseSensor) Tj ET
+0 0 0 RG 1.6 w [] 0 d 388 992 m 446 992 l S
+0 0 0 RG 1.6 w [] 0 d 456 992 m 514 992 l S
+0 0 0 RG 1.8 w [] 0 d 446 982 m 446 1002 l S
+0 0 0 RG 1.8 w [] 0 d 456 982 m 456 1002 l S
+0 0 0 RG 1.8 w [] 0 d 442 1003 m 460 981 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 394 1016 Tm (RejectDiffuseSensor) Tj ET
+0 0 0 RG 1.6 w [] 0 d 524 992 m 555 992 l S
+0 0 0 RG 1.6 w [] 0 d 565 992 m 596 992 l S
+0 0 0 RG 1.8 w [] 0 d 555 982 m 555 1002 l S
+0 0 0 RG 1.8 w [] 0 d 565 982 m 565 1002 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 542 1016 Tm (AtExit) Tj ET
+0 0 0 RG 1.2 w [] 0 d 610 981 m 699 981 l 701.209 981 703 982.791 703 985 c 703 999 l 703 1001.209 701.209 1003 699 1003 c 610 1003 l 607.791 1003 606 1001.209 606 999 c 606 985 l 606 982.791 607.791 981 610 981 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 615.5 995.5 Tm (MainStep := 3) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1127 m 10 1127 l S
+0 0 0 RG 3 w [] 0 d 733 1127 m 733 1127 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1138 Tm (control_on \(* X3 is the only motion permissive; the blinking pilot light is never used as one *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1127 m 10 1208 l S
+0 0 0 RG 3 w [] 0 d 733 1127 m 733 1208 l S
+0 0 0 RG 1.6 w [] 0 d 102 1159 m 112 1159 l S
+0 0 0 RG 1.6 w [] 0 d 10 1159 m 30 1159 l S
+0 0 0 RG 1.6 w [] 0 d 225 1159 m 641 1159 l S
+0 0 0 RG 1.6 w [] 0 d 713 1159 m 733 1159 l S
+0 0 0 RG 1.6 w [] 0 d 30 1159 m 61 1159 l S
+0 0 0 RG 1.6 w [] 0 d 71 1159 m 102 1159 l S
+0 0 0 RG 1.8 w [] 0 d 61 1149 m 61 1169 l S
+0 0 0 RG 1.8 w [] 0 d 71 1149 m 71 1169 l S
+0 0 0 RG 1.8 w [] 0 d 57 1170 m 75 1148 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 1183 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 1148 m 221 1148 l 223.209 1148 225 1149.791 225 1152 c 225 1166 l 225 1168.209 223.209 1170 221 1170 c 116 1170 l 113.791 1170 112 1168.209 112 1166 c 112 1152 l 112 1149.791 113.791 1148 116 1148 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 123.5 1162.5 Tm (EQ\(MainStep, 3\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 1159 m 665 1159 l S
+0 0 0 RG 1.6 w [] 0 d 689 1159 m 713 1159 l S
+0 0 0 RG 1.8 w [] 0 d 669 1149 m 663.667 1155.667 663.667 1162.333 669 1169 c S
+0 0 0 RG 1.8 w [] 0 d 685 1149 m 690.333 1155.667 690.333 1162.333 685 1169 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 650 1183 Tm (ControlOn) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1208 m 10 1208 l S
+0 0 0 RG 3 w [] 0 d 733 1208 m 733 1208 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1219 Tm (control_on_light \(* steady when control is on, flashing while it waits *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1208 m 10 1375 l S
+0 0 0 RG 3 w [] 0 d 733 1208 m 733 1375 l S
+0 0 0 RG 1.6 w [] 0 d 10 1240 m 30 1240 l S
+0 0 0 RG 1.6 w [] 0 d 102 1240 m 543 1240 l S
+0 0 0 RG 1.6 w [] 0 d 620 1240 m 630 1240 l S
+0 0 0 RG 1.6 w [] 0 d 713 1240 m 733 1240 l S
+0 0 0 RG 1.6 w [] 0 d 30 1240 m 30 1312 l S
+0 0 0 RG 1.6 w [] 0 d 102 1240 m 102 1312 l S
+0 0 0 RG 1.6 w [] 0 d 30 1240 m 61 1240 l S
+0 0 0 RG 1.6 w [] 0 d 71 1240 m 102 1240 l S
+0 0 0 RG 1.8 w [] 0 d 61 1230 m 61 1250 l S
+0 0 0 RG 1.8 w [] 0 d 71 1230 m 71 1250 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 1264 Tm (ControlOn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 30 1312 m 61 1312 l S
+0 0 0 RG 1.6 w [] 0 d 71 1312 m 102 1312 l S
+0 0 0 RG 1.8 w [] 0 d 61 1302 m 61 1322 l S
+0 0 0 RG 1.8 w [] 0 d 71 1302 m 71 1322 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 51 1336 Tm (Blink) Tj ET
+0 0 0 RG 1.6 w [] 0 d 543 1240 m 569.5 1240 l S
+0 0 0 RG 1.6 w [] 0 d 593.5 1240 m 620 1240 l S
+0 0 0 RG 1.8 w [] 0 d 573.5 1230 m 568.167 1236.667 568.167 1243.333 573.5 1250 c S
+0 0 0 RG 1.8 w [] 0 d 589.5 1230 m 594.833 1236.667 594.833 1243.333 589.5 1250 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 548.5 1264 Tm (ControlOnPL) Tj ET
+0 0 0 RG 1.6 w [] 0 d 630 1240 m 659.5 1240 l S
+0 0 0 RG 1.6 w [] 0 d 683.5 1240 m 713 1240 l S
+0 0 0 RG 1.8 w [] 0 d 663.5 1230 m 658.167 1236.667 658.167 1243.333 663.5 1250 c S
+0 0 0 RG 1.8 w [] 0 d 679.5 1230 m 684.833 1236.667 684.833 1243.333 679.5 1250 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 635.5 1264 Tm (ControlOnPL2) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1375 m 10 1375 l S
+0 0 0 RG 3 w [] 0 d 733 1375 m 733 1375 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1386 Tm (stop_light \(* lit whenever control is off *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1375 m 10 1456 l S
+0 0 0 RG 3 w [] 0 d 733 1375 m 733 1456 l S
+0 0 0 RG 1.6 w [] 0 d 102 1407 m 112 1407 l S
+0 0 0 RG 1.6 w [] 0 d 10 1407 m 30 1407 l S
+0 0 0 RG 1.6 w [] 0 d 184 1407 m 641 1407 l S
+0 0 0 RG 1.6 w [] 0 d 713 1407 m 733 1407 l S
+0 0 0 RG 1.6 w [] 0 d 30 1407 m 61 1407 l S
+0 0 0 RG 1.6 w [] 0 d 71 1407 m 102 1407 l S
+0 0 0 RG 1.8 w [] 0 d 61 1397 m 61 1417 l S
+0 0 0 RG 1.8 w [] 0 d 71 1397 m 71 1417 l S
+0 0 0 RG 1.8 w [] 0 d 57 1418 m 75 1396 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 1431 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 1407 m 143 1407 l S
+0 0 0 RG 1.6 w [] 0 d 153 1407 m 184 1407 l S
+0 0 0 RG 1.8 w [] 0 d 143 1397 m 143 1417 l S
+0 0 0 RG 1.8 w [] 0 d 153 1397 m 153 1417 l S
+0 0 0 RG 1.8 w [] 0 d 139 1418 m 157 1396 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 121 1431 Tm (ControlOn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 1407 m 665 1407 l S
+0 0 0 RG 1.6 w [] 0 d 689 1407 m 713 1407 l S
+0 0 0 RG 1.8 w [] 0 d 669 1397 m 663.667 1403.667 663.667 1410.333 669 1417 c S
+0 0 0 RG 1.8 w [] 0 d 685 1397 m 690.333 1403.667 690.333 1410.333 685 1417 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 659 1431 Tm (StopPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1456 m 10 1456 l S
+0 0 0 RG 3 w [] 0 d 733 1456 m 733 1456 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1467 Tm (estopped_light \(* flashes while an e-stop holds the machine in X1 *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1456 m 10 1537 l S
+0 0 0 RG 3 w [] 0 d 733 1456 m 733 1537 l S
+0 0 0 RG 1.6 w [] 0 d 102 1488 m 112 1488 l S
+0 0 0 RG 1.6 w [] 0 d 10 1488 m 30 1488 l S
+0 0 0 RG 1.6 w [] 0 d 225 1488 m 641 1488 l S
+0 0 0 RG 1.6 w [] 0 d 713 1488 m 733 1488 l S
+0 0 0 RG 1.6 w [] 0 d 30 1488 m 61 1488 l S
+0 0 0 RG 1.6 w [] 0 d 71 1488 m 102 1488 l S
+0 0 0 RG 1.8 w [] 0 d 61 1478 m 61 1498 l S
+0 0 0 RG 1.8 w [] 0 d 71 1478 m 71 1498 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 51 1512 Tm (Blink) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 1477 m 221 1477 l 223.209 1477 225 1478.791 225 1481 c 225 1495 l 225 1497.209 223.209 1499 221 1499 c 116 1499 l 113.791 1499 112 1497.209 112 1495 c 112 1481 l 112 1478.791 113.791 1477 116 1477 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 123.5 1491.5 Tm (EQ\(MainStep, 1\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 1488 m 665 1488 l S
+0 0 0 RG 1.6 w [] 0 d 689 1488 m 713 1488 l S
+0 0 0 RG 1.8 w [] 0 d 669 1478 m 663.667 1484.667 663.667 1491.333 669 1498 c S
+0 0 0 RG 1.8 w [] 0 d 685 1478 m 690.333 1484.667 690.333 1491.333 685 1498 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 647 1512 Tm (EStoppedPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1537 m 10 1537 l S
+0 0 0 RG 3 w [] 0 d 733 1537 m 733 1537 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1548 Tm (manual_mode \(* manual needs control on and an unambiguous selector *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1537 m 10 1618 l S
+0 0 0 RG 3 w [] 0 d 733 1537 m 733 1618 l S
+0 0 0 RG 1.6 w [] 0 d 102 1569 m 112 1569 l S
+0 0 0 RG 1.6 w [] 0 d 184 1569 m 194 1569 l S
+0 0 0 RG 1.6 w [] 0 d 10 1569 m 30 1569 l S
+0 0 0 RG 1.6 w [] 0 d 266 1569 m 559 1569 l S
+0 0 0 RG 1.6 w [] 0 d 631 1569 m 641 1569 l S
+0 0 0 RG 1.6 w [] 0 d 713 1569 m 733 1569 l S
+0 0 0 RG 1.6 w [] 0 d 30 1569 m 61 1569 l S
+0 0 0 RG 1.6 w [] 0 d 71 1569 m 102 1569 l S
+0 0 0 RG 1.8 w [] 0 d 61 1559 m 61 1579 l S
+0 0 0 RG 1.8 w [] 0 d 71 1559 m 71 1579 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 1593 Tm (ControlOn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 1569 m 143 1569 l S
+0 0 0 RG 1.6 w [] 0 d 153 1569 m 184 1569 l S
+0 0 0 RG 1.8 w [] 0 d 143 1559 m 143 1579 l S
+0 0 0 RG 1.8 w [] 0 d 153 1559 m 153 1579 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 1593 Tm (ManualSS) Tj ET
+0 0 0 RG 1.6 w [] 0 d 194 1569 m 225 1569 l S
+0 0 0 RG 1.6 w [] 0 d 235 1569 m 266 1569 l S
+0 0 0 RG 1.8 w [] 0 d 225 1559 m 225 1579 l S
+0 0 0 RG 1.8 w [] 0 d 235 1559 m 235 1579 l S
+0 0 0 RG 1.8 w [] 0 d 221 1580 m 239 1558 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 212 1593 Tm (AutoSS) Tj ET
+0 0 0 RG 1.6 w [] 0 d 559 1569 m 583 1569 l S
+0 0 0 RG 1.6 w [] 0 d 607 1569 m 631 1569 l S
+0 0 0 RG 1.8 w [] 0 d 587 1559 m 581.667 1565.667 581.667 1572.333 587 1579 c S
+0 0 0 RG 1.8 w [] 0 d 603 1559 m 608.333 1565.667 608.333 1572.333 603 1579 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 565 1593 Tm (ManualMode) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 1569 m 665 1569 l S
+0 0 0 RG 1.6 w [] 0 d 689 1569 m 713 1569 l S
+0 0 0 RG 1.8 w [] 0 d 669 1559 m 663.667 1565.667 663.667 1572.333 669 1579 c S
+0 0 0 RG 1.8 w [] 0 d 685 1559 m 690.333 1565.667 690.333 1572.333 685 1579 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 653 1593 Tm (ManualPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1618 m 10 1618 l S
+0 0 0 RG 3 w [] 0 d 733 1618 m 733 1618 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1629 Tm (auto_mode \(* automatic needs control on and an unambiguous selector *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1618 m 10 1699 l S
+0 0 0 RG 3 w [] 0 d 733 1618 m 733 1699 l S
+0 0 0 RG 1.6 w [] 0 d 102 1650 m 112 1650 l S
+0 0 0 RG 1.6 w [] 0 d 184 1650 m 194 1650 l S
+0 0 0 RG 1.6 w [] 0 d 10 1650 m 30 1650 l S
+0 0 0 RG 1.6 w [] 0 d 266 1650 m 559 1650 l S
+0 0 0 RG 1.6 w [] 0 d 631 1650 m 641 1650 l S
+0 0 0 RG 1.6 w [] 0 d 713 1650 m 733 1650 l S
+0 0 0 RG 1.6 w [] 0 d 30 1650 m 61 1650 l S
+0 0 0 RG 1.6 w [] 0 d 71 1650 m 102 1650 l S
+0 0 0 RG 1.8 w [] 0 d 61 1640 m 61 1660 l S
+0 0 0 RG 1.8 w [] 0 d 71 1640 m 71 1660 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 1674 Tm (ControlOn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 1650 m 143 1650 l S
+0 0 0 RG 1.6 w [] 0 d 153 1650 m 184 1650 l S
+0 0 0 RG 1.8 w [] 0 d 143 1640 m 143 1660 l S
+0 0 0 RG 1.8 w [] 0 d 153 1640 m 153 1660 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 130 1674 Tm (AutoSS) Tj ET
+0 0 0 RG 1.6 w [] 0 d 194 1650 m 225 1650 l S
+0 0 0 RG 1.6 w [] 0 d 235 1650 m 266 1650 l S
+0 0 0 RG 1.8 w [] 0 d 225 1640 m 225 1660 l S
+0 0 0 RG 1.8 w [] 0 d 235 1640 m 235 1660 l S
+0 0 0 RG 1.8 w [] 0 d 221 1661 m 239 1639 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 206 1674 Tm (ManualSS) Tj ET
+0 0 0 RG 1.6 w [] 0 d 559 1650 m 583 1650 l S
+0 0 0 RG 1.6 w [] 0 d 607 1650 m 631 1650 l S
+0 0 0 RG 1.8 w [] 0 d 587 1640 m 581.667 1646.667 581.667 1653.333 587 1660 c S
+0 0 0 RG 1.8 w [] 0 d 603 1640 m 608.333 1646.667 608.333 1653.333 603 1660 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 571 1674 Tm (AutoMode) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 1650 m 665 1650 l S
+0 0 0 RG 1.6 w [] 0 d 689 1650 m 713 1650 l S
+0 0 0 RG 1.8 w [] 0 d 669 1640 m 663.667 1646.667 663.667 1653.333 669 1660 c S
+0 0 0 RG 1.8 w [] 0 d 685 1640 m 690.333 1646.667 690.333 1653.333 685 1660 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 659 1674 Tm (AutoPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1699 m 10 1699 l S
+0 0 0 RG 3 w [] 0 d 733 1699 m 733 1699 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1710 Tm (mode_none \(* no mode unless a rung below selects one *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1699 m 10 1780 l S
+0 0 0 RG 3 w [] 0 d 733 1699 m 733 1780 l S
+0 0 0 RG 1.6 w [] 0 d 102 1731 m 112 1731 l S
+0 0 0 RG 1.6 w [] 0 d 10 1731 m 30 1731 l S
+0 0 0 RG 1.6 w [] 0 d 184 1731 m 713 1731 l S
+0 0 0 RG 1.6 w [] 0 d 713 1731 m 733 1731 l S
+0 0 0 RG 1.6 w [] 0 d 30 1731 m 61 1731 l S
+0 0 0 RG 1.6 w [] 0 d 71 1731 m 102 1731 l S
+0 0 0 RG 1.8 w [] 0 d 61 1721 m 61 1741 l S
+0 0 0 RG 1.8 w [] 0 d 71 1721 m 71 1741 l S
+0 0 0 RG 1.8 w [] 0 d 57 1742 m 75 1720 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 1755 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 1720 m 180 1720 l 182.209 1720 184 1721.791 184 1724 c 184 1738 l 184 1740.209 182.209 1742 180 1742 c 116 1742 l 113.791 1742 112 1740.209 112 1738 c 112 1724 l 112 1721.791 113.791 1720 116 1720 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 121 1734.5 Tm (Mode := 0) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1780 m 10 1780 l S
+0 0 0 RG 3 w [] 0 d 733 1780 m 733 1780 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1791 Tm (mode_manual \(* publish X4 *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1780 m 10 1861 l S
+0 0 0 RG 3 w [] 0 d 733 1780 m 733 1861 l S
+Q
+Q
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 12967 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 518.4 756 Tm (Page 3 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 620.493 re W n
+0.727 0 0 0.727 36 -1231.674 cm
+0 0 0 RG 3 w [] 0 d 10 1699 m 10 1780 l S
+0 0 0 RG 3 w [] 0 d 733 1699 m 733 1780 l S
+0 0 0 RG 3 w [] 0 d 10 1780 m 10 1780 l S
+0 0 0 RG 3 w [] 0 d 733 1780 m 733 1780 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1791 Tm (mode_manual \(* publish X4 *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1780 m 10 1861 l S
+0 0 0 RG 3 w [] 0 d 733 1780 m 733 1861 l S
+0 0 0 RG 1.6 w [] 0 d 102 1812 m 112 1812 l S
+0 0 0 RG 1.6 w [] 0 d 10 1812 m 30 1812 l S
+0 0 0 RG 1.6 w [] 0 d 184 1812 m 713 1812 l S
+0 0 0 RG 1.6 w [] 0 d 713 1812 m 733 1812 l S
+0 0 0 RG 1.6 w [] 0 d 30 1812 m 61 1812 l S
+0 0 0 RG 1.6 w [] 0 d 71 1812 m 102 1812 l S
+0 0 0 RG 1.8 w [] 0 d 61 1802 m 61 1822 l S
+0 0 0 RG 1.8 w [] 0 d 71 1802 m 71 1822 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 1836 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 1801 m 180 1801 l 182.209 1801 184 1802.791 184 1805 c 184 1819 l 184 1821.209 182.209 1823 180 1823 c 116 1823 l 113.791 1823 112 1821.209 112 1819 c 112 1805 l 112 1802.791 113.791 1801 116 1801 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 121 1815.5 Tm (Mode := 4) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1861 m 10 1861 l S
+0 0 0 RG 3 w [] 0 d 733 1861 m 733 1861 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1872 Tm (mode_auto \(* publish X5 *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1861 m 10 1942 l S
+0 0 0 RG 3 w [] 0 d 733 1861 m 733 1942 l S
+0 0 0 RG 1.6 w [] 0 d 102 1893 m 112 1893 l S
+0 0 0 RG 1.6 w [] 0 d 10 1893 m 30 1893 l S
+0 0 0 RG 1.6 w [] 0 d 184 1893 m 713 1893 l S
+0 0 0 RG 1.6 w [] 0 d 713 1893 m 733 1893 l S
+0 0 0 RG 1.6 w [] 0 d 30 1893 m 61 1893 l S
+0 0 0 RG 1.6 w [] 0 d 71 1893 m 102 1893 l S
+0 0 0 RG 1.8 w [] 0 d 61 1883 m 61 1903 l S
+0 0 0 RG 1.8 w [] 0 d 71 1883 m 71 1903 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 1917 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 1882 m 180 1882 l 182.209 1882 184 1883.791 184 1886 c 184 1900 l 184 1902.209 182.209 1904 180 1904 c 116 1904 l 113.791 1904 112 1902.209 112 1900 c 112 1886 l 112 1883.791 113.791 1882 116 1882 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 121 1896.5 Tm (Mode := 5) Tj ET
+0.533 0.533 0.533 RG 0.8 w [3 2] 0 d 23 1948 m 459 1948 l 460.657 1948 462 1949.343 462 1951 c 462 1967 l 462 1968.657 460.657 1970 459 1970 c 23 1970 l 21.343 1970 20 1968.657 20 1967 c 20 1951 l 20 1949.343 21.343 1948 23 1948 c h s
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 1963 Tm (---- Enclosing steps X4/X5: leaving a mode deactivates its child chart.) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1974 m 10 1974 l S
+0 0 0 RG 3 w [] 0 d 733 1974 m 733 1974 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 1985 Tm (mode_changed \(* one scan on every mode change *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 1974 m 10 2055 l S
+0 0 0 RG 3 w [] 0 d 733 1974 m 733 2055 l S
+0 0 0 RG 1.6 w [] 0 d 102 2006 m 112 2006 l S
+0 0 0 RG 1.6 w [] 0 d 10 2006 m 30 2006 l S
+0 0 0 RG 1.6 w [] 0 d 244 2006 m 636 2006 l S
+0 0 0 RG 1.6 w [] 0 d 713 2006 m 733 2006 l S
+0 0 0 RG 1.6 w [] 0 d 30 2006 m 61 2006 l S
+0 0 0 RG 1.6 w [] 0 d 71 2006 m 102 2006 l S
+0 0 0 RG 1.8 w [] 0 d 61 1996 m 61 2016 l S
+0 0 0 RG 1.8 w [] 0 d 71 1996 m 71 2016 l S
+0 0 0 RG 1.8 w [] 0 d 57 2017 m 75 1995 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 2030 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 1995 m 240 1995 l 242.209 1995 244 1996.791 244 1999 c 244 2013 l 244 2015.209 242.209 2017 240 2017 c 116 2017 l 113.791 2017 112 2015.209 112 2013 c 112 1999 l 112 1996.791 113.791 1995 116 1995 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 2009.5 Tm (NE\(Mode, PrevMode\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 636 2006 m 662.5 2006 l S
+0 0 0 RG 1.6 w [] 0 d 686.5 2006 m 713 2006 l S
+0 0 0 RG 1.8 w [] 0 d 666.5 1996 m 661.167 2002.667 661.167 2009.333 666.5 2016 c S
+0 0 0 RG 1.8 w [] 0 d 682.5 1996 m 687.833 2002.667 687.833 2009.333 682.5 2016 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 641.5 2030 Tm (ModeChanged) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2055 m 10 2055 l S
+0 0 0 RG 3 w [] 0 d 733 2055 m 733 2055 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 2066 Tm (mode_change_clear \(* the new mode starts stopped, at the first automatic step *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2055 m 10 2194 l S
+0 0 0 RG 3 w [] 0 d 733 2055 m 733 2194 l S
+0 0 0 RG 1.6 w [] 0 d 107 2116 m 117 2116 l S
+0 0 0 RG 1.6 w [] 0 d 10 2116 m 30 2116 l S
+0 0 0 RG 1.6 w [] 0 d 270 2116 m 713 2116 l S
+0 0 0 RG 1.6 w [] 0 d 713 2116 m 733 2116 l S
+0 0 0 RG 1.6 w [] 0 d 30 2116 m 63.5 2116 l S
+0 0 0 RG 1.6 w [] 0 d 73.5 2116 m 107 2116 l S
+0 0 0 RG 1.8 w [] 0 d 63.5 2106 m 63.5 2126 l S
+0 0 0 RG 1.8 w [] 0 d 73.5 2106 m 73.5 2126 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 2140 Tm (ModeChanged) Tj ET
+0 0 0 RG 1.2 w [] 0 d 121 2075 m 266 2075 l 268.209 2075 270 2076.791 270 2079 c 270 2153 l 270 2155.209 268.209 2157 266 2157 c 121 2157 l 118.791 2157 117 2155.209 117 2153 c 117 2079 l 117 2076.791 118.791 2075 121 2075 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 139.5 2089.5 Tm (BeltSpeedRef := 0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 127.5 2101.5 Tm (LastBeltRefSpeed := 0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 148.5 2113.5 Tm (AutoStep := 16;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 136.5 2125.5 Tm (AutoElapsed := 0.0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 130.5 2137.5 Tm (EmitRemaining := 0.0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 139.5 2149.5 Tm (SortElapsed := 0.0) Tj ET
+0.533 0.533 0.533 RG 0.8 w [3 2] 0 d 23 2200 m 423 2200 l 424.657 2200 426 2201.343 426 2203 c 426 2219 l 426 2220.657 424.657 2222 423 2222 c 23 2222 l 21.343 2222 20 2220.657 20 2219 c 20 2203 l 20 2201.343 21.343 2200 23 2200 c h s
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 2215 Tm (---- Continuous: +/-10 and +/-100 cm/s per press, clamped 0..300.) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2226 m 10 2226 l S
+0 0 0 RG 3 w [] 0 d 733 2226 m 733 2226 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 2237 Tm (speed_up_10 \(* one step per press, only with control on *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2226 m 10 2307 l S
+0 0 0 RG 3 w [] 0 d 733 2226 m 733 2307 l S
+0 0 0 RG 1.6 w [] 0 d 102 2258 m 112 2258 l S
+0 0 0 RG 1.6 w [] 0 d 184 2258 m 194 2258 l S
+0 0 0 RG 1.6 w [] 0 d 10 2258 m 30 2258 l S
+0 0 0 RG 1.6 w [] 0 d 415 2258 m 713 2258 l S
+0 0 0 RG 1.6 w [] 0 d 713 2258 m 733 2258 l S
+0 0 0 RG 1.6 w [] 0 d 30 2258 m 61 2258 l S
+0 0 0 RG 1.6 w [] 0 d 71 2258 m 102 2258 l S
+0 0 0 RG 1.8 w [] 0 d 61 2248 m 61 2268 l S
+0 0 0 RG 1.8 w [] 0 d 71 2248 m 71 2268 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 2282 Tm (ControlOn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 2258 m 140 2258 l S
+0 0 0 RG 1.6 w [] 0 d 156 2258 m 184 2258 l S
+0 0 0 RG 1.8 w [] 0 d 140 2248 m 140 2268 l S
+0 0 0 RG 1.8 w [] 0 d 156 2248 m 156 2268 l S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 145.3 2261.5 Tm (P) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 121 2282 Tm (IncSpdX10) Tj ET
+0 0 0 RG 1.2 w [] 0 d 198 2247 m 411 2247 l 413.209 2247 415 2248.791 415 2251 c 415 2265 l 415 2267.209 413.209 2269 411 2269 c 198 2269 l 195.791 2269 194 2267.209 194 2265 c 194 2251 l 194 2248.791 195.791 2247 198 2247 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 205.5 2261.5 Tm (BeltSpeedRef := BeltSpeedRef + 10) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2307 m 10 2307 l S
+0 0 0 RG 3 w [] 0 d 733 2307 m 733 2307 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 2318 Tm (speed_up_100 \(* one step per press, only with control on *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2307 m 10 2388 l S
+0 0 0 RG 3 w [] 0 d 733 2307 m 733 2388 l S
+0 0 0 RG 1.6 w [] 0 d 102 2339 m 112 2339 l S
+0 0 0 RG 1.6 w [] 0 d 184 2339 m 194 2339 l S
+0 0 0 RG 1.6 w [] 0 d 10 2339 m 30 2339 l S
+0 0 0 RG 1.6 w [] 0 d 421 2339 m 713 2339 l S
+0 0 0 RG 1.6 w [] 0 d 713 2339 m 733 2339 l S
+0 0 0 RG 1.6 w [] 0 d 30 2339 m 61 2339 l S
+0 0 0 RG 1.6 w [] 0 d 71 2339 m 102 2339 l S
+0 0 0 RG 1.8 w [] 0 d 61 2329 m 61 2349 l S
+0 0 0 RG 1.8 w [] 0 d 71 2329 m 71 2349 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 2363 Tm (ControlOn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 2339 m 140 2339 l S
+0 0 0 RG 1.6 w [] 0 d 156 2339 m 184 2339 l S
+0 0 0 RG 1.8 w [] 0 d 140 2329 m 140 2349 l S
+0 0 0 RG 1.8 w [] 0 d 156 2329 m 156 2349 l S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 145.3 2342.5 Tm (P) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 118 2363 Tm (IncSpdX100) Tj ET
+0 0 0 RG 1.2 w [] 0 d 198 2328 m 417 2328 l 419.209 2328 421 2329.791 421 2332 c 421 2346 l 421 2348.209 419.209 2350 417 2350 c 198 2350 l 195.791 2350 194 2348.209 194 2346 c 194 2332 l 194 2329.791 195.791 2328 198 2328 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 205.5 2342.5 Tm (BeltSpeedRef := BeltSpeedRef + 100) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2388 m 10 2388 l S
+0 0 0 RG 3 w [] 0 d 733 2388 m 733 2388 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 2399 Tm (speed_down_10 \(* one step per press, only with control on *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2388 m 10 2469 l S
+0 0 0 RG 3 w [] 0 d 733 2388 m 733 2469 l S
+0 0 0 RG 1.6 w [] 0 d 102 2420 m 112 2420 l S
+0 0 0 RG 1.6 w [] 0 d 184 2420 m 194 2420 l S
+0 0 0 RG 1.6 w [] 0 d 10 2420 m 30 2420 l S
+0 0 0 RG 1.6 w [] 0 d 415 2420 m 713 2420 l S
+0 0 0 RG 1.6 w [] 0 d 713 2420 m 733 2420 l S
+0 0 0 RG 1.6 w [] 0 d 30 2420 m 61 2420 l S
+0 0 0 RG 1.6 w [] 0 d 71 2420 m 102 2420 l S
+0 0 0 RG 1.8 w [] 0 d 61 2410 m 61 2430 l S
+0 0 0 RG 1.8 w [] 0 d 71 2410 m 71 2430 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 2444 Tm (ControlOn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 2420 m 140 2420 l S
+0 0 0 RG 1.6 w [] 0 d 156 2420 m 184 2420 l S
+0 0 0 RG 1.8 w [] 0 d 140 2410 m 140 2430 l S
+0 0 0 RG 1.8 w [] 0 d 156 2410 m 156 2430 l S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 145.3 2423.5 Tm (P) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 121 2444 Tm (DecSpdX10) Tj ET
+0 0 0 RG 1.2 w [] 0 d 198 2409 m 411 2409 l 413.209 2409 415 2410.791 415 2413 c 415 2427 l 415 2429.209 413.209 2431 411 2431 c 198 2431 l 195.791 2431 194 2429.209 194 2427 c 194 2413 l 194 2410.791 195.791 2409 198 2409 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 205.5 2423.5 Tm (BeltSpeedRef := BeltSpeedRef - 10) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2469 m 10 2469 l S
+0 0 0 RG 3 w [] 0 d 733 2469 m 733 2469 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 2480 Tm (speed_down_100 \(* one step per press, only with control on *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2469 m 10 2550 l S
+0 0 0 RG 3 w [] 0 d 733 2469 m 733 2550 l S
+0 0 0 RG 1.6 w [] 0 d 102 2501 m 112 2501 l S
+0 0 0 RG 1.6 w [] 0 d 184 2501 m 194 2501 l S
+0 0 0 RG 1.6 w [] 0 d 10 2501 m 30 2501 l S
+0 0 0 RG 1.6 w [] 0 d 421 2501 m 713 2501 l S
+0 0 0 RG 1.6 w [] 0 d 713 2501 m 733 2501 l S
+0 0 0 RG 1.6 w [] 0 d 30 2501 m 61 2501 l S
+0 0 0 RG 1.6 w [] 0 d 71 2501 m 102 2501 l S
+0 0 0 RG 1.8 w [] 0 d 61 2491 m 61 2511 l S
+0 0 0 RG 1.8 w [] 0 d 71 2491 m 71 2511 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 2525 Tm (ControlOn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 2501 m 140 2501 l S
+0 0 0 RG 1.6 w [] 0 d 156 2501 m 184 2501 l S
+0 0 0 RG 1.8 w [] 0 d 140 2491 m 140 2511 l S
+0 0 0 RG 1.8 w [] 0 d 156 2491 m 156 2511 l S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 145.3 2504.5 Tm (P) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 118 2525 Tm (DecSpdX100) Tj ET
+0 0 0 RG 1.2 w [] 0 d 198 2490 m 417 2490 l 419.209 2490 421 2491.791 421 2494 c 421 2508 l 421 2510.209 419.209 2512 417 2512 c 198 2512 l 195.791 2512 194 2510.209 194 2508 c 194 2494 l 194 2491.791 195.791 2490 198 2490 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 205.5 2504.5 Tm (BeltSpeedRef := BeltSpeedRef - 100) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2550 m 10 2550 l S
+0 0 0 RG 3 w [] 0 d 733 2550 m 733 2550 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 2561 Tm (speed_clamp \(* keep the operator's reference inside the drive's range *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2550 m 10 2631 l S
+0 0 0 RG 3 w [] 0 d 733 2550 m 733 2631 l S
+0 0 0 RG 1.6 w [] 0 d 102 2582 m 112 2582 l S
+0 0 0 RG 1.6 w [] 0 d 10 2582 m 30 2582 l S
+0 0 0 RG 1.6 w [] 0 d 401 2582 m 713 2582 l S
+0 0 0 RG 1.6 w [] 0 d 713 2582 m 733 2582 l S
+0 0 0 RG 1.6 w [] 0 d 30 2582 m 61 2582 l S
+0 0 0 RG 1.6 w [] 0 d 71 2582 m 102 2582 l S
+0 0 0 RG 1.8 w [] 0 d 61 2572 m 61 2592 l S
+0 0 0 RG 1.8 w [] 0 d 71 2572 m 71 2592 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 2606 Tm (ControlOn) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 2571 m 397 2571 l 399.209 2571 401 2572.791 401 2575 c 401 2589 l 401 2591.209 399.209 2593 397 2593 c 116 2593 l 113.791 2593 112 2591.209 112 2589 c 112 2575 l 112 2572.791 113.791 2571 116 2571 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124.5 2585.5 Tm (BeltSpeedRef := LIMIT\(0, BeltSpeedRef, MaxBÖ) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2631 m 10 2631 l S
+0 0 0 RG 3 w [] 0 d 733 2631 m 733 2631 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 2642 Tm (speed_remember \(* an operator change becomes the speed to return to after classifying *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2631 m 10 2942 l S
+0 0 0 RG 3 w [] 0 d 733 2631 m 733 2942 l S
+Q
+Q
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 11588 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 518.4 756 Tm (Page 4 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 621.946 re W n
+0.727 0 0 0.727 36 -1850.167 cm
+0 0 0 RG 3 w [] 0 d 10 2550 m 10 2631 l S
+0 0 0 RG 3 w [] 0 d 733 2550 m 733 2631 l S
+0 0 0 RG 3 w [] 0 d 10 2631 m 10 2631 l S
+0 0 0 RG 3 w [] 0 d 733 2631 m 733 2631 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 2642 Tm (speed_remember \(* an operator change becomes the speed to return to after classifying *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2631 m 10 2942 l S
+0 0 0 RG 3 w [] 0 d 733 2631 m 733 2942 l S
+0 0 0 RG 1.6 w [] 0 d 102 2663 m 120 2663 l S
+0 0 0 RG 1.6 w [] 0 d 192 2663 m 210 2663 l S
+0 0 0 RG 1.6 w [] 0 d 10 2663 m 30 2663 l S
+0 0 0 RG 1.6 w [] 0 d 425 2663 m 713 2663 l S
+0 0 0 RG 1.6 w [] 0 d 713 2663 m 733 2663 l S
+0 0 0 RG 1.6 w [] 0 d 120 2663 m 120 2879 l S
+0 0 0 RG 1.6 w [] 0 d 192 2663 m 192 2879 l S
+0 0 0 RG 1.6 w [] 0 d 30 2663 m 61 2663 l S
+0 0 0 RG 1.6 w [] 0 d 71 2663 m 102 2663 l S
+0 0 0 RG 1.8 w [] 0 d 61 2653 m 61 2673 l S
+0 0 0 RG 1.8 w [] 0 d 71 2653 m 71 2673 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 2687 Tm (ControlOn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 120 2663 m 148 2663 l S
+0 0 0 RG 1.6 w [] 0 d 164 2663 m 192 2663 l S
+0 0 0 RG 1.8 w [] 0 d 148 2653 m 148 2673 l S
+0 0 0 RG 1.8 w [] 0 d 164 2653 m 164 2673 l S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 153.3 2666.5 Tm (P) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 129 2687 Tm (IncSpdX10) Tj ET
+0 0 0 RG 1.6 w [] 0 d 120 2735 m 148 2735 l S
+0 0 0 RG 1.6 w [] 0 d 164 2735 m 192 2735 l S
+0 0 0 RG 1.8 w [] 0 d 148 2725 m 148 2745 l S
+0 0 0 RG 1.8 w [] 0 d 164 2725 m 164 2745 l S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 153.3 2738.5 Tm (P) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 126 2759 Tm (IncSpdX100) Tj ET
+0 0 0 RG 1.6 w [] 0 d 120 2807 m 148 2807 l S
+0 0 0 RG 1.6 w [] 0 d 164 2807 m 192 2807 l S
+0 0 0 RG 1.8 w [] 0 d 148 2797 m 148 2817 l S
+0 0 0 RG 1.8 w [] 0 d 164 2797 m 164 2817 l S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 153.3 2810.5 Tm (P) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 129 2831 Tm (DecSpdX10) Tj ET
+0 0 0 RG 1.6 w [] 0 d 120 2879 m 148 2879 l S
+0 0 0 RG 1.6 w [] 0 d 164 2879 m 192 2879 l S
+0 0 0 RG 1.8 w [] 0 d 148 2869 m 148 2889 l S
+0 0 0 RG 1.8 w [] 0 d 164 2869 m 164 2889 l S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 153.3 2882.5 Tm (P) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 126 2903 Tm (DecSpdX100) Tj ET
+0 0 0 RG 1.2 w [] 0 d 214 2652 m 421 2652 l 423.209 2652 425 2653.791 425 2656 c 425 2670 l 425 2672.209 423.209 2674 421 2674 c 214 2674 l 211.791 2674 210 2672.209 210 2670 c 210 2656 l 210 2653.791 211.791 2652 214 2652 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 221.5 2666.5 Tm (LastBeltRefSpeed := BeltSpeedRef) Tj ET
+0.533 0.533 0.533 RG 0.8 w [3 2] 0 d 23 2948 m 447 2948 l 448.657 2948 450 2949.343 450 2951 c 450 2981 l 450 2982.657 448.657 2984 447 2984 c 23 2984 l 21.343 2984 20 2982.657 20 2981 c 20 2951 l 20 2949.343 21.343 2948 23 2948 c h s
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 2963 Tm (---- Automatic: X16/X21 wait, X20 three second warning, X19 emit, X22) Tj ET
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 2977 Tm (classify, X24/X27/X28 sorting, X25/X85/X86 rejection.) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2988 m 10 2988 l S
+0 0 0 RG 3 w [] 0 d 733 2988 m 733 2988 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 2999 Tm (auto_step_snapshot \(* every transition below tests the step the scan started in, so one step moves per scan *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 2988 m 10 3069 l S
+0 0 0 RG 3 w [] 0 d 733 2988 m 733 3069 l S
+0 0 0 RG 1.6 w [] 0 d 102 3020 m 112 3020 l S
+0 0 0 RG 1.6 w [] 0 d 10 3020 m 30 3020 l S
+0 0 0 RG 1.6 w [] 0 d 321 3020 m 713 3020 l S
+0 0 0 RG 1.6 w [] 0 d 713 3020 m 733 3020 l S
+0 0 0 RG 1.6 w [] 0 d 30 3020 m 61 3020 l S
+0 0 0 RG 1.6 w [] 0 d 71 3020 m 102 3020 l S
+0 0 0 RG 1.8 w [] 0 d 61 3010 m 61 3030 l S
+0 0 0 RG 1.8 w [] 0 d 71 3010 m 71 3030 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 3044 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 3009 m 317 3009 l 319.209 3009 321 3010.791 321 3013 c 321 3027 l 321 3029.209 319.209 3031 317 3031 c 116 3031 l 113.791 3031 112 3029.209 112 3027 c 112 3013 l 112 3010.791 113.791 3009 116 3009 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 123.5 3023.5 Tm (AutoStepAtScanStart := AutoStep) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3069 m 10 3069 l S
+0 0 0 RG 3 w [] 0 d 733 3069 m 733 3069 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3080 Tm (auto_armed \(* X16 to X21: wait for Start *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3069 m 10 3150 l S
+0 0 0 RG 3 w [] 0 d 733 3069 m 733 3150 l S
+0 0 0 RG 1.6 w [] 0 d 102 3101 m 112 3101 l S
+0 0 0 RG 1.6 w [] 0 d 300 3101 m 310 3101 l S
+0 0 0 RG 1.6 w [] 0 d 10 3101 m 30 3101 l S
+0 0 0 RG 1.6 w [] 0 d 413 3101 m 713 3101 l S
+0 0 0 RG 1.6 w [] 0 d 713 3101 m 733 3101 l S
+0 0 0 RG 1.6 w [] 0 d 30 3101 m 61 3101 l S
+0 0 0 RG 1.6 w [] 0 d 71 3101 m 102 3101 l S
+0 0 0 RG 1.8 w [] 0 d 61 3091 m 61 3111 l S
+0 0 0 RG 1.8 w [] 0 d 71 3091 m 71 3111 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 3125 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 3090 m 296 3090 l 298.209 3090 300 3091.791 300 3094 c 300 3108 l 300 3110.209 298.209 3112 296 3112 c 116 3112 l 113.791 3112 112 3110.209 112 3108 c 112 3094 l 112 3091.791 113.791 3090 116 3090 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 125 3104.5 Tm (EQ\(AutoStepAtScanStart, 16\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 314 3090 m 409 3090 l 411.209 3090 413 3091.791 413 3094 c 413 3108 l 413 3110.209 411.209 3112 409 3112 c 314 3112 l 311.791 3112 310 3110.209 310 3108 c 310 3094 l 310 3091.791 311.791 3090 314 3090 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 319.5 3104.5 Tm (AutoStep := 21) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3150 m 10 3150 l S
+0 0 0 RG 3 w [] 0 d 733 3150 m 733 3150 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3161 Tm (auto_start \(* X21 to X20: Start begins the warning period *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3150 m 10 3241 l S
+0 0 0 RG 3 w [] 0 d 733 3150 m 733 3241 l S
+0 0 0 RG 1.6 w [] 0 d 102 3187 m 112 3187 l S
+0 0 0 RG 1.6 w [] 0 d 300 3187 m 310 3187 l S
+0 0 0 RG 1.6 w [] 0 d 382 3187 m 392 3187 l S
+0 0 0 RG 1.6 w [] 0 d 10 3187 m 30 3187 l S
+0 0 0 RG 1.6 w [] 0 d 520 3187 m 713 3187 l S
+0 0 0 RG 1.6 w [] 0 d 713 3187 m 733 3187 l S
+0 0 0 RG 1.6 w [] 0 d 30 3187 m 61 3187 l S
+0 0 0 RG 1.6 w [] 0 d 71 3187 m 102 3187 l S
+0 0 0 RG 1.8 w [] 0 d 61 3177 m 61 3197 l S
+0 0 0 RG 1.8 w [] 0 d 71 3177 m 71 3197 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 3211 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 3176 m 296 3176 l 298.209 3176 300 3177.791 300 3180 c 300 3194 l 300 3196.209 298.209 3198 296 3198 c 116 3198 l 113.791 3198 112 3196.209 112 3194 c 112 3180 l 112 3177.791 113.791 3176 116 3176 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 125 3190.5 Tm (EQ\(AutoStepAtScanStart, 21\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 310 3187 m 341 3187 l S
+0 0 0 RG 1.6 w [] 0 d 351 3187 m 382 3187 l S
+0 0 0 RG 1.8 w [] 0 d 341 3177 m 341 3197 l S
+0 0 0 RG 1.8 w [] 0 d 351 3177 m 351 3197 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 331 3211 Tm (Start) Tj ET
+0 0 0 RG 1.2 w [] 0 d 396 3170 m 516 3170 l 518.209 3170 520 3171.791 520 3174 c 520 3200 l 520 3202.209 518.209 3204 516 3204 c 396 3204 l 393.791 3204 392 3202.209 392 3200 c 392 3174 l 392 3171.791 393.791 3170 396 3170 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 411 3184.5 Tm (AutoStep := 20;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 402 3196.5 Tm (AutoElapsed := 0.0) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3241 m 10 3241 l S
+0 0 0 RG 3 w [] 0 d 733 3241 m 733 3241 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3252 Tm (warning \(* X20: warn before the conveyor moves *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3241 m 10 3322 l S
+0 0 0 RG 3 w [] 0 d 733 3241 m 733 3322 l S
+0 0 0 RG 1.6 w [] 0 d 102 3273 m 112 3273 l S
+0 0 0 RG 1.6 w [] 0 d 10 3273 m 30 3273 l S
+0 0 0 RG 1.6 w [] 0 d 300 3273 m 641 3273 l S
+0 0 0 RG 1.6 w [] 0 d 713 3273 m 733 3273 l S
+0 0 0 RG 1.6 w [] 0 d 30 3273 m 61 3273 l S
+0 0 0 RG 1.6 w [] 0 d 71 3273 m 102 3273 l S
+0 0 0 RG 1.8 w [] 0 d 61 3263 m 61 3283 l S
+0 0 0 RG 1.8 w [] 0 d 71 3263 m 71 3283 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 3297 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 3262 m 296 3262 l 298.209 3262 300 3263.791 300 3266 c 300 3280 l 300 3282.209 298.209 3284 296 3284 c 116 3284 l 113.791 3284 112 3282.209 112 3280 c 112 3266 l 112 3263.791 113.791 3262 116 3262 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 125 3276.5 Tm (EQ\(AutoStepAtScanStart, 20\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 3273 m 665 3273 l S
+0 0 0 RG 1.6 w [] 0 d 689 3273 m 713 3273 l S
+0 0 0 RG 1.8 w [] 0 d 669 3263 m 663.667 3269.667 663.667 3276.333 669 3283 c S
+0 0 0 RG 1.8 w [] 0 d 685 3263 m 690.333 3269.667 690.333 3276.333 685 3283 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 656 3297 Tm (Warning) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3322 m 10 3322 l S
+0 0 0 RG 3 w [] 0 d 733 3322 m 733 3322 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3333 Tm (warning_light \(* flashes opposite the pilot lights during the warning *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3322 m 10 3403 l S
+0 0 0 RG 3 w [] 0 d 733 3322 m 733 3403 l S
+0 0 0 RG 1.6 w [] 0 d 102 3354 m 112 3354 l S
+0 0 0 RG 1.6 w [] 0 d 10 3354 m 30 3354 l S
+0 0 0 RG 1.6 w [] 0 d 184 3354 m 624 3354 l S
+0 0 0 RG 1.6 w [] 0 d 713 3354 m 733 3354 l S
+0 0 0 RG 1.6 w [] 0 d 30 3354 m 61 3354 l S
+0 0 0 RG 1.6 w [] 0 d 71 3354 m 102 3354 l S
+0 0 0 RG 1.8 w [] 0 d 61 3344 m 61 3364 l S
+0 0 0 RG 1.8 w [] 0 d 71 3344 m 71 3364 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 45 3378 Tm (Warning) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 3354 m 143 3354 l S
+0 0 0 RG 1.6 w [] 0 d 153 3354 m 184 3354 l S
+0 0 0 RG 1.8 w [] 0 d 143 3344 m 143 3364 l S
+0 0 0 RG 1.8 w [] 0 d 153 3344 m 153 3364 l S
+0 0 0 RG 1.8 w [] 0 d 139 3365 m 157 3343 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 3378 Tm (Blink) Tj ET
+0 0 0 RG 1.6 w [] 0 d 624 3354 m 656.5 3354 l S
+0 0 0 RG 1.6 w [] 0 d 680.5 3354 m 713 3354 l S
+0 0 0 RG 1.8 w [] 0 d 660.5 3344 m 655.167 3350.667 655.167 3357.333 660.5 3364 c S
+0 0 0 RG 1.8 w [] 0 d 676.5 3344 m 681.833 3350.667 681.833 3357.333 676.5 3364 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 629.5 3378 Tm (WarningLight1) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3403 m 10 3403 l S
+0 0 0 RG 3 w [] 0 d 733 3403 m 733 3403 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3414 Tm (warning_timer \(* time the warning *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3403 m 10 3484 l S
+0 0 0 RG 3 w [] 0 d 733 3403 m 733 3484 l S
+0 0 0 RG 1.6 w [] 0 d 102 3435 m 112 3435 l S
+0 0 0 RG 1.6 w [] 0 d 10 3435 m 30 3435 l S
+0 0 0 RG 1.6 w [] 0 d 352 3435 m 713 3435 l S
+0 0 0 RG 1.6 w [] 0 d 713 3435 m 733 3435 l S
+0 0 0 RG 1.6 w [] 0 d 30 3435 m 61 3435 l S
+0 0 0 RG 1.6 w [] 0 d 71 3435 m 102 3435 l S
+0 0 0 RG 1.8 w [] 0 d 61 3425 m 61 3445 l S
+0 0 0 RG 1.8 w [] 0 d 71 3425 m 71 3445 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 45 3459 Tm (Warning) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 3424 m 348 3424 l 350.209 3424 352 3425.791 352 3428 c 352 3442 l 352 3444.209 350.209 3446 348 3446 c 116 3446 l 113.791 3446 112 3444.209 112 3442 c 112 3428 l 112 3425.791 113.791 3424 116 3424 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 3438.5 Tm (AutoElapsed := AutoElapsed + ScanDtS) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3484 m 10 3484 l S
+0 0 0 RG 3 w [] 0 d 733 3484 m 733 3484 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3495 Tm (warning_done \(* the warning has run its full time *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3484 m 10 3565 l S
+0 0 0 RG 3 w [] 0 d 733 3484 m 733 3565 l S
+Q
+Q
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 12922 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 518.4 756 Tm (Page 5 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 629.941 re W n
+0.727 0 0 0.727 36 -2470.113 cm
+0 0 0 RG 3 w [] 0 d 10 3403 m 10 3484 l S
+0 0 0 RG 3 w [] 0 d 733 3403 m 733 3484 l S
+0 0 0 RG 3 w [] 0 d 10 3484 m 10 3484 l S
+0 0 0 RG 3 w [] 0 d 733 3484 m 733 3484 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3495 Tm (warning_done \(* the warning has run its full time *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3484 m 10 3565 l S
+0 0 0 RG 3 w [] 0 d 733 3484 m 733 3565 l S
+0 0 0 RG 1.6 w [] 0 d 102 3516 m 112 3516 l S
+0 0 0 RG 1.6 w [] 0 d 10 3516 m 30 3516 l S
+0 0 0 RG 1.6 w [] 0 d 312 3516 m 636 3516 l S
+0 0 0 RG 1.6 w [] 0 d 713 3516 m 733 3516 l S
+0 0 0 RG 1.6 w [] 0 d 30 3516 m 61 3516 l S
+0 0 0 RG 1.6 w [] 0 d 71 3516 m 102 3516 l S
+0 0 0 RG 1.8 w [] 0 d 61 3506 m 61 3526 l S
+0 0 0 RG 1.8 w [] 0 d 71 3506 m 71 3526 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 45 3540 Tm (Warning) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 3505 m 308 3505 l 310.209 3505 312 3506.791 312 3509 c 312 3523 l 312 3525.209 310.209 3527 308 3527 c 116 3527 l 113.791 3527 112 3525.209 112 3523 c 112 3509 l 112 3506.791 113.791 3505 116 3505 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 125 3519.5 Tm (GE\(AutoElapsed, WarningTimeS\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 636 3516 m 662.5 3516 l S
+0 0 0 RG 1.6 w [] 0 d 686.5 3516 m 713 3516 l S
+0 0 0 RG 1.8 w [] 0 d 666.5 3506 m 661.167 3512.667 661.167 3519.333 666.5 3526 c S
+0 0 0 RG 1.8 w [] 0 d 682.5 3506 m 687.833 3512.667 687.833 3519.333 682.5 3526 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 641.5 3540 Tm (WarningDone) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3565 m 10 3565 l S
+0 0 0 RG 3 w [] 0 d 733 3565 m 733 3565 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3576 Tm (auto_run \(* X20 to X19: emit the first part and bring the belt to its remembered speed *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3565 m 10 3668 l S
+0 0 0 RG 3 w [] 0 d 733 3565 m 733 3668 l S
+0 0 0 RG 1.6 w [] 0 d 107 3608 m 117 3608 l S
+0 0 0 RG 1.6 w [] 0 d 10 3608 m 30 3608 l S
+0 0 0 RG 1.6 w [] 0 d 332 3608 m 713 3608 l S
+0 0 0 RG 1.6 w [] 0 d 713 3608 m 733 3608 l S
+0 0 0 RG 1.6 w [] 0 d 30 3608 m 63.5 3608 l S
+0 0 0 RG 1.6 w [] 0 d 73.5 3608 m 107 3608 l S
+0 0 0 RG 1.8 w [] 0 d 63.5 3598 m 63.5 3618 l S
+0 0 0 RG 1.8 w [] 0 d 73.5 3598 m 73.5 3618 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 3632 Tm (WarningDone) Tj ET
+0 0 0 RG 1.2 w [] 0 d 121 3585 m 328 3585 l 330.209 3585 332 3586.791 332 3589 c 332 3627 l 332 3629.209 330.209 3631 328 3631 c 121 3631 l 118.791 3631 117 3629.209 117 3627 c 117 3589 l 117 3586.791 118.791 3585 121 3585 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 179.5 3599.5 Tm (AutoStep := 19;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 140.5 3611.5 Tm (EmitRemaining := EmitPulseS;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 128.5 3623.5 Tm (BeltSpeedRef := LastBeltRefSpeed) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3668 m 10 3668 l S
+0 0 0 RG 3 w [] 0 d 733 3668 m 733 3668 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3679 Tm (running_light \(* seals in from the end of the warning until automatic is left *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3668 m 10 3835 l S
+0 0 0 RG 3 w [] 0 d 733 3668 m 733 3835 l S
+0 0 0 RG 1.6 w [] 0 d 102 3700 m 112 3700 l S
+0 0 0 RG 1.6 w [] 0 d 189 3700 m 207 3700 l S
+0 0 0 RG 1.6 w [] 0 d 279 3772 m 284 3772 l S
+0 0 0 RG 1.6 w [] 0 d 10 3700 m 30 3700 l S
+0 0 0 RG 1.6 w [] 0 d 284 3700 m 641 3700 l S
+0 0 0 RG 1.6 w [] 0 d 713 3700 m 733 3700 l S
+0 0 0 RG 1.6 w [] 0 d 207 3700 m 207 3772 l S
+0 0 0 RG 1.6 w [] 0 d 284 3700 m 284 3772 l S
+0 0 0 RG 1.6 w [] 0 d 30 3700 m 61 3700 l S
+0 0 0 RG 1.6 w [] 0 d 71 3700 m 102 3700 l S
+0 0 0 RG 1.8 w [] 0 d 61 3690 m 61 3710 l S
+0 0 0 RG 1.8 w [] 0 d 71 3690 m 71 3710 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 3724 Tm (AutoMode) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 3700 m 145.5 3700 l S
+0 0 0 RG 1.6 w [] 0 d 155.5 3700 m 189 3700 l S
+0 0 0 RG 1.8 w [] 0 d 145.5 3690 m 145.5 3710 l S
+0 0 0 RG 1.8 w [] 0 d 155.5 3690 m 155.5 3710 l S
+0 0 0 RG 1.8 w [] 0 d 141.5 3711 m 159.5 3689 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 117.5 3724 Tm (ModeChanged) Tj ET
+0 0 0 RG 1.6 w [] 0 d 207 3700 m 240.5 3700 l S
+0 0 0 RG 1.6 w [] 0 d 250.5 3700 m 284 3700 l S
+0 0 0 RG 1.8 w [] 0 d 240.5 3690 m 240.5 3710 l S
+0 0 0 RG 1.8 w [] 0 d 250.5 3690 m 250.5 3710 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 212.5 3724 Tm (WarningDone) Tj ET
+0 0 0 RG 1.6 w [] 0 d 207 3772 m 238 3772 l S
+0 0 0 RG 1.6 w [] 0 d 248 3772 m 279 3772 l S
+0 0 0 RG 1.8 w [] 0 d 238 3762 m 238 3782 l S
+0 0 0 RG 1.8 w [] 0 d 248 3762 m 248 3782 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 216 3796 Tm (RunningPL) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 3700 m 665 3700 l S
+0 0 0 RG 1.6 w [] 0 d 689 3700 m 713 3700 l S
+0 0 0 RG 1.8 w [] 0 d 669 3690 m 663.667 3696.667 663.667 3703.333 669 3710 c S
+0 0 0 RG 1.8 w [] 0 d 685 3690 m 690.333 3696.667 690.333 3703.333 685 3710 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 650 3724 Tm (RunningPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3835 m 10 3835 l S
+0 0 0 RG 3 w [] 0 d 733 3835 m 733 3835 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3846 Tm (emit_step \(* X19: a part is on its way to the classifier *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3835 m 10 3916 l S
+0 0 0 RG 3 w [] 0 d 733 3835 m 733 3916 l S
+0 0 0 RG 1.6 w [] 0 d 102 3867 m 112 3867 l S
+0 0 0 RG 1.6 w [] 0 d 10 3867 m 30 3867 l S
+0 0 0 RG 1.6 w [] 0 d 300 3867 m 641 3867 l S
+0 0 0 RG 1.6 w [] 0 d 713 3867 m 733 3867 l S
+0 0 0 RG 1.6 w [] 0 d 30 3867 m 61 3867 l S
+0 0 0 RG 1.6 w [] 0 d 71 3867 m 102 3867 l S
+0 0 0 RG 1.8 w [] 0 d 61 3857 m 61 3877 l S
+0 0 0 RG 1.8 w [] 0 d 71 3857 m 71 3877 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 3891 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 3856 m 296 3856 l 298.209 3856 300 3857.791 300 3860 c 300 3874 l 300 3876.209 298.209 3878 296 3878 c 116 3878 l 113.791 3878 112 3876.209 112 3874 c 112 3860 l 112 3857.791 113.791 3856 116 3856 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 125 3870.5 Tm (EQ\(AutoStepAtScanStart, 19\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 3867 m 665 3867 l S
+0 0 0 RG 1.6 w [] 0 d 689 3867 m 713 3867 l S
+0 0 0 RG 1.8 w [] 0 d 669 3857 m 663.667 3863.667 663.667 3870.333 669 3877 c S
+0 0 0 RG 1.8 w [] 0 d 685 3857 m 690.333 3863.667 690.333 3870.333 685 3877 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 653 3891 Tm (EmitFlag) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3916 m 10 3916 l S
+0 0 0 RG 3 w [] 0 d 733 3916 m 733 3916 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 3927 Tm (part_arrived \(* X19 to X22: slow the belt while the part is classified *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 3916 m 10 4019 l S
+0 0 0 RG 3 w [] 0 d 733 3916 m 733 4019 l S
+0 0 0 RG 1.6 w [] 0 d 102 3959 m 112 3959 l S
+0 0 0 RG 1.6 w [] 0 d 244 3959 m 254 3959 l S
+0 0 0 RG 1.6 w [] 0 d 10 3959 m 30 3959 l S
+0 0 0 RG 1.6 w [] 0 d 475 3959 m 713 3959 l S
+0 0 0 RG 1.6 w [] 0 d 713 3959 m 733 3959 l S
+0 0 0 RG 1.6 w [] 0 d 30 3959 m 61 3959 l S
+0 0 0 RG 1.6 w [] 0 d 71 3959 m 102 3959 l S
+0 0 0 RG 1.8 w [] 0 d 61 3949 m 61 3969 l S
+0 0 0 RG 1.8 w [] 0 d 71 3949 m 71 3969 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 3983 Tm (EmitFlag) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 3959 m 170 3959 l S
+0 0 0 RG 1.6 w [] 0 d 186 3959 m 244 3959 l S
+0 0 0 RG 1.8 w [] 0 d 170 3949 m 170 3969 l S
+0 0 0 RG 1.8 w [] 0 d 186 3949 m 186 3969 l S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 175.3 3962.5 Tm (P) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 118 3983 Tm (ClassifyDefuseSensor) Tj ET
+0 0 0 RG 1.2 w [] 0 d 258 3936 m 471 3936 l 473.209 3936 475 3937.791 475 3940 c 475 3978 l 475 3980.209 473.209 3982 471 3982 c 258 3982 l 255.791 3982 254 3980.209 254 3978 c 254 3940 l 254 3937.791 255.791 3936 258 3936 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 265.5 3950.5 Tm (LastBeltRefSpeed := BeltSpeedRef;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 274.5 3962.5 Tm (BeltSpeedRef := ClassifySpeed;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 322.5 3974.5 Tm (AutoStep := 22) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4019 m 10 4019 l S
+0 0 0 RG 3 w [] 0 d 733 4019 m 733 4019 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 4030 Tm (classifying \(* X22: the part is under the vision sensor *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4019 m 10 4100 l S
+0 0 0 RG 3 w [] 0 d 733 4019 m 733 4100 l S
+0 0 0 RG 1.6 w [] 0 d 102 4051 m 112 4051 l S
+0 0 0 RG 1.6 w [] 0 d 10 4051 m 30 4051 l S
+0 0 0 RG 1.6 w [] 0 d 300 4051 m 636 4051 l S
+0 0 0 RG 1.6 w [] 0 d 713 4051 m 733 4051 l S
+0 0 0 RG 1.6 w [] 0 d 30 4051 m 61 4051 l S
+0 0 0 RG 1.6 w [] 0 d 71 4051 m 102 4051 l S
+0 0 0 RG 1.8 w [] 0 d 61 4041 m 61 4061 l S
+0 0 0 RG 1.8 w [] 0 d 71 4041 m 71 4061 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 4075 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 4040 m 296 4040 l 298.209 4040 300 4041.791 300 4044 c 300 4058 l 300 4060.209 298.209 4062 296 4062 c 116 4062 l 113.791 4062 112 4060.209 112 4058 c 112 4044 l 112 4041.791 113.791 4040 116 4040 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 125 4054.5 Tm (EQ\(AutoStepAtScanStart, 22\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 636 4051 m 662.5 4051 l S
+0 0 0 RG 1.6 w [] 0 d 686.5 4051 m 713 4051 l S
+0 0 0 RG 1.8 w [] 0 d 666.5 4041 m 661.167 4047.667 661.167 4054.333 666.5 4061 c S
+0 0 0 RG 1.8 w [] 0 d 682.5 4041 m 687.833 4047.667 687.833 4054.333 682.5 4061 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 641.5 4075 Tm (Classifying) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4100 m 10 4100 l S
+0 0 0 RG 3 w [] 0 d 733 4100 m 733 4100 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 4111 Tm (metal_detected \(* vision codes 7..9 are metal, which is always rejected *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4100 m 10 4181 l S
+0 0 0 RG 3 w [] 0 d 733 4100 m 733 4181 l S
+0 0 0 RG 1.6 w [] 0 d 243 4132 m 253 4132 l S
+0 0 0 RG 1.6 w [] 0 d 10 4132 m 30 4132 l S
+0 0 0 RG 1.6 w [] 0 d 466 4132 m 624 4132 l S
+0 0 0 RG 1.6 w [] 0 d 713 4132 m 733 4132 l S
+0 0 0 RG 1.2 w [] 0 d 34 4121 m 239 4121 l 241.209 4121 243 4122.791 243 4125 c 243 4139 l 243 4141.209 241.209 4143 239 4143 c 34 4143 l 31.791 4143 30 4141.209 30 4139 c 30 4125 l 30 4122.791 31.791 4121 34 4121 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 43.5 4135.5 Tm (GE\(VisionSensor1, MetalCodeMin\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 257 4121 m 462 4121 l 464.209 4121 466 4122.791 466 4125 c 466 4139 l 466 4141.209 464.209 4143 462 4143 c 257 4143 l 254.791 4143 253 4141.209 253 4139 c 253 4125 l 253 4122.791 254.791 4121 257 4121 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 266.5 4135.5 Tm (LE\(VisionSensor1, MetalCodeMax\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 624 4132 m 656.5 4132 l S
+0 0 0 RG 1.6 w [] 0 d 680.5 4132 m 713 4132 l S
+0 0 0 RG 1.8 w [] 0 d 660.5 4122 m 655.167 4128.667 655.167 4135.333 660.5 4142 c S
+0 0 0 RG 1.8 w [] 0 d 676.5 4122 m 681.833 4128.667 681.833 4135.333 676.5 4142 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 629.5 4156 Tm (MetalDetected) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4181 m 10 4181 l S
+0 0 0 RG 3 w [] 0 d 733 4181 m 733 4181 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 4192 Tm (reject_call \(* reject wins if the operator presses both commands *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4181 m 10 4348 l S
+0 0 0 RG 3 w [] 0 d 733 4181 m 733 4348 l S
+0 0 0 RG 1.6 w [] 0 d 107 4213 m 125 4213 l S
+0 0 0 RG 1.6 w [] 0 d 208 4213 m 214 4213 l S
+0 0 0 RG 1.6 w [] 0 d 10 4213 m 30 4213 l S
+0 0 0 RG 1.6 w [] 0 d 214 4213 m 641 4213 l S
+0 0 0 RG 1.6 w [] 0 d 713 4213 m 733 4213 l S
+0 0 0 RG 1.6 w [] 0 d 125 4213 m 125 4285 l S
+0 0 0 RG 1.6 w [] 0 d 214 4213 m 214 4285 l S
+0 0 0 RG 1.6 w [] 0 d 30 4213 m 63.5 4213 l S
+0 0 0 RG 1.6 w [] 0 d 73.5 4213 m 107 4213 l S
+0 0 0 RG 1.8 w [] 0 d 63.5 4203 m 63.5 4223 l S
+0 0 0 RG 1.8 w [] 0 d 73.5 4203 m 73.5 4223 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 4237 Tm (Classifying) Tj ET
+0 0 0 RG 1.6 w [] 0 d 125 4213 m 161.5 4213 l S
+0 0 0 RG 1.6 w [] 0 d 171.5 4213 m 208 4213 l S
+0 0 0 RG 1.8 w [] 0 d 161.5 4203 m 161.5 4223 l S
+0 0 0 RG 1.8 w [] 0 d 171.5 4203 m 171.5 4223 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 130.5 4237 Tm (SendRejectPB) Tj ET
+0 0 0 RG 1.6 w [] 0 d 125 4285 m 164.5 4285 l S
+0 0 0 RG 1.6 w [] 0 d 174.5 4285 m 214 4285 l S
+0 0 0 RG 1.8 w [] 0 d 164.5 4275 m 164.5 4295 l S
+0 0 0 RG 1.8 w [] 0 d 174.5 4275 m 174.5 4295 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 130.5 4309 Tm (MetalDetected) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 4213 m 665 4213 l S
+0 0 0 RG 1.6 w [] 0 d 689 4213 m 713 4213 l S
+0 0 0 RG 1.8 w [] 0 d 669 4203 m 663.667 4209.667 663.667 4216.333 669 4223 c S
+0 0 0 RG 1.8 w [] 0 d 685 4203 m 690.333 4209.667 690.333 4216.333 685 4223 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 647 4237 Tm (RejectCall) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4348 m 10 4348 l S
+0 0 0 RG 3 w [] 0 d 733 4348 m 733 4348 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 4359 Tm (sort_call \(* the operator releases a part that is not being rejected *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4348 m 10 4429 l S
+0 0 0 RG 3 w [] 0 d 733 4348 m 733 4429 l S
+Q
+Q
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 9333 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 518.4 756 Tm (Page 6 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 507.841 re W n
+0.727 0 0 0.727 36 -3098.054 cm
+0 0 0 RG 3 w [] 0 d 10 4181 m 10 4348 l S
+0 0 0 RG 3 w [] 0 d 733 4181 m 733 4348 l S
+0 0 0 RG 3 w [] 0 d 10 4348 m 10 4348 l S
+0 0 0 RG 3 w [] 0 d 733 4348 m 733 4348 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 4359 Tm (sort_call \(* the operator releases a part that is not being rejected *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4348 m 10 4429 l S
+0 0 0 RG 3 w [] 0 d 733 4348 m 733 4429 l S
+0 0 0 RG 1.6 w [] 0 d 107 4380 m 117 4380 l S
+0 0 0 RG 1.6 w [] 0 d 189 4380 m 199 4380 l S
+0 0 0 RG 1.6 w [] 0 d 10 4380 m 30 4380 l S
+0 0 0 RG 1.6 w [] 0 d 271 4380 m 641 4380 l S
+0 0 0 RG 1.6 w [] 0 d 713 4380 m 733 4380 l S
+0 0 0 RG 1.6 w [] 0 d 30 4380 m 63.5 4380 l S
+0 0 0 RG 1.6 w [] 0 d 73.5 4380 m 107 4380 l S
+0 0 0 RG 1.8 w [] 0 d 63.5 4370 m 63.5 4390 l S
+0 0 0 RG 1.8 w [] 0 d 73.5 4370 m 73.5 4390 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 4404 Tm (Classifying) Tj ET
+0 0 0 RG 1.6 w [] 0 d 117 4380 m 148 4380 l S
+0 0 0 RG 1.6 w [] 0 d 158 4380 m 189 4380 l S
+0 0 0 RG 1.8 w [] 0 d 148 4370 m 148 4390 l S
+0 0 0 RG 1.8 w [] 0 d 158 4370 m 158 4390 l S
+0 0 0 RG 1.8 w [] 0 d 144 4391 m 162 4369 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 123 4404 Tm (RejectCall) Tj ET
+0 0 0 RG 1.6 w [] 0 d 199 4380 m 230 4380 l S
+0 0 0 RG 1.6 w [] 0 d 240 4380 m 271 4380 l S
+0 0 0 RG 1.8 w [] 0 d 230 4370 m 230 4390 l S
+0 0 0 RG 1.8 w [] 0 d 240 4370 m 240 4390 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 205 4404 Tm (SendSortPB) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 4380 m 665 4380 l S
+0 0 0 RG 1.6 w [] 0 d 689 4380 m 713 4380 l S
+0 0 0 RG 1.8 w [] 0 d 669 4370 m 663.667 4376.667 663.667 4383.333 669 4390 c S
+0 0 0 RG 1.8 w [] 0 d 685 4370 m 690.333 4376.667 690.333 4383.333 685 4390 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 653 4404 Tm (SortCall) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4429 m 10 4429 l S
+0 0 0 RG 3 w [] 0 d 733 4429 m 733 4429 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 4440 Tm (to_reject \(* X22 to X25 *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4429 m 10 4510 l S
+0 0 0 RG 3 w [] 0 d 733 4429 m 733 4510 l S
+0 0 0 RG 1.6 w [] 0 d 102 4461 m 112 4461 l S
+0 0 0 RG 1.6 w [] 0 d 10 4461 m 30 4461 l S
+0 0 0 RG 1.6 w [] 0 d 215 4461 m 713 4461 l S
+0 0 0 RG 1.6 w [] 0 d 713 4461 m 733 4461 l S
+0 0 0 RG 1.6 w [] 0 d 30 4461 m 61 4461 l S
+0 0 0 RG 1.6 w [] 0 d 71 4461 m 102 4461 l S
+0 0 0 RG 1.8 w [] 0 d 61 4451 m 61 4471 l S
+0 0 0 RG 1.8 w [] 0 d 71 4451 m 71 4471 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 4485 Tm (RejectCall) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 4450 m 211 4450 l 213.209 4450 215 4451.791 215 4454 c 215 4468 l 215 4470.209 213.209 4472 211 4472 c 116 4472 l 113.791 4472 112 4470.209 112 4468 c 112 4454 l 112 4451.791 113.791 4450 116 4450 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 121.5 4464.5 Tm (AutoStep := 25) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4510 m 10 4510 l S
+0 0 0 RG 3 w [] 0 d 733 4510 m 733 4510 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 4521 Tm (to_raw \(* X22 to X24: count the raw part and resume belt speed *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4510 m 10 4688 l S
+0 0 0 RG 3 w [] 0 d 733 4510 m 733 4688 l S
+0 0 0 RG 1.6 w [] 0 d 102 4553 m 120 4553 l S
+0 0 0 RG 1.6 w [] 0 d 264 4553 m 282 4553 l S
+0 0 0 RG 1.6 w [] 0 d 10 4553 m 30 4553 l S
+0 0 0 RG 1.6 w [] 0 d 497 4553 m 713 4553 l S
+0 0 0 RG 1.6 w [] 0 d 713 4553 m 733 4553 l S
+0 0 0 RG 1.6 w [] 0 d 120 4553 m 120 4625 l S
+0 0 0 RG 1.6 w [] 0 d 264 4553 m 264 4625 l S
+0 0 0 RG 1.6 w [] 0 d 30 4553 m 61 4553 l S
+0 0 0 RG 1.6 w [] 0 d 71 4553 m 102 4553 l S
+0 0 0 RG 1.8 w [] 0 d 61 4543 m 61 4563 l S
+0 0 0 RG 1.8 w [] 0 d 71 4543 m 71 4563 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 4577 Tm (SortCall) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 4542 m 260 4542 l 262.209 4542 264 4543.791 264 4546 c 264 4560 l 264 4562.209 262.209 4564 260 4564 c 124 4564 l 121.791 4564 120 4562.209 120 4560 c 120 4546 l 120 4543.791 121.791 4542 124 4542 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 4556.5 Tm (EQ\(VisionSensor1, 1\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 4614 m 260 4614 l 262.209 4614 264 4615.791 264 4618 c 264 4632 l 264 4634.209 262.209 4636 260 4636 c 124 4636 l 121.791 4636 120 4634.209 120 4632 c 120 4618 l 120 4615.791 121.791 4614 124 4614 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 4628.5 Tm (EQ\(VisionSensor1, 4\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 286 4530 m 493 4530 l 495.209 4530 497 4531.791 497 4534 c 497 4572 l 497 4574.209 495.209 4576 493 4576 c 286 4576 l 283.791 4576 282 4574.209 282 4572 c 282 4534 l 282 4531.791 283.791 4530 286 4530 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 344.5 4544.5 Tm (AutoStep := 24;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 302.5 4556.5 Tm (RawCounter := RawCounter + 1;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 293.5 4568.5 Tm (BeltSpeedRef := LastBeltRefSpeed) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4688 m 10 4688 l S
+0 0 0 RG 3 w [] 0 d 733 4688 m 733 4688 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 4699 Tm (to_base \(* X22 to X27: count the base and resume belt speed *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4688 m 10 4866 l S
+0 0 0 RG 3 w [] 0 d 733 4688 m 733 4866 l S
+0 0 0 RG 1.6 w [] 0 d 102 4731 m 120 4731 l S
+0 0 0 RG 1.6 w [] 0 d 264 4731 m 282 4731 l S
+0 0 0 RG 1.6 w [] 0 d 10 4731 m 30 4731 l S
+0 0 0 RG 1.6 w [] 0 d 497 4731 m 713 4731 l S
+0 0 0 RG 1.6 w [] 0 d 713 4731 m 733 4731 l S
+0 0 0 RG 1.6 w [] 0 d 120 4731 m 120 4803 l S
+0 0 0 RG 1.6 w [] 0 d 264 4731 m 264 4803 l S
+0 0 0 RG 1.6 w [] 0 d 30 4731 m 61 4731 l S
+0 0 0 RG 1.6 w [] 0 d 71 4731 m 102 4731 l S
+0 0 0 RG 1.8 w [] 0 d 61 4721 m 61 4741 l S
+0 0 0 RG 1.8 w [] 0 d 71 4721 m 71 4741 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 4755 Tm (SortCall) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 4720 m 260 4720 l 262.209 4720 264 4721.791 264 4724 c 264 4738 l 264 4740.209 262.209 4742 260 4742 c 124 4742 l 121.791 4742 120 4740.209 120 4738 c 120 4724 l 120 4721.791 121.791 4720 124 4720 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 4734.5 Tm (EQ\(VisionSensor1, 3\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 4792 m 260 4792 l 262.209 4792 264 4793.791 264 4796 c 264 4810 l 264 4812.209 262.209 4814 260 4814 c 124 4814 l 121.791 4814 120 4812.209 120 4810 c 120 4796 l 120 4793.791 121.791 4792 124 4792 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 4806.5 Tm (EQ\(VisionSensor1, 6\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 286 4708 m 493 4708 l 495.209 4708 497 4709.791 497 4712 c 497 4750 l 497 4752.209 495.209 4754 493 4754 c 286 4754 l 283.791 4754 282 4752.209 282 4750 c 282 4712 l 282 4709.791 283.791 4708 286 4708 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 344.5 4722.5 Tm (AutoStep := 27;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 296.5 4734.5 Tm (BaseCounter := BaseCounter + 1;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 293.5 4746.5 Tm (BeltSpeedRef := LastBeltRefSpeed) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4866 m 10 4866 l S
+0 0 0 RG 3 w [] 0 d 733 4866 m 733 4866 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 4877 Tm (to_lid \(* X22 to X28: count the lid and resume belt speed *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 4866 m 10 5044 l S
+0 0 0 RG 3 w [] 0 d 733 4866 m 733 5044 l S
+0 0 0 RG 1.6 w [] 0 d 102 4909 m 120 4909 l S
+0 0 0 RG 1.6 w [] 0 d 264 4909 m 282 4909 l S
+0 0 0 RG 1.6 w [] 0 d 10 4909 m 30 4909 l S
+0 0 0 RG 1.6 w [] 0 d 497 4909 m 713 4909 l S
+0 0 0 RG 1.6 w [] 0 d 713 4909 m 733 4909 l S
+0 0 0 RG 1.6 w [] 0 d 120 4909 m 120 4981 l S
+0 0 0 RG 1.6 w [] 0 d 264 4909 m 264 4981 l S
+0 0 0 RG 1.6 w [] 0 d 30 4909 m 61 4909 l S
+0 0 0 RG 1.6 w [] 0 d 71 4909 m 102 4909 l S
+0 0 0 RG 1.8 w [] 0 d 61 4899 m 61 4919 l S
+0 0 0 RG 1.8 w [] 0 d 71 4899 m 71 4919 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 4933 Tm (SortCall) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 4898 m 260 4898 l 262.209 4898 264 4899.791 264 4902 c 264 4916 l 264 4918.209 262.209 4920 260 4920 c 124 4920 l 121.791 4920 120 4918.209 120 4916 c 120 4902 l 120 4899.791 121.791 4898 124 4898 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 4912.5 Tm (EQ\(VisionSensor1, 2\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 4970 m 260 4970 l 262.209 4970 264 4971.791 264 4974 c 264 4988 l 264 4990.209 262.209 4992 260 4992 c 124 4992 l 121.791 4992 120 4990.209 120 4988 c 120 4974 l 120 4971.791 121.791 4970 124 4970 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 4984.5 Tm (EQ\(VisionSensor1, 5\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 286 4886 m 493 4886 l 495.209 4886 497 4887.791 497 4890 c 497 4928 l 497 4930.209 495.209 4932 493 4932 c 286 4932 l 283.791 4932 282 4930.209 282 4928 c 282 4890 l 282 4887.791 283.791 4886 286 4886 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 344.5 4900.5 Tm (AutoStep := 28;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 302.5 4912.5 Tm (LidCounter := LidCounter + 1;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 293.5 4924.5 Tm (BeltSpeedRef := LastBeltRefSpeed) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5044 m 10 5044 l S
+0 0 0 RG 3 w [] 0 d 733 5044 m 733 5044 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 5055 Tm (sort_leaving \(* the part has left the exit sensor: stop diverting and wait for it to clear *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5044 m 10 5283 l S
+0 0 0 RG 3 w [] 0 d 733 5044 m 733 5283 l S
+Q
+Q
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 10476 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 518.4 756 Tm (Page 7 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 660.466 re W n
+0.727 0 0 0.727 36 -3603.895 cm
+0 0 0 RG 3 w [] 0 d 10 4866 m 10 5044 l S
+0 0 0 RG 3 w [] 0 d 733 4866 m 733 5044 l S
+0 0 0 RG 3 w [] 0 d 10 5044 m 10 5044 l S
+0 0 0 RG 3 w [] 0 d 733 5044 m 733 5044 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 5055 Tm (sort_leaving \(* the part has left the exit sensor: stop diverting and wait for it to clear *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5044 m 10 5283 l S
+0 0 0 RG 3 w [] 0 d 733 5044 m 733 5283 l S
+0 0 0 RG 1.6 w [] 0 d 102 5076 m 120 5076 l S
+0 0 0 RG 1.6 w [] 0 d 308 5076 m 326 5076 l S
+0 0 0 RG 1.6 w [] 0 d 398 5076 m 408 5076 l S
+0 0 0 RG 1.6 w [] 0 d 10 5076 m 30 5076 l S
+0 0 0 RG 1.6 w [] 0 d 586 5076 m 713 5076 l S
+0 0 0 RG 1.6 w [] 0 d 713 5076 m 733 5076 l S
+0 0 0 RG 1.6 w [] 0 d 120 5076 m 120 5220 l S
+0 0 0 RG 1.6 w [] 0 d 308 5076 m 308 5220 l S
+0 0 0 RG 1.6 w [] 0 d 30 5076 m 61 5076 l S
+0 0 0 RG 1.6 w [] 0 d 71 5076 m 102 5076 l S
+0 0 0 RG 1.8 w [] 0 d 61 5066 m 61 5086 l S
+0 0 0 RG 1.8 w [] 0 d 71 5066 m 71 5086 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 5100 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 5065 m 304 5065 l 306.209 5065 308 5066.791 308 5069 c 308 5083 l 308 5085.209 306.209 5087 304 5087 c 124 5087 l 121.791 5087 120 5085.209 120 5083 c 120 5069 l 120 5066.791 121.791 5065 124 5065 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 5079.5 Tm (EQ\(AutoStepAtScanStart, 24\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 5137 m 304 5137 l 306.209 5137 308 5138.791 308 5141 c 308 5155 l 308 5157.209 306.209 5159 304 5159 c 124 5159 l 121.791 5159 120 5157.209 120 5155 c 120 5141 l 120 5138.791 121.791 5137 124 5137 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 5151.5 Tm (EQ\(AutoStepAtScanStart, 27\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 5209 m 304 5209 l 306.209 5209 308 5210.791 308 5213 c 308 5227 l 308 5229.209 306.209 5231 304 5231 c 124 5231 l 121.791 5231 120 5229.209 120 5227 c 120 5213 l 120 5210.791 121.791 5209 124 5209 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 5223.5 Tm (EQ\(AutoStepAtScanStart, 28\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 326 5076 m 357 5076 l S
+0 0 0 RG 1.6 w [] 0 d 367 5076 m 398 5076 l S
+0 0 0 RG 1.8 w [] 0 d 357 5066 m 357 5086 l S
+0 0 0 RG 1.8 w [] 0 d 367 5066 m 367 5086 l S
+0 0 0 RG 1.8 w [] 0 d 353 5087 m 371 5065 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 344 5100 Tm (AtExit) Tj ET
+0 0 0 RG 1.2 w [] 0 d 412 5065 m 582 5065 l 584.209 5065 586 5066.791 586 5069 c 586 5083 l 586 5085.209 584.209 5087 582 5087 c 412 5087 l 409.791 5087 408 5085.209 408 5083 c 408 5069 l 408 5066.791 409.791 5065 412 5065 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 419 5079.5 Tm (AutoStep := AutoStep + 100) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5283 m 10 5283 l S
+0 0 0 RG 3 w [] 0 d 733 5283 m 733 5283 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 5294 Tm (sort_cleared \(* exit sensor made again: start the settling time *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5283 m 10 5527 l S
+0 0 0 RG 3 w [] 0 d 733 5283 m 733 5527 l S
+0 0 0 RG 1.6 w [] 0 d 102 5320 m 120 5320 l S
+0 0 0 RG 1.6 w [] 0 d 314 5320 m 332 5320 l S
+0 0 0 RG 1.6 w [] 0 d 404 5320 m 414 5320 l S
+0 0 0 RG 1.6 w [] 0 d 10 5320 m 30 5320 l S
+0 0 0 RG 1.6 w [] 0 d 598 5320 m 713 5320 l S
+0 0 0 RG 1.6 w [] 0 d 713 5320 m 733 5320 l S
+0 0 0 RG 1.6 w [] 0 d 120 5320 m 120 5464 l S
+0 0 0 RG 1.6 w [] 0 d 314 5320 m 314 5464 l S
+0 0 0 RG 1.6 w [] 0 d 30 5320 m 61 5320 l S
+0 0 0 RG 1.6 w [] 0 d 71 5320 m 102 5320 l S
+0 0 0 RG 1.8 w [] 0 d 61 5310 m 61 5330 l S
+0 0 0 RG 1.8 w [] 0 d 71 5310 m 71 5330 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 5344 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 5309 m 310 5309 l 312.209 5309 314 5310.791 314 5313 c 314 5327 l 314 5329.209 312.209 5331 310 5331 c 124 5331 l 121.791 5331 120 5329.209 120 5327 c 120 5313 l 120 5310.791 121.791 5309 124 5309 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 5323.5 Tm (EQ\(AutoStepAtScanStart, 124\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 5381 m 310 5381 l 312.209 5381 314 5382.791 314 5385 c 314 5399 l 314 5401.209 312.209 5403 310 5403 c 124 5403 l 121.791 5403 120 5401.209 120 5399 c 120 5385 l 120 5382.791 121.791 5381 124 5381 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 5395.5 Tm (EQ\(AutoStepAtScanStart, 127\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 5453 m 310 5453 l 312.209 5453 314 5454.791 314 5457 c 314 5471 l 314 5473.209 312.209 5475 310 5475 c 124 5475 l 121.791 5475 120 5473.209 120 5471 c 120 5457 l 120 5454.791 121.791 5453 124 5453 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 5467.5 Tm (EQ\(AutoStepAtScanStart, 128\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 332 5320 m 363 5320 l S
+0 0 0 RG 1.6 w [] 0 d 373 5320 m 404 5320 l S
+0 0 0 RG 1.8 w [] 0 d 363 5310 m 363 5330 l S
+0 0 0 RG 1.8 w [] 0 d 373 5310 m 373 5330 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 350 5344 Tm (AtExit) Tj ET
+0 0 0 RG 1.2 w [] 0 d 418 5303 m 594 5303 l 596.209 5303 598 5304.791 598 5307 c 598 5333 l 598 5335.209 596.209 5337 594 5337 c 418 5337 l 415.791 5337 414 5335.209 414 5333 c 414 5307 l 414 5304.791 415.791 5303 418 5303 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 425 5317.5 Tm (AutoStep := AutoStep + 100;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 452 5329.5 Tm (SortElapsed := 0.0) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5527 m 10 5527 l S
+0 0 0 RG 3 w [] 0 d 733 5527 m 733 5527 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 5538 Tm (sort_settling \(* any of the three sorters is settling *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5527 m 10 5766 l S
+0 0 0 RG 3 w [] 0 d 733 5527 m 733 5766 l S
+0 0 0 RG 1.6 w [] 0 d 102 5559 m 120 5559 l S
+0 0 0 RG 1.6 w [] 0 d 10 5559 m 30 5559 l S
+0 0 0 RG 1.6 w [] 0 d 314 5559 m 630 5559 l S
+0 0 0 RG 1.6 w [] 0 d 713 5559 m 733 5559 l S
+0 0 0 RG 1.6 w [] 0 d 120 5559 m 120 5703 l S
+0 0 0 RG 1.6 w [] 0 d 314 5559 m 314 5703 l S
+0 0 0 RG 1.6 w [] 0 d 30 5559 m 61 5559 l S
+0 0 0 RG 1.6 w [] 0 d 71 5559 m 102 5559 l S
+0 0 0 RG 1.8 w [] 0 d 61 5549 m 61 5569 l S
+0 0 0 RG 1.8 w [] 0 d 71 5549 m 71 5569 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 5583 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 5548 m 310 5548 l 312.209 5548 314 5549.791 314 5552 c 314 5566 l 314 5568.209 312.209 5570 310 5570 c 124 5570 l 121.791 5570 120 5568.209 120 5566 c 120 5552 l 120 5549.791 121.791 5548 124 5548 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 5562.5 Tm (EQ\(AutoStepAtScanStart, 224\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 5620 m 310 5620 l 312.209 5620 314 5621.791 314 5624 c 314 5638 l 314 5640.209 312.209 5642 310 5642 c 124 5642 l 121.791 5642 120 5640.209 120 5638 c 120 5624 l 120 5621.791 121.791 5620 124 5620 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 5634.5 Tm (EQ\(AutoStepAtScanStart, 227\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 5692 m 310 5692 l 312.209 5692 314 5693.791 314 5696 c 314 5710 l 314 5712.209 312.209 5714 310 5714 c 124 5714 l 121.791 5714 120 5712.209 120 5710 c 120 5696 l 120 5693.791 121.791 5692 124 5692 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 5706.5 Tm (EQ\(AutoStepAtScanStart, 228\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 630 5559 m 659.5 5559 l S
+0 0 0 RG 1.6 w [] 0 d 683.5 5559 m 713 5559 l S
+0 0 0 RG 1.8 w [] 0 d 663.5 5549 m 658.167 5555.667 658.167 5562.333 663.5 5569 c S
+0 0 0 RG 1.8 w [] 0 d 679.5 5549 m 684.833 5555.667 684.833 5562.333 679.5 5569 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 635.5 5583 Tm (SortSettling) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5766 m 10 5766 l S
+0 0 0 RG 3 w [] 0 d 733 5766 m 733 5766 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 5777 Tm (sort_settle_timer \(* time the settling *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5766 m 10 5847 l S
+0 0 0 RG 3 w [] 0 d 733 5766 m 733 5847 l S
+0 0 0 RG 1.6 w [] 0 d 113 5798 m 123 5798 l S
+0 0 0 RG 1.6 w [] 0 d 10 5798 m 30 5798 l S
+0 0 0 RG 1.6 w [] 0 d 363 5798 m 713 5798 l S
+0 0 0 RG 1.6 w [] 0 d 713 5798 m 733 5798 l S
+0 0 0 RG 1.6 w [] 0 d 30 5798 m 66.5 5798 l S
+0 0 0 RG 1.6 w [] 0 d 76.5 5798 m 113 5798 l S
+0 0 0 RG 1.8 w [] 0 d 66.5 5788 m 66.5 5808 l S
+0 0 0 RG 1.8 w [] 0 d 76.5 5788 m 76.5 5808 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 5822 Tm (SortSettling) Tj ET
+0 0 0 RG 1.2 w [] 0 d 127 5787 m 359 5787 l 361.209 5787 363 5788.791 363 5791 c 363 5805 l 363 5807.209 361.209 5809 359 5809 c 127 5809 l 124.791 5809 123 5807.209 123 5805 c 123 5791 l 123 5788.791 124.791 5787 127 5787 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 135 5801.5 Tm (SortElapsed := SortElapsed + ScanDtS) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5847 m 10 5847 l S
+0 0 0 RG 3 w [] 0 d 733 5847 m 733 5847 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 5858 Tm (sort_done \(* back to X19: emit the next part *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5847 m 10 5950 l S
+0 0 0 RG 3 w [] 0 d 733 5847 m 733 5950 l S
+0 0 0 RG 1.6 w [] 0 d 113 5890 m 123 5890 l S
+0 0 0 RG 1.6 w [] 0 d 317 5890 m 327 5890 l S
+0 0 0 RG 1.6 w [] 0 d 10 5890 m 30 5890 l S
+0 0 0 RG 1.6 w [] 0 d 542 5890 m 713 5890 l S
+0 0 0 RG 1.6 w [] 0 d 713 5890 m 733 5890 l S
+0 0 0 RG 1.6 w [] 0 d 30 5890 m 66.5 5890 l S
+0 0 0 RG 1.6 w [] 0 d 76.5 5890 m 113 5890 l S
+0 0 0 RG 1.8 w [] 0 d 66.5 5880 m 66.5 5900 l S
+0 0 0 RG 1.8 w [] 0 d 76.5 5880 m 76.5 5900 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 5914 Tm (SortSettling) Tj ET
+0 0 0 RG 1.2 w [] 0 d 127 5879 m 313 5879 l 315.209 5879 317 5880.791 317 5883 c 317 5897 l 317 5899.209 315.209 5901 313 5901 c 127 5901 l 124.791 5901 123 5899.209 123 5897 c 123 5883 l 123 5880.791 124.791 5879 127 5879 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 136 5893.5 Tm (GE\(SortElapsed, SortSettleS\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 331 5867 m 538 5867 l 540.209 5867 542 5868.791 542 5871 c 542 5909 l 542 5911.209 540.209 5913 538 5913 c 331 5913 l 328.791 5913 327 5911.209 327 5909 c 327 5871 l 327 5868.791 328.791 5867 331 5867 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 389.5 5881.5 Tm (AutoStep := 19;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 350.5 5893.5 Tm (EmitRemaining := EmitPulseS;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 338.5 5905.5 Tm (BeltSpeedRef := LastBeltRefSpeed) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5950 m 10 5950 l S
+0 0 0 RG 3 w [] 0 d 733 5950 m 733 5950 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 5961 Tm (reject_at_pusher \(* X25 to X85: stop the belt with the part in front of the pusher *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5950 m 10 6041 l S
+0 0 0 RG 3 w [] 0 d 733 5950 m 733 6041 l S
+Q
+Q
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 10295 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 518.4 756 Tm (Page 8 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 549.268 re W n
+0.727 0 0 0.727 36 -4262.361 cm
+0 0 0 RG 3 w [] 0 d 10 5847 m 10 5950 l S
+0 0 0 RG 3 w [] 0 d 733 5847 m 733 5950 l S
+0 0 0 RG 3 w [] 0 d 10 5950 m 10 5950 l S
+0 0 0 RG 3 w [] 0 d 733 5950 m 733 5950 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 5961 Tm (reject_at_pusher \(* X25 to X85: stop the belt with the part in front of the pusher *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 5950 m 10 6041 l S
+0 0 0 RG 3 w [] 0 d 733 5950 m 733 6041 l S
+0 0 0 RG 1.6 w [] 0 d 102 5987 m 112 5987 l S
+0 0 0 RG 1.6 w [] 0 d 300 5987 m 310 5987 l S
+0 0 0 RG 1.6 w [] 0 d 436 5987 m 446 5987 l S
+0 0 0 RG 1.6 w [] 0 d 10 5987 m 30 5987 l S
+0 0 0 RG 1.6 w [] 0 d 568 5987 m 713 5987 l S
+0 0 0 RG 1.6 w [] 0 d 713 5987 m 733 5987 l S
+0 0 0 RG 1.6 w [] 0 d 30 5987 m 61 5987 l S
+0 0 0 RG 1.6 w [] 0 d 71 5987 m 102 5987 l S
+0 0 0 RG 1.8 w [] 0 d 61 5977 m 61 5997 l S
+0 0 0 RG 1.8 w [] 0 d 71 5977 m 71 5997 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 6011 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 5976 m 296 5976 l 298.209 5976 300 5977.791 300 5980 c 300 5994 l 300 5996.209 298.209 5998 296 5998 c 116 5998 l 113.791 5998 112 5996.209 112 5994 c 112 5980 l 112 5977.791 113.791 5976 116 5976 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 125 5990.5 Tm (EQ\(AutoStepAtScanStart, 25\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 310 5987 m 368 5987 l S
+0 0 0 RG 1.6 w [] 0 d 378 5987 m 436 5987 l S
+0 0 0 RG 1.8 w [] 0 d 368 5977 m 368 5997 l S
+0 0 0 RG 1.8 w [] 0 d 378 5977 m 378 5997 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 316 6011 Tm (RejectDiffuseSensor) Tj ET
+0 0 0 RG 1.2 w [] 0 d 450 5970 m 564 5970 l 566.209 5970 568 5971.791 568 5974 c 568 6000 l 568 6002.209 566.209 6004 564 6004 c 450 6004 l 447.791 6004 446 6002.209 446 6000 c 446 5974 l 446 5971.791 447.791 5970 450 5970 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 462 5984.5 Tm (AutoStep := 85;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 456 5996.5 Tm (BeltSpeedRef := 0) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6041 m 10 6041 l S
+0 0 0 RG 3 w [] 0 d 733 6041 m 733 6041 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 6052 Tm (reject_pushed \(* X85 to X86: pusher fully out, let it retract *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6041 m 10 6122 l S
+0 0 0 RG 3 w [] 0 d 733 6041 m 733 6122 l S
+0 0 0 RG 1.6 w [] 0 d 102 6073 m 112 6073 l S
+0 0 0 RG 1.6 w [] 0 d 300 6073 m 310 6073 l S
+0 0 0 RG 1.6 w [] 0 d 424 6073 m 434 6073 l S
+0 0 0 RG 1.6 w [] 0 d 10 6073 m 30 6073 l S
+0 0 0 RG 1.6 w [] 0 d 537 6073 m 713 6073 l S
+0 0 0 RG 1.6 w [] 0 d 713 6073 m 733 6073 l S
+0 0 0 RG 1.6 w [] 0 d 30 6073 m 61 6073 l S
+0 0 0 RG 1.6 w [] 0 d 71 6073 m 102 6073 l S
+0 0 0 RG 1.8 w [] 0 d 61 6063 m 61 6083 l S
+0 0 0 RG 1.8 w [] 0 d 71 6063 m 71 6083 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 6097 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 6062 m 296 6062 l 298.209 6062 300 6063.791 300 6066 c 300 6080 l 300 6082.209 298.209 6084 296 6084 c 116 6084 l 113.791 6084 112 6082.209 112 6080 c 112 6066 l 112 6063.791 113.791 6062 116 6062 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 125 6076.5 Tm (EQ\(AutoStepAtScanStart, 85\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 310 6073 m 362 6073 l S
+0 0 0 RG 1.6 w [] 0 d 372 6073 m 424 6073 l S
+0 0 0 RG 1.8 w [] 0 d 362 6063 m 362 6083 l S
+0 0 0 RG 1.8 w [] 0 d 372 6063 m 372 6083 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 316 6097 Tm (RejPushFrontLimit) Tj ET
+0 0 0 RG 1.2 w [] 0 d 438 6062 m 533 6062 l 535.209 6062 537 6063.791 537 6066 c 537 6080 l 537 6082.209 535.209 6084 533 6084 c 438 6084 l 435.791 6084 434 6082.209 434 6080 c 434 6066 l 434 6063.791 435.791 6062 438 6062 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 443.5 6076.5 Tm (AutoStep := 86) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6122 m 10 6122 l S
+0 0 0 RG 3 w [] 0 d 733 6122 m 733 6122 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 6133 Tm (reject_done \(* X86 to X19: pusher home, emit the next part *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6122 m 10 6225 l S
+0 0 0 RG 3 w [] 0 d 733 6122 m 733 6225 l S
+0 0 0 RG 1.6 w [] 0 d 102 6165 m 112 6165 l S
+0 0 0 RG 1.6 w [] 0 d 300 6165 m 310 6165 l S
+0 0 0 RG 1.6 w [] 0 d 418 6165 m 428 6165 l S
+0 0 0 RG 1.6 w [] 0 d 10 6165 m 30 6165 l S
+0 0 0 RG 1.6 w [] 0 d 643 6165 m 713 6165 l S
+0 0 0 RG 1.6 w [] 0 d 713 6165 m 733 6165 l S
+0 0 0 RG 1.6 w [] 0 d 30 6165 m 61 6165 l S
+0 0 0 RG 1.6 w [] 0 d 71 6165 m 102 6165 l S
+0 0 0 RG 1.8 w [] 0 d 61 6155 m 61 6175 l S
+0 0 0 RG 1.8 w [] 0 d 71 6155 m 71 6175 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 6189 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 6154 m 296 6154 l 298.209 6154 300 6155.791 300 6158 c 300 6172 l 300 6174.209 298.209 6176 296 6176 c 116 6176 l 113.791 6176 112 6174.209 112 6172 c 112 6158 l 112 6155.791 113.791 6154 116 6154 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 125 6168.5 Tm (EQ\(AutoStepAtScanStart, 86\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 310 6165 m 359 6165 l S
+0 0 0 RG 1.6 w [] 0 d 369 6165 m 418 6165 l S
+0 0 0 RG 1.8 w [] 0 d 359 6155 m 359 6175 l S
+0 0 0 RG 1.8 w [] 0 d 369 6155 m 369 6175 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 316 6189 Tm (RejPushBackLimit) Tj ET
+0 0 0 RG 1.2 w [] 0 d 432 6142 m 639 6142 l 641.209 6142 643 6143.791 643 6146 c 643 6184 l 643 6186.209 641.209 6188 639 6188 c 432 6188 l 429.791 6188 428 6186.209 428 6184 c 428 6146 l 428 6143.791 429.791 6142 432 6142 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 490.5 6156.5 Tm (AutoStep := 19;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 451.5 6168.5 Tm (EmitRemaining := EmitPulseS;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 439.5 6180.5 Tm (BeltSpeedRef := LastBeltRefSpeed) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6225 m 10 6225 l S
+0 0 0 RG 3 w [] 0 d 733 6225 m 733 6225 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 6236 Tm (raw_flag \(* a raw part is being sorted, from divert to settled *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6225 m 10 6464 l S
+0 0 0 RG 3 w [] 0 d 733 6225 m 733 6464 l S
+0 0 0 RG 1.6 w [] 0 d 102 6257 m 120 6257 l S
+0 0 0 RG 1.6 w [] 0 d 240 6257 m 246 6257 l S
+0 0 0 RG 1.6 w [] 0 d 10 6257 m 30 6257 l S
+0 0 0 RG 1.6 w [] 0 d 246 6257 m 641 6257 l S
+0 0 0 RG 1.6 w [] 0 d 713 6257 m 733 6257 l S
+0 0 0 RG 1.6 w [] 0 d 120 6257 m 120 6401 l S
+0 0 0 RG 1.6 w [] 0 d 246 6257 m 246 6401 l S
+0 0 0 RG 1.6 w [] 0 d 30 6257 m 61 6257 l S
+0 0 0 RG 1.6 w [] 0 d 71 6257 m 102 6257 l S
+0 0 0 RG 1.8 w [] 0 d 61 6247 m 61 6267 l S
+0 0 0 RG 1.8 w [] 0 d 71 6247 m 71 6267 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 6281 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 6246 m 236 6246 l 238.209 6246 240 6247.791 240 6250 c 240 6264 l 240 6266.209 238.209 6268 236 6268 c 124 6268 l 121.791 6268 120 6266.209 120 6264 c 120 6250 l 120 6247.791 121.791 6246 124 6246 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 6260.5 Tm (EQ\(AutoStep, 24\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 6318 m 242 6318 l 244.209 6318 246 6319.791 246 6322 c 246 6336 l 246 6338.209 244.209 6340 242 6340 c 124 6340 l 121.791 6340 120 6338.209 120 6336 c 120 6322 l 120 6319.791 121.791 6318 124 6318 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 6332.5 Tm (EQ\(AutoStep, 124\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 6390 m 242 6390 l 244.209 6390 246 6391.791 246 6394 c 246 6408 l 246 6410.209 244.209 6412 242 6412 c 124 6412 l 121.791 6412 120 6410.209 120 6408 c 120 6394 l 120 6391.791 121.791 6390 124 6390 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 6404.5 Tm (EQ\(AutoStep, 224\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 6257 m 665 6257 l S
+0 0 0 RG 1.6 w [] 0 d 689 6257 m 713 6257 l S
+0 0 0 RG 1.8 w [] 0 d 669 6247 m 663.667 6253.667 663.667 6260.333 669 6267 c S
+0 0 0 RG 1.8 w [] 0 d 685 6247 m 690.333 6253.667 690.333 6260.333 685 6267 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 656 6281 Tm (RawFlag) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6464 m 10 6464 l S
+0 0 0 RG 3 w [] 0 d 733 6464 m 733 6464 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 6475 Tm (base_flag \(* a base is being sorted, from divert to settled *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6464 m 10 6703 l S
+0 0 0 RG 3 w [] 0 d 733 6464 m 733 6703 l S
+0 0 0 RG 1.6 w [] 0 d 102 6496 m 120 6496 l S
+0 0 0 RG 1.6 w [] 0 d 240 6496 m 246 6496 l S
+0 0 0 RG 1.6 w [] 0 d 10 6496 m 30 6496 l S
+0 0 0 RG 1.6 w [] 0 d 246 6496 m 641 6496 l S
+0 0 0 RG 1.6 w [] 0 d 713 6496 m 733 6496 l S
+0 0 0 RG 1.6 w [] 0 d 120 6496 m 120 6640 l S
+0 0 0 RG 1.6 w [] 0 d 246 6496 m 246 6640 l S
+0 0 0 RG 1.6 w [] 0 d 30 6496 m 61 6496 l S
+0 0 0 RG 1.6 w [] 0 d 71 6496 m 102 6496 l S
+0 0 0 RG 1.8 w [] 0 d 61 6486 m 61 6506 l S
+0 0 0 RG 1.8 w [] 0 d 71 6486 m 71 6506 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 6520 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 6485 m 236 6485 l 238.209 6485 240 6486.791 240 6489 c 240 6503 l 240 6505.209 238.209 6507 236 6507 c 124 6507 l 121.791 6507 120 6505.209 120 6503 c 120 6489 l 120 6486.791 121.791 6485 124 6485 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 6499.5 Tm (EQ\(AutoStep, 27\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 6557 m 242 6557 l 244.209 6557 246 6558.791 246 6561 c 246 6575 l 246 6577.209 244.209 6579 242 6579 c 124 6579 l 121.791 6579 120 6577.209 120 6575 c 120 6561 l 120 6558.791 121.791 6557 124 6557 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 6571.5 Tm (EQ\(AutoStep, 127\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 6629 m 242 6629 l 244.209 6629 246 6630.791 246 6633 c 246 6647 l 246 6649.209 244.209 6651 242 6651 c 124 6651 l 121.791 6651 120 6649.209 120 6647 c 120 6633 l 120 6630.791 121.791 6629 124 6629 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 6643.5 Tm (EQ\(AutoStep, 227\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 6496 m 665 6496 l S
+0 0 0 RG 1.6 w [] 0 d 689 6496 m 713 6496 l S
+0 0 0 RG 1.8 w [] 0 d 669 6486 m 663.667 6492.667 663.667 6499.333 669 6506 c S
+0 0 0 RG 1.8 w [] 0 d 685 6486 m 690.333 6492.667 690.333 6499.333 685 6506 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 653 6520 Tm (BaseFlag) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6703 m 10 6703 l S
+0 0 0 RG 3 w [] 0 d 733 6703 m 733 6703 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 6714 Tm (lid_flag \(* a lid is being sorted, from divert to settled *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6703 m 10 6942 l S
+0 0 0 RG 3 w [] 0 d 733 6703 m 733 6942 l S
+Q
+Q
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 11919 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 518.4 756 Tm (Page 9 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 591.421 re W n
+0.727 0 0 0.727 36 -4809.629 cm
+0 0 0 RG 3 w [] 0 d 10 6464 m 10 6703 l S
+0 0 0 RG 3 w [] 0 d 733 6464 m 733 6703 l S
+0 0 0 RG 3 w [] 0 d 10 6703 m 10 6703 l S
+0 0 0 RG 3 w [] 0 d 733 6703 m 733 6703 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 6714 Tm (lid_flag \(* a lid is being sorted, from divert to settled *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6703 m 10 6942 l S
+0 0 0 RG 3 w [] 0 d 733 6703 m 733 6942 l S
+0 0 0 RG 1.6 w [] 0 d 102 6735 m 120 6735 l S
+0 0 0 RG 1.6 w [] 0 d 240 6735 m 246 6735 l S
+0 0 0 RG 1.6 w [] 0 d 10 6735 m 30 6735 l S
+0 0 0 RG 1.6 w [] 0 d 246 6735 m 641 6735 l S
+0 0 0 RG 1.6 w [] 0 d 713 6735 m 733 6735 l S
+0 0 0 RG 1.6 w [] 0 d 120 6735 m 120 6879 l S
+0 0 0 RG 1.6 w [] 0 d 246 6735 m 246 6879 l S
+0 0 0 RG 1.6 w [] 0 d 30 6735 m 61 6735 l S
+0 0 0 RG 1.6 w [] 0 d 71 6735 m 102 6735 l S
+0 0 0 RG 1.8 w [] 0 d 61 6725 m 61 6745 l S
+0 0 0 RG 1.8 w [] 0 d 71 6725 m 71 6745 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 6759 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 6724 m 236 6724 l 238.209 6724 240 6725.791 240 6728 c 240 6742 l 240 6744.209 238.209 6746 236 6746 c 124 6746 l 121.791 6746 120 6744.209 120 6742 c 120 6728 l 120 6725.791 121.791 6724 124 6724 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 6738.5 Tm (EQ\(AutoStep, 28\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 6796 m 242 6796 l 244.209 6796 246 6797.791 246 6800 c 246 6814 l 246 6816.209 244.209 6818 242 6818 c 124 6818 l 121.791 6818 120 6816.209 120 6814 c 120 6800 l 120 6797.791 121.791 6796 124 6796 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 6810.5 Tm (EQ\(AutoStep, 128\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 6868 m 242 6868 l 244.209 6868 246 6869.791 246 6872 c 246 6886 l 246 6888.209 244.209 6890 242 6890 c 124 6890 l 121.791 6890 120 6888.209 120 6886 c 120 6872 l 120 6869.791 121.791 6868 124 6868 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 6882.5 Tm (EQ\(AutoStep, 228\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 6735 m 665 6735 l S
+0 0 0 RG 1.6 w [] 0 d 689 6735 m 713 6735 l S
+0 0 0 RG 1.8 w [] 0 d 669 6725 m 663.667 6731.667 663.667 6738.333 669 6745 c S
+0 0 0 RG 1.8 w [] 0 d 685 6725 m 690.333 6731.667 690.333 6738.333 685 6745 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 656 6759 Tm (LidFlag) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6942 m 10 6942 l S
+0 0 0 RG 3 w [] 0 d 733 6942 m 733 6942 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 6953 Tm (reject_flag \(* a part is being rejected, until the pusher is out *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 6942 m 10 7109 l S
+0 0 0 RG 3 w [] 0 d 733 6942 m 733 7109 l S
+0 0 0 RG 1.6 w [] 0 d 102 6974 m 120 6974 l S
+0 0 0 RG 1.6 w [] 0 d 10 6974 m 30 6974 l S
+0 0 0 RG 1.6 w [] 0 d 240 6974 m 641 6974 l S
+0 0 0 RG 1.6 w [] 0 d 713 6974 m 733 6974 l S
+0 0 0 RG 1.6 w [] 0 d 120 6974 m 120 7046 l S
+0 0 0 RG 1.6 w [] 0 d 240 6974 m 240 7046 l S
+0 0 0 RG 1.6 w [] 0 d 30 6974 m 61 6974 l S
+0 0 0 RG 1.6 w [] 0 d 71 6974 m 102 6974 l S
+0 0 0 RG 1.8 w [] 0 d 61 6964 m 61 6984 l S
+0 0 0 RG 1.8 w [] 0 d 71 6964 m 71 6984 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 6998 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 6963 m 236 6963 l 238.209 6963 240 6964.791 240 6967 c 240 6981 l 240 6983.209 238.209 6985 236 6985 c 124 6985 l 121.791 6985 120 6983.209 120 6981 c 120 6967 l 120 6964.791 121.791 6963 124 6963 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 6977.5 Tm (EQ\(AutoStep, 25\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 124 7035 m 236 7035 l 238.209 7035 240 7036.791 240 7039 c 240 7053 l 240 7055.209 238.209 7057 236 7057 c 124 7057 l 121.791 7057 120 7055.209 120 7053 c 120 7039 l 120 7036.791 121.791 7035 124 7035 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 132 7049.5 Tm (EQ\(AutoStep, 85\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 6974 m 665 6974 l S
+0 0 0 RG 1.6 w [] 0 d 689 6974 m 713 6974 l S
+0 0 0 RG 1.8 w [] 0 d 669 6964 m 663.667 6970.667 663.667 6977.333 669 6984 c S
+0 0 0 RG 1.8 w [] 0 d 685 6964 m 690.333 6970.667 690.333 6977.333 685 6984 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 647 6998 Tm (RejectFlag) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7109 m 10 7109 l S
+0 0 0 RG 3 w [] 0 d 733 7109 m 733 7109 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 7120 Tm (raw_diverting \(* X24: the raw sorter diverts, and its light shows it *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7109 m 10 7190 l S
+0 0 0 RG 3 w [] 0 d 733 7109 m 733 7190 l S
+0 0 0 RG 1.6 w [] 0 d 102 7141 m 112 7141 l S
+0 0 0 RG 1.6 w [] 0 d 10 7141 m 30 7141 l S
+0 0 0 RG 1.6 w [] 0 d 232 7141 m 543 7141 l S
+0 0 0 RG 1.6 w [] 0 d 626 7141 m 636 7141 l S
+0 0 0 RG 1.6 w [] 0 d 713 7141 m 733 7141 l S
+0 0 0 RG 1.6 w [] 0 d 30 7141 m 61 7141 l S
+0 0 0 RG 1.6 w [] 0 d 71 7141 m 102 7141 l S
+0 0 0 RG 1.8 w [] 0 d 61 7131 m 61 7151 l S
+0 0 0 RG 1.8 w [] 0 d 71 7131 m 71 7151 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 7165 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 7130 m 228 7130 l 230.209 7130 232 7131.791 232 7134 c 232 7148 l 232 7150.209 230.209 7152 228 7152 c 116 7152 l 113.791 7152 112 7150.209 112 7148 c 112 7134 l 112 7131.791 113.791 7130 116 7130 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 7144.5 Tm (EQ\(AutoStep, 24\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 543 7141 m 572.5 7141 l S
+0 0 0 RG 1.6 w [] 0 d 596.5 7141 m 626 7141 l S
+0 0 0 RG 1.8 w [] 0 d 576.5 7131 m 571.167 7137.667 571.167 7144.333 576.5 7151 c S
+0 0 0 RG 1.8 w [] 0 d 592.5 7131 m 597.833 7137.667 597.833 7144.333 592.5 7151 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 548.5 7165 Tm (RawDiverting) Tj ET
+0 0 0 RG 1.6 w [] 0 d 636 7141 m 662.5 7141 l S
+0 0 0 RG 1.6 w [] 0 d 686.5 7141 m 713 7141 l S
+0 0 0 RG 1.8 w [] 0 d 666.5 7131 m 661.167 7137.667 661.167 7144.333 666.5 7151 c S
+0 0 0 RG 1.8 w [] 0 d 682.5 7131 m 687.833 7137.667 687.833 7144.333 682.5 7151 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 641.5 7165 Tm (RawLightInd) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7190 m 10 7190 l S
+0 0 0 RG 3 w [] 0 d 733 7190 m 733 7190 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 7201 Tm (base_diverting \(* X27: the base sorter diverts, and its light shows it *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7190 m 10 7271 l S
+0 0 0 RG 3 w [] 0 d 733 7190 m 733 7271 l S
+0 0 0 RG 1.6 w [] 0 d 102 7222 m 112 7222 l S
+0 0 0 RG 1.6 w [] 0 d 10 7222 m 30 7222 l S
+0 0 0 RG 1.6 w [] 0 d 232 7222 m 531 7222 l S
+0 0 0 RG 1.6 w [] 0 d 620 7222 m 630 7222 l S
+0 0 0 RG 1.6 w [] 0 d 713 7222 m 733 7222 l S
+0 0 0 RG 1.6 w [] 0 d 30 7222 m 61 7222 l S
+0 0 0 RG 1.6 w [] 0 d 71 7222 m 102 7222 l S
+0 0 0 RG 1.8 w [] 0 d 61 7212 m 61 7232 l S
+0 0 0 RG 1.8 w [] 0 d 71 7212 m 71 7232 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 7246 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 7211 m 228 7211 l 230.209 7211 232 7212.791 232 7215 c 232 7229 l 232 7231.209 230.209 7233 228 7233 c 116 7233 l 113.791 7233 112 7231.209 112 7229 c 112 7215 l 112 7212.791 113.791 7211 116 7211 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 7225.5 Tm (EQ\(AutoStep, 27\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 531 7222 m 563.5 7222 l S
+0 0 0 RG 1.6 w [] 0 d 587.5 7222 m 620 7222 l S
+0 0 0 RG 1.8 w [] 0 d 567.5 7212 m 562.167 7218.667 562.167 7225.333 567.5 7232 c S
+0 0 0 RG 1.8 w [] 0 d 583.5 7212 m 588.833 7218.667 588.833 7225.333 583.5 7232 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 536.5 7246 Tm (BaseDiverting) Tj ET
+0 0 0 RG 1.6 w [] 0 d 630 7222 m 659.5 7222 l S
+0 0 0 RG 1.6 w [] 0 d 683.5 7222 m 713 7222 l S
+0 0 0 RG 1.8 w [] 0 d 663.5 7212 m 658.167 7218.667 658.167 7225.333 663.5 7232 c S
+0 0 0 RG 1.8 w [] 0 d 679.5 7212 m 684.833 7218.667 684.833 7225.333 679.5 7232 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 635.5 7246 Tm (BaseLightInd) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7271 m 10 7271 l S
+0 0 0 RG 3 w [] 0 d 733 7271 m 733 7271 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 7282 Tm (lid_diverting \(* X28: the lid sorter diverts, and its light shows it *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7271 m 10 7352 l S
+0 0 0 RG 3 w [] 0 d 733 7271 m 733 7352 l S
+0 0 0 RG 1.6 w [] 0 d 102 7303 m 112 7303 l S
+0 0 0 RG 1.6 w [] 0 d 10 7303 m 30 7303 l S
+0 0 0 RG 1.6 w [] 0 d 232 7303 m 543 7303 l S
+0 0 0 RG 1.6 w [] 0 d 626 7303 m 636 7303 l S
+0 0 0 RG 1.6 w [] 0 d 713 7303 m 733 7303 l S
+0 0 0 RG 1.6 w [] 0 d 30 7303 m 61 7303 l S
+0 0 0 RG 1.6 w [] 0 d 71 7303 m 102 7303 l S
+0 0 0 RG 1.8 w [] 0 d 61 7293 m 61 7313 l S
+0 0 0 RG 1.8 w [] 0 d 71 7293 m 71 7313 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 7327 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 7292 m 228 7292 l 230.209 7292 232 7293.791 232 7296 c 232 7310 l 232 7312.209 230.209 7314 228 7314 c 116 7314 l 113.791 7314 112 7312.209 112 7310 c 112 7296 l 112 7293.791 113.791 7292 116 7292 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 7306.5 Tm (EQ\(AutoStep, 28\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 543 7303 m 572.5 7303 l S
+0 0 0 RG 1.6 w [] 0 d 596.5 7303 m 626 7303 l S
+0 0 0 RG 1.8 w [] 0 d 576.5 7293 m 571.167 7299.667 571.167 7306.333 576.5 7313 c S
+0 0 0 RG 1.8 w [] 0 d 592.5 7293 m 597.833 7299.667 597.833 7306.333 592.5 7313 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 548.5 7327 Tm (LidDiverting) Tj ET
+0 0 0 RG 1.6 w [] 0 d 636 7303 m 662.5 7303 l S
+0 0 0 RG 1.6 w [] 0 d 686.5 7303 m 713 7303 l S
+0 0 0 RG 1.8 w [] 0 d 666.5 7293 m 661.167 7299.667 661.167 7306.333 666.5 7313 c S
+0 0 0 RG 1.8 w [] 0 d 682.5 7293 m 687.833 7299.667 687.833 7306.333 682.5 7313 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 641.5 7327 Tm (LidLightInd) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7352 m 10 7352 l S
+0 0 0 RG 3 w [] 0 d 733 7352 m 733 7352 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 7363 Tm (emitter \(* emit for as long as the pulse has time left *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7352 m 10 7433 l S
+0 0 0 RG 3 w [] 0 d 733 7352 m 733 7433 l S
+0 0 0 RG 1.6 w [] 0 d 102 7384 m 112 7384 l S
+0 0 0 RG 1.6 w [] 0 d 10 7384 m 30 7384 l S
+0 0 0 RG 1.6 w [] 0 d 269 7384 m 641 7384 l S
+0 0 0 RG 1.6 w [] 0 d 713 7384 m 733 7384 l S
+0 0 0 RG 1.6 w [] 0 d 30 7384 m 61 7384 l S
+0 0 0 RG 1.6 w [] 0 d 71 7384 m 102 7384 l S
+0 0 0 RG 1.8 w [] 0 d 61 7374 m 61 7394 l S
+0 0 0 RG 1.8 w [] 0 d 71 7374 m 71 7394 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 7408 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 7373 m 265 7373 l 267.209 7373 269 7374.791 269 7377 c 269 7391 l 269 7393.209 267.209 7395 265 7395 c 116 7395 l 113.791 7395 112 7393.209 112 7391 c 112 7377 l 112 7374.791 113.791 7373 116 7373 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124.5 7387.5 Tm (GT\(EmitRemaining, 0.0\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 7384 m 665 7384 l S
+0 0 0 RG 1.6 w [] 0 d 689 7384 m 713 7384 l S
+0 0 0 RG 1.8 w [] 0 d 669 7374 m 663.667 7380.667 663.667 7387.333 669 7394 c S
+0 0 0 RG 1.8 w [] 0 d 685 7374 m 690.333 7380.667 690.333 7387.333 685 7394 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 656 7408 Tm (Emitter) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7433 m 10 7433 l S
+0 0 0 RG 3 w [] 0 d 733 7433 m 733 7433 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 7444 Tm (emit_pulse_timer \(* run the emit pulse down *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7433 m 10 7514 l S
+0 0 0 RG 3 w [] 0 d 733 7433 m 733 7514 l S
+0 0 0 RG 1.6 w [] 0 d 102 7465 m 112 7465 l S
+0 0 0 RG 1.6 w [] 0 d 10 7465 m 30 7465 l S
+0 0 0 RG 1.6 w [] 0 d 376 7465 m 713 7465 l S
+0 0 0 RG 1.6 w [] 0 d 713 7465 m 733 7465 l S
+0 0 0 RG 1.6 w [] 0 d 30 7465 m 61 7465 l S
+0 0 0 RG 1.6 w [] 0 d 71 7465 m 102 7465 l S
+0 0 0 RG 1.8 w [] 0 d 61 7455 m 61 7475 l S
+0 0 0 RG 1.8 w [] 0 d 71 7455 m 71 7475 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 45 7489 Tm (Emitter) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 7454 m 372 7454 l 374.209 7454 376 7455.791 376 7458 c 376 7472 l 376 7474.209 374.209 7476 372 7476 c 116 7476 l 113.791 7476 112 7474.209 112 7472 c 112 7458 l 112 7455.791 113.791 7454 116 7454 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 7468.5 Tm (EmitRemaining := EmitRemaining - ScanDtS) Tj ET
+Q
+Q
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Length 13061 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 513.6 756 Tm (Page 10 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 622.673 re W n
+0.727 0 0 0.727 36 -5399.05 cm
+0 0 0 RG 3 w [] 0 d 10 7433 m 10 7514 l S
+0 0 0 RG 3 w [] 0 d 733 7433 m 733 7514 l S
+0.533 0.533 0.533 RG 0.8 w [3 2] 0 d 23 7520 m 435 7520 l 436.657 7520 438 7521.343 438 7523 c 438 7567 l 438 7568.657 436.657 7570 435 7570 c 23 7570 l 21.343 7570 20 7568.657 20 7567 c 20 7523 l 20 7521.343 21.343 7520 23 7520 c h s
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 7535 Tm (---- Manual-PushPulls and Manual-Counters: each button is push-on /) Tj ET
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 7549 Tm (push-off, CW and CCW exclude each other, and every latch drops on) Tj ET
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 7563 Tm (leaving manual. Holding Reset five seconds clears the three totals.) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7574 m 10 7574 l S
+0 0 0 RG 3 w [] 0 d 733 7574 m 733 7574 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 7585 Tm (belt_jog \(* manual belt on/off *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7574 m 10 7667 l S
+0 0 0 RG 3 w [] 0 d 733 7574 m 733 7667 l S
+0 0 0 RG 1.6 w [] 0 d 102 7618 m 112 7618 l S
+0 0 0 RG 1.6 w [] 0 d 10 7618 m 30 7618 l S
+0 0 0 RG 1.6 w [] 0 d 289 7618 m 713 7618 l S
+0 0 0 RG 1.6 w [] 0 d 713 7618 m 733 7618 l S
+0 0 0 RG 1.6 w [] 0 d 30 7618 m 61 7618 l S
+0 0 0 RG 1.6 w [] 0 d 71 7618 m 102 7618 l S
+0 0 0 RG 1.8 w [] 0 d 61 7608 m 61 7628 l S
+0 0 0 RG 1.8 w [] 0 d 71 7608 m 71 7628 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 7642 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 7606 m 286 7606 l 287.657 7606 289 7607.343 289 7609 c 289 7650 l 289 7651.657 287.657 7653 286 7653 c 115 7653 l 113.343 7653 112 7651.657 112 7650 c 112 7609 l 112 7607.343 113.343 7606 115 7606 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 179.5 7602 Tm (beltJog) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 167.5 7621 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 129.1 7648 Tm (Press := BeltConveyor4mManPB) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 7615 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 281.5 7615 Tm (Q) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7667 m 10 7667 l S
+0 0 0 RG 3 w [] 0 d 733 7667 m 733 7667 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 7678 Tm (belt_jog_on \(* latching the belt on runs it at jog speed *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7667 m 10 7748 l S
+0 0 0 RG 3 w [] 0 d 733 7667 m 733 7748 l S
+0 0 0 RG 1.6 w [] 0 d 131 7699 m 141 7699 l S
+0 0 0 RG 1.6 w [] 0 d 213 7699 m 223 7699 l S
+0 0 0 RG 1.6 w [] 0 d 10 7699 m 30 7699 l S
+0 0 0 RG 1.6 w [] 0 d 388 7699 m 713 7699 l S
+0 0 0 RG 1.6 w [] 0 d 713 7699 m 733 7699 l S
+0 0 0 RG 1.6 w [] 0 d 30 7699 m 75.5 7699 l S
+0 0 0 RG 1.6 w [] 0 d 85.5 7699 m 131 7699 l S
+0 0 0 RG 1.8 w [] 0 d 75.5 7689 m 75.5 7709 l S
+0 0 0 RG 1.8 w [] 0 d 85.5 7689 m 85.5 7709 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 7723 Tm (beltJog.Flipped) Tj ET
+0 0 0 RG 1.6 w [] 0 d 141 7699 m 172 7699 l S
+0 0 0 RG 1.6 w [] 0 d 182 7699 m 213 7699 l S
+0 0 0 RG 1.8 w [] 0 d 172 7689 m 172 7709 l S
+0 0 0 RG 1.8 w [] 0 d 182 7689 m 182 7709 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 150 7723 Tm (beltJog.Q) Tj ET
+0 0 0 RG 1.2 w [] 0 d 227 7688 m 384 7688 l 386.209 7688 388 7689.791 388 7692 c 388 7706 l 388 7708.209 386.209 7710 384 7710 c 227 7710 l 224.791 7710 223 7708.209 223 7706 c 223 7692 l 223 7689.791 224.791 7688 227 7688 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 233.5 7702.5 Tm (BeltSpeedRef := JogSpeed) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7748 m 10 7748 l S
+0 0 0 RG 3 w [] 0 d 733 7748 m 733 7748 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 7759 Tm (belt_jog_off \(* latching it off stops it *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7748 m 10 7829 l S
+0 0 0 RG 3 w [] 0 d 733 7748 m 733 7829 l S
+0 0 0 RG 1.6 w [] 0 d 131 7780 m 141 7780 l S
+0 0 0 RG 1.6 w [] 0 d 213 7780 m 223 7780 l S
+0 0 0 RG 1.6 w [] 0 d 10 7780 m 30 7780 l S
+0 0 0 RG 1.6 w [] 0 d 345 7780 m 713 7780 l S
+0 0 0 RG 1.6 w [] 0 d 713 7780 m 733 7780 l S
+0 0 0 RG 1.6 w [] 0 d 30 7780 m 75.5 7780 l S
+0 0 0 RG 1.6 w [] 0 d 85.5 7780 m 131 7780 l S
+0 0 0 RG 1.8 w [] 0 d 75.5 7770 m 75.5 7790 l S
+0 0 0 RG 1.8 w [] 0 d 85.5 7770 m 85.5 7790 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 7804 Tm (beltJog.Flipped) Tj ET
+0 0 0 RG 1.6 w [] 0 d 141 7780 m 172 7780 l S
+0 0 0 RG 1.6 w [] 0 d 182 7780 m 213 7780 l S
+0 0 0 RG 1.8 w [] 0 d 172 7770 m 172 7790 l S
+0 0 0 RG 1.8 w [] 0 d 182 7770 m 182 7790 l S
+0 0 0 RG 1.8 w [] 0 d 168 7791 m 186 7769 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 150 7804 Tm (beltJog.Q) Tj ET
+0 0 0 RG 1.2 w [] 0 d 227 7769 m 341 7769 l 343.209 7769 345 7770.791 345 7773 c 345 7787 l 345 7789.209 343.209 7791 341 7791 c 227 7791 l 224.791 7791 223 7789.209 223 7787 c 223 7773 l 223 7770.791 224.791 7769 227 7769 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 233 7783.5 Tm (BeltSpeedRef := 0) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7829 m 10 7829 l S
+0 0 0 RG 3 w [] 0 d 733 7829 m 733 7829 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 7840 Tm (reject_jog \(* manual pusher out/in *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7829 m 10 7922 l S
+0 0 0 RG 3 w [] 0 d 733 7829 m 733 7922 l S
+0 0 0 RG 1.6 w [] 0 d 102 7873 m 112 7873 l S
+0 0 0 RG 1.6 w [] 0 d 10 7873 m 30 7873 l S
+0 0 0 RG 1.6 w [] 0 d 278 7873 m 713 7873 l S
+0 0 0 RG 1.6 w [] 0 d 713 7873 m 733 7873 l S
+0 0 0 RG 1.6 w [] 0 d 30 7873 m 61 7873 l S
+0 0 0 RG 1.6 w [] 0 d 71 7873 m 102 7873 l S
+0 0 0 RG 1.8 w [] 0 d 61 7863 m 61 7883 l S
+0 0 0 RG 1.8 w [] 0 d 71 7863 m 71 7883 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 7897 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 7861 m 275 7861 l 276.657 7861 278 7862.343 278 7864 c 278 7905 l 278 7906.657 276.657 7908 275 7908 c 115 7908 l 113.343 7908 112 7906.657 112 7905 c 112 7864 l 112 7862.343 113.343 7861 115 7861 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 168 7857 Tm (rejectJog) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 162 7876 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 128.7 7903 Tm (Press := RejectPusherManPB) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 7870 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 270.5 7870 Tm (Q) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7922 m 10 7922 l S
+0 0 0 RG 3 w [] 0 d 733 7922 m 733 7922 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 7933 Tm (raw_ccw \(* manual raw sorter CCW, refused while CW is latched *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 7922 m 10 8015 l S
+0 0 0 RG 3 w [] 0 d 733 7922 m 733 8015 l S
+0 0 0 RG 1.6 w [] 0 d 102 7966 m 112 7966 l S
+0 0 0 RG 1.6 w [] 0 d 10 7966 m 30 7966 l S
+0 0 0 RG 1.6 w [] 0 d 317 7966 m 475 7966 l S
+0 0 0 RG 1.6 w [] 0 d 583 7966 m 593 7966 l S
+0 0 0 RG 1.6 w [] 0 d 713 7966 m 733 7966 l S
+0 0 0 RG 1.6 w [] 0 d 30 7966 m 61 7966 l S
+0 0 0 RG 1.6 w [] 0 d 71 7966 m 102 7966 l S
+0 0 0 RG 1.8 w [] 0 d 61 7956 m 61 7976 l S
+0 0 0 RG 1.8 w [] 0 d 71 7956 m 71 7976 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 7990 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 7954 m 314 7954 l 315.657 7954 317 7955.343 317 7957 c 317 7998 l 317 7999.657 315.657 8001 314 8001 c 115 8001 l 113.343 8001 112 7999.657 112 7998 c 112 7957 l 112 7955.343 113.343 7954 115 7954 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 196.5 7950 Tm (rawCcw) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 181.5 7969 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 130.35 7996 Tm (Press := RawSorterBeltCCWManPB, Ö) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 7963 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 309.5 7963 Tm (Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 475 7966 m 517 7966 l S
+0 0 0 RG 1.6 w [] 0 d 541 7966 m 583 7966 l S
+0 0 0 RG 1.8 w [] 0 d 521 7956 m 515.667 7962.667 515.667 7969.333 521 7976 c S
+0 0 0 RG 1.8 w [] 0 d 537 7956 m 542.333 7962.667 542.333 7969.333 537 7976 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 481 7990 Tm (RawSorterBeltCCW) Tj ET
+0 0 0 RG 1.6 w [] 0 d 593 7966 m 641 7966 l S
+0 0 0 RG 1.6 w [] 0 d 665 7966 m 713 7966 l S
+0 0 0 RG 1.8 w [] 0 d 645 7956 m 639.667 7962.667 639.667 7969.333 645 7976 c S
+0 0 0 RG 1.8 w [] 0 d 661 7956 m 666.333 7962.667 666.333 7969.333 661 7976 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 599 7990 Tm (RawSorterBeltCCWPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8015 m 10 8015 l S
+0 0 0 RG 3 w [] 0 d 733 8015 m 733 8015 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 8026 Tm (raw_cw_jog \(* manual raw sorter CW, refused while CCW is latched *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8015 m 10 8108 l S
+0 0 0 RG 3 w [] 0 d 733 8015 m 733 8108 l S
+0 0 0 RG 1.6 w [] 0 d 102 8059 m 112 8059 l S
+0 0 0 RG 1.6 w [] 0 d 10 8059 m 30 8059 l S
+0 0 0 RG 1.6 w [] 0 d 311 8059 m 713 8059 l S
+0 0 0 RG 1.6 w [] 0 d 713 8059 m 733 8059 l S
+0 0 0 RG 1.6 w [] 0 d 30 8059 m 61 8059 l S
+0 0 0 RG 1.6 w [] 0 d 71 8059 m 102 8059 l S
+0 0 0 RG 1.8 w [] 0 d 61 8049 m 61 8069 l S
+0 0 0 RG 1.8 w [] 0 d 71 8049 m 71 8069 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 8083 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 8047 m 308 8047 l 309.657 8047 311 8048.343 311 8050 c 311 8091 l 311 8092.657 309.657 8094 308 8094 c 115 8094 l 113.343 8094 112 8092.657 112 8091 c 112 8050 l 112 8048.343 113.343 8047 115 8047 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 196.5 8043 Tm (rawCw) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 178.5 8062 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 129.9 8089 Tm (Press := RawSorterBeltCWManPB, Ö) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 8056 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 303.5 8056 Tm (Q) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8108 m 10 8108 l S
+0 0 0 RG 3 w [] 0 d 733 8108 m 733 8108 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 8119 Tm (raw_turn_jog \(* manual raw sorter turn *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8108 m 10 8201 l S
+0 0 0 RG 3 w [] 0 d 733 8108 m 733 8201 l S
+0 0 0 RG 1.6 w [] 0 d 102 8152 m 112 8152 l S
+0 0 0 RG 1.6 w [] 0 d 10 8152 m 30 8152 l S
+0 0 0 RG 1.6 w [] 0 d 305 8152 m 713 8152 l S
+0 0 0 RG 1.6 w [] 0 d 713 8152 m 733 8152 l S
+0 0 0 RG 1.6 w [] 0 d 30 8152 m 61 8152 l S
+0 0 0 RG 1.6 w [] 0 d 71 8152 m 102 8152 l S
+0 0 0 RG 1.8 w [] 0 d 61 8142 m 61 8162 l S
+0 0 0 RG 1.8 w [] 0 d 71 8142 m 71 8162 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 8176 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 8140 m 302 8140 l 303.657 8140 305 8141.343 305 8143 c 305 8184 l 305 8185.657 303.657 8187 302 8187 c 115 8187 l 113.343 8187 112 8185.657 112 8184 c 112 8143 l 112 8141.343 113.343 8140 115 8140 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 187.5 8136 Tm (rawTurn) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 175.5 8155 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 129.45 8182 Tm (Press := RawSorterBeltTurnManPB) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 8149 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 297.5 8149 Tm (Q) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8201 m 10 8201 l S
+0 0 0 RG 3 w [] 0 d 733 8201 m 733 8201 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 8212 Tm (raw_cw \(* automatic divert or the manual latch *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8201 m 10 8368 l S
+0 0 0 RG 3 w [] 0 d 733 8201 m 733 8368 l S
+0 0 0 RG 1.6 w [] 0 d 102 8305 m 113 8305 l S
+0 0 0 RG 1.6 w [] 0 d 10 8233 m 30 8233 l S
+0 0 0 RG 1.6 w [] 0 d 113 8233 m 488 8233 l S
+0 0 0 RG 1.6 w [] 0 d 589 8233 m 599 8233 l S
+0 0 0 RG 1.6 w [] 0 d 713 8233 m 733 8233 l S
+0 0 0 RG 1.6 w [] 0 d 30 8233 m 30 8305 l S
+0 0 0 RG 1.6 w [] 0 d 113 8233 m 113 8305 l S
+0 0 0 RG 1.6 w [] 0 d 30 8233 m 66.5 8233 l S
+0 0 0 RG 1.6 w [] 0 d 76.5 8233 m 113 8233 l S
+0 0 0 RG 1.8 w [] 0 d 66.5 8223 m 66.5 8243 l S
+0 0 0 RG 1.8 w [] 0 d 76.5 8223 m 76.5 8243 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 8257 Tm (RawDiverting) Tj ET
+0 0 0 RG 1.6 w [] 0 d 30 8305 m 61 8305 l S
+0 0 0 RG 1.6 w [] 0 d 71 8305 m 102 8305 l S
+0 0 0 RG 1.8 w [] 0 d 61 8295 m 61 8315 l S
+0 0 0 RG 1.8 w [] 0 d 71 8295 m 71 8315 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 45 8329 Tm (rawCw.Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 488 8233 m 526.5 8233 l S
+0 0 0 RG 1.6 w [] 0 d 550.5 8233 m 589 8233 l S
+0 0 0 RG 1.8 w [] 0 d 530.5 8223 m 525.167 8229.667 525.167 8236.333 530.5 8243 c S
+0 0 0 RG 1.8 w [] 0 d 546.5 8223 m 551.833 8229.667 551.833 8236.333 546.5 8243 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 493.5 8257 Tm (RawSorterBeltCW) Tj ET
+0 0 0 RG 1.6 w [] 0 d 599 8233 m 644 8233 l S
+0 0 0 RG 1.6 w [] 0 d 668 8233 m 713 8233 l S
+0 0 0 RG 1.8 w [] 0 d 648 8223 m 642.667 8229.667 642.667 8236.333 648 8243 c S
+0 0 0 RG 1.8 w [] 0 d 664 8223 m 669.333 8229.667 669.333 8236.333 664 8243 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 605 8257 Tm (RawSorterBeltCWPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8368 m 10 8368 l S
+0 0 0 RG 3 w [] 0 d 733 8368 m 733 8368 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 8379 Tm (raw_turn \(* automatic divert or the manual latch *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8368 m 10 8535 l S
+0 0 0 RG 3 w [] 0 d 733 8368 m 733 8535 l S
+Q
+Q
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 25 0 R >>
+endobj
+27 0 obj
+<< /Length 12700 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 513.6 756 Tm (Page 11 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 636.482 re W n
+0.727 0 0 0.727 36 -6019.723 cm
+0 0 0 RG 3 w [] 0 d 10 8201 m 10 8368 l S
+0 0 0 RG 3 w [] 0 d 733 8201 m 733 8368 l S
+0 0 0 RG 3 w [] 0 d 10 8368 m 10 8368 l S
+0 0 0 RG 3 w [] 0 d 733 8368 m 733 8368 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 8379 Tm (raw_turn \(* automatic divert or the manual latch *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8368 m 10 8535 l S
+0 0 0 RG 3 w [] 0 d 733 8368 m 733 8535 l S
+0 0 0 RG 1.6 w [] 0 d 102 8472 m 113 8472 l S
+0 0 0 RG 1.6 w [] 0 d 10 8400 m 30 8400 l S
+0 0 0 RG 1.6 w [] 0 d 113 8400 m 463 8400 l S
+0 0 0 RG 1.6 w [] 0 d 577 8400 m 587 8400 l S
+0 0 0 RG 1.6 w [] 0 d 713 8400 m 733 8400 l S
+0 0 0 RG 1.6 w [] 0 d 30 8400 m 30 8472 l S
+0 0 0 RG 1.6 w [] 0 d 113 8400 m 113 8472 l S
+0 0 0 RG 1.6 w [] 0 d 30 8400 m 66.5 8400 l S
+0 0 0 RG 1.6 w [] 0 d 76.5 8400 m 113 8400 l S
+0 0 0 RG 1.8 w [] 0 d 66.5 8390 m 66.5 8410 l S
+0 0 0 RG 1.8 w [] 0 d 76.5 8390 m 76.5 8410 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 8424 Tm (RawDiverting) Tj ET
+0 0 0 RG 1.6 w [] 0 d 30 8472 m 61 8472 l S
+0 0 0 RG 1.6 w [] 0 d 71 8472 m 102 8472 l S
+0 0 0 RG 1.8 w [] 0 d 61 8462 m 61 8482 l S
+0 0 0 RG 1.8 w [] 0 d 71 8462 m 71 8482 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 8496 Tm (rawTurn.Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 463 8400 m 508 8400 l S
+0 0 0 RG 1.6 w [] 0 d 532 8400 m 577 8400 l S
+0 0 0 RG 1.8 w [] 0 d 512 8390 m 506.667 8396.667 506.667 8403.333 512 8410 c S
+0 0 0 RG 1.8 w [] 0 d 528 8390 m 533.333 8396.667 533.333 8403.333 528 8410 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 469 8424 Tm (RawSorterBeltTurn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 587 8400 m 638 8400 l S
+0 0 0 RG 1.6 w [] 0 d 662 8400 m 713 8400 l S
+0 0 0 RG 1.8 w [] 0 d 642 8390 m 636.667 8396.667 636.667 8403.333 642 8410 c S
+0 0 0 RG 1.8 w [] 0 d 658 8390 m 663.333 8396.667 663.333 8403.333 658 8410 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 593 8424 Tm (RawSorterBeltTurnPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8535 m 10 8535 l S
+0 0 0 RG 3 w [] 0 d 733 8535 m 733 8535 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 8546 Tm (base_ccw \(* manual base sorter CCW, refused while CW is latched *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8535 m 10 8628 l S
+0 0 0 RG 3 w [] 0 d 733 8535 m 733 8628 l S
+0 0 0 RG 1.6 w [] 0 d 102 8579 m 112 8579 l S
+0 0 0 RG 1.6 w [] 0 d 10 8579 m 30 8579 l S
+0 0 0 RG 1.6 w [] 0 d 322 8579 m 463 8579 l S
+0 0 0 RG 1.6 w [] 0 d 577 8579 m 587 8579 l S
+0 0 0 RG 1.6 w [] 0 d 713 8579 m 733 8579 l S
+0 0 0 RG 1.6 w [] 0 d 30 8579 m 61 8579 l S
+0 0 0 RG 1.6 w [] 0 d 71 8579 m 102 8579 l S
+0 0 0 RG 1.8 w [] 0 d 61 8569 m 61 8589 l S
+0 0 0 RG 1.8 w [] 0 d 71 8569 m 71 8589 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 8603 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 8567 m 319 8567 l 320.657 8567 322 8568.343 322 8570 c 322 8611 l 322 8612.657 320.657 8614 319 8614 c 115 8614 l 113.343 8614 112 8612.657 112 8611 c 112 8570 l 112 8568.343 113.343 8567 115 8567 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 196 8563 Tm (baseCcw) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 184 8582 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 130.3 8609 Tm (Press := BaseSorterBeltCCWManPB, Ö) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 8576 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 314.5 8576 Tm (Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 463 8579 m 508 8579 l S
+0 0 0 RG 1.6 w [] 0 d 532 8579 m 577 8579 l S
+0 0 0 RG 1.8 w [] 0 d 512 8569 m 506.667 8575.667 506.667 8582.333 512 8589 c S
+0 0 0 RG 1.8 w [] 0 d 528 8569 m 533.333 8575.667 533.333 8582.333 528 8589 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 469 8603 Tm (BaseSorterBeltCCW) Tj ET
+0 0 0 RG 1.6 w [] 0 d 587 8579 m 638 8579 l S
+0 0 0 RG 1.6 w [] 0 d 662 8579 m 713 8579 l S
+0 0 0 RG 1.8 w [] 0 d 642 8569 m 636.667 8575.667 636.667 8582.333 642 8589 c S
+0 0 0 RG 1.8 w [] 0 d 658 8569 m 663.333 8575.667 663.333 8582.333 658 8589 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 593 8603 Tm (BaseSorterBeltCCWPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8628 m 10 8628 l S
+0 0 0 RG 3 w [] 0 d 733 8628 m 733 8628 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 8639 Tm (base_cw_jog \(* manual base sorter CW, refused while CCW is latched *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8628 m 10 8721 l S
+0 0 0 RG 3 w [] 0 d 733 8628 m 733 8721 l S
+0 0 0 RG 1.6 w [] 0 d 102 8672 m 112 8672 l S
+0 0 0 RG 1.6 w [] 0 d 10 8672 m 30 8672 l S
+0 0 0 RG 1.6 w [] 0 d 317 8672 m 713 8672 l S
+0 0 0 RG 1.6 w [] 0 d 713 8672 m 733 8672 l S
+0 0 0 RG 1.6 w [] 0 d 30 8672 m 61 8672 l S
+0 0 0 RG 1.6 w [] 0 d 71 8672 m 102 8672 l S
+0 0 0 RG 1.8 w [] 0 d 61 8662 m 61 8682 l S
+0 0 0 RG 1.8 w [] 0 d 71 8662 m 71 8682 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 8696 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 8660 m 314 8660 l 315.657 8660 317 8661.343 317 8663 c 317 8704 l 317 8705.657 315.657 8707 314 8707 c 115 8707 l 113.343 8707 112 8705.657 112 8704 c 112 8663 l 112 8661.343 113.343 8660 115 8660 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 196.5 8656 Tm (baseCw) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 181.5 8675 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 130.35 8702 Tm (Press := BaseSorterBeltCWManPB, Ö) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 8669 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 309.5 8669 Tm (Q) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8721 m 10 8721 l S
+0 0 0 RG 3 w [] 0 d 733 8721 m 733 8721 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 8732 Tm (base_turn_jog \(* manual base sorter turn *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8721 m 10 8814 l S
+0 0 0 RG 3 w [] 0 d 733 8721 m 733 8814 l S
+0 0 0 RG 1.6 w [] 0 d 102 8765 m 112 8765 l S
+0 0 0 RG 1.6 w [] 0 d 10 8765 m 30 8765 l S
+0 0 0 RG 1.6 w [] 0 d 311 8765 m 713 8765 l S
+0 0 0 RG 1.6 w [] 0 d 713 8765 m 733 8765 l S
+0 0 0 RG 1.6 w [] 0 d 30 8765 m 61 8765 l S
+0 0 0 RG 1.6 w [] 0 d 71 8765 m 102 8765 l S
+0 0 0 RG 1.8 w [] 0 d 61 8755 m 61 8775 l S
+0 0 0 RG 1.8 w [] 0 d 71 8755 m 71 8775 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 8789 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 8753 m 308 8753 l 309.657 8753 311 8754.343 311 8756 c 311 8797 l 311 8798.657 309.657 8800 308 8800 c 115 8800 l 113.343 8800 112 8798.657 112 8797 c 112 8756 l 112 8754.343 113.343 8753 115 8753 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 187.5 8749 Tm (baseTurn) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 178.5 8768 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 129.9 8795 Tm (Press := BaseSorterBeltTurnManPB) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 8762 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 303.5 8762 Tm (Q) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8814 m 10 8814 l S
+0 0 0 RG 3 w [] 0 d 733 8814 m 733 8814 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 8825 Tm (base_cw \(* automatic divert or the manual latch *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8814 m 10 8981 l S
+0 0 0 RG 3 w [] 0 d 733 8814 m 733 8981 l S
+0 0 0 RG 1.6 w [] 0 d 102 8918 m 119 8918 l S
+0 0 0 RG 1.6 w [] 0 d 10 8846 m 30 8846 l S
+0 0 0 RG 1.6 w [] 0 d 119 8846 m 475 8846 l S
+0 0 0 RG 1.6 w [] 0 d 583 8846 m 593 8846 l S
+0 0 0 RG 1.6 w [] 0 d 713 8846 m 733 8846 l S
+0 0 0 RG 1.6 w [] 0 d 30 8846 m 30 8918 l S
+0 0 0 RG 1.6 w [] 0 d 119 8846 m 119 8918 l S
+0 0 0 RG 1.6 w [] 0 d 30 8846 m 69.5 8846 l S
+0 0 0 RG 1.6 w [] 0 d 79.5 8846 m 119 8846 l S
+0 0 0 RG 1.8 w [] 0 d 69.5 8836 m 69.5 8856 l S
+0 0 0 RG 1.8 w [] 0 d 79.5 8836 m 79.5 8856 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 8870 Tm (BaseDiverting) Tj ET
+0 0 0 RG 1.6 w [] 0 d 30 8918 m 61 8918 l S
+0 0 0 RG 1.6 w [] 0 d 71 8918 m 102 8918 l S
+0 0 0 RG 1.8 w [] 0 d 61 8908 m 61 8928 l S
+0 0 0 RG 1.8 w [] 0 d 71 8908 m 71 8928 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 8942 Tm (baseCw.Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 475 8846 m 517 8846 l S
+0 0 0 RG 1.6 w [] 0 d 541 8846 m 583 8846 l S
+0 0 0 RG 1.8 w [] 0 d 521 8836 m 515.667 8842.667 515.667 8849.333 521 8856 c S
+0 0 0 RG 1.8 w [] 0 d 537 8836 m 542.333 8842.667 542.333 8849.333 537 8856 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 481 8870 Tm (BaseSorterBeltCW) Tj ET
+0 0 0 RG 1.6 w [] 0 d 593 8846 m 641 8846 l S
+0 0 0 RG 1.6 w [] 0 d 665 8846 m 713 8846 l S
+0 0 0 RG 1.8 w [] 0 d 645 8836 m 639.667 8842.667 639.667 8849.333 645 8856 c S
+0 0 0 RG 1.8 w [] 0 d 661 8836 m 666.333 8842.667 666.333 8849.333 661 8856 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 599 8870 Tm (BaseSorterBeltCWPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8981 m 10 8981 l S
+0 0 0 RG 3 w [] 0 d 733 8981 m 733 8981 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 8992 Tm (base_turn \(* automatic divert or the manual latch *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 8981 m 10 9148 l S
+0 0 0 RG 3 w [] 0 d 733 8981 m 733 9148 l S
+0 0 0 RG 1.6 w [] 0 d 102 9085 m 119 9085 l S
+0 0 0 RG 1.6 w [] 0 d 10 9013 m 30 9013 l S
+0 0 0 RG 1.6 w [] 0 d 119 9013 m 451 9013 l S
+0 0 0 RG 1.6 w [] 0 d 571 9013 m 581 9013 l S
+0 0 0 RG 1.6 w [] 0 d 713 9013 m 733 9013 l S
+0 0 0 RG 1.6 w [] 0 d 30 9013 m 30 9085 l S
+0 0 0 RG 1.6 w [] 0 d 119 9013 m 119 9085 l S
+0 0 0 RG 1.6 w [] 0 d 30 9013 m 69.5 9013 l S
+0 0 0 RG 1.6 w [] 0 d 79.5 9013 m 119 9013 l S
+0 0 0 RG 1.8 w [] 0 d 69.5 9003 m 69.5 9023 l S
+0 0 0 RG 1.8 w [] 0 d 79.5 9003 m 79.5 9023 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 9037 Tm (BaseDiverting) Tj ET
+0 0 0 RG 1.6 w [] 0 d 30 9085 m 61 9085 l S
+0 0 0 RG 1.6 w [] 0 d 71 9085 m 102 9085 l S
+0 0 0 RG 1.8 w [] 0 d 61 9075 m 61 9095 l S
+0 0 0 RG 1.8 w [] 0 d 71 9075 m 71 9095 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 9109 Tm (baseTurn.Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 451 9013 m 499 9013 l S
+0 0 0 RG 1.6 w [] 0 d 523 9013 m 571 9013 l S
+0 0 0 RG 1.8 w [] 0 d 503 9003 m 497.667 9009.667 497.667 9016.333 503 9023 c S
+0 0 0 RG 1.8 w [] 0 d 519 9003 m 524.333 9009.667 524.333 9016.333 519 9023 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 457 9037 Tm (BaseSorterBeltTurn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 581 9013 m 635 9013 l S
+0 0 0 RG 1.6 w [] 0 d 659 9013 m 713 9013 l S
+0 0 0 RG 1.8 w [] 0 d 639 9003 m 633.667 9009.667 633.667 9016.333 639 9023 c S
+0 0 0 RG 1.8 w [] 0 d 655 9003 m 660.333 9009.667 660.333 9016.333 655 9023 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 587 9037 Tm (BaseSorterBeltTurnPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9148 m 10 9148 l S
+0 0 0 RG 3 w [] 0 d 733 9148 m 733 9148 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 9159 Tm (lid_ccw \(* manual lid sorter CCW, refused while CW is latched *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9148 m 10 9241 l S
+0 0 0 RG 3 w [] 0 d 733 9148 m 733 9241 l S
+0 0 0 RG 1.6 w [] 0 d 102 9192 m 112 9192 l S
+0 0 0 RG 1.6 w [] 0 d 10 9192 m 30 9192 l S
+0 0 0 RG 1.6 w [] 0 d 317 9192 m 475 9192 l S
+0 0 0 RG 1.6 w [] 0 d 583 9192 m 593 9192 l S
+0 0 0 RG 1.6 w [] 0 d 713 9192 m 733 9192 l S
+0 0 0 RG 1.6 w [] 0 d 30 9192 m 61 9192 l S
+0 0 0 RG 1.6 w [] 0 d 71 9192 m 102 9192 l S
+0 0 0 RG 1.8 w [] 0 d 61 9182 m 61 9202 l S
+0 0 0 RG 1.8 w [] 0 d 71 9182 m 71 9202 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 9216 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 9180 m 314 9180 l 315.657 9180 317 9181.343 317 9183 c 317 9224 l 317 9225.657 315.657 9227 314 9227 c 115 9227 l 113.343 9227 112 9225.657 112 9224 c 112 9183 l 112 9181.343 113.343 9180 115 9180 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 196.5 9176 Tm (lidCcw) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 181.5 9195 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 130.35 9222 Tm (Press := LidSorterBeltCCWManPB, Ö) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 9189 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 309.5 9189 Tm (Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 475 9192 m 517 9192 l S
+0 0 0 RG 1.6 w [] 0 d 541 9192 m 583 9192 l S
+0 0 0 RG 1.8 w [] 0 d 521 9182 m 515.667 9188.667 515.667 9195.333 521 9202 c S
+0 0 0 RG 1.8 w [] 0 d 537 9182 m 542.333 9188.667 542.333 9195.333 537 9202 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 481 9216 Tm (LidSorterBeltCCW) Tj ET
+0 0 0 RG 1.6 w [] 0 d 593 9192 m 641 9192 l S
+0 0 0 RG 1.6 w [] 0 d 665 9192 m 713 9192 l S
+0 0 0 RG 1.8 w [] 0 d 645 9182 m 639.667 9188.667 639.667 9195.333 645 9202 c S
+0 0 0 RG 1.8 w [] 0 d 661 9182 m 666.333 9188.667 666.333 9195.333 661 9202 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 599 9216 Tm (LidSorterBeltCCWPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9241 m 10 9241 l S
+0 0 0 RG 3 w [] 0 d 733 9241 m 733 9241 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 9252 Tm (lid_cw_jog \(* manual lid sorter CW, refused while CCW is latched *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9241 m 10 9334 l S
+0 0 0 RG 3 w [] 0 d 733 9241 m 733 9334 l S
+Q
+Q
+endstream
+endobj
+28 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 27 0 R >>
+endobj
+29 0 obj
+<< /Length 10414 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 513.6 756 Tm (Page 12 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 560.17 re W n
+0.727 0 0 0.727 36 -6654.205 cm
+0 0 0 RG 3 w [] 0 d 10 9148 m 10 9241 l S
+0 0 0 RG 3 w [] 0 d 733 9148 m 733 9241 l S
+0 0 0 RG 3 w [] 0 d 10 9241 m 10 9241 l S
+0 0 0 RG 3 w [] 0 d 733 9241 m 733 9241 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 9252 Tm (lid_cw_jog \(* manual lid sorter CW, refused while CCW is latched *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9241 m 10 9334 l S
+0 0 0 RG 3 w [] 0 d 733 9241 m 733 9334 l S
+0 0 0 RG 1.6 w [] 0 d 102 9285 m 112 9285 l S
+0 0 0 RG 1.6 w [] 0 d 10 9285 m 30 9285 l S
+0 0 0 RG 1.6 w [] 0 d 311 9285 m 713 9285 l S
+0 0 0 RG 1.6 w [] 0 d 713 9285 m 733 9285 l S
+0 0 0 RG 1.6 w [] 0 d 30 9285 m 61 9285 l S
+0 0 0 RG 1.6 w [] 0 d 71 9285 m 102 9285 l S
+0 0 0 RG 1.8 w [] 0 d 61 9275 m 61 9295 l S
+0 0 0 RG 1.8 w [] 0 d 71 9275 m 71 9295 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 9309 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 9273 m 308 9273 l 309.657 9273 311 9274.343 311 9276 c 311 9317 l 311 9318.657 309.657 9320 308 9320 c 115 9320 l 113.343 9320 112 9318.657 112 9317 c 112 9276 l 112 9274.343 113.343 9273 115 9273 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 196.5 9269 Tm (lidCw) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 178.5 9288 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 129.9 9315 Tm (Press := LidSorterBeltCWManPB, Ö) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 9282 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 303.5 9282 Tm (Q) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9334 m 10 9334 l S
+0 0 0 RG 3 w [] 0 d 733 9334 m 733 9334 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 9345 Tm (lid_turn_jog \(* manual lid sorter turn *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9334 m 10 9427 l S
+0 0 0 RG 3 w [] 0 d 733 9334 m 733 9427 l S
+0 0 0 RG 1.6 w [] 0 d 102 9378 m 112 9378 l S
+0 0 0 RG 1.6 w [] 0 d 10 9378 m 30 9378 l S
+0 0 0 RG 1.6 w [] 0 d 305 9378 m 713 9378 l S
+0 0 0 RG 1.6 w [] 0 d 713 9378 m 733 9378 l S
+0 0 0 RG 1.6 w [] 0 d 30 9378 m 61 9378 l S
+0 0 0 RG 1.6 w [] 0 d 71 9378 m 102 9378 l S
+0 0 0 RG 1.8 w [] 0 d 61 9368 m 61 9388 l S
+0 0 0 RG 1.8 w [] 0 d 71 9368 m 71 9388 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 9402 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 115 9366 m 302 9366 l 303.657 9366 305 9367.343 305 9369 c 305 9410 l 305 9411.657 303.657 9413 302 9413 c 115 9413 l 113.343 9413 112 9411.657 112 9410 c 112 9369 l 112 9367.343 113.343 9366 115 9366 c h s
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 187.5 9362 Tm (lidTurn) Tj ET
+BT /F2 10 Tf 0 0 0 rg 1 0 0 -1 175.5 9381 Tm (ToggleLatch) Tj ET
+BT /F1 8.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 129.45 9408 Tm (Press := LidSorterBeltTurnManPB) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 115 9375 Tm (IN) Tj ET
+BT /F1 7.5 Tf 0.333 0.333 0.333 rg 1 0 0 -1 297.5 9375 Tm (Q) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9427 m 10 9427 l S
+0 0 0 RG 3 w [] 0 d 733 9427 m 733 9427 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 9438 Tm (lid_cw \(* automatic divert or the manual latch *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9427 m 10 9594 l S
+0 0 0 RG 3 w [] 0 d 733 9427 m 733 9594 l S
+0 0 0 RG 1.6 w [] 0 d 102 9531 m 113 9531 l S
+0 0 0 RG 1.6 w [] 0 d 10 9459 m 30 9459 l S
+0 0 0 RG 1.6 w [] 0 d 113 9459 m 488 9459 l S
+0 0 0 RG 1.6 w [] 0 d 589 9459 m 599 9459 l S
+0 0 0 RG 1.6 w [] 0 d 713 9459 m 733 9459 l S
+0 0 0 RG 1.6 w [] 0 d 30 9459 m 30 9531 l S
+0 0 0 RG 1.6 w [] 0 d 113 9459 m 113 9531 l S
+0 0 0 RG 1.6 w [] 0 d 30 9459 m 66.5 9459 l S
+0 0 0 RG 1.6 w [] 0 d 76.5 9459 m 113 9459 l S
+0 0 0 RG 1.8 w [] 0 d 66.5 9449 m 66.5 9469 l S
+0 0 0 RG 1.8 w [] 0 d 76.5 9449 m 76.5 9469 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 9483 Tm (LidDiverting) Tj ET
+0 0 0 RG 1.6 w [] 0 d 30 9531 m 61 9531 l S
+0 0 0 RG 1.6 w [] 0 d 71 9531 m 102 9531 l S
+0 0 0 RG 1.8 w [] 0 d 61 9521 m 61 9541 l S
+0 0 0 RG 1.8 w [] 0 d 71 9521 m 71 9541 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 45 9555 Tm (lidCw.Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 488 9459 m 526.5 9459 l S
+0 0 0 RG 1.6 w [] 0 d 550.5 9459 m 589 9459 l S
+0 0 0 RG 1.8 w [] 0 d 530.5 9449 m 525.167 9455.667 525.167 9462.333 530.5 9469 c S
+0 0 0 RG 1.8 w [] 0 d 546.5 9449 m 551.833 9455.667 551.833 9462.333 546.5 9469 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 493.5 9483 Tm (LidSorterBeltCW) Tj ET
+0 0 0 RG 1.6 w [] 0 d 599 9459 m 644 9459 l S
+0 0 0 RG 1.6 w [] 0 d 668 9459 m 713 9459 l S
+0 0 0 RG 1.8 w [] 0 d 648 9449 m 642.667 9455.667 642.667 9462.333 648 9469 c S
+0 0 0 RG 1.8 w [] 0 d 664 9449 m 669.333 9455.667 669.333 9462.333 664 9469 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 605 9483 Tm (LidSorterBeltCWPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9594 m 10 9594 l S
+0 0 0 RG 3 w [] 0 d 733 9594 m 733 9594 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 9605 Tm (lid_turn \(* automatic divert or the manual latch *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9594 m 10 9761 l S
+0 0 0 RG 3 w [] 0 d 733 9594 m 733 9761 l S
+0 0 0 RG 1.6 w [] 0 d 102 9698 m 113 9698 l S
+0 0 0 RG 1.6 w [] 0 d 10 9626 m 30 9626 l S
+0 0 0 RG 1.6 w [] 0 d 113 9626 m 463 9626 l S
+0 0 0 RG 1.6 w [] 0 d 577 9626 m 587 9626 l S
+0 0 0 RG 1.6 w [] 0 d 713 9626 m 733 9626 l S
+0 0 0 RG 1.6 w [] 0 d 30 9626 m 30 9698 l S
+0 0 0 RG 1.6 w [] 0 d 113 9626 m 113 9698 l S
+0 0 0 RG 1.6 w [] 0 d 30 9626 m 66.5 9626 l S
+0 0 0 RG 1.6 w [] 0 d 76.5 9626 m 113 9626 l S
+0 0 0 RG 1.8 w [] 0 d 66.5 9616 m 66.5 9636 l S
+0 0 0 RG 1.8 w [] 0 d 76.5 9616 m 76.5 9636 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 9650 Tm (LidDiverting) Tj ET
+0 0 0 RG 1.6 w [] 0 d 30 9698 m 61 9698 l S
+0 0 0 RG 1.6 w [] 0 d 71 9698 m 102 9698 l S
+0 0 0 RG 1.8 w [] 0 d 61 9688 m 61 9708 l S
+0 0 0 RG 1.8 w [] 0 d 71 9688 m 71 9708 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 39 9722 Tm (lidTurn.Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 463 9626 m 508 9626 l S
+0 0 0 RG 1.6 w [] 0 d 532 9626 m 577 9626 l S
+0 0 0 RG 1.8 w [] 0 d 512 9616 m 506.667 9622.667 506.667 9629.333 512 9636 c S
+0 0 0 RG 1.8 w [] 0 d 528 9616 m 533.333 9622.667 533.333 9629.333 528 9636 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 469 9650 Tm (LidSorterBeltTurn) Tj ET
+0 0 0 RG 1.6 w [] 0 d 587 9626 m 638 9626 l S
+0 0 0 RG 1.6 w [] 0 d 662 9626 m 713 9626 l S
+0 0 0 RG 1.8 w [] 0 d 642 9616 m 636.667 9622.667 636.667 9629.333 642 9636 c S
+0 0 0 RG 1.8 w [] 0 d 658 9616 m 663.333 9622.667 663.333 9629.333 658 9636 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 593 9650 Tm (LidSorterBeltTurnPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9761 m 10 9761 l S
+0 0 0 RG 3 w [] 0 d 733 9761 m 733 9761 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 9772 Tm (reject_pusher \(* automatic push at X85 or the manual latch *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9761 m 10 9928 l S
+0 0 0 RG 3 w [] 0 d 733 9761 m 733 9928 l S
+0 0 0 RG 1.6 w [] 0 d 102 9793 m 112 9793 l S
+0 0 0 RG 1.6 w [] 0 d 107 9865 m 232 9865 l S
+0 0 0 RG 1.6 w [] 0 d 10 9793 m 30 9793 l S
+0 0 0 RG 1.6 w [] 0 d 232 9793 m 525 9793 l S
+0 0 0 RG 1.6 w [] 0 d 608 9793 m 618 9793 l S
+0 0 0 RG 1.6 w [] 0 d 713 9793 m 733 9793 l S
+0 0 0 RG 1.6 w [] 0 d 30 9793 m 30 9865 l S
+0 0 0 RG 1.6 w [] 0 d 232 9793 m 232 9865 l S
+0 0 0 RG 1.6 w [] 0 d 30 9793 m 61 9793 l S
+0 0 0 RG 1.6 w [] 0 d 71 9793 m 102 9793 l S
+0 0 0 RG 1.8 w [] 0 d 61 9783 m 61 9803 l S
+0 0 0 RG 1.8 w [] 0 d 71 9783 m 71 9803 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 9817 Tm (AutoMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 9782 m 228 9782 l 230.209 9782 232 9783.791 232 9786 c 232 9800 l 232 9802.209 230.209 9804 228 9804 c 116 9804 l 113.791 9804 112 9802.209 112 9800 c 112 9786 l 112 9783.791 113.791 9782 116 9782 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 9796.5 Tm (EQ\(AutoStep, 85\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 30 9865 m 63.5 9865 l S
+0 0 0 RG 1.6 w [] 0 d 73.5 9865 m 107 9865 l S
+0 0 0 RG 1.8 w [] 0 d 63.5 9855 m 63.5 9875 l S
+0 0 0 RG 1.8 w [] 0 d 73.5 9855 m 73.5 9875 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 35.5 9889 Tm (rejectJog.Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 525 9793 m 554.5 9793 l S
+0 0 0 RG 1.6 w [] 0 d 578.5 9793 m 608 9793 l S
+0 0 0 RG 1.8 w [] 0 d 558.5 9783 m 553.167 9789.667 553.167 9796.333 558.5 9803 c S
+0 0 0 RG 1.8 w [] 0 d 574.5 9783 m 579.833 9789.667 579.833 9796.333 574.5 9803 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 530.5 9817 Tm (RejectPusher) Tj ET
+0 0 0 RG 1.6 w [] 0 d 618 9793 m 653.5 9793 l S
+0 0 0 RG 1.6 w [] 0 d 677.5 9793 m 713 9793 l S
+0 0 0 RG 1.8 w [] 0 d 657.5 9783 m 652.167 9789.667 652.167 9796.333 657.5 9803 c S
+0 0 0 RG 1.8 w [] 0 d 673.5 9783 m 678.833 9789.667 678.833 9796.333 673.5 9803 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 623.5 9817 Tm (RejectPusherPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9928 m 10 9928 l S
+0 0 0 RG 3 w [] 0 d 733 9928 m 733 9928 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 9939 Tm (reset_hold_timer \(* time how long Reset has been held in manual *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 9928 m 10 10009 l S
+0 0 0 RG 3 w [] 0 d 733 9928 m 733 10009 l S
+0 0 0 RG 1.6 w [] 0 d 102 9960 m 112 9960 l S
+0 0 0 RG 1.6 w [] 0 d 184 9960 m 194 9960 l S
+0 0 0 RG 1.6 w [] 0 d 10 9960 m 30 9960 l S
+0 0 0 RG 1.6 w [] 0 d 409 9960 m 713 9960 l S
+0 0 0 RG 1.6 w [] 0 d 713 9960 m 733 9960 l S
+0 0 0 RG 1.6 w [] 0 d 30 9960 m 61 9960 l S
+0 0 0 RG 1.6 w [] 0 d 71 9960 m 102 9960 l S
+0 0 0 RG 1.8 w [] 0 d 61 9950 m 61 9970 l S
+0 0 0 RG 1.8 w [] 0 d 71 9950 m 71 9970 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 9984 Tm (ManualMode) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 9960 m 143 9960 l S
+0 0 0 RG 1.6 w [] 0 d 153 9960 m 184 9960 l S
+0 0 0 RG 1.8 w [] 0 d 143 9950 m 143 9970 l S
+0 0 0 RG 1.8 w [] 0 d 153 9950 m 153 9970 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 9984 Tm (Reset) Tj ET
+0 0 0 RG 1.2 w [] 0 d 198 9949 m 405 9949 l 407.209 9949 409 9950.791 409 9953 c 409 9967 l 409 9969.209 407.209 9971 405 9971 c 198 9971 l 195.791 9971 194 9969.209 194 9967 c 194 9953 l 194 9950.791 195.791 9949 198 9949 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 205.5 9963.5 Tm (ResetHeld := ResetHeld + ScanDtS) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10009 m 10 10009 l S
+0 0 0 RG 3 w [] 0 d 733 10009 m 733 10009 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10020 Tm (reset_hold_clear \(* releasing Reset or leaving manual restarts the hold *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10009 m 10 10176 l S
+0 0 0 RG 3 w [] 0 d 733 10009 m 733 10176 l S
+Q
+Q
+endstream
+endobj
+30 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 29 0 R >>
+endobj
+31 0 obj
+<< /Length 13926 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 513.6 756 Tm (Page 13 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 675.001 re W n
+0.727 0 0 0.727 36 -7212.374 cm
+0 0 0 RG 3 w [] 0 d 10 9928 m 10 10009 l S
+0 0 0 RG 3 w [] 0 d 733 9928 m 733 10009 l S
+0 0 0 RG 3 w [] 0 d 10 10009 m 10 10009 l S
+0 0 0 RG 3 w [] 0 d 733 10009 m 733 10009 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10020 Tm (reset_hold_clear \(* releasing Reset or leaving manual restarts the hold *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10009 m 10 10176 l S
+0 0 0 RG 3 w [] 0 d 733 10009 m 733 10176 l S
+0 0 0 RG 1.6 w [] 0 d 102 10041 m 120 10041 l S
+0 0 0 RG 1.6 w [] 0 d 192 10041 m 210 10041 l S
+0 0 0 RG 1.6 w [] 0 d 10 10041 m 30 10041 l S
+0 0 0 RG 1.6 w [] 0 d 326 10041 m 713 10041 l S
+0 0 0 RG 1.6 w [] 0 d 713 10041 m 733 10041 l S
+0 0 0 RG 1.6 w [] 0 d 120 10041 m 120 10113 l S
+0 0 0 RG 1.6 w [] 0 d 192 10041 m 192 10113 l S
+0 0 0 RG 1.6 w [] 0 d 30 10041 m 61 10041 l S
+0 0 0 RG 1.6 w [] 0 d 71 10041 m 102 10041 l S
+0 0 0 RG 1.8 w [] 0 d 61 10031 m 61 10051 l S
+0 0 0 RG 1.8 w [] 0 d 71 10031 m 71 10051 l S
+0 0 0 RG 1.8 w [] 0 d 57 10052 m 75 10030 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 10065 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 120 10041 m 151 10041 l S
+0 0 0 RG 1.6 w [] 0 d 161 10041 m 192 10041 l S
+0 0 0 RG 1.8 w [] 0 d 151 10031 m 151 10051 l S
+0 0 0 RG 1.8 w [] 0 d 161 10031 m 161 10051 l S
+0 0 0 RG 1.8 w [] 0 d 147 10052 m 165 10030 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 126 10065 Tm (ManualMode) Tj ET
+0 0 0 RG 1.6 w [] 0 d 120 10113 m 151 10113 l S
+0 0 0 RG 1.6 w [] 0 d 161 10113 m 192 10113 l S
+0 0 0 RG 1.8 w [] 0 d 151 10103 m 151 10123 l S
+0 0 0 RG 1.8 w [] 0 d 161 10103 m 161 10123 l S
+0 0 0 RG 1.8 w [] 0 d 147 10124 m 165 10102 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 141 10137 Tm (Reset) Tj ET
+0 0 0 RG 1.2 w [] 0 d 214 10030 m 322 10030 l 324.209 10030 326 10031.791 326 10034 c 326 10048 l 326 10050.209 324.209 10052 322 10052 c 214 10052 l 211.791 10052 210 10050.209 210 10048 c 210 10034 l 210 10031.791 211.791 10030 214 10030 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 220 10044.5 Tm (ResetHeld := 0.0) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10176 m 10 10176 l S
+0 0 0 RG 3 w [] 0 d 733 10176 m 733 10176 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10187 Tm (totals_clear \(* a full hold clears the three production totals *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10176 m 10 10279 l S
+0 0 0 RG 3 w [] 0 d 733 10176 m 733 10279 l S
+0 0 0 RG 1.6 w [] 0 d 102 10219 m 112 10219 l S
+0 0 0 RG 1.6 w [] 0 d 287 10219 m 297 10219 l S
+0 0 0 RG 1.6 w [] 0 d 10 10219 m 30 10219 l S
+0 0 0 RG 1.6 w [] 0 d 419 10219 m 713 10219 l S
+0 0 0 RG 1.6 w [] 0 d 713 10219 m 733 10219 l S
+0 0 0 RG 1.6 w [] 0 d 30 10219 m 61 10219 l S
+0 0 0 RG 1.6 w [] 0 d 71 10219 m 102 10219 l S
+0 0 0 RG 1.8 w [] 0 d 61 10209 m 61 10229 l S
+0 0 0 RG 1.8 w [] 0 d 71 10209 m 71 10229 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 10243 Tm (ManualMode) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 10208 m 283 10208 l 285.209 10208 287 10209.791 287 10212 c 287 10226 l 287 10228.209 285.209 10230 283 10230 c 116 10230 l 113.791 10230 112 10228.209 112 10226 c 112 10212 l 112 10209.791 113.791 10208 116 10208 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124.5 10222.5 Tm (GE\(ResetHeld, ResetHoldS\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 301 10196 m 415 10196 l 417.209 10196 419 10197.791 419 10200 c 419 10238 l 419 10240.209 417.209 10242 415 10242 c 301 10242 l 298.791 10242 297 10240.209 297 10238 c 297 10200 l 297 10197.791 298.791 10196 301 10196 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 310 10210.5 Tm (RawCounter := 0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 307 10222.5 Tm (BaseCounter := 0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 313 10234.5 Tm (LidCounter := 0) Tj ET
+0.533 0.533 0.533 RG 0.8 w [3 2] 0 d 23 10285 m 297 10285 l 298.657 10285 300 10286.343 300 10288 c 300 10304 l 300 10305.657 298.657 10307 297 10307 c 23 10307 l 21.343 10307 20 10305.657 20 10304 c 20 10288 l 20 10286.343 21.343 10285 23 10285 c h s
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 10300 Tm (---- Output arbitration: no mode, no motion.) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10311 m 10 10311 l S
+0 0 0 RG 3 w [] 0 d 733 10311 m 733 10311 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10322 Tm (no_mode_stop \(* without a mode the belt reference is zero *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10311 m 10 10392 l S
+0 0 0 RG 3 w [] 0 d 733 10311 m 733 10392 l S
+0 0 0 RG 1.6 w [] 0 d 102 10343 m 112 10343 l S
+0 0 0 RG 1.6 w [] 0 d 201 10343 m 211 10343 l S
+0 0 0 RG 1.6 w [] 0 d 10 10343 m 30 10343 l S
+0 0 0 RG 1.6 w [] 0 d 333 10343 m 713 10343 l S
+0 0 0 RG 1.6 w [] 0 d 713 10343 m 733 10343 l S
+0 0 0 RG 1.6 w [] 0 d 30 10343 m 61 10343 l S
+0 0 0 RG 1.6 w [] 0 d 71 10343 m 102 10343 l S
+0 0 0 RG 1.8 w [] 0 d 61 10333 m 61 10353 l S
+0 0 0 RG 1.8 w [] 0 d 71 10333 m 71 10353 l S
+0 0 0 RG 1.8 w [] 0 d 57 10354 m 75 10332 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 10367 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 10332 m 197 10332 l 199.209 10332 201 10333.791 201 10336 c 201 10350 l 201 10352.209 199.209 10354 197 10354 c 116 10354 l 113.791 10354 112 10352.209 112 10350 c 112 10336 l 112 10333.791 113.791 10332 116 10332 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 123.5 10346.5 Tm (EQ\(Mode, 0\)) Tj ET
+0 0 0 RG 1.2 w [] 0 d 215 10332 m 329 10332 l 331.209 10332 333 10333.791 333 10336 c 333 10350 l 333 10352.209 331.209 10354 329 10354 c 215 10354 l 212.791 10354 211 10352.209 211 10350 c 211 10336 l 211 10333.791 212.791 10332 215 10332 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 221 10346.5 Tm (BeltSpeedRef := 0) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10392 m 10 10392 l S
+0 0 0 RG 3 w [] 0 d 733 10392 m 733 10392 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10403 Tm (belt_speed \(* clamp, then scale 0..300 cm/s to the drive's 0..10 V *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10392 m 10 10483 l S
+0 0 0 RG 3 w [] 0 d 733 10392 m 733 10483 l S
+0 0 0 RG 1.6 w [] 0 d 102 10429 m 112 10429 l S
+0 0 0 RG 1.6 w [] 0 d 10 10429 m 30 10429 l S
+0 0 0 RG 1.6 w [] 0 d 401 10429 m 713 10429 l S
+0 0 0 RG 1.6 w [] 0 d 713 10429 m 733 10429 l S
+0 0 0 RG 1.6 w [] 0 d 30 10429 m 61 10429 l S
+0 0 0 RG 1.6 w [] 0 d 71 10429 m 102 10429 l S
+0 0 0 RG 1.8 w [] 0 d 61 10419 m 61 10439 l S
+0 0 0 RG 1.8 w [] 0 d 71 10419 m 71 10439 l S
+0 0 0 RG 1.8 w [] 0 d 57 10440 m 75 10418 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 10453 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 10412 m 397 10412 l 399.209 10412 401 10413.791 401 10416 c 401 10442 l 401 10444.209 399.209 10446 397 10446 c 116 10446 l 113.791 10446 112 10444.209 112 10442 c 112 10416 l 112 10413.791 113.791 10412 116 10412 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124.5 10426.5 Tm (BeltSpeedRef := LIMIT\(0, BeltSpeedRef, MaxBÖ) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124.5 10438.5 Tm (TargetBeltSpeed := BeltSpeedRef * 10.0 / 30Ö) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10483 m 10 10483 l S
+0 0 0 RG 3 w [] 0 d 733 10483 m 733 10483 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10494 Tm (belt_drive \(* both analog channels follow the same target *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10483 m 10 10574 l S
+0 0 0 RG 3 w [] 0 d 733 10483 m 733 10574 l S
+0 0 0 RG 1.6 w [] 0 d 102 10520 m 112 10520 l S
+0 0 0 RG 1.6 w [] 0 d 10 10520 m 30 10520 l S
+0 0 0 RG 1.6 w [] 0 d 370 10520 m 713 10520 l S
+0 0 0 RG 1.6 w [] 0 d 713 10520 m 733 10520 l S
+0 0 0 RG 1.6 w [] 0 d 30 10520 m 61 10520 l S
+0 0 0 RG 1.6 w [] 0 d 71 10520 m 102 10520 l S
+0 0 0 RG 1.8 w [] 0 d 61 10510 m 61 10530 l S
+0 0 0 RG 1.8 w [] 0 d 71 10510 m 71 10530 l S
+0 0 0 RG 1.8 w [] 0 d 57 10531 m 75 10509 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 10544 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 10503 m 366 10503 l 368.209 10503 370 10504.791 370 10507 c 370 10533 l 370 10535.209 368.209 10537 366 10537 c 116 10537 l 113.791 10537 112 10535.209 112 10533 c 112 10507 l 112 10504.791 113.791 10503 116 10503 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 10517.5 Tm (BeltConveyor4mSpeed := TargetBeltSpeed;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 10529.5 Tm (BeltConveyor4mSpeed2 := TargetBeltSpeed) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10574 m 10 10574 l S
+0 0 0 RG 3 w [] 0 d 733 10574 m 733 10574 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10585 Tm (belt_light \(* lit while the belt has a speed reference *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10574 m 10 10655 l S
+0 0 0 RG 3 w [] 0 d 733 10574 m 733 10655 l S
+0 0 0 RG 1.6 w [] 0 d 102 10606 m 112 10606 l S
+0 0 0 RG 1.6 w [] 0 d 10 10606 m 30 10606 l S
+0 0 0 RG 1.6 w [] 0 d 250 10606 m 605 10606 l S
+0 0 0 RG 1.6 w [] 0 d 713 10606 m 733 10606 l S
+0 0 0 RG 1.6 w [] 0 d 30 10606 m 61 10606 l S
+0 0 0 RG 1.6 w [] 0 d 71 10606 m 102 10606 l S
+0 0 0 RG 1.8 w [] 0 d 61 10596 m 61 10616 l S
+0 0 0 RG 1.8 w [] 0 d 71 10596 m 71 10616 l S
+0 0 0 RG 1.8 w [] 0 d 57 10617 m 75 10595 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 10630 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 10595 m 246 10595 l 248.209 10595 250 10596.791 250 10599 c 250 10613 l 250 10615.209 248.209 10617 246 10617 c 116 10617 l 113.791 10617 112 10615.209 112 10613 c 112 10599 l 112 10596.791 113.791 10595 116 10595 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 124 10609.5 Tm (GT\(BeltSpeedRef, 0\)) Tj ET
+0 0 0 RG 1.6 w [] 0 d 605 10606 m 647 10606 l S
+0 0 0 RG 1.6 w [] 0 d 671 10606 m 713 10606 l S
+0 0 0 RG 1.8 w [] 0 d 651 10596 m 645.667 10602.667 645.667 10609.333 651 10616 c S
+0 0 0 RG 1.8 w [] 0 d 667 10596 m 672.333 10602.667 672.333 10609.333 667 10616 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 611 10630 Tm (BeltConveyor4mPL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10655 m 10 10655 l S
+0 0 0 RG 3 w [] 0 d 733 10655 m 733 10655 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10666 Tm (start_light \(* flashes while automatic waits for Start, steady once running *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10655 m 10 10822 l S
+0 0 0 RG 3 w [] 0 d 733 10655 m 733 10822 l S
+0 0 0 RG 1.6 w [] 0 d 102 10687 m 120 10687 l S
+0 0 0 RG 1.6 w [] 0 d 10 10687 m 30 10687 l S
+0 0 0 RG 1.6 w [] 0 d 192 10687 m 641 10687 l S
+0 0 0 RG 1.6 w [] 0 d 713 10687 m 733 10687 l S
+0 0 0 RG 1.6 w [] 0 d 120 10687 m 120 10759 l S
+0 0 0 RG 1.6 w [] 0 d 192 10687 m 192 10759 l S
+0 0 0 RG 1.6 w [] 0 d 30 10687 m 61 10687 l S
+0 0 0 RG 1.6 w [] 0 d 71 10687 m 102 10687 l S
+0 0 0 RG 1.8 w [] 0 d 61 10677 m 61 10697 l S
+0 0 0 RG 1.8 w [] 0 d 71 10677 m 71 10697 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 42 10711 Tm (AutoMode) Tj ET
+0 0 0 RG 1.6 w [] 0 d 120 10687 m 151 10687 l S
+0 0 0 RG 1.6 w [] 0 d 161 10687 m 192 10687 l S
+0 0 0 RG 1.8 w [] 0 d 151 10677 m 151 10697 l S
+0 0 0 RG 1.8 w [] 0 d 161 10677 m 161 10697 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 129 10711 Tm (RunningPL) Tj ET
+0 0 0 RG 1.6 w [] 0 d 120 10759 m 151 10759 l S
+0 0 0 RG 1.6 w [] 0 d 161 10759 m 192 10759 l S
+0 0 0 RG 1.8 w [] 0 d 151 10749 m 151 10769 l S
+0 0 0 RG 1.8 w [] 0 d 161 10749 m 161 10769 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 141 10783 Tm (Blink) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 10687 m 665 10687 l S
+0 0 0 RG 1.6 w [] 0 d 689 10687 m 713 10687 l S
+0 0 0 RG 1.8 w [] 0 d 669 10677 m 663.667 10683.667 663.667 10690.333 669 10697 c S
+0 0 0 RG 1.8 w [] 0 d 685 10677 m 690.333 10683.667 690.333 10690.333 685 10697 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 656 10711 Tm (StartPL) Tj ET
+0.533 0.533 0.533 RG 0.8 w [3 2] 0 d 23 10828 m 387 10828 l 388.657 10828 390 10829.343 390 10831 c 390 10847 l 390 10848.657 388.657 10850 387 10850 c 23 10850 l 21.343 10850 20 10848.657 20 10847 c 20 10831 l 20 10829.343 21.343 10828 23 10828 c h s
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 28 10843 Tm (---- Scene support outputs absent from the chart's actions.) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10854 m 10 10854 l S
+0 0 0 RG 3 w [] 0 d 733 10854 m 733 10854 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10865 Tm (removers \(* the scene's removers run whenever this controller does *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10854 m 10 10935 l S
+0 0 0 RG 3 w [] 0 d 733 10854 m 733 10935 l S
+0 0 0 RG 1.6 w [] 0 d 10 10886 m 30 10886 l S
+0 0 0 RG 1.6 w [] 0 d 102 10886 m 477 10886 l S
+0 0 0 RG 1.6 w [] 0 d 549 10886 m 559 10886 l S
+0 0 0 RG 1.6 w [] 0 d 631 10886 m 641 10886 l S
+0 0 0 RG 1.6 w [] 0 d 713 10886 m 733 10886 l S
+0 0 0 RG 1.6 w [] 0 d 30 10886 m 61 10886 l S
+0 0 0 RG 1.6 w [] 0 d 71 10886 m 102 10886 l S
+0 0 0 RG 1.8 w [] 0 d 61 10876 m 61 10896 l S
+0 0 0 RG 1.8 w [] 0 d 71 10876 m 71 10896 l S
+0 0 0 RG 1.8 w [] 0 d 57 10897 m 75 10875 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 10910 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 477 10886 m 501 10886 l S
+0 0 0 RG 1.6 w [] 0 d 525 10886 m 549 10886 l S
+0 0 0 RG 1.8 w [] 0 d 505 10876 m 499.667 10882.667 499.667 10889.333 505 10896 c S
+0 0 0 RG 1.8 w [] 0 d 521 10876 m 526.333 10882.667 526.333 10889.333 521 10896 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 489 10910 Tm (Remover1) Tj ET
+0 0 0 RG 1.6 w [] 0 d 559 10886 m 583 10886 l S
+0 0 0 RG 1.6 w [] 0 d 607 10886 m 631 10886 l S
+0 0 0 RG 1.8 w [] 0 d 587 10876 m 581.667 10882.667 581.667 10889.333 587 10896 c S
+0 0 0 RG 1.8 w [] 0 d 603 10876 m 608.333 10882.667 608.333 10889.333 603 10896 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 571 10910 Tm (Remover2) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 10886 m 665 10886 l S
+0 0 0 RG 1.6 w [] 0 d 689 10886 m 713 10886 l S
+0 0 0 RG 1.8 w [] 0 d 669 10876 m 663.667 10882.667 663.667 10889.333 669 10896 c S
+0 0 0 RG 1.8 w [] 0 d 685 10876 m 690.333 10882.667 690.333 10889.333 685 10896 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 653 10910 Tm (Remover3) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10935 m 10 10935 l S
+0 0 0 RG 3 w [] 0 d 733 10935 m 733 10935 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10946 Tm (local_panel \(* echo the panel selector *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10935 m 10 11016 l S
+0 0 0 RG 3 w [] 0 d 733 10935 m 733 11016 l S
+Q
+Q
+endstream
+endobj
+32 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 31 0 R >>
+endobj
+33 0 obj
+<< /Length 11626 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (PracticumLD) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 513.6 756 Tm (Page 14 of 14) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (practicum_ld.ld) Tj ET
+q 34 61 544 480.223 re W n
+0.727 0 0 0.727 36 -7885.376 cm
+0 0 0 RG 3 w [] 0 d 10 10854 m 10 10935 l S
+0 0 0 RG 3 w [] 0 d 733 10854 m 733 10935 l S
+0 0 0 RG 3 w [] 0 d 10 10935 m 10 10935 l S
+0 0 0 RG 3 w [] 0 d 733 10935 m 733 10935 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 10946 Tm (local_panel \(* echo the panel selector *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 10935 m 10 11016 l S
+0 0 0 RG 3 w [] 0 d 733 10935 m 733 11016 l S
+0 0 0 RG 1.6 w [] 0 d 102 10967 m 112 10967 l S
+0 0 0 RG 1.6 w [] 0 d 10 10967 m 30 10967 l S
+0 0 0 RG 1.6 w [] 0 d 226 10967 m 605 10967 l S
+0 0 0 RG 1.6 w [] 0 d 713 10967 m 733 10967 l S
+0 0 0 RG 1.6 w [] 0 d 30 10967 m 61 10967 l S
+0 0 0 RG 1.6 w [] 0 d 71 10967 m 102 10967 l S
+0 0 0 RG 1.8 w [] 0 d 61 10957 m 61 10977 l S
+0 0 0 RG 1.8 w [] 0 d 71 10957 m 71 10977 l S
+0 0 0 RG 1.8 w [] 0 d 57 10978 m 75 10956 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 10991 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 10967 m 164 10967 l S
+0 0 0 RG 1.6 w [] 0 d 174 10967 m 226 10967 l S
+0 0 0 RG 1.8 w [] 0 d 164 10957 m 164 10977 l S
+0 0 0 RG 1.8 w [] 0 d 174 10957 m 174 10977 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 118 10991 Tm (LocalControlPanel) Tj ET
+0 0 0 RG 1.6 w [] 0 d 605 10967 m 647 10967 l S
+0 0 0 RG 1.6 w [] 0 d 671 10967 m 713 10967 l S
+0 0 0 RG 1.8 w [] 0 d 651 10957 m 645.667 10963.667 645.667 10970.333 651 10977 c S
+0 0 0 RG 1.8 w [] 0 d 667 10957 m 672.333 10963.667 672.333 10970.333 667 10977 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 611 10991 Tm (LocalPanelActive) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11016 m 10 11016 l S
+0 0 0 RG 3 w [] 0 d 733 11016 m 733 11016 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 11027 Tm (remote_panel \(* echo the panel selector *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11016 m 10 11097 l S
+0 0 0 RG 3 w [] 0 d 733 11016 m 733 11097 l S
+0 0 0 RG 1.6 w [] 0 d 102 11048 m 112 11048 l S
+0 0 0 RG 1.6 w [] 0 d 10 11048 m 30 11048 l S
+0 0 0 RG 1.6 w [] 0 d 232 11048 m 599 11048 l S
+0 0 0 RG 1.6 w [] 0 d 713 11048 m 733 11048 l S
+0 0 0 RG 1.6 w [] 0 d 30 11048 m 61 11048 l S
+0 0 0 RG 1.6 w [] 0 d 71 11048 m 102 11048 l S
+0 0 0 RG 1.8 w [] 0 d 61 11038 m 61 11058 l S
+0 0 0 RG 1.8 w [] 0 d 71 11038 m 71 11058 l S
+0 0 0 RG 1.8 w [] 0 d 57 11059 m 75 11037 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 11072 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 11048 m 167 11048 l S
+0 0 0 RG 1.6 w [] 0 d 177 11048 m 232 11048 l S
+0 0 0 RG 1.8 w [] 0 d 167 11038 m 167 11058 l S
+0 0 0 RG 1.8 w [] 0 d 177 11038 m 177 11058 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 118 11072 Tm (RemoteControlPanel) Tj ET
+0 0 0 RG 1.6 w [] 0 d 599 11048 m 644 11048 l S
+0 0 0 RG 1.6 w [] 0 d 668 11048 m 713 11048 l S
+0 0 0 RG 1.8 w [] 0 d 648 11038 m 642.667 11044.667 642.667 11051.333 648 11058 c S
+0 0 0 RG 1.8 w [] 0 d 664 11038 m 669.333 11044.667 669.333 11051.333 664 11058 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 605 11072 Tm (RemotePanelActive) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11097 m 10 11097 l S
+0 0 0 RG 3 w [] 0 d 733 11097 m 733 11097 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 11108 Tm (inc_100_light \(* each speed button lights while pressed *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11097 m 10 11178 l S
+0 0 0 RG 3 w [] 0 d 733 11097 m 733 11178 l S
+0 0 0 RG 1.6 w [] 0 d 102 11129 m 112 11129 l S
+0 0 0 RG 1.6 w [] 0 d 10 11129 m 30 11129 l S
+0 0 0 RG 1.6 w [] 0 d 184 11129 m 624 11129 l S
+0 0 0 RG 1.6 w [] 0 d 713 11129 m 733 11129 l S
+0 0 0 RG 1.6 w [] 0 d 30 11129 m 61 11129 l S
+0 0 0 RG 1.6 w [] 0 d 71 11129 m 102 11129 l S
+0 0 0 RG 1.8 w [] 0 d 61 11119 m 61 11139 l S
+0 0 0 RG 1.8 w [] 0 d 71 11119 m 71 11139 l S
+0 0 0 RG 1.8 w [] 0 d 57 11140 m 75 11118 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 11153 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 11129 m 143 11129 l S
+0 0 0 RG 1.6 w [] 0 d 153 11129 m 184 11129 l S
+0 0 0 RG 1.8 w [] 0 d 143 11119 m 143 11139 l S
+0 0 0 RG 1.8 w [] 0 d 153 11119 m 153 11139 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 118 11153 Tm (IncSpdX100) Tj ET
+0 0 0 RG 1.6 w [] 0 d 624 11129 m 656.5 11129 l S
+0 0 0 RG 1.6 w [] 0 d 680.5 11129 m 713 11129 l S
+0 0 0 RG 1.8 w [] 0 d 660.5 11119 m 655.167 11125.667 655.167 11132.333 660.5 11139 c S
+0 0 0 RG 1.8 w [] 0 d 676.5 11119 m 681.833 11125.667 681.833 11132.333 676.5 11139 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 629.5 11153 Tm (IncSpdX1Light) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11178 m 10 11178 l S
+0 0 0 RG 3 w [] 0 d 733 11178 m 733 11178 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 11189 Tm (inc_10_light \(* each speed button lights while pressed *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11178 m 10 11259 l S
+0 0 0 RG 3 w [] 0 d 733 11178 m 733 11259 l S
+0 0 0 RG 1.6 w [] 0 d 102 11210 m 112 11210 l S
+0 0 0 RG 1.6 w [] 0 d 10 11210 m 30 11210 l S
+0 0 0 RG 1.6 w [] 0 d 184 11210 m 618 11210 l S
+0 0 0 RG 1.6 w [] 0 d 713 11210 m 733 11210 l S
+0 0 0 RG 1.6 w [] 0 d 30 11210 m 61 11210 l S
+0 0 0 RG 1.6 w [] 0 d 71 11210 m 102 11210 l S
+0 0 0 RG 1.8 w [] 0 d 61 11200 m 61 11220 l S
+0 0 0 RG 1.8 w [] 0 d 71 11200 m 71 11220 l S
+0 0 0 RG 1.8 w [] 0 d 57 11221 m 75 11199 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 11234 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 11210 m 143 11210 l S
+0 0 0 RG 1.6 w [] 0 d 153 11210 m 184 11210 l S
+0 0 0 RG 1.8 w [] 0 d 143 11200 m 143 11220 l S
+0 0 0 RG 1.8 w [] 0 d 153 11200 m 153 11220 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 121 11234 Tm (IncSpdX10) Tj ET
+0 0 0 RG 1.6 w [] 0 d 618 11210 m 653.5 11210 l S
+0 0 0 RG 1.6 w [] 0 d 677.5 11210 m 713 11210 l S
+0 0 0 RG 1.8 w [] 0 d 657.5 11200 m 652.167 11206.667 652.167 11213.333 657.5 11220 c S
+0 0 0 RG 1.8 w [] 0 d 673.5 11200 m 678.833 11206.667 678.833 11213.333 673.5 11220 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 623.5 11234 Tm (IncSpdX10Light) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11259 m 10 11259 l S
+0 0 0 RG 3 w [] 0 d 733 11259 m 733 11259 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 11270 Tm (dec_10_light \(* each speed button lights while pressed *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11259 m 10 11340 l S
+0 0 0 RG 3 w [] 0 d 733 11259 m 733 11340 l S
+0 0 0 RG 1.6 w [] 0 d 102 11291 m 112 11291 l S
+0 0 0 RG 1.6 w [] 0 d 10 11291 m 30 11291 l S
+0 0 0 RG 1.6 w [] 0 d 184 11291 m 618 11291 l S
+0 0 0 RG 1.6 w [] 0 d 713 11291 m 733 11291 l S
+0 0 0 RG 1.6 w [] 0 d 30 11291 m 61 11291 l S
+0 0 0 RG 1.6 w [] 0 d 71 11291 m 102 11291 l S
+0 0 0 RG 1.8 w [] 0 d 61 11281 m 61 11301 l S
+0 0 0 RG 1.8 w [] 0 d 71 11281 m 71 11301 l S
+0 0 0 RG 1.8 w [] 0 d 57 11302 m 75 11280 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 11315 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 11291 m 143 11291 l S
+0 0 0 RG 1.6 w [] 0 d 153 11291 m 184 11291 l S
+0 0 0 RG 1.8 w [] 0 d 143 11281 m 143 11301 l S
+0 0 0 RG 1.8 w [] 0 d 153 11281 m 153 11301 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 121 11315 Tm (DecSpdX10) Tj ET
+0 0 0 RG 1.6 w [] 0 d 618 11291 m 653.5 11291 l S
+0 0 0 RG 1.6 w [] 0 d 677.5 11291 m 713 11291 l S
+0 0 0 RG 1.8 w [] 0 d 657.5 11281 m 652.167 11287.667 652.167 11294.333 657.5 11301 c S
+0 0 0 RG 1.8 w [] 0 d 673.5 11281 m 678.833 11287.667 678.833 11294.333 673.5 11301 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 623.5 11315 Tm (DecSpdX10Light) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11340 m 10 11340 l S
+0 0 0 RG 3 w [] 0 d 733 11340 m 733 11340 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 11351 Tm (dec_100_light \(* each speed button lights while pressed *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11340 m 10 11421 l S
+0 0 0 RG 3 w [] 0 d 733 11340 m 733 11421 l S
+0 0 0 RG 1.6 w [] 0 d 102 11372 m 112 11372 l S
+0 0 0 RG 1.6 w [] 0 d 10 11372 m 30 11372 l S
+0 0 0 RG 1.6 w [] 0 d 184 11372 m 612 11372 l S
+0 0 0 RG 1.6 w [] 0 d 713 11372 m 733 11372 l S
+0 0 0 RG 1.6 w [] 0 d 30 11372 m 61 11372 l S
+0 0 0 RG 1.6 w [] 0 d 71 11372 m 102 11372 l S
+0 0 0 RG 1.8 w [] 0 d 61 11362 m 61 11382 l S
+0 0 0 RG 1.8 w [] 0 d 71 11362 m 71 11382 l S
+0 0 0 RG 1.8 w [] 0 d 57 11383 m 75 11361 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 11396 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 11372 m 143 11372 l S
+0 0 0 RG 1.6 w [] 0 d 153 11372 m 184 11372 l S
+0 0 0 RG 1.8 w [] 0 d 143 11362 m 143 11382 l S
+0 0 0 RG 1.8 w [] 0 d 153 11362 m 153 11382 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 118 11396 Tm (DecSpdX100) Tj ET
+0 0 0 RG 1.6 w [] 0 d 612 11372 m 650.5 11372 l S
+0 0 0 RG 1.6 w [] 0 d 674.5 11372 m 713 11372 l S
+0 0 0 RG 1.8 w [] 0 d 654.5 11362 m 649.167 11368.667 649.167 11375.333 654.5 11382 c S
+0 0 0 RG 1.8 w [] 0 d 670.5 11362 m 675.833 11368.667 675.833 11375.333 670.5 11382 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 617.5 11396 Tm (DecSpdX100Light) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11421 m 10 11421 l S
+0 0 0 RG 3 w [] 0 d 733 11421 m 733 11421 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 11432 Tm (unused_outputs \(* the stop blade and the spare are never used; hold them off *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11421 m 10 11502 l S
+0 0 0 RG 3 w [] 0 d 733 11421 m 733 11502 l S
+0 0 0 RG 1.6 w [] 0 d 10 11453 m 30 11453 l S
+0 0 0 RG 1.6 w [] 0 d 102 11453 m 559 11453 l S
+0 0 0 RG 1.6 w [] 0 d 631 11453 m 641 11453 l S
+0 0 0 RG 1.6 w [] 0 d 713 11453 m 733 11453 l S
+0 0 0 RG 1.6 w [] 0 d 30 11453 m 61 11453 l S
+0 0 0 RG 1.6 w [] 0 d 71 11453 m 102 11453 l S
+0 0 0 RG 1.8 w [] 0 d 61 11443 m 61 11463 l S
+0 0 0 RG 1.8 w [] 0 d 71 11443 m 71 11463 l S
+0 0 0 RG 1.8 w [] 0 d 57 11464 m 75 11442 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 11477 Tm (ResetState) Tj ET
+0 0 0 RG 1.6 w [] 0 d 559 11453 m 583 11453 l S
+0 0 0 RG 1.6 w [] 0 d 607 11453 m 631 11453 l S
+0 0 0 RG 1.8 w [] 0 d 587 11443 m 581.667 11449.667 581.667 11456.333 587 11463 c S
+0 0 0 RG 1.8 w [] 0 d 603 11443 m 608.333 11449.667 608.333 11456.333 603 11463 c S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 592.3 11457 Tm (R) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 568 11477 Tm (StopBlade) Tj ET
+0 0 0 RG 1.6 w [] 0 d 641 11453 m 665 11453 l S
+0 0 0 RG 1.6 w [] 0 d 689 11453 m 713 11453 l S
+0 0 0 RG 1.8 w [] 0 d 669 11443 m 663.667 11449.667 663.667 11456.333 669 11463 c S
+0 0 0 RG 1.8 w [] 0 d 685 11443 m 690.333 11449.667 690.333 11456.333 685 11463 c S
+BT /F2 9 Tf 0 0 0 rg 1 0 0 -1 674.3 11457 Tm (R) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 662 11477 Tm (Spare) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11502 m 10 11502 l S
+0 0 0 RG 3 w [] 0 d 733 11502 m 733 11502 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 11513 Tm (scan_end \(* no rate is calculated; remember the mode for the next scan's change detection *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 11502 m 10 11593 l S
+0 0 0 RG 3 w [] 0 d 733 11502 m 733 11593 l S
+0 0 0 RG 1.6 w [] 0 d 102 11539 m 112 11539 l S
+0 0 0 RG 1.6 w [] 0 d 10 11539 m 30 11539 l S
+0 0 0 RG 1.6 w [] 0 d 252 11539 m 713 11539 l S
+0 0 0 RG 1.6 w [] 0 d 713 11539 m 733 11539 l S
+0 0 0 RG 1.6 w [] 0 d 30 11539 m 61 11539 l S
+0 0 0 RG 1.6 w [] 0 d 71 11539 m 102 11539 l S
+0 0 0 RG 1.8 w [] 0 d 61 11529 m 61 11549 l S
+0 0 0 RG 1.8 w [] 0 d 71 11529 m 71 11549 l S
+0 0 0 RG 1.8 w [] 0 d 57 11550 m 75 11528 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 36 11563 Tm (ResetState) Tj ET
+0 0 0 RG 1.2 w [] 0 d 116 11522 m 248 11522 l 250.209 11522 252 11523.791 252 11526 c 252 11552 l 252 11554.209 250.209 11556 248 11556 c 116 11556 l 113.791 11556 112 11554.209 112 11552 c 112 11526 l 112 11523.791 113.791 11522 116 11522 c h s
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 122 11536.5 Tm (ProductionRate := 0;) Tj ET
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 134 11548.5 Tm (PrevMode := Mode) Tj ET
+Q
+Q
+endstream
+endobj
+34 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 33 0 R >>
+endobj
+35 0 obj
+<< /Title (PracticumLD - Ladder Diagram) /Producer (nautilus) >>
+endobj
+xref
+0 36
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000213 00000 n 
+0000000308 00000 n 
+0000000408 00000 n 
+0000000511 00000 n 
+0000000618 00000 n 
+0000014672 00000 n 
+0000014828 00000 n 
+0000030747 00000 n 
+0000030904 00000 n 
+0000043925 00000 n 
+0000044083 00000 n 
+0000055725 00000 n 
+0000055883 00000 n 
+0000068859 00000 n 
+0000069017 00000 n 
+0000078403 00000 n 
+0000078561 00000 n 
+0000089091 00000 n 
+0000089249 00000 n 
+0000099598 00000 n 
+0000099756 00000 n 
+0000111729 00000 n 
+0000111887 00000 n 
+0000125002 00000 n 
+0000125160 00000 n 
+0000137914 00000 n 
+0000138072 00000 n 
+0000148540 00000 n 
+0000148698 00000 n 
+0000162678 00000 n 
+0000162836 00000 n 
+0000174516 00000 n 
+0000174674 00000 n 
+trailer
+<< /Size 36 /Root 1 0 R /Info 35 0 R >>
+startxref
+174755
+%%EOF

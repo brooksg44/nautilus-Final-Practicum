@@ -1,0 +1,164 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [8 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-BoldOblique /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Length 5718 >>
+stream
+q 1 0 0 -1 0 792 cm
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 36 48 Tm (ToggleLatch) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 500.4 48 Tm (Ladder Diagram) Tj ET
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 54 m 576 54 l S
+0.533 0.533 0.533 RG 0.5 w [] 0 d 36 746 m 576 746 l S
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 523.2 756 Tm (Page 1 of 1) Tj ET
+BT /F1 8 Tf 0.333 0.333 0.333 rg 1 0 0 -1 36 756 Tm (toggle_latch.ld) Tj ET
+q 34 61 544 283.25 re W n
+0.75 0 0 0.75 36 62 cm
+0 0 0 RG 3 w [] 0 d 0 10 m 0 42 l S
+BT /F2 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 10 24 Tm (FUNCTION_BLOCK) Tj ET
+BT /F2 12 Tf 0 0 0 rg 1 0 0 -1 100 24 Tm (ToggleLatch) Tj ET
+BT /F1 9 Tf 0.333 0.333 0.333 rg 1 0 0 -1 10 36 Tm (IN : BOOL, Press : BOOL, Inhibit : BOOL, OUT Q : BOOL, OUT Flipped : BOOL) Tj ET
+0 0 0 RG 3 w [] 0 d 10 46 m 10 46 l S
+0 0 0 RG 3 w [] 0 d 710 46 m 710 46 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 57 Tm (accept \(* one scan per accepted press, so a held button flips Q once *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 46 m 10 127 l S
+0 0 0 RG 3 w [] 0 d 710 46 m 710 127 l S
+0 0 0 RG 1.6 w [] 0 d 102 78 m 112 78 l S
+0 0 0 RG 1.6 w [] 0 d 184 78 m 194 78 l S
+0 0 0 RG 1.6 w [] 0 d 266 78 m 276 78 l S
+0 0 0 RG 1.6 w [] 0 d 10 78 m 30 78 l S
+0 0 0 RG 1.6 w [] 0 d 348 78 m 618 78 l S
+0 0 0 RG 1.6 w [] 0 d 690 78 m 710 78 l S
+0 0 0 RG 1.6 w [] 0 d 30 78 m 61 78 l S
+0 0 0 RG 1.6 w [] 0 d 71 78 m 102 78 l S
+0 0 0 RG 1.8 w [] 0 d 61 68 m 61 88 l S
+0 0 0 RG 1.8 w [] 0 d 71 68 m 71 88 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 60 102 Tm (IN) Tj ET
+0 0 0 RG 1.6 w [] 0 d 112 78 m 143 78 l S
+0 0 0 RG 1.6 w [] 0 d 153 78 m 184 78 l S
+0 0 0 RG 1.8 w [] 0 d 143 68 m 143 88 l S
+0 0 0 RG 1.8 w [] 0 d 153 68 m 153 88 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 133 102 Tm (Press) Tj ET
+0 0 0 RG 1.6 w [] 0 d 194 78 m 225 78 l S
+0 0 0 RG 1.6 w [] 0 d 235 78 m 266 78 l S
+0 0 0 RG 1.8 w [] 0 d 225 68 m 225 88 l S
+0 0 0 RG 1.8 w [] 0 d 235 68 m 235 88 l S
+0 0 0 RG 1.8 w [] 0 d 221 89 m 239 67 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 203 102 Tm (PrevPress) Tj ET
+0 0 0 RG 1.6 w [] 0 d 276 78 m 307 78 l S
+0 0 0 RG 1.6 w [] 0 d 317 78 m 348 78 l S
+0 0 0 RG 1.8 w [] 0 d 307 68 m 307 88 l S
+0 0 0 RG 1.8 w [] 0 d 317 68 m 317 88 l S
+0 0 0 RG 1.8 w [] 0 d 303 89 m 321 67 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 291 102 Tm (Inhibit) Tj ET
+0 0 0 RG 1.6 w [] 0 d 618 78 m 642 78 l S
+0 0 0 RG 1.6 w [] 0 d 666 78 m 690 78 l S
+0 0 0 RG 1.8 w [] 0 d 646 68 m 640.667 74.667 640.667 81.333 646 88 c S
+0 0 0 RG 1.8 w [] 0 d 662 68 m 667.333 74.667 667.333 81.333 662 88 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 633 102 Tm (Flipped) Tj ET
+0 0 0 RG 3 w [] 0 d 10 127 m 10 127 l S
+0 0 0 RG 3 w [] 0 d 710 127 m 710 127 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 138 Tm (latch \(* an accepted press inverts Q; otherwise Q holds while enabled *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 127 m 10 294 l S
+0 0 0 RG 3 w [] 0 d 710 127 m 710 294 l S
+0 0 0 RG 1.6 w [] 0 d 102 159 m 120 159 l S
+0 0 0 RG 1.6 w [] 0 d 192 159 m 202 159 l S
+0 0 0 RG 1.6 w [] 0 d 192 231 m 202 231 l S
+0 0 0 RG 1.6 w [] 0 d 10 159 m 30 159 l S
+0 0 0 RG 1.6 w [] 0 d 274 159 m 618 159 l S
+0 0 0 RG 1.6 w [] 0 d 690 159 m 710 159 l S
+0 0 0 RG 1.6 w [] 0 d 120 159 m 120 231 l S
+0 0 0 RG 1.6 w [] 0 d 274 159 m 274 231 l S
+0 0 0 RG 1.6 w [] 0 d 30 159 m 61 159 l S
+0 0 0 RG 1.6 w [] 0 d 71 159 m 102 159 l S
+0 0 0 RG 1.8 w [] 0 d 61 149 m 61 169 l S
+0 0 0 RG 1.8 w [] 0 d 71 149 m 71 169 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 60 183 Tm (IN) Tj ET
+0 0 0 RG 1.6 w [] 0 d 120 159 m 151 159 l S
+0 0 0 RG 1.6 w [] 0 d 161 159 m 192 159 l S
+0 0 0 RG 1.8 w [] 0 d 151 149 m 151 169 l S
+0 0 0 RG 1.8 w [] 0 d 161 149 m 161 169 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 135 183 Tm (Flipped) Tj ET
+0 0 0 RG 1.6 w [] 0 d 202 159 m 233 159 l S
+0 0 0 RG 1.6 w [] 0 d 243 159 m 274 159 l S
+0 0 0 RG 1.8 w [] 0 d 233 149 m 233 169 l S
+0 0 0 RG 1.8 w [] 0 d 243 149 m 243 169 l S
+0 0 0 RG 1.8 w [] 0 d 229 170 m 247 148 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 235 183 Tm (Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 120 231 m 151 231 l S
+0 0 0 RG 1.6 w [] 0 d 161 231 m 192 231 l S
+0 0 0 RG 1.8 w [] 0 d 151 221 m 151 241 l S
+0 0 0 RG 1.8 w [] 0 d 161 221 m 161 241 l S
+0 0 0 RG 1.8 w [] 0 d 147 242 m 165 220 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 135 255 Tm (Flipped) Tj ET
+0 0 0 RG 1.6 w [] 0 d 202 231 m 233 231 l S
+0 0 0 RG 1.6 w [] 0 d 243 231 m 274 231 l S
+0 0 0 RG 1.8 w [] 0 d 233 221 m 233 241 l S
+0 0 0 RG 1.8 w [] 0 d 243 221 m 243 241 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 235 255 Tm (Q) Tj ET
+0 0 0 RG 1.6 w [] 0 d 618 159 m 642 159 l S
+0 0 0 RG 1.6 w [] 0 d 666 159 m 690 159 l S
+0 0 0 RG 1.8 w [] 0 d 646 149 m 640.667 155.667 640.667 162.333 646 169 c S
+0 0 0 RG 1.8 w [] 0 d 662 149 m 667.333 155.667 667.333 162.333 662 169 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 651 183 Tm (Q) Tj ET
+0 0 0 RG 3 w [] 0 d 10 294 m 10 294 l S
+0 0 0 RG 3 w [] 0 d 710 294 m 710 294 l S
+BT /F3 10 Tf 0.333 0.333 0.333 rg 1 0 0 -1 30 305 Tm (remember \(* tracked even while disabled: a button held on entry is not a new press *\)) Tj ET
+0 0 0 RG 3 w [] 0 d 10 294 m 10 375 l S
+0 0 0 RG 3 w [] 0 d 710 294 m 710 375 l S
+0 0 0 RG 1.6 w [] 0 d 10 326 m 30 326 l S
+0 0 0 RG 1.6 w [] 0 d 102 326 m 618 326 l S
+0 0 0 RG 1.6 w [] 0 d 690 326 m 710 326 l S
+0 0 0 RG 1.6 w [] 0 d 30 326 m 61 326 l S
+0 0 0 RG 1.6 w [] 0 d 71 326 m 102 326 l S
+0 0 0 RG 1.8 w [] 0 d 61 316 m 61 336 l S
+0 0 0 RG 1.8 w [] 0 d 71 316 m 71 336 l S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 51 350 Tm (Press) Tj ET
+0 0 0 RG 1.6 w [] 0 d 618 326 m 642 326 l S
+0 0 0 RG 1.6 w [] 0 d 666 326 m 690 326 l S
+0 0 0 RG 1.8 w [] 0 d 646 316 m 640.667 322.667 640.667 329.333 646 336 c S
+0 0 0 RG 1.8 w [] 0 d 662 316 m 667.333 322.667 667.333 329.333 662 336 c S
+BT /F1 10 Tf 0 0 0 rg 1 0 0 -1 627 350 Tm (PrevPress) Tj ET
+Q
+Q
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Title (ToggleLatch - Ladder Diagram) /Producer (nautilus) >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000216 00000 n 
+0000000316 00000 n 
+0000000419 00000 n 
+0000000526 00000 n 
+0000006296 00000 n 
+0000006452 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R /Info 9 0 R >>
+startxref
+6532
+%%EOF
