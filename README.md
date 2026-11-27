@@ -267,3 +267,8 @@ the sequence, matching the supplied chart's lack of such conditions.
 
 References: [Nautilus](https://github.com/joyautomation/nautilus),
 [Factory I/O Modbus TCP server configuration](https://docs.factoryio.com/manual/drivers/modbus-server/).
+
+## License
+
+MIT; see [LICENSE](LICENSE). The practicum's Factory I/O scenes and GRAFCET source files are
+described in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
